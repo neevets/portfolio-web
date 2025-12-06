@@ -50,13 +50,11 @@ import cLogo from '@/assets/c-logo.svg';
 import goLogo from '@/assets/go-logo.svg';
 import fastapiLogo from '@/assets/fastapi-logo.svg';
 import fiberLogo from '@/assets/fiber-logo.svg';
-import mozillaLogo from '@/assets/mozilla-logo.svg';
 import sqliteLogo from '@/assets/sqlite-logo.svg';
 import mongodbLogo from '@/assets/mongodb-logo.svg';
 import redisLogo from '@/assets/redis-logo.svg';
 import blenderLogo from '@/assets/blender-logo.svg';
 import figmaLogo from '@/assets/figma-logo.svg';
-import opensslLogo from '@/assets/openssl-logo.svg';
 import numpyLogo from '@/assets/numpy-logo.svg';
 import cmakeLogo from '@/assets/cmake-logo.svg';
 import pytorchLogo from '@/assets/pytorch-logo.svg';
@@ -64,8 +62,6 @@ import tensorflowLogo from '@/assets/tensorflow-logo.svg';
 import puttyLogo from '@/assets/putty-logo.svg';
 import vscodiumLogo from '@/assets/vscodium-logo.svg';
 import visualstudioLogo from '@/assets/visualstudio-logo.svg';
-
-import assemblyLogo from '@/assets/assembly-logo.svg';
 
 export const CIcon = memo(() => (
   <img src={cLogo} alt="C Programming Language" className="w-full h-full" loading="lazy" />
@@ -81,10 +77,6 @@ export const FastAPIIcon = memo(() => (
 
 export const FiberIcon = memo(() => (
   <img src={fiberLogo} alt="Fiber Go Framework" className="w-full h-full" loading="lazy" />
-));
-
-export const MozillaIcon = memo(() => (
-  <img src={mozillaLogo} alt="Mozilla" className="w-full h-full" loading="lazy" />
 ));
 
 export const SQLiteIcon = memo(() => (
@@ -197,10 +189,6 @@ export const NumPyIcon = memo(() => (
   <img src={numpyLogo} alt="NumPy Library" className="w-full h-full" loading="lazy" />
 ));
 
-export const OpenSSLIcon = memo(() => (
-  <img src={opensslLogo} alt="OpenSSL Security Library" className="w-full h-full" loading="lazy" />
-));
-
 export const CMakeIcon = memo(() => (
   <img src={cmakeLogo} alt="CMake Build System" className="w-full h-full" loading="lazy" />
 ));
@@ -225,10 +213,6 @@ export const VisualStudioIcon = memo(() => (
   <img src={visualstudioLogo} alt="Visual Studio IDE" className="w-full h-full" loading="lazy" />
 ));
 
-export const AssemblyIcon = memo(() => (
-  <img src={assemblyLogo} alt="Assembly x86-64" className="w-full h-full" loading="lazy" />
-));
-
 
 export const iconMap = {
   JavaScript: JavaScriptIcon,
@@ -246,7 +230,6 @@ export const iconMap = {
   Django: DjangoIcon,
   FastAPI: FastAPIIcon,
   Fiber: FiberIcon,
-  Mozilla: MozillaIcon,
   SQLite: SQLiteIcon,
   MySQL: MySQLIcon,
   MongoDB: MongoDBIcon,
@@ -260,14 +243,12 @@ export const iconMap = {
   Reddit: RedditIcon,
   Twitter: TwitterIcon,
   NumPy: NumPyIcon,
-  OpenSSL: OpenSSLIcon,
   CMake: CMakeIcon,
   PyTorch: PyTorchIcon,
   TensorFlow: TensorFlowIcon,
   Putty: PuttyIcon,
   VSCodium: VSCodiumIcon,
   VisualStudio: VisualStudioIcon,
-  Assembly: AssemblyIcon,
 } as const;
 
 export type IconName = keyof typeof iconMap;
