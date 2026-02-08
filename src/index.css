@@ -601,7 +601,6 @@
   }
 }
 
-/* Responsive improvements */
 @media (max-width: 640px) {
   .skill-card-optimized {
     min-height: 70px;
