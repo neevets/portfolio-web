@@ -47,7 +47,7 @@ const HeroSection = memo(() => {
         </div>
         <div className="h-12 sm:h-16 md:h-20 mb-12 sm:mb-16 md:mb-20 flex items-center justify-center">
           <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-dev font-light text-foreground leading-relaxed">
-            Full Stack Engineer and UI UX Designer
+            Fullstack Developer
           </p>
         </div>
         <div className="relative">
