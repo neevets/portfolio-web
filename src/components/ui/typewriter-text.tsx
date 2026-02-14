@@ -6,6 +6,7 @@ interface TypewriterTextProps {
   deleteSpeed?: number;
   pauseTime?: number;
   className?: string;
+  loop?: boolean;
 }
 
 export const TypewriterText = ({ 
@@ -13,7 +14,8 @@ export const TypewriterText = ({
   speed = 100, 
   deleteSpeed = 50, 
   pauseTime = 2000, 
-  className = "" 
+  className = "",
+  loop = true
 }: TypewriterTextProps) => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
@@ -27,7 +29,7 @@ export const TypewriterText = ({
       if (!isDeleting) {
         if (currentText.length < fullText.length) {
           setCurrentText(fullText.slice(0, currentText.length + 1));
-        } else {
+        } else if (loop) {
           setTimeout(() => setIsDeleting(true), pauseTime);
         }
       } else {
@@ -43,7 +45,7 @@ export const TypewriterText = ({
     }, isDeleting ? deleteSpeed : speed);
 
     return () => clearTimeout(timeout);
-  }, [currentText, isDeleting, currentTextIndex, texts, speed, deleteSpeed, pauseTime]);
+  }, [currentText, isDeleting, currentTextIndex, texts, speed, deleteSpeed, pauseTime, loop]);
 
   useEffect(() => {
     const cursorInterval = setInterval(() => {
