@@ -35,9 +35,7 @@ export function ThemeProvider({
 
   const value = {
     theme,
-    setTheme: () => {
-      // Only light mode supported
-    },
+    setTheme: () => {},
   }
 
   return (

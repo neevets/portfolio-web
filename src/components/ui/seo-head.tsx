@@ -9,7 +9,7 @@ interface SEOHeadProps {
 }
 
 export const SEOHead = ({
-  title = "Neevets - Welcome to my Portfolio",
+  title = "Neevets",
   description = "Full-stack developer from Honduras. Specializing in TypeScript, Python, React and modern web development.",
   keywords = "Neevets, full stack developer, TypeScript, Python, React, web development, Honduras",
   author = "Neevets",
