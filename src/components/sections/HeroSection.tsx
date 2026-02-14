@@ -41,14 +41,9 @@ const HeroSection = memo(() => {
       <div className="absolute top-0 left-0 w-full h-96 opacity-60" style={{ background: 'var(--gradient-hero)' }} />
       <div className="text-center max-w-7xl mx-auto fade-in-up relative z-10 px-4 sm:px-6 py-16 sm:py-20">
         <div className="mb-6 sm:mb-8 md:mb-12">
-          <h1 className="section-title text-8xl sm:text-9xl md:text-[8rem] lg:text-[10rem] xl:text-[12rem] 2xl:text-[14rem] font-dev font-light mb-4 sm:mb-6 md:mb-8 tracking-tight relative animated-underline leading-none cursor-pointer">
+          <h1 className="section-title text-8xl sm:text-9xl md:text-[8rem] lg:text-[10rem] xl:text-[12rem] 2xl:text-[14rem] font-dev font-light mb-12 sm:mb-16 md:mb-20 tracking-tight relative animated-underline leading-none cursor-pointer">
             <span className="text-foreground">Neevets</span>
           </h1>
-        </div>
-        <div className="h-12 sm:h-16 md:h-20 mb-12 sm:mb-16 md:mb-20 flex items-center justify-center">
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-dev font-light text-foreground leading-relaxed">
-            Fullstack Developer
-          </p>
         </div>
         <div className="relative">
           <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full border border-border/30 bg-background/30 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300">
