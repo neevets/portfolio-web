@@ -29,11 +29,9 @@ const SkillCard = memo<{
 }>(({ skill, isVisible }) => {
   const styleProps = useMemo(() => {
     const skillColor = skill.color;
-    const isViteSkill = skill.name === 'Vite';
-    
     return {
       skillColor,
-      iconColor: isViteSkill ? 'hsl(45, 100%, 55%)' : skillColor,
+      iconColor: skillColor,
     };
   }, [skill.color, skill.name]);
 
@@ -100,7 +98,7 @@ const SkillsSection = () => {
   useEffect(() => {
     if (!isIntersecting) return;
     
-    const timeouts: NodeJS.Timeout[] = [];
+    const timeouts: ReturnType<typeof setTimeout>[] = [];
     
     allSkills.forEach((_, index) => {
       const timeout = setTimeout(() => {
