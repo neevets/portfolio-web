@@ -39,12 +39,6 @@ const OptimizedContactSection = memo(() => {
   const contactLinks = useMemo(
     () => [
       {
-        label: 'Twitter',
-        value: 'Neevets504',
-        href: 'https://twitter.com/Neevets504',
-        icon: ContactIcons.Twitter,
-      },
-      {
         label: 'LinkedIn',
         value: '/in/neevets',
         href: 'https://www.linkedin.com/in/neevets-r-68921833am',
@@ -55,12 +49,6 @@ const OptimizedContactSection = memo(() => {
         value: '@goroutines',
         href: 'https://discord.com/users/goroutines',
         icon: ContactIcons.Discord,
-      },
-      {
-        label: 'Reddit',
-        value: 'u/neevets',
-        href: 'https://reddit.com/u/neevets',
-        icon: ContactIcons.Reddit,
       },
     ],
     []

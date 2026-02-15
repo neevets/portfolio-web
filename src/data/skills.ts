@@ -10,7 +10,6 @@ export const skillsData = {
     { name: 'FastAPI', icon: 'FastAPI', color: 'hsl(173, 80%, 40%)', level: 'Mid level' },
     { name: 'React', icon: 'React', color: 'hsl(193, 95%, 68%)', level: 'Trainee' },
     { name: 'Tailwind', icon: 'Tailwind', color: 'hsl(198, 93%, 60%)', level: 'Trainee' },
-    { name: 'Vue', icon: 'Vue', color: 'hsl(153, 48%, 49%)', level: 'Trainee' },
   ],
   Databases: [
     { name: 'PostgreSQL', icon: 'MySQL', color: 'hsl(205, 81%, 33%)', level: 'Mid level' },
@@ -23,11 +22,9 @@ export const skillsData = {
     { name: 'VS Code', icon: 'VSCode', color: 'hsl(213, 89%, 64%)', level: 'Senior' },
     { name: 'VSCodium', icon: 'VSCodium', color: 'hsl(213, 89%, 64%)', level: 'Senior' },
     { name: 'Visual Studio', icon: 'VisualStudio', color: 'hsl(270, 40%, 65%)', level: 'Senior' },
-    { name: 'Vite', icon: 'Vite', color: 'hsl(45, 100%, 55%)', level: 'Trainee' },
     { name: 'CMake', icon: 'CMake', color: 'hsl(0, 100%, 50%)', level: 'Mid level' },
     { name: 'Figma', icon: 'Figma', color: 'hsl(280, 100%, 60%)', level: 'Junior' },
     { name: 'Blender', icon: 'Blender', color: 'hsl(31, 100%, 50%)', level: 'Junior' },
     { name: 'PuTTY', icon: 'Putty', color: 'hsl(0, 0%, 50%)', level: 'Mid level' },
-    { name: 'Node', icon: 'Node', color: 'hsl(120, 50%, 40%)', level: 'Junior' },
   ],
 };
