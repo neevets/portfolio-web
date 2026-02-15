@@ -53,15 +53,6 @@ const OptimizedAboutSection = memo(() => {
     []
   );
 
-  const professionalHighlights = useMemo(
-    () => [
-      'Experience building end-to-end solutions from idea to deployment.',
-      'Strong attention to detail in UI/UX, accessibility, and product consistency.',
-      'Continuous learning mindset with practical experimentation and project shipping.',
-    ],
-    []
-  );
-
   const FeatureCard = memo<{ card: (typeof featureCards)[0] }>(({ card }) => (
     <div className="border border-border bg-card p-8 text-left h-full flex flex-col rounded-md shadow-sm">
       <div className="w-12 h-12 mb-5 bg-muted flex items-center justify-center flex-shrink-0 rounded-sm">
@@ -113,17 +104,6 @@ const OptimizedAboutSection = memo(() => {
                   ))}
                 </div>
 
-                <div className="border border-border bg-card p-8 md:p-10 rounded-md max-w-5xl mx-auto">
-                  <h3 className="text-2xl font-dev font-light mb-5 text-center">Core Professional Highlights</h3>
-                  <ul className="space-y-3 max-w-3xl mx-auto">
-                    {professionalHighlights.map((highlight) => (
-                      <li key={highlight} className="text-base md:text-lg text-muted-foreground font-dev leading-relaxed flex gap-3">
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-foreground/70 flex-shrink-0" aria-hidden="true" />
-                        <span>{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
               </div>
             </div>
           </div>
