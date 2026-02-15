@@ -46,19 +46,13 @@ export const VSCodeIcon = memo(() => (
 ));
 
 
-import cLogo from '@/assets/c-logo.svg';
 import goLogo from '@/assets/go-logo.svg';
 import fastapiLogo from '@/assets/fastapi-logo.svg';
 import fiberLogo from '@/assets/fiber-logo.svg';
 import sqliteLogo from '@/assets/sqlite-logo.svg';
 import mongodbLogo from '@/assets/mongodb-logo.svg';
 import redisLogo from '@/assets/redis-logo.svg';
-import blenderLogo from '@/assets/blender-logo.svg';
-import figmaLogo from '@/assets/figma-logo.svg';
-import numpyLogo from '@/assets/numpy-logo.svg';
 import cmakeLogo from '@/assets/cmake-logo.svg';
-import pytorchLogo from '@/assets/pytorch-logo.svg';
-import tensorflowLogo from '@/assets/tensorflow-logo.svg';
 import puttyLogo from '@/assets/putty-logo.svg';
 import vscodiumLogo from '@/assets/vscodium-logo.svg';
 import visualstudioLogo from '@/assets/visualstudio-logo.svg';
@@ -72,7 +66,10 @@ import postmanLogo from '@/assets/postman-logo.svg';
 import sentryLogo from '@/assets/sentry-logo.svg';
 
 export const CIcon = memo(() => (
-  <img src={cLogo} alt="C Programming Language" className="w-full h-full" loading="lazy" />
+  <svg viewBox="0 0 24 24" className="w-full h-full" aria-label="C Programming Language" role="img">
+    <circle cx="12" cy="12" r="10" fill="#00599C" />
+    <path d="M15.6 8.4a5.2 5.2 0 1 0 0 7.2l-1.5-1.2a3.2 3.2 0 1 1 0-4.8z" fill="#FFF" />
+  </svg>
 ));
 
 export const GodotIcon = memo(() => (
@@ -104,11 +101,20 @@ export const RedisIcon = memo(() => (
 ));
 
 export const BlenderIcon = memo(() => (
-  <img src={blenderLogo} alt="Blender 3D Software" className="w-full h-full" loading="lazy" />
+  <svg viewBox="0 0 24 24" className="w-full h-full" aria-label="Blender 3D Software" role="img">
+    <path d="M10.8 2.4 3 10.2l2.4 2.4 2.2-2.2h2.8a5.6 5.6 0 1 1-4.6 8.8l-2 2A8 8 0 1 0 11 8h-1L13.2 4.8z" fill="#F5792A" />
+    <circle cx="14.6" cy="13.6" r="2.2" fill="#1F6FFF" />
+  </svg>
 ));
 
 export const FigmaIcon = memo(() => (
-  <img src={figmaLogo} alt="Figma Design Tool" className="w-full h-full" loading="lazy" />
+  <svg viewBox="0 0 24 24" className="w-full h-full" aria-label="Figma Design Tool" role="img">
+    <rect x="6" y="2" width="6" height="6" rx="3" fill="#F24E1E" />
+    <rect x="12" y="2" width="6" height="6" rx="3" fill="#FF7262" />
+    <rect x="6" y="8" width="6" height="6" rx="3" fill="#A259FF" />
+    <circle cx="15" cy="11" r="3" fill="#1ABCFE" />
+    <rect x="6" y="14" width="6" height="6" rx="3" fill="#0ACF83" />
+  </svg>
 ));
 
 export const EmailIcon = memo(() => (
@@ -226,7 +232,11 @@ export const SentryIcon = memo(() => (
 ));
 
 export const NumPyIcon = memo(() => (
-  <img src={numpyLogo} alt="NumPy Library" className="w-full h-full" loading="lazy" />
+  <svg viewBox="0 0 24 24" className="w-full h-full" aria-label="NumPy Library" role="img">
+    <path d="M4 4h7v16H4z" fill="#4D77CF" />
+    <path d="M13 4h7v16h-7z" fill="#4FA0CA" />
+    <path d="M6 7h1.8l2.3 4.7V7h1.8v10H10l-2.2-4.6V17H6zm8.4 0H16v10h-1.6z" fill="#FFF" />
+  </svg>
 ));
 
 export const CMakeIcon = memo(() => (
@@ -234,11 +244,16 @@ export const CMakeIcon = memo(() => (
 ));
 
 export const PyTorchIcon = memo(() => (
-  <img src={pytorchLogo} alt="PyTorch Machine Learning Framework" className="w-full h-full" loading="lazy" />
+  <svg viewBox="0 0 24 24" className="w-full h-full" aria-label="PyTorch Machine Learning Framework" role="img">
+    <path d="M12 3.5a8.5 8.5 0 1 0 8.3 10.2h-2.4A6.2 6.2 0 1 1 12 5.8z" fill="#EE4C2C" />
+    <circle cx="13.2" cy="5" r="2" fill="#EE4C2C" />
+  </svg>
 ));
 
 export const TensorFlowIcon = memo(() => (
-  <img src={tensorflowLogo} alt="TensorFlow Machine Learning Framework" className="w-full h-full" loading="lazy" />
+  <svg viewBox="0 0 24 24" className="w-full h-full" aria-label="TensorFlow Machine Learning Framework" role="img">
+    <path d="M3 5.5 9.8 2v4L6.6 7.6v8.8L3 14.6zm7.2.4L17 2v4l-3.2 1.6v8.8l-3.6 1.8zm4 6.2 3.2-1.6 3.6 1.8-6.8 3.4z" fill="#FF6F00" />
+  </svg>
 ));
 
 export const PuttyIcon = memo(() => (
