@@ -1,6 +1,6 @@
 export const skillsData = {
   Languages: [
-    { name: 'C', icon: 'C', color: 'hsl(0, 0%, 45%)', level: 'Junior' },
+    { name: 'Godot', icon: 'Godot', color: 'hsl(211, 70%, 55%)', level: 'Junior' },
     { name: 'Go', icon: 'Go', color: 'hsl(199, 89%, 48%)', level: 'Junior' },
     { name: 'Python', icon: 'Python', color: 'hsl(45, 100%, 50%)', level: 'Mid level' },
     { name: 'TypeScript', icon: 'TypeScript', color: 'hsl(211, 60%, 45%)', level: 'Junior' },
@@ -23,8 +23,12 @@ export const skillsData = {
     { name: 'VSCodium', icon: 'VSCodium', color: 'hsl(213, 89%, 64%)', level: 'Senior' },
     { name: 'Visual Studio', icon: 'VisualStudio', color: 'hsl(270, 40%, 65%)', level: 'Senior' },
     { name: 'CMake', icon: 'CMake', color: 'hsl(0, 100%, 50%)', level: 'Mid level' },
-    { name: 'Figma', icon: 'Figma', color: 'hsl(280, 100%, 60%)', level: 'Junior' },
-    { name: 'Blender', icon: 'Blender', color: 'hsl(31, 100%, 50%)', level: 'Junior' },
+    { name: 'Docker', icon: 'Docker', color: 'hsl(210, 79%, 46%)', level: 'Mid level' },
+    { name: 'Vercel', icon: 'Vercel', color: 'hsl(0, 0%, 12%)', level: 'Mid level' },
+    { name: 'Netlify', icon: 'Netlify', color: 'hsl(176, 100%, 32%)', level: 'Mid level' },
+    { name: 'Cloudflare', icon: 'Cloudflare', color: 'hsl(31, 100%, 55%)', level: 'Mid level' },
+    { name: 'Postman', icon: 'Postman', color: 'hsl(24, 100%, 56%)', level: 'Mid level' },
+    { name: 'Sentry', icon: 'Sentry', color: 'hsl(257, 31%, 43%)', level: 'Mid level' },
     { name: 'PuTTY', icon: 'Putty', color: 'hsl(0, 0%, 50%)', level: 'Mid level' },
   ],
 };
