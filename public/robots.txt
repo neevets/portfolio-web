@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://neevets.dev/sitemap.xml
+Sitemap: https://neevets.website/sitemap.xml
