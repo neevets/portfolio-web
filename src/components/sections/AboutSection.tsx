@@ -23,8 +23,8 @@ const OptimizedAboutSection = memo(() => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
         </svg>
       ),
-      title: "Digital Art & Design",
-      description: "Creating digital artwork and designing user interfaces that inspire. Combining aesthetics with functionality for exceptional user experiences."
+      title: "Software Engineering",
+      description: "Designing resilient systems, APIs, and developer-friendly architectures. Prioritizing maintainability, testing, and efficient delivery across the stack."
     }
   ], []);
 
@@ -67,11 +67,11 @@ const OptimizedAboutSection = memo(() => {
                 <div className="relative border border-border bg-card p-10 lg:p-12 text-center rounded-md">
                   <div className="relative z-10">
                     <h3 className="text-3xl md:text-4xl font-dev font-light mb-6">
-                      Passionate Developer & Designer
+                      Passionate Full-Stack Developer
                     </h3>
                     <p className="text-lg md:text-xl leading-relaxed text-muted-foreground max-w-3xl mx-auto font-dev">
-                      Honduran developer passionate about programming and graphic design. 
-                      Creating digital experiences that blend functionality with beautiful design.
+                      Honduran developer focused on building reliable software products.
+                      Creating practical, high-quality web experiences with clean, maintainable code.
                     </p>
                   </div>
                 </div>
@@ -84,11 +84,11 @@ const OptimizedAboutSection = memo(() => {
 
                 <div className="border border-border bg-card p-10 text-center max-w-5xl mx-auto">
                   <h3 className="text-2xl font-dev font-light mb-4">
-                    Always Learning & Growing
+                    Continuous Development Growth
                   </h3>
                   <p className="text-base md:text-lg text-muted-foreground font-dev leading-relaxed">
-                    Always sharpening skills, exploring new technologies, 
-                    and building personal projects. Continuous growth, both personally and professionally.
+                    Constantly improving development skills, exploring modern tools,
+                    and shipping personal projects to keep learning through real implementation.
                   </p>
                 </div>
               </div>
