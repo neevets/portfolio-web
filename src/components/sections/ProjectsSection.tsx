@@ -101,12 +101,12 @@ const OptimizedProjectsSection = memo(() => {
       status: "Production"
     },
     {
-      title: "Asake Store",
-      description: "Modern e-commerce platform with service mesh, distributed payments, and auto-scaling infrastructure using cloud orchestration.",
-      repo: "https://github.com/neevets/asake-store",
-      productionUrl: "https://asake.store",
-      tech: ["React", "TypeScript", "Tailwind", "Stripe", "AWS"],
-      category: "E-commerce",
+      title: "Guroi Bot",
+      description: "Security-focused bot built in Rust, designed for automated threat detection, moderation hardening, and resilient incident response workflows.",
+      repo: "https://github.com/neevets/guroi-bot",
+      productionUrl: "https://github.com/neevets/guroi-bot",
+      tech: ["Rust", "Tokio", "Serenity", "Sentry"],
+      category: "Security",
       status: "Production"
     }
   ], []);
