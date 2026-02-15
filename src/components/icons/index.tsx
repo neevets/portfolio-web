@@ -67,6 +67,12 @@ export const CIcon = memo(() => (
   <img src={cLogo} alt="C Programming Language" className="w-full h-full" loading="lazy" />
 ));
 
+export const GodotIcon = memo(() => (
+  <svg className="w-full h-full" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm-3 7a1.5 1.5 0 1 1-1.5 1.5A1.5 1.5 0 0 1 9 9Zm6 0a1.5 1.5 0 1 1-1.5 1.5A1.5 1.5 0 0 1 15 9Zm2.2 6.2a5.9 5.9 0 0 1-10.4 0 .8.8 0 0 1 .7-1.2h9a.8.8 0 0 1 .7 1.2Z"/>
+  </svg>
+));
+
 export const GoIcon = memo(() => (
   <img src={goLogo} alt="Go Programming Language" className="w-full h-full" loading="lazy" />
 ));
@@ -185,6 +191,21 @@ export const MySQLIcon = memo(() => (
 ));
 
 
+
+const MonogramIcon = ({ text, bgColor = 'currentColor' }: { text: string; bgColor?: string }) => (
+  <svg className="w-full h-full" viewBox="0 0 24 24" fill="none">
+    <rect x="2" y="2" width="20" height="20" rx="4" fill={bgColor} />
+    <text x="12" y="15" textAnchor="middle" fontSize="8" fontWeight="700" fill="white">{text}</text>
+  </svg>
+);
+
+export const DockerIcon = memo(() => <MonogramIcon text="DK" />);
+export const VercelIcon = memo(() => <MonogramIcon text="VC" />);
+export const NetlifyIcon = memo(() => <MonogramIcon text="NL" />);
+export const CloudflareIcon = memo(() => <MonogramIcon text="CF" />);
+export const PostmanIcon = memo(() => <MonogramIcon text="PM" />);
+export const SentryIcon = memo(() => <MonogramIcon text="SE" />);
+
 export const NumPyIcon = memo(() => (
   <img src={numpyLogo} alt="NumPy Library" className="w-full h-full" loading="lazy" />
 ));
@@ -223,6 +244,7 @@ export const iconMap = {
   Git: GitIcon,
   VSCode: VSCodeIcon,
   C: CIcon,
+  Godot: GodotIcon,
   Go: GoIcon,
   Python: PythonIcon,
   Node: NodeIcon,
@@ -236,6 +258,12 @@ export const iconMap = {
   Redis: RedisIcon,
   Blender: BlenderIcon,
   Figma: FigmaIcon,
+  Docker: DockerIcon,
+  Vercel: VercelIcon,
+  Netlify: NetlifyIcon,
+  Cloudflare: CloudflareIcon,
+  Postman: PostmanIcon,
+  Sentry: SentryIcon,
   
   Email: EmailIcon,
   LinkedIn: LinkedInIcon,
