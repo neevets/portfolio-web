@@ -12,7 +12,7 @@ export const skillsData = {
     { name: 'Tailwind', icon: 'Tailwind', color: 'hsl(198, 93%, 60%)', level: 'Trainee' },
   ],
   Databases: [
-    { name: 'PostgreSQL', icon: 'MySQL', color: 'hsl(205, 81%, 33%)', level: 'Mid level' },
+    { name: 'PostgreSQL', icon: 'PostgreSQL', color: 'hsl(205, 81%, 33%)', level: 'Mid level' },
     { name: 'SQLite', icon: 'SQLite', color: 'hsl(214, 73%, 51%)', level: 'Senior' },
     { name: 'MongoDB', icon: 'MongoDB', color: 'hsl(120, 48%, 20%)', level: 'Mid level' },
     { name: 'Redis', icon: 'Redis', color: 'hsl(12, 100%, 50%)', level: 'Junior' },

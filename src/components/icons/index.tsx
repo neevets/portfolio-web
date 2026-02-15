@@ -62,15 +62,21 @@ import tensorflowLogo from '@/assets/tensorflow-logo.svg';
 import puttyLogo from '@/assets/putty-logo.svg';
 import vscodiumLogo from '@/assets/vscodium-logo.svg';
 import visualstudioLogo from '@/assets/visualstudio-logo.svg';
+import godotLogo from '@/assets/godot-logo.svg';
+import postgresqlLogo from '@/assets/postgresql-logo.svg';
+import dockerLogo from '@/assets/docker-logo.svg';
+import vercelLogo from '@/assets/vercel-logo.svg';
+import netlifyLogo from '@/assets/netlify-logo.svg';
+import cloudflareLogo from '@/assets/cloudflare-logo.svg';
+import postmanLogo from '@/assets/postman-logo.svg';
+import sentryLogo from '@/assets/sentry-logo.svg';
 
 export const CIcon = memo(() => (
   <img src={cLogo} alt="C Programming Language" className="w-full h-full" loading="lazy" />
 ));
 
 export const GodotIcon = memo(() => (
-  <svg className="w-full h-full" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm-3 7a1.5 1.5 0 1 1-1.5 1.5A1.5 1.5 0 0 1 9 9Zm6 0a1.5 1.5 0 1 1-1.5 1.5A1.5 1.5 0 0 1 15 9Zm2.2 6.2a5.9 5.9 0 0 1-10.4 0 .8.8 0 0 1 .7-1.2h9a.8.8 0 0 1 .7 1.2Z"/>
-  </svg>
+  <img src={godotLogo} alt="Godot Engine" className="w-full h-full" loading="lazy" />
 ));
 
 export const GoIcon = memo(() => (
@@ -191,20 +197,33 @@ export const MySQLIcon = memo(() => (
 ));
 
 
+export const PostgreSQLIcon = memo(() => (
+  <img src={postgresqlLogo} alt="PostgreSQL" className="w-full h-full" loading="lazy" />
+));
 
-const MonogramIcon = ({ text, bgColor = 'currentColor' }: { text: string; bgColor?: string }) => (
-  <svg className="w-full h-full" viewBox="0 0 24 24" fill="none">
-    <rect x="2" y="2" width="20" height="20" rx="4" fill={bgColor} />
-    <text x="12" y="15" textAnchor="middle" fontSize="8" fontWeight="700" fill="white">{text}</text>
-  </svg>
-);
+export const DockerIcon = memo(() => (
+  <img src={dockerLogo} alt="Docker" className="w-full h-full" loading="lazy" />
+));
 
-export const DockerIcon = memo(() => <MonogramIcon text="DK" />);
-export const VercelIcon = memo(() => <MonogramIcon text="VC" />);
-export const NetlifyIcon = memo(() => <MonogramIcon text="NL" />);
-export const CloudflareIcon = memo(() => <MonogramIcon text="CF" />);
-export const PostmanIcon = memo(() => <MonogramIcon text="PM" />);
-export const SentryIcon = memo(() => <MonogramIcon text="SE" />);
+export const VercelIcon = memo(() => (
+  <img src={vercelLogo} alt="Vercel" className="w-full h-full" loading="lazy" />
+));
+
+export const NetlifyIcon = memo(() => (
+  <img src={netlifyLogo} alt="Netlify" className="w-full h-full" loading="lazy" />
+));
+
+export const CloudflareIcon = memo(() => (
+  <img src={cloudflareLogo} alt="Cloudflare" className="w-full h-full" loading="lazy" />
+));
+
+export const PostmanIcon = memo(() => (
+  <img src={postmanLogo} alt="Postman" className="w-full h-full" loading="lazy" />
+));
+
+export const SentryIcon = memo(() => (
+  <img src={sentryLogo} alt="Sentry" className="w-full h-full" loading="lazy" />
+));
 
 export const NumPyIcon = memo(() => (
   <img src={numpyLogo} alt="NumPy Library" className="w-full h-full" loading="lazy" />
@@ -254,6 +273,7 @@ export const iconMap = {
   Fiber: FiberIcon,
   SQLite: SQLiteIcon,
   MySQL: MySQLIcon,
+  PostgreSQL: PostgreSQLIcon,
   MongoDB: MongoDBIcon,
   Redis: RedisIcon,
   Blender: BlenderIcon,
