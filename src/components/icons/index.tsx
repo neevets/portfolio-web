@@ -62,9 +62,21 @@ import tensorflowLogo from '@/assets/tensorflow-logo.svg';
 import puttyLogo from '@/assets/putty-logo.svg';
 import vscodiumLogo from '@/assets/vscodium-logo.svg';
 import visualstudioLogo from '@/assets/visualstudio-logo.svg';
+import godotLogo from '@/assets/godot-logo.svg';
+import postgresqlLogo from '@/assets/postgresql-logo.svg';
+import dockerLogo from '@/assets/docker-logo.svg';
+import vercelLogo from '@/assets/vercel-logo.svg';
+import netlifyLogo from '@/assets/netlify-logo.svg';
+import cloudflareLogo from '@/assets/cloudflare-logo.svg';
+import postmanLogo from '@/assets/postman-logo.svg';
+import sentryLogo from '@/assets/sentry-logo.svg';
 
 export const CIcon = memo(() => (
   <img src={cLogo} alt="C Programming Language" className="w-full h-full" loading="lazy" />
+));
+
+export const GodotIcon = memo(() => (
+  <img src={godotLogo} alt="Godot Engine" className="w-full h-full" loading="lazy" />
 ));
 
 export const GoIcon = memo(() => (
@@ -185,6 +197,34 @@ export const MySQLIcon = memo(() => (
 ));
 
 
+export const PostgreSQLIcon = memo(() => (
+  <img src={postgresqlLogo} alt="PostgreSQL" className="w-full h-full" loading="lazy" />
+));
+
+export const DockerIcon = memo(() => (
+  <img src={dockerLogo} alt="Docker" className="w-full h-full" loading="lazy" />
+));
+
+export const VercelIcon = memo(() => (
+  <img src={vercelLogo} alt="Vercel" className="w-full h-full" loading="lazy" />
+));
+
+export const NetlifyIcon = memo(() => (
+  <img src={netlifyLogo} alt="Netlify" className="w-full h-full" loading="lazy" />
+));
+
+export const CloudflareIcon = memo(() => (
+  <img src={cloudflareLogo} alt="Cloudflare" className="w-full h-full" loading="lazy" />
+));
+
+export const PostmanIcon = memo(() => (
+  <img src={postmanLogo} alt="Postman" className="w-full h-full" loading="lazy" />
+));
+
+export const SentryIcon = memo(() => (
+  <img src={sentryLogo} alt="Sentry" className="w-full h-full" loading="lazy" />
+));
+
 export const NumPyIcon = memo(() => (
   <img src={numpyLogo} alt="NumPy Library" className="w-full h-full" loading="lazy" />
 ));
@@ -223,6 +263,7 @@ export const iconMap = {
   Git: GitIcon,
   VSCode: VSCodeIcon,
   C: CIcon,
+  Godot: GodotIcon,
   Go: GoIcon,
   Python: PythonIcon,
   Node: NodeIcon,
@@ -232,10 +273,17 @@ export const iconMap = {
   Fiber: FiberIcon,
   SQLite: SQLiteIcon,
   MySQL: MySQLIcon,
+  PostgreSQL: PostgreSQLIcon,
   MongoDB: MongoDBIcon,
   Redis: RedisIcon,
   Blender: BlenderIcon,
   Figma: FigmaIcon,
+  Docker: DockerIcon,
+  Vercel: VercelIcon,
+  Netlify: NetlifyIcon,
+  Cloudflare: CloudflareIcon,
+  Postman: PostmanIcon,
+  Sentry: SentryIcon,
   
   Email: EmailIcon,
   LinkedIn: LinkedInIcon,
