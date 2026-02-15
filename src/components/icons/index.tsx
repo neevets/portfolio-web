@@ -214,7 +214,7 @@ export const NetlifyIcon = memo(() => (
 ));
 
 export const CloudflareIcon = memo(() => (
-  <img src={cloudflareLogo} alt="Cloudflare" className="w-full h-full" loading="lazy" />
+  <img src={cloudflareLogo} alt="Cloudflare" className="w-full h-full object-contain" loading="lazy" />
 ));
 
 export const PostmanIcon = memo(() => (
