@@ -56,7 +56,7 @@ export default {
 			},
 			fontFamily: {
 				mono: ['JetBrains Mono', 'Fira Code', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'monospace'],
-				sans: ['Ubuntu', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+				sans: ['Wise Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
 				serif: ['Playfair Display', 'Georgia', 'serif'],
 				dev: ['JetBrains Mono', 'Cascadia Code', 'Fira Code', 'Operator Mono', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'monospace']
 			},
