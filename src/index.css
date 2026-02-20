@@ -461,13 +461,17 @@
   .skill-card-optimized {
     @apply relative p-3 sm:p-4 rounded-xl border border-border/50 backdrop-blur-sm transition-all duration-300 ease-out cursor-pointer;
     background: var(--glass-bg);
-    min-height: 80px;
+    min-height: 88px;
   }
 
   .skill-card-optimized:hover {
     @apply -translate-y-1;
     border-color: var(--skill-color);
     box-shadow: 0 8px 20px hsl(0 0% 0% / 0.1);
+  }
+
+  .dark .skill-card-optimized:hover {
+    box-shadow: 0 10px 24px hsl(0 0% 0% / 0.35);
   }
 
   .skill-card-placeholder {
@@ -636,12 +640,16 @@
 
 @media (max-width: 640px) {
   .skill-card-optimized {
-    min-height: 70px;
-    padding: 0.5rem;
+    min-height: 92px;
+    padding: 0.625rem;
   }
   
   .category-header h3 {
     font-size: 1rem;
+  }
+
+  .skill-card-placeholder {
+    min-height: 92px;
   }
 }
 
