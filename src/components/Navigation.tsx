@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
-import { Menu, X, Home, User, Code, FolderOpen, GraduationCap, Mail } from 'lucide-react';
+import { Menu, X, Home, User, Code, FolderOpen, GraduationCap, Mail, Moon, Sun } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { cn } from '@/lib/utils';
+import { useTheme } from '@/components/providers/theme-provider';
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -10,6 +11,13 @@ export const Navigation = () => {
   const [touchEnd, setTouchEnd] = useState(0);
   const menuRef = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
+  const { theme, setTheme } = useTheme();
+
+  const isDarkMode = theme === 'dark';
+
+  const toggleTheme = () => {
+    setTheme(isDarkMode ? 'light' : 'dark');
+  };
 
   const minSwipeDistance = 50;
 
@@ -109,6 +117,17 @@ export const Navigation = () => {
               </div>
             </div>
 
+            <button
+              onClick={toggleTheme}
+              className={cn(
+                "hidden md:inline-flex items-center justify-center p-2 rounded-xl mr-2",
+                "transition-all duration-300 ease-out hover:bg-muted/50 active:scale-95"
+              )}
+              aria-label="Toggle dark mode"
+            >
+              {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            </button>
+
             <button 
               onClick={() => setIsOpen(!isOpen)}
               className={cn(
@@ -193,6 +212,17 @@ export const Navigation = () => {
             </div>
           </div>
           
+          <div className="px-6 pb-3">
+            <button
+              onClick={toggleTheme}
+              className="w-full flex items-center justify-center gap-2 px-3 py-3 rounded-xl border border-border/40 hover:bg-muted/50 transition-all duration-300"
+              aria-label="Toggle dark mode"
+            >
+              {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+              <span className="font-dev text-sm">{isDarkMode ? 'Light mode' : 'Dark mode'}</span>
+            </button>
+          </div>
+
           <div className="px-6 pb-3">
             <div className="h-1 w-12 bg-muted-foreground/30 rounded-full mx-auto" />
           </div>
