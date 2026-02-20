@@ -10,41 +10,11 @@ const OptimizedAboutSection = memo(() => {
   const featureCards = useMemo(
     () => [
       {
-        icon: (
-          <svg
-            className="w-7 h-7 text-foreground/70 transition-colors duration-500"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1.5}
-              d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-            />
-          </svg>
-        ),
         title: 'Full-Stack Development',
         description:
           'Design and implementation of robust web products using modern frameworks, reusable architecture, and clean coding standards.',
       },
       {
-        icon: (
-          <svg
-            className="w-7 h-7 text-foreground/70 transition-colors duration-500"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1.5}
-              d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
-            />
-          </svg>
-        ),
         title: 'Software Engineering',
         description:
           'Focus on maintainability, performance, and quality through scalable APIs, structured systems, and delivery best practices.',
@@ -54,12 +24,9 @@ const OptimizedAboutSection = memo(() => {
   );
 
   const FeatureCard = memo<{ card: (typeof featureCards)[0] }>(({ card }) => (
-    <div className="border border-border bg-card p-8 text-left h-full flex flex-col rounded-md shadow-sm">
-      <div className="w-12 h-12 mb-5 bg-muted flex items-center justify-center flex-shrink-0 rounded-sm">
-        {card.icon}
-      </div>
-      <h4 className="text-xl font-dev font-light mb-3">{card.title}</h4>
-      <p className="text-muted-foreground font-dev leading-relaxed text-sm flex-grow">{card.description}</p>
+    <div className="border border-border/80 bg-card/85 backdrop-blur-sm p-8 text-left h-full flex flex-col rounded-md shadow-sm">
+      <h4 className="text-xl font-dev font-light mb-3 text-foreground/90">{card.title}</h4>
+      <p className="text-muted-foreground/90 font-dev leading-relaxed text-sm flex-grow">{card.description}</p>
     </div>
   ));
 
@@ -85,12 +52,9 @@ const OptimizedAboutSection = memo(() => {
           <div className="max-w-5xl mx-auto">
             <div className="fade-in-up" style={{ animationDelay: '200ms' }}>
               <div className="space-y-8">
-                <div className="relative border border-border bg-card p-10 lg:p-12 rounded-md">
+                <div className="relative border border-border/80 bg-card/85 backdrop-blur-sm p-10 lg:p-12 rounded-md">
                   <div className="relative z-10 space-y-6 text-center">
-                    <p className="text-sm tracking-[0.18em] uppercase text-muted-foreground font-dev">
-                      Professional Profile
-                    </p>
-                    <h3 className="text-3xl md:text-4xl font-dev font-light">Passionate Full-Stack Developer</h3>
+                    <h3 className="text-3xl md:text-4xl font-dev font-light text-foreground/90">Passionate Full-Stack Developer</h3>
                     <p className="text-lg md:text-xl leading-relaxed text-muted-foreground max-w-3xl mx-auto font-dev">
                       Honduran developer specialized in delivering reliable software products and polished web experiences.
                       I build maintainable solutions with a balance of technical quality, clear communication, and product focus.
