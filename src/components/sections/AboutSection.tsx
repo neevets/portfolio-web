@@ -54,9 +54,6 @@ const OptimizedAboutSection = memo(() => {
               <div className="space-y-8">
                 <div className="relative border border-border bg-card p-10 lg:p-12 rounded-md">
                   <div className="relative z-10 space-y-6 text-center">
-                    <p className="text-sm tracking-[0.18em] uppercase text-muted-foreground font-dev">
-                      Professional Profile
-                    </p>
                     <h3 className="text-3xl md:text-4xl font-dev font-light">Passionate Full-Stack Developer</h3>
                     <p className="text-lg md:text-xl leading-relaxed text-muted-foreground max-w-3xl mx-auto font-dev">
                       Honduran developer specialized in delivering reliable software products and polished web experiences.
