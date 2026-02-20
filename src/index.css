@@ -1,47 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/wise-sans');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    --background: 0 0% 98%;
+    --foreground: 222 25% 10%;
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
-    --primary: 0 0% 0%;
+    --card-foreground: 222 25% 10%;
+    --primary: 222 28% 16%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 0%;
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 20%;
-    --accent: 0 0% 96%;
-    --accent-foreground: 0 0% 0%;
-    --border: 0 0% 90%;
-    --input: 0 0% 96%;
-    --ring: 0 0% 0%;
+    --secondary: 0 0% 84%;
+    --secondary-foreground: 222 25% 10%;
+    --muted: 0 0% 92%;
+    --muted-foreground: 222 10% 35%;
+    --accent: 0 0% 88%;
+    --accent-foreground: 222 25% 10%;
+    --border: 0 0% 82%;
+    --input: 0 0% 94%;
+    --ring: 222 28% 16%;
     --fiverr-green: 146 80% 43%;
     --fiverr-green-foreground: 0 0% 0%;
     --radius: 0.75rem;
     
-    --gradient-bg: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(0 0% 97%) 50%, hsl(0 0% 100%) 100%);
-    --gradient-hero: radial-gradient(ellipse 80% 60% at 50% -10%, hsl(0 0% 0% / 0.03) 0%, transparent 70%);
-    --gradient-mesh: conic-gradient(from 90deg at 50% 50%, hsl(0 0% 0% / 0.01) 0deg, transparent 60deg, hsl(0 0% 0% / 0.01) 120deg, transparent 180deg);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
-    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(0 0% 0% / 0.03) 0%, transparent 70%);
+    --gradient-bg: linear-gradient(135deg, hsl(0 0% 98%) 0%, hsl(0 0% 95%) 50%, hsl(0 0% 100%) 100%);
+    --gradient-hero: radial-gradient(ellipse 80% 60% at 50% -10%, hsl(0 0% 20% / 0.08) 0%, transparent 70%);
+    --gradient-mesh: conic-gradient(from 90deg at 50% 50%, hsl(222 25% 10% / 0.05) 0deg, transparent 60deg, hsl(0 0% 70% / 0.07) 120deg, transparent 180deg);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(0 0% 96%) 100%);
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(222 25% 10% / 0.12) 0%, transparent 70%);
     
-    --dot-pattern: radial-gradient(circle at 50% 50%, hsl(0 0% 0% / 0.08) 1px, transparent 1px);
+    --dot-pattern: radial-gradient(circle at 50% 50%, hsl(222 25% 10% / 0.12) 1px, transparent 1px);
     --dot-size: 48px 48px;
     
-    --shadow-sm: 0 1px 3px hsl(0 0% 0% / 0.1);
-    --shadow: 0 2px 8px hsl(0 0% 0% / 0.1);
-    --shadow-md: 0 4px 12px hsl(0 0% 0% / 0.12);
-    --shadow-lg: 0 8px 24px hsl(0 0% 0% / 0.15);
-    --shadow-xl: 0 16px 48px hsl(0 0% 0% / 0.2);
-    --shadow-glow: 0 0 40px hsl(0 0% 0% / 0.1);
+    --shadow-sm: 0 1px 3px hsl(222 25% 10% / 0.12);
+    --shadow: 0 2px 8px hsl(222 25% 10% / 0.14);
+    --shadow-md: 0 4px 12px hsl(222 25% 10% / 0.18);
+    --shadow-lg: 0 8px 24px hsl(222 25% 10% / 0.22);
+    --shadow-xl: 0 16px 48px hsl(222 25% 10% / 0.28);
+    --shadow-glow: 0 0 40px hsl(222 25% 10% / 0.18);
     
-    --glass-bg: hsl(0 0% 100% / 0.9);
-    --glass-border: hsl(0 0% 0% / 0.08);
+    --glass-bg: hsl(0 0% 100% / 0.92);
+    --glass-border: hsl(0 0% 65% / 0.35);
   }
 }
 
@@ -62,7 +62,7 @@
   
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Wise Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background: hsl(var(--background));
     margin: 0;
     padding: 0;
