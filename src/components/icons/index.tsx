@@ -212,7 +212,7 @@ export const DockerIcon = memo(() => (
 ));
 
 export const VercelIcon = memo(() => (
-  <img src={vercelLogo} alt="Vercel" className="w-full h-full" loading="lazy" />
+  <img src={vercelLogo} alt="Vercel" className="w-full h-full dark:invert" loading="lazy" />
 ));
 
 export const NetlifyIcon = memo(() => (
