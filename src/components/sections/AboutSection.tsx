@@ -24,9 +24,9 @@ const OptimizedAboutSection = memo(() => {
   );
 
   const FeatureCard = memo<{ card: (typeof featureCards)[0] }>(({ card }) => (
-    <div className="border border-border bg-card p-8 text-left h-full flex flex-col rounded-md shadow-sm">
-      <h4 className="text-xl font-dev font-light mb-3">{card.title}</h4>
-      <p className="text-muted-foreground font-dev leading-relaxed text-sm flex-grow">{card.description}</p>
+    <div className="border border-border/80 bg-card/85 backdrop-blur-sm p-8 text-left h-full flex flex-col rounded-md shadow-sm">
+      <h4 className="text-xl font-dev font-light mb-3 text-foreground/90">{card.title}</h4>
+      <p className="text-muted-foreground/90 font-dev leading-relaxed text-sm flex-grow">{card.description}</p>
     </div>
   ));
 
@@ -52,9 +52,9 @@ const OptimizedAboutSection = memo(() => {
           <div className="max-w-5xl mx-auto">
             <div className="fade-in-up" style={{ animationDelay: '200ms' }}>
               <div className="space-y-8">
-                <div className="relative border border-border bg-card p-10 lg:p-12 rounded-md">
+                <div className="relative border border-border/80 bg-card/85 backdrop-blur-sm p-10 lg:p-12 rounded-md">
                   <div className="relative z-10 space-y-6 text-center">
-                    <h3 className="text-3xl md:text-4xl font-dev font-light">Passionate Full-Stack Developer</h3>
+                    <h3 className="text-3xl md:text-4xl font-dev font-light text-foreground/90">Passionate Full-Stack Developer</h3>
                     <p className="text-lg md:text-xl leading-relaxed text-muted-foreground max-w-3xl mx-auto font-dev">
                       Honduran developer specialized in delivering reliable software products and polished web experiences.
                       I build maintainable solutions with a balance of technical quality, clear communication, and product focus.
