@@ -41,7 +41,7 @@ const SkillCard = memo<{
 
   return (
     <div
-      className="skill-card-optimized group opacity-0 animate-skill-fade-in"
+      className={`skill-card-optimized group opacity-0 animate-skill-fade-in ${skill.name === 'Vercel' ? 'vercel-skill-card' : ''}`}
       style={{ 
         '--skill-color': styleProps.skillColor,
       } as React.CSSProperties & { '--skill-color': string }}
@@ -61,7 +61,7 @@ const SkillCard = memo<{
         </h4>
         <div className="opacity-100 sm:opacity-0 transform translate-y-0 sm:translate-y-2 sm:group-hover:opacity-100 sm:group-hover:translate-y-0 transition-all duration-300 ease-out">
           <span 
-            className="inline-block px-2 py-1 rounded-full text-xs font-medium border backdrop-blur-sm"
+            className={`inline-block px-2 py-1 rounded-full text-xs font-medium border backdrop-blur-sm ${skill.name === 'Vercel' ? 'vercel-level-pill' : ''}`}
             style={{ 
               borderColor: `${styleProps.skillColor}50`,
               backgroundColor: `${styleProps.skillColor}15`,

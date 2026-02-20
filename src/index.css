@@ -474,6 +474,17 @@
     box-shadow: 0 10px 24px hsl(0 0% 0% / 0.35);
   }
 
+
+  .dark .vercel-skill-card {
+    --skill-color: hsl(0 0% 88%) !important;
+  }
+
+  .dark .vercel-level-pill {
+    color: hsl(0 0% 88%) !important;
+    border-color: hsl(0 0% 88% / 0.35) !important;
+    background-color: hsl(0 0% 88% / 0.12) !important;
+  }
+
   .skill-card-placeholder {
     @apply relative p-3 sm:p-4 rounded-xl border border-transparent;
     background: transparent;
@@ -646,6 +657,17 @@
   
   .category-header h3 {
     font-size: 1rem;
+  }
+
+
+  .dark .vercel-skill-card {
+    --skill-color: hsl(0 0% 88%) !important;
+  }
+
+  .dark .vercel-level-pill {
+    color: hsl(0 0% 88%) !important;
+    border-color: hsl(0 0% 88% / 0.35) !important;
+    background-color: hsl(0 0% 88% / 0.12) !important;
   }
 
   .skill-card-placeholder {
