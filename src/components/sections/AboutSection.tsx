@@ -10,14 +10,14 @@ const OptimizedAboutSection = memo(() => {
   const featureCards = useMemo(
     () => [
       {
-        title: 'Full-Stack Development',
+        title: 'Growth Through Technology',
         description:
-          'Design and implementation of robust web products using modern frameworks, reusable architecture, and clean coding standards.',
+          'I am a Spanish student passionate about programming, always excited to learn new technologies, build projects, and explore innovative ideas that challenge me to grow.',
       },
       {
-        title: 'Software Engineering',
+        title: 'Values, Discipline & Teamwork',
         description:
-          'Focus on maintainability, performance, and quality through scalable APIs, structured systems, and delivery best practices.',
+          'I consider myself principled, friendly, disciplined, and responsible. I enjoy creating a positive work environment, adapting quickly to new situations, and consistently giving my best in every project.',
       },
     ],
     []
@@ -54,10 +54,12 @@ const OptimizedAboutSection = memo(() => {
               <div className="space-y-8">
                 <div className="relative border border-border/80 bg-card/85 backdrop-blur-sm p-10 lg:p-12 rounded-md">
                   <div className="relative z-10 space-y-6 text-center">
-                    <h3 className="text-3xl md:text-4xl font-dev font-light text-foreground/90">Passionate Full-Stack Developer</h3>
+                    <h3 className="text-3xl md:text-4xl font-dev font-light text-foreground/90">Curious Developer with a Creative Mindset</h3>
                     <p className="text-lg md:text-xl leading-relaxed text-muted-foreground max-w-3xl mx-auto font-dev">
-                      Honduran developer specialized in delivering reliable software products and polished web experiences.
-                      I build maintainable solutions with a balance of technical quality, clear communication, and product focus.
+                      I am a Spanish student passionate about programming. I enjoy learning new technologies,
+                      creating projects, and exploring innovative ideas. I am proactive, curious, and always
+                      looking to improve my skills while staying up to date with current tech trends. When I am
+                      not coding, I enjoy experimenting with design and developing creative concepts.
                     </p>
                   </div>
                 </div>
@@ -67,7 +69,6 @@ const OptimizedAboutSection = memo(() => {
                     <FeatureCard key={card.title} card={card} />
                   ))}
                 </div>
-
               </div>
             </div>
           </div>
