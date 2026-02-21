@@ -474,6 +474,15 @@
     box-shadow: 0 10px 24px hsl(0 0% 0% / 0.35);
   }
 
+  .vercel-skill-card {
+    --skill-color: hsl(0 0% 0%) !important;
+  }
+
+  .vercel-level-pill {
+    color: hsl(0 0% 8%) !important;
+    border-color: hsl(0 0% 0% / 0.35) !important;
+    background-color: hsl(0 0% 0% / 0.08) !important;
+  }
 
   .dark .vercel-skill-card {
     --skill-color: hsl(0 0% 88%) !important;
