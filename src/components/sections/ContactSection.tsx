@@ -66,7 +66,7 @@ const ContactSection = memo(() => {
       <div className="absolute inset-0 dot-pattern opacity-20" />
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
-        <h2 className="section-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-dev font-light mb-6 sm:mb-8">Let's Connect</h2>
+        <h2 className="section-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-dev font-light mb-6 sm:mb-8">Let's Talk</h2>
 
         <p className="text-base sm:text-lg md:text-xl font-dev text-muted-foreground mb-12 sm:mb-14 md:mb-16">
           Ready to collaborate? Let's build something amazing together.
