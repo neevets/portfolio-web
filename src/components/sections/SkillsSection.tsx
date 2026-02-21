@@ -27,13 +27,9 @@ const SkillCard = memo<{
   skillIndex: number;
   isVisible: boolean;
 }>(({ skill, isVisible }) => {
-  const styleProps = useMemo(() => {
-    const skillColor = skill.color;
-    return {
-      skillColor,
-      iconColor: skillColor,
-    };
-  }, [skill.color, skill.name]);
+  const styleProps = useMemo(() => ({
+    skillColor: 'hsl(var(--muted-foreground))',
+  }), []);
 
   if (!isVisible) {
     return <div className="skill-card-placeholder" style={{ minHeight: '90px' }} />;
@@ -49,7 +45,7 @@ const SkillCard = memo<{
       <div className="relative">
         <div 
           className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto mb-2 sm:mb-3 flex items-center justify-center text-muted-foreground transition-all duration-300 sm:group-hover:scale-110 relative z-10"
-          style={{ color: styleProps.iconColor }}
+          style={{ color: styleProps.skillColor }}
         >
           <PreloadedSkillIcon name={skill.icon} />
         </div>
@@ -63,8 +59,8 @@ const SkillCard = memo<{
           <span 
             className={`inline-flex items-center justify-center min-w-[88px] px-2 py-1 rounded-full text-xs font-medium text-foreground dark:text-foreground border backdrop-blur-sm ${skill.name === 'Vercel' ? 'vercel-level-pill' : ''}`}
             style={{ 
-              borderColor: `${styleProps.skillColor}50`,
-              backgroundColor: `${styleProps.skillColor}15`,
+              borderColor: 'hsl(var(--muted-foreground) / 0.35)',
+              backgroundColor: 'hsl(var(--muted) / 0.6)',
             }}
           >
             {skill.level}
