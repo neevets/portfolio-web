@@ -8,6 +8,7 @@ export const skillsData = {
   'Frameworks & Libraries': [
     { name: 'Django', icon: 'Django', color: 'hsl(120, 48%, 20%)', level: 'Mid level' },
     { name: 'FastAPI', icon: 'FastAPI', color: 'hsl(173, 80%, 40%)', level: 'Mid level' },
+    { name: 'NestJS', icon: 'NestJS', color: 'hsl(347, 75%, 51%)', level: 'Mid level' },
     { name: 'React', icon: 'React', color: 'hsl(193, 95%, 68%)', level: 'Trainee' },
     { name: 'Tailwind', icon: 'Tailwind', color: 'hsl(198, 93%, 60%)', level: 'Trainee' },
   ],
