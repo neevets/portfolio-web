@@ -133,7 +133,8 @@ const ProjectsSection = memo(() => {
           <p className="text-muted-foreground font-dev text-base sm:text-lg max-w-2xl mx-auto fade-in-up mb-8" style={{animationDelay: '200ms'}}>
             Production-ready solutions built with modern technologies
           </p>
-
+          
+          {/* ESTE BOTÓN NO SE TOCA */}
           <div className="fade-in-up flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center" style={{animationDelay: '400ms'}}>
             <a
               href="https://status.neevets.website"
