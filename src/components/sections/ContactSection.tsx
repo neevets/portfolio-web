@@ -8,7 +8,6 @@ const ContactCard = memo<{ link: { label: string; value: string; href: string; i
     <a
       href={link.href}
       target="_blank"
-      rel="noopener noreferrer"
       className="group relative overflow-hidden bg-background/80 border border-border/50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
     >
       <div className="p-6 relative z-10">
@@ -57,7 +56,7 @@ const ContactSection = memo(() => {
   const handleSendMessage = useCallback(() => {
     setPaperFlying(true);
     setTimeout(() => {
-      window.open('mailto:contact@neevets.website', '_blank', 'noopener,noreferrer');
+      window.open('mailto:contact@neevets.website', '_blank');
       setPaperFlying(false);
     }, 600);
   }, []);
