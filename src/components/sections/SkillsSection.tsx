@@ -56,13 +56,14 @@ const SkillCard = memo<{
       </div>
       
       <div className="text-center">
-        <h4 className="text-xs sm:text-sm font-dev font-medium text-foreground sm:group-hover:text-foreground transition-colors duration-300 mb-1 sm:mb-2 flex items-center justify-center min-h-[1.5rem] z-10 relative">
+        <h4 className="text-xs sm:text-sm font-dev font-medium text-muted-foreground sm:group-hover:text-foreground transition-colors duration-300 mb-1 sm:mb-2 flex items-center justify-center min-h-[1.5rem] z-10 relative">
           {skill.name}
         </h4>
         <div className="opacity-100 sm:opacity-0 transform translate-y-0 sm:translate-y-2 sm:group-hover:opacity-100 sm:group-hover:translate-y-0 transition-all duration-300 ease-out">
           <span 
-            className={`inline-flex items-center justify-center min-w-[88px] px-2 py-1 rounded-full text-xs font-medium text-foreground/90 dark:text-foreground/90 border backdrop-blur-sm ${skill.name === 'Vercel' ? 'vercel-level-pill' : ''}`}
+            className={`inline-flex items-center justify-center min-w-[88px] px-2 py-1 rounded-full text-xs font-medium border backdrop-blur-sm ${skill.name === 'Vercel' ? 'vercel-level-pill' : ''}`}
             style={{ 
+              color: styleProps.skillColor,
               borderColor: `${styleProps.skillColor}50`,
               backgroundColor: `${styleProps.skillColor}15`,
             }}
