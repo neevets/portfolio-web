@@ -132,13 +132,13 @@ const SkillsSection = () => {
           {allSkills.map(([category, skills], categoryIndex) => (
             <div key={category} className="skills-category-advanced">
               <div className="category-header">
-                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-dev font-light text-foreground mr-4 sm:mr-6">
+                <h3 className="text-base min-[380px]:text-lg sm:text-xl md:text-2xl lg:text-3xl font-dev font-light text-foreground mr-3 sm:mr-6 leading-tight break-words">
                   {category}
                 </h3>
                 <div className="flex-1 h-px bg-gradient-to-r from-foreground/50 to-transparent" />
               </div>
 
-              <div className="grid grid-cols-2 min-[420px]:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-2 sm:gap-3 md:gap-4">
+              <div className="grid grid-cols-[repeat(auto-fit,minmax(145px,1fr))] sm:grid-cols-[repeat(auto-fit,minmax(155px,1fr))] lg:grid-cols-6 xl:grid-cols-7 gap-2 sm:gap-3 md:gap-4">
                 {skills.map((skill, index) => (
                   <SkillCard
                     key={skill.name}
