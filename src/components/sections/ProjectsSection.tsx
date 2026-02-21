@@ -48,7 +48,6 @@ const ProjectCard = memo<{ project: Project; index: number; isVisible: boolean }
           <a
             href={project.repo}
             target="_blank"
-            rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 border border-border bg-background text-foreground rounded-lg font-dev font-medium hover:scale-105 hover:bg-muted/50 transition-all duration-300 group"
           >
             View source
@@ -61,7 +60,6 @@ const ProjectCard = memo<{ project: Project; index: number; isVisible: boolean }
             <a
               href={project.productionUrl}
               target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex items-center px-6 py-3 bg-foreground text-background rounded-lg font-dev font-medium hover:scale-105 transition-all duration-300 group"
             >
               Explore Project
@@ -139,7 +137,6 @@ const ProjectsSection = memo(() => {
             <a
               href="https://status.neevets.website"
               target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border border-border bg-background text-foreground rounded-xl font-dev font-medium hover:scale-105 hover:bg-muted/50 transition-all duration-300 group shadow-md"
             >
               Status
@@ -148,7 +145,6 @@ const ProjectsSection = memo(() => {
             <a
               href="https://github.com/neevets"
               target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-foreground text-background rounded-xl font-dev font-medium hover:scale-105 transition-all duration-300 group shadow-md"
             >
               View All Projects
@@ -157,7 +153,6 @@ const ProjectsSection = memo(() => {
             <a
               href="https://fiverr.com/neevetsio"
               target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-green-600 text-white rounded-xl font-dev font-medium hover:scale-105 transition-all duration-300 group shadow-xl shadow-green-500/20"
             >
               Hire me on Fiverr
