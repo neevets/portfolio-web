@@ -1,7 +1,7 @@
 import { memo } from 'react';
 
 export const JavaScriptIcon = memo(() => (
-  <svg className="w-full h-full" viewBox="0 0 48 48">
+  <svg className="w-full h-full" viewBox="6 6 36 36">
     <path fill="#ffd600" d="M6,42V6h36v36H6z" />
     <path
       fill="#000001"
@@ -74,7 +74,7 @@ export const GodotIcon = memo(() => (
 ));
 
 export const GoIcon = memo(() => (
-  <img src={goLogo} alt="Go Programming Language" className="w-full h-full" loading="lazy" />
+  <img src={goLogo} alt="Go Programming Language" className="w-full h-full scale-125" loading="lazy" />
 ));
 
 export const FastAPIIcon = memo(() => (
