@@ -27,13 +27,9 @@ const SkillCard = memo<{
   skillIndex: number;
   isVisible: boolean;
 }>(({ skill, isVisible }) => {
-  const styleProps = useMemo(() => {
-    const skillColor = skill.color;
-    return {
-      skillColor,
-      iconColor: skillColor,
-    };
-  }, [skill.color, skill.name]);
+  const styleProps = useMemo(() => ({
+    skillColor: 'hsl(var(--muted-foreground))',
+  }), []);
 
   if (!isVisible) {
     return <div className="skill-card-placeholder" style={{ minHeight: '90px' }} />;
@@ -49,7 +45,7 @@ const SkillCard = memo<{
       <div className="relative">
         <div 
           className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto mb-2 sm:mb-3 flex items-center justify-center text-muted-foreground transition-all duration-300 sm:group-hover:scale-110 relative z-10"
-          style={{ color: styleProps.iconColor }}
+          style={{ color: styleProps.skillColor }}
         >
           <PreloadedSkillIcon name={skill.icon} />
         </div>

@@ -52,7 +52,7 @@ const HeroSection = memo(() => {
               <div className="absolute inset-0 w-3 h-3 bg-green-400 rounded-full animate-ping" />
               <div className="absolute -inset-1 w-5 h-5 bg-green-500/30 rounded-full animate-pulse" />
             </div>
-            <p className="text-base sm:text-lg font-dev text-foreground font-medium animate-fade-in-up transition-all duration-700 ease-out" style={{ animationDelay: '1s' }}>
+            <p className="text-base sm:text-lg font-dev text-muted-foreground font-medium animate-fade-in-up transition-all duration-700 ease-out" style={{ animationDelay: '1s' }}>
               Ubicated in Spain
             </p>
           </div>
