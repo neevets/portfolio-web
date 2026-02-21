@@ -98,7 +98,7 @@ const ProjectsSection = memo(() => {
       description: "Advanced anti-raid Discord bot with automated moderation, real-time threat detection, and comprehensive server protection systems.",
       repo: "https://github.com/neevets/drew-bot",
       productionUrl: "https://drew.xyz",
-      tech: ["Python", "MongoDB", "Sentry", "discord.py"],
+      tech: ["Python", "PostgreSQL", "Redis", "Sentry", "discord.py"],
       category: "Security",
       status: "Production"
     },
@@ -107,7 +107,7 @@ const ProjectsSection = memo(() => {
       description: "Security-focused bot built in Rust, designed for automated threat detection, moderation hardening, and resilient incident response workflows.",
       repo: "https://github.com/neevets/guroi-bot",
       productionUrl: "https://github.com/neevets/guroi-bot",
-      tech: ["Rust", "Tokio", "Serenity", "Sentry"],
+      tech: ["Rust", "Tokio", "Serenity"],
       category: "Security",
       status: "Production"
     }
