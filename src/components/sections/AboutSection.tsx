@@ -56,9 +56,8 @@ const AboutSection = memo(() => {
                   <div className="relative z-10 space-y-6 text-center">
                     <h3 className="text-3xl md:text-4xl font-dev font-light text-foreground/90"> Who am I?</h3>
                     <p className="text-lg md:text-xl leading-relaxed text-muted-foreground max-w-3xl mx-auto font-dev">
-                      I am a Honduran student living in Spain, passionate about programming. I enjoy learning new technologies,
-                      creating projects, and exploring innovative ideas. I am proactive, curious, and always
-                      looking to improve my skills while staying up to date with current tech trends.
+                      I am a Honduran student living in Spain, passionate about programming.
+                      Looking to improve my skills while staying up to date with current tech trends.
                     </p>
                   </div>
                 </div>
