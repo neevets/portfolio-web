@@ -712,3 +712,16 @@
     min-height: 80px;
   }
 }
+
+@keyframes professional-loader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-professional-loader {
+  animation: professional-loader-spin 0.9s linear infinite;
+}
