@@ -13,17 +13,24 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 const INITIAL_LOADER_DURATION_MS = 3000;
+const LOADER_FADE_OUT_DURATION_MS = 450;
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoaderVisible, setIsLoaderVisible] = useState(true);
+  const [shouldRenderLoader, setShouldRenderLoader] = useState(true);
 
   useEffect(() => {
-    const timer = window.setTimeout(() => {
-      setIsLoading(false);
+    const hideLoaderTimer = window.setTimeout(() => {
+      setIsLoaderVisible(false);
     }, INITIAL_LOADER_DURATION_MS);
 
+    const unmountLoaderTimer = window.setTimeout(() => {
+      setShouldRenderLoader(false);
+    }, INITIAL_LOADER_DURATION_MS + LOADER_FADE_OUT_DURATION_MS);
+
     return () => {
-      window.clearTimeout(timer);
+      window.clearTimeout(hideLoaderTimer);
+      window.clearTimeout(unmountLoaderTimer);
     };
   }, []);
 
@@ -31,22 +38,29 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
       <ThemeProvider defaultTheme="system">
         <TooltipProvider>
-          {isLoading ? (
-            <InitialLoader />
-          ) : (
-            <>
-              <Toaster />
-              <Sonner />
-              <BrowserRouter>
-                <Routes>
-                  <Route path="/" element={<Portfolio />} />
-                  <Route path="*" element={<NotFound />} />
-                </Routes>
-              </BrowserRouter>
-              <Analytics />
-              <SpeedInsights />
-            </>
-          )}
+          <div
+            className={`transition-opacity duration-500 ${isLoaderVisible ? "opacity-0" : "opacity-100"}`}
+            aria-hidden={isLoaderVisible}
+          >
+            <Toaster />
+            <Sonner />
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<Portfolio />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </BrowserRouter>
+            <Analytics />
+            <SpeedInsights />
+          </div>
+
+          {shouldRenderLoader ? (
+            <div
+              className={`transition-opacity duration-500 ${isLoaderVisible ? "opacity-100" : "pointer-events-none opacity-0"}`}
+            >
+              <InitialLoader />
+            </div>
+          ) : null}
         </TooltipProvider>
       </ThemeProvider>
     </QueryClientProvider>
