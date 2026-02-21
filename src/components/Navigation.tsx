@@ -88,8 +88,8 @@ export const Navigation = () => {
     { label: 'About Me', id: 'about', icon: User },
     { label: 'Skills', id: 'skills', icon: Code },
     { label: 'Projects', id: 'projects', icon: FolderOpen },
-    { label: 'Education', id: 'courses', icon: GraduationCap },
-    { label: 'Contact', id: 'contact', icon: Mail }
+    { label: 'Certificates', id: 'courses', icon: GraduationCap },
+    { label: 'Work With Me', id: 'contact', icon: Mail }
   ];
 
   return (

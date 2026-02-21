@@ -48,6 +48,7 @@ import goLogo from '@/assets/go-logo.svg';
 import fastapiLogo from '@/assets/fastapi-logo.svg';
 import sqliteLogo from '@/assets/sqlite-logo.svg';
 import mongodbLogo from '@/assets/mongodb-logo.svg';
+import cassandraLogo from '@/assets/cassandra-logo.svg';
 import redisLogo from '@/assets/redis-logo.svg';
 import cmakeLogo from '@/assets/cmake-logo.svg';
 import puttyLogo from '@/assets/putty-logo.svg';
@@ -97,6 +98,10 @@ export const MongoDBIcon = memo(() => (
 
 export const RedisIcon = memo(() => (
   <img src={redisLogo} alt="Redis Database" className="w-full h-full" loading="lazy" />
+));
+
+export const CassandraIcon = memo(() => (
+  <img src={cassandraLogo} alt="Cassandra Database" className="w-full h-full object-contain scale-125" loading="lazy" />
 ));
 
 export const EmailIcon = memo(() => (
@@ -172,7 +177,7 @@ export const NetlifyIcon = memo(() => (
 ));
 
 export const CloudflareIcon = memo(() => (
-  <img src={cloudflareLogo} alt="Cloudflare" className="w-full h-full object-contain" loading="lazy" />
+  <img src={cloudflareLogo} alt="Cloudflare" className="w-full h-full object-contain scale-110" loading="lazy" />
 ));
 
 export const PostmanIcon = memo(() => (
@@ -219,6 +224,7 @@ export const iconMap = {
   MySQL: MySQLIcon,
   PostgreSQL: PostgreSQLIcon,
   MongoDB: MongoDBIcon,
+  Cassandra: CassandraIcon,
   Redis: RedisIcon,
   Docker: DockerIcon,
   Vercel: VercelIcon,
