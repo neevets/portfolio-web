@@ -12,7 +12,7 @@ const OptimizedAboutSection = memo(() => {
       {
         title: 'Growth Through Technology',
         description:
-          'I am a Spanish student passionate about programming, always excited to learn new technologies, build projects, and explore innovative ideas that challenge me to grow.',
+          'I am always excited to learn new technologies, build projects, and explore innovative ideas that challenge me to grow.',
       },
       {
         title: 'Values, Discipline & Teamwork',
@@ -54,9 +54,9 @@ const OptimizedAboutSection = memo(() => {
               <div className="space-y-8">
                 <div className="relative border border-border/80 bg-card/85 backdrop-blur-sm p-10 lg:p-12 rounded-md">
                   <div className="relative z-10 space-y-6 text-center">
-                    <h3 className="text-3xl md:text-4xl font-dev font-light text-foreground/90">Curious Developer with a Creative Mindset</h3>
+                    <h3 className="text-3xl md:text-4xl font-dev font-light text-foreground/90"> Who i am?</h3>
                     <p className="text-lg md:text-xl leading-relaxed text-muted-foreground max-w-3xl mx-auto font-dev">
-                      I am a Spanish student passionate about programming. I enjoy learning new technologies,
+                      I am a Honduran student living in Spain, passionate about programming. I enjoy learning new technologies,
                       creating projects, and exploring innovative ideas. I am proactive, curious, and always
                       looking to improve my skills while staying up to date with current tech trends. When I am
                       not coding, I enjoy experimenting with design and developing creative concepts.
