@@ -58,7 +58,7 @@ const EducationSection = memo(() => (
   <section id="courses" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 relative overflow-hidden" style={{ scrollMarginTop: '5rem' }}>
     <div className="max-w-7xl mx-auto relative">
       <div className="text-center mb-16 md:mb-20 fade-in-up">
-        <h2 className="section-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-dev font-light mb-6 text-foreground leading-tight">Education</h2>
+        <h2 className="section-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-dev font-light mb-6 text-foreground leading-tight">Certificates</h2>
         <p className="text-muted-foreground font-dev text-base sm:text-lg max-w-2xl mx-auto">Continuous evolution through structured learning and hands-on experience</p>
       </div>
       <div className="max-w-4xl mx-auto">
