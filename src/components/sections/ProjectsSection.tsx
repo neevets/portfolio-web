@@ -95,7 +95,7 @@ const ProjectsSection = memo(() => {
       title: "Drew Bot",
       description: "Advanced anti-raid Discord bot with automated moderation, real-time threat detection, and comprehensive server protection systems.",
       repo: "https://github.com/neevets/drew-bot",
-      productionUrl: "https://drew.xyz",
+      productionUrl: "https://drewbot.site",
       tech: ["Python", "PostgreSQL", "Redis", "Sentry", "discord.py"],
       category: "Security",
       status: "Production"
