@@ -16,6 +16,7 @@ export const skillsData = {
     { name: 'PostgreSQL', icon: 'PostgreSQL', color: 'hsl(205, 81%, 33%)', level: 'Mid level' },
     { name: 'SQLite', icon: 'SQLite', color: 'hsl(214, 73%, 51%)', level: 'Senior' },
     { name: 'MongoDB', icon: 'MongoDB', color: 'hsl(120, 48%, 20%)', level: 'Mid level' },
+    { name: 'Cassandra', icon: 'Cassandra', color: 'hsl(198, 83%, 38%)', level: 'Junior' },
     { name: 'Redis', icon: 'Redis', color: 'hsl(12, 100%, 50%)', level: 'Junior' },
   ],
   'Tools & Utils': [
