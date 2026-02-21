@@ -689,6 +689,24 @@
   }
 }
 
+
+@media (min-width: 375px) and (max-width: 430px) {
+  #skills .skill-card-optimized {
+    min-height: 104px;
+    padding: 0.7rem;
+  }
+
+  #skills .skill-card-optimized h4 {
+    font-size: 0.95rem;
+    line-height: 1.25rem;
+  }
+
+  #skills .skill-card-optimized span {
+    min-width: 82px;
+    font-size: 0.7rem;
+  }
+}
+
 @media (min-width: 641px) and (max-width: 1024px) {
   .skill-card-optimized {
     min-height: 80px;
