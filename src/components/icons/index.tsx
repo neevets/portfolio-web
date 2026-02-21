@@ -27,12 +27,6 @@ export const TailwindIcon = memo(() => (
   </svg>
 ));
 
-export const VueIcon = memo(() => (
-  <svg className="w-full h-full" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M24,1.61H14.06L12,5.16,9.94,1.61H0L12,22.39ZM12,14.08,5.16,2.23H9.59L12,6.41l2.41-4.18h4.43Z"/>
-  </svg>
-));
-
 export const GitIcon = memo(() => (
   <svg className="w-full h-full" viewBox="0 0 24 24" fill="currentColor">
     <path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187"/>
@@ -48,7 +42,6 @@ export const VSCodeIcon = memo(() => (
 
 import goLogo from '@/assets/go-logo.svg';
 import fastapiLogo from '@/assets/fastapi-logo.svg';
-import fiberLogo from '@/assets/fiber-logo.svg';
 import sqliteLogo from '@/assets/sqlite-logo.svg';
 import mongodbLogo from '@/assets/mongodb-logo.svg';
 import redisLogo from '@/assets/redis-logo.svg';
@@ -84,10 +77,6 @@ export const FastAPIIcon = memo(() => (
   <img src={fastapiLogo} alt="FastAPI Framework" className="w-full h-full" loading="lazy" />
 ));
 
-export const FiberIcon = memo(() => (
-  <img src={fiberLogo} alt="Fiber Go Framework" className="w-full h-full" loading="lazy" />
-));
-
 export const SQLiteIcon = memo(() => (
   <img src={sqliteLogo} alt="SQLite Database" className="w-full h-full" loading="lazy" />
 ));
@@ -98,23 +87,6 @@ export const MongoDBIcon = memo(() => (
 
 export const RedisIcon = memo(() => (
   <img src={redisLogo} alt="Redis Database" className="w-full h-full" loading="lazy" />
-));
-
-export const BlenderIcon = memo(() => (
-  <svg viewBox="0 0 24 24" className="w-full h-full" aria-label="Blender 3D Software" role="img">
-    <path d="M10.8 2.4 3 10.2l2.4 2.4 2.2-2.2h2.8a5.6 5.6 0 1 1-4.6 8.8l-2 2A8 8 0 1 0 11 8h-1L13.2 4.8z" fill="#F5792A" />
-    <circle cx="14.6" cy="13.6" r="2.2" fill="#1F6FFF" />
-  </svg>
-));
-
-export const FigmaIcon = memo(() => (
-  <svg viewBox="0 0 24 24" className="w-full h-full" aria-label="Figma Design Tool" role="img">
-    <rect x="6" y="2" width="6" height="6" rx="3" fill="#F24E1E" />
-    <rect x="12" y="2" width="6" height="6" rx="3" fill="#FF7262" />
-    <rect x="6" y="8" width="6" height="6" rx="3" fill="#A259FF" />
-    <circle cx="15" cy="11" r="3" fill="#1ABCFE" />
-    <rect x="6" y="14" width="6" height="6" rx="3" fill="#0ACF83" />
-  </svg>
 ));
 
 export const EmailIcon = memo(() => (
@@ -132,18 +104,6 @@ export const LinkedInIcon = memo(() => (
 export const DiscordIcon = memo(() => (
   <svg className="w-full h-full" fill="currentColor" viewBox="0 0 24 24">
     <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.210.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.120.098.246.191.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418Z"/>
-  </svg>
-));
-
-export const RedditIcon = memo(() => (
-  <svg className="w-full h-full" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
-  </svg>
-));
-
-export const TwitterIcon = memo(() => (
-  <svg className="w-full h-full" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
   </svg>
 ));
 
@@ -168,24 +128,6 @@ export const PythonIcon = memo(() => (
 export const NodeIcon = memo(() => (
   <svg viewBox="0 0 256 289" className="w-full h-full">
     <path d="M127.999999 288.463771c-3.975-.112-7.748-.928-11.295-2.429l-35.958-21.253c-5.363-3.004-2.744-4.068-.976-4.485 7.156-2.486 8.608-3.056 16.232-7.389.795-.452 1.846-.281 2.671.204l27.627 16.399c1.003.563 2.417.563 3.34 0l107.708-62.16c1.003-.583 1.647-1.753 1.647-2.959V80.019c0-1.233-.644-2.377-1.674-2.988L129.72 14.925c-.999-.563-2.33-.563-3.358 0L18.708 77.031c-1.055.611-1.725 1.783-1.725 2.96v124.321c0 1.206.67 2.349 1.698 2.932l29.505 17.052c16.008 8.006 25.81-1.423 25.81-10.9V91.39c0-1.732 1.395-3.099 3.125-3.099h13.635c1.703 0 3.126 1.367 3.126 3.099v122.007c0 21.366-11.635 33.627-31.889 33.627-6.223 0-11.127 0-24.791-6.732L8.957 224.078C3.241 220.758 0 214.62 0 208.002V83.681c0-6.617 3.241-12.754 8.957-16.075L116.665 5.473c5.547-3.143 12.932-3.143 18.423 0l107.708 62.133c5.716 3.293 8.93 9.458 8.93 16.075v124.321c0 6.618-3.214 12.729-8.93 16.05l-107.708 62.16c-2.799 1.621-5.964 2.459-9.185 2.514l.056-.027zm33.297-85.521c-47.132 0-57.001-21.648-57.001-39.813 0-1.731 1.394-3.126 3.125-3.126h13.917c1.563 0 2.858 1.114 3.098 2.63 2.094 14.166 8.355 21.309 36.89 21.309 22.685 0 32.357-5.137 32.357-17.194 0-6.954-2.744-12.108-38.032-15.569-29.505-2.914-47.75-9.43-47.75-33.027 0-21.76 18.339-34.711 49.076-34.711 34.542 0 51.637 11.974 53.813 37.709.084.958-.254 1.873-.901 2.546-.647.618-1.535.984-2.461.984h-13.972c-1.449 0-2.744-1.03-2.97-2.432-3.293-14.674-11.324-19.364-33.482-19.364-24.678 0-27.564 8.607-27.564 15.063 0 7.842 3.392 10.111 36.89 14.532 33.103 4.372 48.839 10.588 48.839 33.886 0 23.514-19.624 36.982-53.84 36.982l.028.028z" fill="#539E43"/>
-  </svg>
-));
-
-export const ViteIcon = memo(() => (
-  <svg viewBox="0 0 256 257" className="w-full h-full">
-    <defs>
-      <linearGradient x1="-.828%" y1="7.652%" x2="57.636%" y2="78.411%" id="vite-a">
-        <stop stopColor="#41D1FF" offset="0%"/>
-        <stop stopColor="#BD34FE" offset="100%"/>
-      </linearGradient>
-      <linearGradient x1="43.376%" y1="2.242%" x2="50.316%" y2="89.03%" id="vite-b">
-        <stop stopColor="#FFEA83" offset="0%"/>
-        <stop stopColor="#FFDD35" offset="8.333%"/>
-        <stop stopColor="#FFA800" offset="100%"/>
-      </linearGradient>
-    </defs>
-    <path d="M255.153 37.938L134.897 252.976c-2.483 4.44-8.862 4.466-11.382.048L.875 37.958c-2.746-4.814 1.371-10.646 6.827-9.67l120.385 21.517a6.537 6.537 0 0 0 2.322-.004l117.867-21.483c5.438-.991 9.574 4.796 6.877 9.62Z" fill="url(#vite-a)"/>
-    <path d="M185.432.063L96.44 17.501a3.268 3.268 0 0 0-2.634 3.014l-5.474 92.456a3.268 3.268 0 0 0 3.997 3.378l24.777-5.718c2.318-.535 4.413 1.507 3.936 3.838l-7.361 36.047c-.495 2.426 1.782 4.5 4.151 3.78l15.304-4.649c2.372-.72 4.652 1.36 4.15 3.788l-11.698 56.621c-.732 3.542 3.979 5.473 5.943 2.437l1.313-2.028l72.516-144.72c1.215-2.423-.88-5.186-3.54-4.672l-25.505 4.922c-2.396.462-4.435-1.77-3.759-4.114l16.646-57.705c.677-2.35-1.37-4.583-3.769-4.113Z" fill="url(#vite-b)"/>
   </svg>
 ));
 
@@ -231,29 +173,8 @@ export const SentryIcon = memo(() => (
   <img src={sentryLogo} alt="Sentry" className="w-full h-full" loading="lazy" />
 ));
 
-export const NumPyIcon = memo(() => (
-  <svg viewBox="0 0 24 24" className="w-full h-full" aria-label="NumPy Library" role="img">
-    <path d="M4 4h7v16H4z" fill="#4D77CF" />
-    <path d="M13 4h7v16h-7z" fill="#4FA0CA" />
-    <path d="M6 7h1.8l2.3 4.7V7h1.8v10H10l-2.2-4.6V17H6zm8.4 0H16v10h-1.6z" fill="#FFF" />
-  </svg>
-));
-
 export const CMakeIcon = memo(() => (
   <img src={cmakeLogo} alt="CMake Build System" className="w-full h-full" loading="lazy" />
-));
-
-export const PyTorchIcon = memo(() => (
-  <svg viewBox="0 0 24 24" className="w-full h-full" aria-label="PyTorch Machine Learning Framework" role="img">
-    <path d="M12 3.5a8.5 8.5 0 1 0 8.3 10.2h-2.4A6.2 6.2 0 1 1 12 5.8z" fill="#EE4C2C" />
-    <circle cx="13.2" cy="5" r="2" fill="#EE4C2C" />
-  </svg>
-));
-
-export const TensorFlowIcon = memo(() => (
-  <svg viewBox="0 0 24 24" className="w-full h-full" aria-label="TensorFlow Machine Learning Framework" role="img">
-    <path d="M3 5.5 9.8 2v4L6.6 7.6v8.8L3 14.6zm7.2.4L17 2v4l-3.2 1.6v8.8l-3.6 1.8zm4 6.2 3.2-1.6 3.6 1.8-6.8 3.4z" fill="#FF6F00" />
-  </svg>
 ));
 
 export const PuttyIcon = memo(() => (
@@ -274,7 +195,6 @@ export const iconMap = {
   TypeScript: TypeScriptIcon,
   React: ReactIcon,
   Tailwind: TailwindIcon,
-  Vue: VueIcon,
   Git: GitIcon,
   VSCode: VSCodeIcon,
   C: CIcon,
@@ -282,17 +202,13 @@ export const iconMap = {
   Go: GoIcon,
   Python: PythonIcon,
   Node: NodeIcon,
-  Vite: ViteIcon,
   Django: DjangoIcon,
   FastAPI: FastAPIIcon,
-  Fiber: FiberIcon,
   SQLite: SQLiteIcon,
   MySQL: MySQLIcon,
   PostgreSQL: PostgreSQLIcon,
   MongoDB: MongoDBIcon,
   Redis: RedisIcon,
-  Blender: BlenderIcon,
-  Figma: FigmaIcon,
   Docker: DockerIcon,
   Vercel: VercelIcon,
   Netlify: NetlifyIcon,
@@ -303,12 +219,7 @@ export const iconMap = {
   Email: EmailIcon,
   LinkedIn: LinkedInIcon,
   Discord: DiscordIcon,
-  Reddit: RedditIcon,
-  Twitter: TwitterIcon,
-  NumPy: NumPyIcon,
   CMake: CMakeIcon,
-  PyTorch: PyTorchIcon,
-  TensorFlow: TensorFlowIcon,
   Putty: PuttyIcon,
   VSCodium: VSCodiumIcon,
   VisualStudio: VisualStudioIcon,

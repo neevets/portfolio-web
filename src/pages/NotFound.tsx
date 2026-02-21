@@ -1,17 +1,7 @@
-import { useLocation, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const NotFound = () => {
   const location = useLocation();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      navigate('/');
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, [location.pathname, navigate]);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background text-foreground relative overflow-hidden">
@@ -19,11 +9,19 @@ const NotFound = () => {
         <div className="dot-pattern absolute inset-0"></div>
       </div>
       
-      <div className="relative z-10 text-center elevated-card p-8 sm:p-12 max-w-md mx-4 animate-fade-in-up hover:transform-none">
-        <div className="mb-6">
-          <h1 className="text-8xl sm:text-9xl font-light mb-4 text-foreground">
-            404
-          </h1>
+      <div className="relative z-10 text-center elevated-card p-8 sm:p-12 max-w-xl mx-4 animate-fade-in-up hover:transform-none">
+        <h1 className="text-7xl sm:text-8xl font-light mb-4 text-foreground">404</h1>
+        <p className="text-xl sm:text-2xl font-dev text-foreground mb-2">Page not found</p>
+        <p className="text-sm sm:text-base text-muted-foreground mb-6">
+          The route <code>{location.pathname}</code> does not exist.
+        </p>
+        <div className="flex items-center justify-center gap-3">
+          <Link
+            to="/"
+            className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-foreground text-background font-dev text-sm hover:opacity-90 transition-opacity"
+          >
+            Back to Home
+          </Link>
         </div>
       </div>
       

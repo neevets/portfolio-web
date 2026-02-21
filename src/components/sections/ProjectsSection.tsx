@@ -75,7 +75,7 @@ const ProjectCard = memo<{ project: Project; index: number; isVisible: boolean }
 
 ProjectCard.displayName = 'ProjectCard';
 
-const OptimizedProjectsSection = memo(() => {
+const ProjectsSection = memo(() => {
   const { ref, isIntersecting } = useIntersectionObserver({
     threshold: 0.1,
     rootMargin: '50px 0px',
@@ -183,6 +183,6 @@ const OptimizedProjectsSection = memo(() => {
   );
 });
 
-OptimizedProjectsSection.displayName = 'OptimizedProjectsSection';
+ProjectsSection.displayName = 'ProjectsSection';
 
-export { OptimizedProjectsSection as ProjectsSection };
+export { ProjectsSection };

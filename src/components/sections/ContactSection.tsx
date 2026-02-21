@@ -33,7 +33,7 @@ const ContactCard = memo<{ link: { label: string; value: string; href: string; i
 
 ContactCard.displayName = 'ContactCard';
 
-const OptimizedContactSection = memo(() => {
+const ContactSection = memo(() => {
   const [paperFlying, setPaperFlying] = useState(false);
 
   const contactLinks = useMemo(
@@ -86,7 +86,7 @@ const OptimizedContactSection = memo(() => {
           >
             <span className="relative z-10 flex items-center">
               <svg
-                className={`w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 transition-all duration-500 ${paperFlying ? 'animate-paper-fly-up' : 'group-hover:-translate-y-2 group-hover:scale-110'}`}
+                className={`w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 transition-all duration-500 ${paperFlying ? '-translate-y-2 translate-x-2 scale-110 opacity-0' : 'group-hover:-translate-y-2 group-hover:scale-110'}`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -113,6 +113,6 @@ const OptimizedContactSection = memo(() => {
   );
 });
 
-OptimizedContactSection.displayName = 'OptimizedContactSection';
+ContactSection.displayName = 'ContactSection';
 
-export { OptimizedContactSection as ContactSection };
+export { ContactSection };

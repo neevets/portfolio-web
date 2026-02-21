@@ -198,10 +198,7 @@ export const Navigation = () => {
                     "transform hover:translate-x-1 active:scale-[0.98]",
                     "group"
                   )}
-                  style={{ 
-                    animationDelay: `${index * 100}ms`,
-                    animation: isOpen ? 'slide-in-right 0.4s ease-out forwards' : 'none'
-                  }}
+                  style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-muted/30 flex items-center justify-center group-hover:bg-muted/50 transition-colors duration-300">
                     <item.icon className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300" />
