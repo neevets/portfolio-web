@@ -10,12 +10,12 @@ const AboutSection = memo(() => {
   const featureCards = useMemo(
     () => [
       {
-        title: 'Growth Through Technology',
+        title: 'Mindset',
         description:
           'I am always excited to learn new technologies, build projects, and explore innovative ideas that challenge me to grow.',
       },
       {
-        title: 'Values, Discipline & Teamwork',
+        title: 'Summary',
         description:
           'I consider myself principled, friendly, disciplined, and responsible. I enjoy creating a positive work environment, adapting quickly to new situations, and consistently giving my best in every project.',
       },
@@ -58,8 +58,7 @@ const AboutSection = memo(() => {
                     <p className="text-lg md:text-xl leading-relaxed text-muted-foreground max-w-3xl mx-auto font-dev">
                       I am a Honduran student living in Spain, passionate about programming. I enjoy learning new technologies,
                       creating projects, and exploring innovative ideas. I am proactive, curious, and always
-                      looking to improve my skills while staying up to date with current tech trends. When I am
-                      not coding, I enjoy experimenting with design and developing creative concepts.
+                      looking to improve my skills while staying up to date with current tech trends.
                     </p>
                   </div>
                 </div>
