@@ -101,7 +101,7 @@ export const RedisIcon = memo(() => (
 ));
 
 export const CassandraIcon = memo(() => (
-  <img src={cassandraLogo} alt="Cassandra Database" className="w-full h-full" loading="lazy" />
+  <img src={cassandraLogo} alt="Cassandra Database" className="w-full h-full object-contain scale-125" loading="lazy" />
 ));
 
 export const EmailIcon = memo(() => (
@@ -177,7 +177,7 @@ export const NetlifyIcon = memo(() => (
 ));
 
 export const CloudflareIcon = memo(() => (
-  <img src={cloudflareLogo} alt="Cloudflare" className="w-full h-full object-contain" loading="lazy" />
+  <img src={cloudflareLogo} alt="Cloudflare" className="w-full h-full object-contain scale-110" loading="lazy" />
 ));
 
 export const PostmanIcon = memo(() => (
