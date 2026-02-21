@@ -116,7 +116,7 @@ const SkillsSection = () => {
     <section 
       ref={ref}
       id="skills" 
-      className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 relative overflow-hidden z-10" 
+      className="py-12 sm:py-16 lg:py-20 px-3 sm:px-6 relative overflow-hidden z-10" 
       style={{ scrollMarginTop: '5rem' }}
     >
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
@@ -132,13 +132,13 @@ const SkillsSection = () => {
           {allSkills.map(([category, skills], categoryIndex) => (
             <div key={category} className="skills-category-advanced">
               <div className="category-header">
-                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-dev font-light text-foreground mr-4 sm:mr-6">
+                <h3 className="text-[0.95rem] min-[390px]:text-base sm:text-xl md:text-2xl lg:text-3xl font-dev font-light text-foreground mr-2 min-[390px]:mr-3 sm:mr-6 leading-tight break-words">
                   {category}
                 </h3>
                 <div className="flex-1 h-px bg-gradient-to-r from-foreground/50 to-transparent" />
               </div>
 
-              <div className="grid grid-cols-2 min-[420px]:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-2 sm:gap-3 md:gap-4">
+              <div className="grid grid-cols-2 min-[520px]:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-2 min-[390px]:gap-2.5 sm:gap-3 md:gap-4">
                 {skills.map((skill, index) => (
                   <SkillCard
                     key={skill.name}
