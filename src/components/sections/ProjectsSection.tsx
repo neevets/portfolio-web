@@ -5,7 +5,7 @@ interface Project {
   title: string;
   description: string;
   repo: string;
-  productionUrl?: string; // ahora opcional
+  productionUrl?: string;
   tech: string[];
   category: string;
   status: string;
