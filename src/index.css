@@ -694,3 +694,86 @@
     min-height: 80px;
   }
 }
+
+@keyframes loaderOrbit {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.04); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes loaderPulse {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.2); opacity: 1; }
+}
+
+@keyframes loaderShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.intro-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background:
+    radial-gradient(circle at 50% 30%, hsl(var(--foreground) / 0.12) 0%, transparent 45%),
+    hsl(var(--background) / 0.96);
+  backdrop-filter: blur(10px);
+}
+
+.intro-loader__visual {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: grid;
+  place-items: center;
+}
+
+.intro-loader__ring {
+  position: absolute;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  animation: loaderOrbit 2.6s linear infinite;
+}
+
+.intro-loader__ring--outer {
+  width: 120px;
+  height: 120px;
+  border-top-color: hsl(var(--foreground));
+  border-right-color: hsl(var(--foreground) / 0.5);
+}
+
+.intro-loader__ring--inner {
+  width: 84px;
+  height: 84px;
+  border-bottom-color: hsl(var(--primary));
+  border-left-color: hsl(var(--primary) / 0.45);
+  animation-direction: reverse;
+  animation-duration: 1.8s;
+}
+
+.intro-loader__core {
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: hsl(var(--foreground));
+  box-shadow: 0 0 35px hsl(var(--foreground) / 0.45);
+  animation: loaderPulse 1.4s ease-in-out infinite;
+}
+
+.intro-loader__text {
+  font-family: 'Unbounded', 'Geist', system-ui, sans-serif;
+  font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+  letter-spacing: 0.06em;
+  background: linear-gradient(90deg, hsl(var(--muted-foreground)) 10%, hsl(var(--foreground)) 50%, hsl(var(--muted-foreground)) 90%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: loaderShimmer 2.4s linear infinite;
+}

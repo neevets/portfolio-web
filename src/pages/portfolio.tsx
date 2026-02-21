@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect } from 'react';
+import { lazy, Suspense, useEffect, useState } from 'react';
 import { Navigation } from '@/components/Navigation';
 import { SEOHead } from '@/components/ui/seo-head';
 import { Footer } from '@/components/layout/footer';
@@ -17,6 +17,16 @@ const preloadSecondarySections = () => {
 };
 
 const Portfolio = () => {
+  const [isIntroLoading, setIsIntroLoading] = useState(true);
+
+  useEffect(() => {
+    const introTimeoutId = window.setTimeout(() => {
+      setIsIntroLoading(false);
+    }, 1600);
+
+    return () => window.clearTimeout(introTimeoutId);
+  }, []);
+
   useEffect(() => {
     if ('requestIdleCallback' in window) {
       const idleId = window.requestIdleCallback(() => preloadSecondarySections(), { timeout: 1200 });
@@ -30,6 +40,18 @@ const Portfolio = () => {
   return (
     <>
       <SEOHead />
+
+      {isIntroLoading && (
+        <div className="intro-loader">
+          <div className="intro-loader__visual">
+            <div className="intro-loader__ring intro-loader__ring--outer" />
+            <div className="intro-loader__ring intro-loader__ring--inner" />
+            <div className="intro-loader__core" />
+          </div>
+          <div className="intro-loader__text">Loading portfolio experience...</div>
+        </div>
+      )}
+
       <div className="min-h-screen bg-background text-foreground">
         <Navigation />
 
