@@ -89,7 +89,7 @@ export const Navigation = () => {
     { label: 'Skills', id: 'skills', icon: Code },
     { label: 'Projects', id: 'projects', icon: FolderOpen },
     { label: 'Certificates', id: 'courses', icon: GraduationCap },
-    { label: 'Contact', id: 'contact', icon: Mail }
+    { label: 'Work With Me', id: 'contact', icon: Mail }
   ];
 
   return (
