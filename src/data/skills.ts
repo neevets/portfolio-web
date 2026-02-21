@@ -1,9 +1,9 @@
 export const skillsData = {
   Languages: [
-    { name: 'Godot', icon: 'Godot', color: 'hsl(211, 70%, 55%)', level: 'Junior' },
     { name: 'Go', icon: 'Go', color: 'hsl(199, 89%, 48%)', level: 'Mid level' },
     { name: 'Python', icon: 'Python', color: 'hsl(45, 100%, 50%)', level: 'Mid level' },
     { name: 'TypeScript', icon: 'TypeScript', color: 'hsl(211, 60%, 45%)', level: 'Junior' },
+    { name: 'JavaScript', icon: 'JavaScript', color: 'hsl(51, 100%, 50%)', level: 'Junior' },
   ],
   'Frameworks & Libraries': [
     { name: 'Django', icon: 'Django', color: 'hsl(120, 48%, 20%)', level: 'Mid level' },
