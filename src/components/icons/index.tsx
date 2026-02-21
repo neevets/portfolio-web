@@ -1,7 +1,7 @@
 import { memo } from 'react';
 
 export const JavaScriptIcon = memo(() => (
-  <svg className="w-full h-full scale-[1.15]" viewBox="0 0 48 48">
+  <svg className="w-full h-full scale-[1.3]" viewBox="0 0 48 48">
     <path fill="#ffd600" d="M6,42V6h36v36H6z" />
     <path
       fill="#000001"
