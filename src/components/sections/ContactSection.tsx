@@ -62,7 +62,7 @@ const ContactSection = memo(() => {
   }, []);
 
   return (
-    <section id="contact" className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 relative overflow-hidden z-10" style={{ scrollMarginTop: '5rem' }}>
+    <section id="getintouch" className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 relative overflow-hidden z-10" style={{ scrollMarginTop: '5rem' }}>
       <div className="absolute inset-0 dot-pattern opacity-20" />
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
