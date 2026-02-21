@@ -8,13 +8,17 @@ type ThemeProviderProps = {
   storageKey?: string
 }
 
+type ResolvedTheme = "light" | "dark"
+
 type ThemeProviderState = {
   theme: Theme
+  resolvedTheme: ResolvedTheme
   setTheme: (theme: Theme) => void
 }
 
 const initialState: ThemeProviderState = {
   theme: "light",
+  resolvedTheme: "light",
   setTheme: () => null,
 }
 
@@ -29,6 +33,7 @@ export function ThemeProvider({
   const [theme, setTheme] = useState<Theme>(
     () => (localStorage.getItem(storageKey) as Theme) || defaultTheme
   )
+  const [resolvedTheme, setResolvedTheme] = useState<ResolvedTheme>("light")
 
   useEffect(() => {
     const root = window.document.documentElement
@@ -36,19 +41,22 @@ export function ThemeProvider({
     root.classList.remove("light", "dark")
 
     if (theme === "system") {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+      const systemTheme: ResolvedTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
         ? "dark"
         : "light"
 
+      setResolvedTheme(systemTheme)
       root.classList.add(systemTheme)
       return
     }
 
+    setResolvedTheme(theme)
     root.classList.add(theme)
   }, [theme])
 
   const value = {
     theme,
+    resolvedTheme,
     setTheme: (nextTheme: Theme) => {
       localStorage.setItem(storageKey, nextTheme)
       setTheme(nextTheme)
@@ -61,9 +69,12 @@ export function ThemeProvider({
     const onThemeChange = () => {
       if (theme !== "system") return
 
+      const nextResolvedTheme: ResolvedTheme = mediaQuery.matches ? "dark" : "light"
+      setResolvedTheme(nextResolvedTheme)
+
       const root = window.document.documentElement
       root.classList.remove("light", "dark")
-      root.classList.add(mediaQuery.matches ? "dark" : "light")
+      root.classList.add(nextResolvedTheme)
     }
 
     mediaQuery.addEventListener("change", onThemeChange)

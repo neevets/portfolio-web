@@ -11,9 +11,9 @@ export const Navigation = () => {
   const [touchEnd, setTouchEnd] = useState(0);
   const menuRef = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
 
-  const isDarkMode = theme === 'dark';
+  const isDarkMode = resolvedTheme === 'dark';
 
   const toggleTheme = () => {
     setTheme(isDarkMode ? 'light' : 'dark');
