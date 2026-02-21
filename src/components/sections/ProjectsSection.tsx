@@ -5,7 +5,7 @@ interface Project {
   title: string;
   description: string;
   repo: string;
-  productionUrl: string;
+  productionUrl?: string; // ahora opcional
   tech: string[];
   category: string;
   status: string;
@@ -56,17 +56,20 @@ const ProjectCard = memo<{ project: Project; index: number; isVisible: boolean }
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
           </a>
-          <a
-            href={project.productionUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 bg-foreground text-background rounded-lg font-dev font-medium hover:scale-105 transition-all duration-300 group"
-          >
-            Explore Project
-            <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
+
+          {project.productionUrl && (
+            <a
+              href={project.productionUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 bg-foreground text-background rounded-lg font-dev font-medium hover:scale-105 transition-all duration-300 group"
+            >
+              Explore Project
+              <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          )}
         </div>
       </div>
     );
@@ -86,7 +89,6 @@ const ProjectsSection = memo(() => {
       title: "Portfolio Web",
       description: "Modern, responsive portfolio website showcasing projects and skills with smooth animations and optimized performance.",
       repo: "https://github.com/neevets/portfolio-web",
-      productionUrl: "https://neevets.website",
       tech: ["React", "TypeScript", "Tailwind", "Vercel", "Cloudflare"],
       category: "Frontend",
       status: "Production"
@@ -127,10 +129,11 @@ const ProjectsSection = memo(() => {
           <h2 className="section-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-dev font-light mb-6 fade-in-up">
             Projects
           </h2>
+
           <p className="text-muted-foreground font-dev text-base sm:text-lg max-w-2xl mx-auto fade-in-up mb-8" style={{animationDelay: '200ms'}}>
             Production-ready solutions built with modern technologies
           </p>
-          
+
           <div className="fade-in-up flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center" style={{animationDelay: '400ms'}}>
             <a
               href="https://status.neevets.website"
@@ -139,10 +142,8 @@ const ProjectsSection = memo(() => {
               className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border border-border bg-background text-foreground rounded-xl font-dev font-medium hover:scale-105 hover:bg-muted/50 transition-all duration-300 group shadow-md"
             >
               Status
-              <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
             </a>
+
             <a
               href="https://github.com/neevets"
               target="_blank"
@@ -150,10 +151,8 @@ const ProjectsSection = memo(() => {
               className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-foreground text-background rounded-xl font-dev font-medium hover:scale-105 transition-all duration-300 group shadow-md"
             >
               View All Projects
-              <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
             </a>
+
             <a
               href="https://fiverr.com/neevetsio"
               target="_blank"
@@ -161,9 +160,6 @@ const ProjectsSection = memo(() => {
               className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-green-600 text-white rounded-xl font-dev font-medium hover:scale-105 transition-all duration-300 group shadow-xl shadow-green-500/20"
             >
               Hire me on Fiverr
-              <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
             </a>
           </div>
         </div>
