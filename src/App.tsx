@@ -13,7 +13,7 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 const INITIAL_LOADER_DURATION_MS = 3000;
-const LOADER_FADE_OUT_DURATION_MS = 450;
+const LOADER_FADE_OUT_DURATION_MS = 1200;
 
 const App = () => {
   const [isLoaderVisible, setIsLoaderVisible] = useState(true);
@@ -39,7 +39,8 @@ const App = () => {
       <ThemeProvider defaultTheme="system">
         <TooltipProvider>
           <div
-            className={`transition-opacity duration-500 ${isLoaderVisible ? "opacity-0" : "opacity-100"}`}
+            className={`transition-opacity ease-in-out ${isLoaderVisible ? "opacity-0" : "opacity-100"}`}
+            style={{ transitionDuration: "1400ms" }}
             aria-hidden={isLoaderVisible}
           >
             <Toaster />
@@ -56,7 +57,8 @@ const App = () => {
 
           {shouldRenderLoader ? (
             <div
-              className={`transition-opacity duration-500 ${isLoaderVisible ? "opacity-100" : "pointer-events-none opacity-0"}`}
+              className={`transition-opacity ease-in-out ${isLoaderVisible ? "opacity-100" : "pointer-events-none opacity-0"}`}
+              style={{ transitionDuration: "1200ms" }}
             >
               <InitialLoader />
             </div>
