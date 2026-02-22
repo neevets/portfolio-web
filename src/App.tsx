@@ -12,7 +12,6 @@ import Portfolio from "./pages/portfolio";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
-const INITIAL_LOADER_DURATION_MS = 3000;
 const LOADER_FADE_OUT_DURATION_MS = 1200;
 
 const App = () => {
@@ -20,19 +19,18 @@ const App = () => {
   const [shouldRenderLoader, setShouldRenderLoader] = useState(true);
 
   useEffect(() => {
-    const hideLoaderTimer = window.setTimeout(() => {
-      setIsLoaderVisible(false);
-    }, INITIAL_LOADER_DURATION_MS);
+    if (isLoaderVisible) {
+      return;
+    }
 
     const unmountLoaderTimer = window.setTimeout(() => {
       setShouldRenderLoader(false);
-    }, INITIAL_LOADER_DURATION_MS + LOADER_FADE_OUT_DURATION_MS);
+    }, LOADER_FADE_OUT_DURATION_MS);
 
     return () => {
-      window.clearTimeout(hideLoaderTimer);
       window.clearTimeout(unmountLoaderTimer);
     };
-  }, []);
+  }, [isLoaderVisible]);
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -60,7 +58,7 @@ const App = () => {
               className={`transition-opacity ease-in-out ${isLoaderVisible ? "opacity-100" : "pointer-events-none opacity-0"}`}
               style={{ transitionDuration: "1200ms" }}
             >
-              <InitialLoader />
+              <InitialLoader onAnimationComplete={() => setIsLoaderVisible(false)} />
             </div>
           ) : null}
         </TooltipProvider>
