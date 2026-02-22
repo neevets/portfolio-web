@@ -38,7 +38,7 @@ const App = () => {
         <TooltipProvider>
           <div
             className={`transition-opacity ease-in-out ${isLoaderVisible ? "opacity-0" : "opacity-100"}`}
-            style={{ transitionDuration: "1400ms" }}
+            style={{ transitionDuration: `${LOADER_FADE_OUT_DURATION_MS}ms` }}
             aria-hidden={isLoaderVisible}
           >
             <Toaster />
@@ -56,7 +56,7 @@ const App = () => {
           {shouldRenderLoader ? (
             <div
               className={`transition-opacity ease-in-out ${isLoaderVisible ? "opacity-100" : "pointer-events-none opacity-0"}`}
-              style={{ transitionDuration: "1200ms" }}
+              style={{ transitionDuration: `${LOADER_FADE_OUT_DURATION_MS}ms` }}
             >
               <InitialLoader onAnimationComplete={() => setIsLoaderVisible(false)} />
             </div>
