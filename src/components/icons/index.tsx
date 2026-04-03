@@ -60,6 +60,7 @@ import dockerLogo from '@/assets/docker-logo.svg';
 import vercelLogo from '@/assets/vercel-logo.svg';
 import netlifyLogo from '@/assets/netlify-logo.svg';
 import cloudflareLogo from '@/assets/cloudflare-logo.svg';
+import kubernetesLogo from '@/assets/kubernetes-logo.svg';
 import postmanLogo from '@/assets/postman-logo.svg';
 import sentryLogo from '@/assets/sentry-logo.svg';
 
@@ -180,6 +181,10 @@ export const CloudflareIcon = memo(() => (
   <img src={cloudflareLogo} alt="Cloudflare" className="w-full h-full object-contain scale-110" loading="lazy" />
 ));
 
+export const KubernetesIcon = memo(() => (
+  <img src={kubernetesLogo} alt="Kubernetes" className="w-full h-full object-contain" loading="lazy" />
+));
+
 export const PostmanIcon = memo(() => (
   <img src={postmanLogo} alt="Postman" className="w-full h-full" loading="lazy" />
 ));
@@ -228,6 +233,7 @@ export const iconMap = {
   Vercel: VercelIcon,
   Netlify: NetlifyIcon,
   Cloudflare: CloudflareIcon,
+  Kubernetes: KubernetesIcon,
   Postman: PostmanIcon,
   Sentry: SentryIcon,
   Rust: RustIcon,
