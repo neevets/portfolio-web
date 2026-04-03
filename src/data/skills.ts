@@ -26,6 +26,7 @@ export const skillsData: Record<string, Skill[]> = {
     { name: 'VS Code', icon: 'VSCode', color: 'hsl(213, 89%, 64%)', level: 'Senior' },
     { name: 'CMake', icon: 'CMake', color: 'hsl(0, 100%, 50%)', level: 'Mid level' },
     { name: 'Docker', icon: 'Docker', color: 'hsl(210, 79%, 46%)', level: 'Mid level' },
+    { name: 'Heroku', icon: 'Heroku', color: '#6762A6', level: 'Mid level' },
     { name: 'Vercel', icon: 'Vercel', color: 'hsl(0, 0%, 0%)', level: 'Mid level' },
     { name: 'Netlify', icon: 'Netlify', color: 'hsl(176, 100%, 32%)', level: 'Mid level' },
     { name: 'Cloudflare', icon: 'Cloudflare', color: 'hsl(31, 100%, 55%)', level: 'Mid level' },
