@@ -3,6 +3,16 @@
   <head>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' 'unsafe-inline' https://va.vercel-scripts.com https://vitals.vercel-insights.com https://static.cloudflareinsights.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;" />
     <meta charset="UTF-8" />
+    <script>
+      (function() {
+        var fix = { persistent: 'persistent', temporary: 'temporary' };
+        window.StorageType = window.StorageType || fix;
+        navigator.webkitPersistentStorage = navigator.webkitPersistentStorage || {
+          queryUsageAndQuota: function(cb) { if(navigator.storage) navigator.storage.estimate().then(function(e){ cb(e.usage, e.quota); }); },
+          requestQuota: function(q, cb) { if(navigator.storage) navigator.storage.estimate().then(function(e){ cb(e.quota); }); }
+        };
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Neevets Portfolio</title>
     <meta name="description" content="Hi, I'm Neevets, a fullstack developer from Honduras. feel free to explore my projects and work." />
