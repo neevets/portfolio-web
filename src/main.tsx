@@ -1,8 +1,5 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { initSupportPolyfills } from './lib/support-polyfills'
-
-initSupportPolyfills();
 
 import './index.css'
 import App from './App.tsx'
