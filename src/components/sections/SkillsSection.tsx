@@ -78,7 +78,7 @@ const SkillsSection = () => {
               </div>
 
               <div className="grid grid-cols-2 min-[520px]:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-2 min-[390px]:gap-2.5 sm:gap-3 md:gap-4">
-                {skills.map((skill, index) => (
+                {skills.map((skill) => (
                   <SkillCard
                     key={skill.name}
                     skill={skill as Skill}

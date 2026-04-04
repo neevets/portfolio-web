@@ -1,14 +1,11 @@
 import { memo, useMemo } from 'react';
-import { motion } from 'framer-motion';
 import { PreloadedSkillIcon } from '@/components/ui/preloaded-skill-icon';
 import { Skill } from '@/types/portfolio';
 
-export interface SkillCardProps {
+const SkillCard = memo<{
   skill: Skill;
   isVisible: boolean;
-}
-
-export const SkillCard = memo<SkillCardProps>(({ skill, isVisible }) => {
+}>(({ skill, isVisible }) => {
   const styleProps = useMemo(() => {
     const skillColor = skill.color;
     return {
@@ -22,11 +19,8 @@ export const SkillCard = memo<SkillCardProps>(({ skill, isVisible }) => {
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.4 }}
-      className={`skill-card-optimized group ${skill.name === 'Vercel' ? 'vercel-skill-card' : ''}`}
+    <div
+      className={`skill-card-optimized group opacity-0 animate-skill-fade-in ${skill.name === 'Vercel' ? 'vercel-skill-card' : ''}`}
       style={{ 
         '--skill-color': styleProps.skillColor,
       } as React.CSSProperties & { '--skill-color': string }}
@@ -41,7 +35,7 @@ export const SkillCard = memo<SkillCardProps>(({ skill, isVisible }) => {
       </div>
 
       <div className="text-center">
-        <h4 className="text-xs sm:text-sm font-dev font-medium text-foreground transition-colors duration-300 mb-1 sm:mb-2 flex items-center justify-center min-h-[1.5rem] z-10 relative">
+        <h4 className="text-xs sm:text-sm font-dev font-medium text-foreground sm:group-hover:text-foreground transition-colors duration-300 mb-1 sm:mb-2 flex items-center justify-center min-h-[1.5rem] z-10 relative">
           {skill.name}
         </h4>
         <div className="opacity-0 transform translate-y-2 sm:group-hover:opacity-100 sm:group-hover:translate-y-0 transition-all duration-300 ease-out">
@@ -57,8 +51,10 @@ export const SkillCard = memo<SkillCardProps>(({ skill, isVisible }) => {
           </span>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 });
 
 SkillCard.displayName = 'SkillCard';
+
+export { SkillCard };

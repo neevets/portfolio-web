@@ -42,21 +42,15 @@ const ContactSection = memo(() => {
       {
         label: 'LinkedIn',
         value: '/in/neevets',
-        href: 'https://www.linkedin.com/in/neevets-r-68921833a',
+        href: contactData.linkedin,
         icon: ContactIcons.LinkedIn,
       },
       {
         label: 'Discord',
         value: '@goroutines',
-        href: 'https://discord.com/users/goroutines',
+        href: contactData.discord,
         icon: ContactIcons.Discord,
       },
-      {
-        label: 'GitHub',
-        value: 'github.com/neevets',
-        href: contactData.github,
-        icon: ContactIcons.GitHub,
-      }
     ],
     []
   );

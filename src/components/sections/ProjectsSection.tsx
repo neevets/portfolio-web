@@ -1,9 +1,8 @@
-import { memo, useMemo } from 'react';
+import { memo } from 'react';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 import { projectsData } from '@/data/projects';
-import { contactData } from '@/data/contact';
-import { ProjectCard } from '@/components/ui/project-card';
 import { motion } from 'framer-motion';
+import { ProjectCard } from '@/components/ui/project-card';
 
 const ProjectsSection = memo(() => {
   const { ref, isIntersecting } = useIntersectionObserver({
@@ -52,7 +51,7 @@ const ProjectsSection = memo(() => {
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
           >
             <a
-              href={contactData.status}
+              href="https://status.neevets.website"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border border-border bg-background text-foreground rounded-xl font-dev font-medium hover:scale-105 hover:bg-muted/50 transition-all duration-300 group shadow-md"
@@ -61,7 +60,7 @@ const ProjectsSection = memo(() => {
             </a>
 
             <a
-              href={contactData.github}
+              href="https://github.com/neevets"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-foreground text-background rounded-xl font-dev font-medium hover:scale-105 transition-all duration-300 group shadow-md"
@@ -70,7 +69,7 @@ const ProjectsSection = memo(() => {
             </a>
 
             <a
-              href={contactData.fiverr}
+              href="https://fiverr.com/neevetsio"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-green-600 text-white rounded-xl font-dev font-medium hover:scale-105 transition-all duration-300 group shadow-xl shadow-green-500/20"
