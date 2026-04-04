@@ -1,9 +1,6 @@
-
-
 export const initSupportPolyfills = () => {
   if (typeof window === 'undefined') return;
 
-  
   if (!('StorageType' in window)) {
     (window as unknown as { StorageType: unknown }).StorageType = {
       persistent: 'persistent',
@@ -11,7 +8,6 @@ export const initSupportPolyfills = () => {
     };
   }
 
-  
   if (typeof navigator !== 'undefined' && !('webkitPersistentStorage' in navigator)) {
     try {
       (navigator as unknown as { webkitPersistentStorage: unknown }).webkitPersistentStorage = {
@@ -31,7 +27,7 @@ export const initSupportPolyfills = () => {
         }
       };
     } catch {
-      
+      void 0;
     }
   }
 };
