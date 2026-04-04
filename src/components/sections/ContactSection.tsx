@@ -1,6 +1,5 @@
 import { memo, useState, useMemo, useCallback } from 'react';
 import { ContactIcons } from '@/components/ContactIcons';
-import { contactData } from '@/data/contact';
 
 const ContactCard = memo<{ link: { label: string; value: string; href: string; icon: () => JSX.Element } }>(({ link }) => {
   const IconComponent = link.icon;
@@ -42,13 +41,13 @@ const ContactSection = memo(() => {
       {
         label: 'LinkedIn',
         value: '/in/neevets',
-        href: contactData.linkedin,
+        href: 'https://www.linkedin.com/in/neevets-r-68921833a',
         icon: ContactIcons.LinkedIn,
       },
       {
         label: 'Discord',
         value: '@goroutines',
-        href: contactData.discord,
+        href: 'https://discord.com/users/goroutines',
         icon: ContactIcons.Discord,
       },
     ],
@@ -58,7 +57,7 @@ const ContactSection = memo(() => {
   const handleSendMessage = useCallback(() => {
     setPaperFlying(true);
     setTimeout(() => {
-      window.open(`mailto:${contactData.email}`, '_blank');
+      window.open('mailto:contact@neevets.website', '_blank');
       setPaperFlying(false);
     }, 600);
   }, []);
