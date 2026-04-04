@@ -5,6 +5,6 @@ export const contactData = {
   status: 'https://status.neevets.website',
   social: {
     github: 'https://github.com/neevets',
-    // Agregaremos más redes según sea necesario
+    
   }
 };
