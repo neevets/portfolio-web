@@ -67,6 +67,7 @@ const SkillsSection = () => {
   });
 
   const [visibleCategories, setVisibleCategories] = useState<Set<number>>(new Set());
+  const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set());
 
   const allSkills = useMemo(() => Object.entries(skillsData), []);
 
@@ -74,6 +75,18 @@ const SkillsSection = () => {
     setVisibleCategories(prev => {
       if (prev.has(categoryIndex)) return prev;
       return new Set([...prev, categoryIndex]);
+    });
+  }, []);
+
+  const toggleCategory = useCallback((category: string) => {
+    setExpandedCategories(prev => {
+      const next = new Set(prev);
+      if (next.has(category)) {
+        next.delete(category);
+      } else {
+        next.add(category);
+      }
+      return next;
     });
   }, []);
 
@@ -125,22 +138,43 @@ const SkillsSection = () => {
         >
           {allSkills.map(([category, skills], categoryIndex) => (
             <div key={category} className="skills-category-advanced">
-              <div className="category-header">
-                <h3 className="text-[0.95rem] min-[390px]:text-base sm:text-xl md:text-2xl lg:text-3xl font-dev font-light text-foreground mr-2 min-[390px]:mr-3 sm:mr-6 leading-tight break-words">
-                  {category}
-                </h3>
-                <div className="flex-1 h-px bg-gradient-to-r from-foreground/50 to-transparent" />
+              <div className="category-header flex items-center justify-between mb-4 sm:mb-6">
+                <div className="flex items-center flex-1">
+                  <h3 className="text-[0.95rem] min-[390px]:text-base sm:text-xl md:text-2xl lg:text-3xl font-dev font-light text-foreground mr-2 min-[390px]:mr-3 sm:mr-6 leading-tight break-words">
+                    {category}
+                  </h3>
+                  <div className="flex-1 h-px bg-gradient-to-r from-foreground/50 to-transparent" />
+                </div>
+                {skills.length > 5 && (
+                  <button
+                    onClick={() => toggleCategory(category)}
+                    className="ml-4 px-3 py-1 text-[10px] sm:text-xs font-dev font-medium bg-foreground/5 hover:bg-foreground/10 text-foreground/60 hover:text-foreground transition-all duration-300 rounded-full border border-foreground/10 flex items-center gap-1.5"
+                  >
+                    <span>{expandedCategories.has(category) ? 'See less' : `See more (${skills.length - 5})`}</span>
+                    <motion.span
+                      animate={{ rotate: expandedCategories.has(category) ? 180 : 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="text-[8px] sm:text-[10px]"
+                    >
+                      ▼
+                    </motion.span>
+                  </button>
+                )}
               </div>
 
-              <div className="grid grid-cols-2 min-[520px]:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-2 min-[390px]:gap-2.5 sm:gap-3 md:gap-4">
-                {skills.map((skill, index) => (
-                  <SkillCard
-                    key={skill.name}
-                    skill={skill as Skill}
-                    isVisible={visibleCategories.has(categoryIndex)}
-                  />
+              <motion.div 
+                layout
+                className="grid grid-cols-2 min-[520px]:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-2 min-[390px]:gap-2.5 sm:gap-3 md:gap-4"
+              >
+                {(expandedCategories.has(category) ? skills : skills.slice(0, 5)).map((skill) => (
+                  <motion.div layout key={skill.name}>
+                    <SkillCard
+                      skill={skill as Skill}
+                      isVisible={visibleCategories.has(categoryIndex)}
+                    />
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
             </div>
           ))}
         </motion.div>
