@@ -49,10 +49,7 @@ import goLogo from '@/assets/go-logo.svg';
 import fastapiLogo from '@/assets/fastapi-logo.svg';
 import sqliteLogo from '@/assets/sqlite-logo.svg';
 import mongodbLogo from '@/assets/mongodb-logo.svg';
-import cassandraLogo from '@/assets/cassandra-logo.svg';
 import redisLogo from '@/assets/redis-logo.svg';
-import cmakeLogo from '@/assets/cmake-logo.svg';
-import puttyLogo from '@/assets/putty-logo.svg';
 import vscodiumLogo from '@/assets/vscodium-logo.svg';
 import visualstudioLogo from '@/assets/visualstudio-logo.svg';
 import postgresqlLogo from '@/assets/postgresql-logo.svg';
@@ -99,9 +96,6 @@ export const RedisIcon = memo(() => (
   <img src={redisLogo} alt="Redis Database" className="w-full h-full" loading="lazy" />
 ));
 
-export const CassandraIcon = memo(() => (
-  <img src={cassandraLogo} alt="Cassandra Database" className="w-full h-full object-contain scale-125" loading="lazy" />
-));
 
 export const EmailIcon = memo(() => (
   <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -197,13 +191,6 @@ export const SentryIcon = memo(() => (
   <img src={sentryLogo} alt="Sentry" className="w-full h-full" loading="lazy" />
 ));
 
-export const CMakeIcon = memo(() => (
-  <img src={cmakeLogo} alt="CMake Build System" className="w-full h-full" loading="lazy" />
-));
-
-export const PuttyIcon = memo(() => (
-  <img src={puttyLogo} alt="PuTTY SSH Client" className="w-full h-full" loading="lazy" />
-));
 
 export const VSCodiumIcon = memo(() => (
   <img src={vscodiumLogo} alt="VSCodium Code Editor" className="w-full h-full" loading="lazy" />
@@ -237,7 +224,6 @@ export const iconMap = {
   MySQL: MySQLIcon,
   PostgreSQL: PostgreSQLIcon,
   MongoDB: MongoDBIcon,
-  Cassandra: CassandraIcon,
   Redis: RedisIcon,
   Docker: DockerIcon,
   Heroku: HerokuIcon,
@@ -253,8 +239,6 @@ export const iconMap = {
   Email: EmailIcon,
   LinkedIn: LinkedInIcon,
   Discord: DiscordIcon,
-  CMake: CMakeIcon,
-  Putty: PuttyIcon,
   VSCodium: VSCodiumIcon,
   VisualStudio: VisualStudioIcon,
 } as const;
