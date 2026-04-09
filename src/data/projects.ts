@@ -10,28 +10,20 @@ export const projectsData: Project[] = [
     status: "Production"
   },
   {
-    title: "Kent Engine",
-    description: "Free and open-source game engine for high-performance 2D and 3D development. Built in Rust for zero-cost abstractions and memory safety. Uses Wgpu for cross-platform GPU rendering, Winit for window and input handling, GLAM for SIMD math, and an ECS architecture to keep game logic cache-friendly",
-    repo: "https://github.com/neevets/kent-engine",
-    tech: ["Rust", "Wgpu", "Winit", "Glam", "ECS"],
-    category: "Engine",
-    status: "In Development"
-  },
-  {
     title: "Drew Bot",
-    description: "Anti-raid Discord bot for community safety at scale. Redis handles rate-limit state in-memory, PostgreSQL stores audit logs and ban records long-term, and Sentry provides real-time visibility into unhandled exceptions.",
+    description: "An open-source, high-performance multipurpose/opsec bot. Go provides memory safety and high concurrency, Fiber ensures low-latency execution, while PostgreSQL and Redis enable scalable state management and ACID-compliant logging",
     repo: "https://github.com/neevets/drew-bot",
     productionUrl: "https://drewbot.site",
-    tech: ["Python", "PostgreSQL", "Redis", "Sentry", "discord.py"],
+    tech: ["Go", "Fiber", "Redis", "PostgreSQL"],
     category: "Security",
     status: "Production"
   },
   {
     title: "Guroi Bot",
-    description: "Opsec bot written in Rust for heavy raid traffic. Tokio handles concurrent gateway events without thread overhead, and Serenity's event model keeps each handler isolated",
+    description: "An opsec bot written in Rust for heavy raid traffic. Tokio handles concurrent gateway events without thread overhead, and Serenity's event model keeps each handler isolated",
     repo: "https://github.com/neevets/guroi-bot",
     tech: ["Rust", "Tokio", "Serenity"],
     category: "Security",
-    status: "Production"
+    status: "In Development"
   }
 ];
