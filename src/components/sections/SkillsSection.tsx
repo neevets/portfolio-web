@@ -125,7 +125,7 @@ const SkillsSection = () => {
         >
           {allSkills.map(([category, skills], categoryIndex) => (
             <div key={category} className="skills-category-advanced">
-              <div className="category-header flex items-center mb-4 sm:mb-6">
+              <div className="category-header">
                 <h3 className="text-[0.95rem] min-[390px]:text-base sm:text-xl md:text-2xl lg:text-3xl font-dev font-light text-foreground mr-2 min-[390px]:mr-3 sm:mr-6 leading-tight break-words">
                   {category}
                 </h3>
