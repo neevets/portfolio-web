@@ -38,7 +38,10 @@ const SkillCard = memo<{
       </div>
 
       <div className="text-center">
-        <h4 className="text-xs sm:text-sm font-dev font-medium text-foreground sm:group-hover:text-foreground transition-colors duration-300 mb-1 sm:mb-2 flex items-center justify-center min-h-[1.5rem] z-10 relative">
+        <h4 
+          className="text-xs sm:text-sm font-dev font-medium text-foreground sm:group-hover:text-foreground transition-colors duration-300 mb-1 sm:mb-2 flex items-center justify-center min-h-[1.5rem] z-10 relative"
+          style={skill.name === 'Heroku' ? { color: styleProps.skillColor } : {}}
+        >
           {skill.name}
         </h4>
         <div className="opacity-0 transform translate-y-2 sm:group-hover:opacity-100 sm:group-hover:translate-y-0 transition-all duration-300 ease-out">

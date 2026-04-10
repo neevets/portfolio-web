@@ -17,7 +17,7 @@ export const skillsData: Record<string, Skill[]> = {
   Databases: [
     { name: 'PostgreSQL', icon: 'PostgreSQL', color: 'hsl(205, 81%, 33%)', level: 'Mid level' },
     { name: 'SQLite', icon: 'SQLite', color: 'hsl(214, 73%, 51%)', level: 'Mid level' },
-    { name: 'MongoDB', icon: 'MongoDB', color: 'hsl(120, 48%, 20%)', level: 'Junior' },
+    { name: 'MongoDB', icon: 'MongoDB', color: '#00ED64', level: 'Junior' },
     { name: 'Redis', icon: 'Redis', color: 'hsl(12, 100%, 50%)', level: 'Junior' },
   ],
   'Tools & Utils': [
