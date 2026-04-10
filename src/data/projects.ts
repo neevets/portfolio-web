@@ -20,7 +20,7 @@ export const projectsData: Project[] = [
   },
   {
     title: "Guroi Bot",
-    description: "An opsec bot written in Rust for heavy raid traffic. Tokio handles concurrent gateway events without thread overhead, and Serenity's event model keeps each handler isolated",
+    description: "A high-performance Discord bot written in Rust, designed for scalability, multilingual support, and robust command handling. Twilight powers the gateway layer, Moka provides in-memory caching, and Fluent Templates enable internationalization across 31 languages",
     repo: "https://github.com/neevets/guroi-bot",
     tech: ["Rust", "Tokio", "Serenity"],
     category: "Security",
