@@ -40,7 +40,6 @@ const SkillCard = memo<{
       <div className="text-center">
         <h4
           className="text-xs sm:text-sm font-dev font-medium text-foreground sm:group-hover:text-foreground transition-colors duration-300 mb-1 sm:mb-2 flex items-center justify-center min-h-[1.5rem] z-10 relative"
-          style={{}}
         >
           {skill.name}
         </h4>
