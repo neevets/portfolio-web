@@ -24,12 +24,12 @@ const SkillCard = memo<{
   return (
     <div
       className={`skill-card-optimized group opacity-0 animate-skill-fade-in ${skill.name === 'Vercel' ? 'vercel-skill-card' : ''}`}
-      style={{ 
+      style={{
         '--skill-color': styleProps.skillColor,
       } as React.CSSProperties & { '--skill-color': string }}
     >
       <div className="relative">
-        <div 
+        <div
           className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto mb-2 sm:mb-3 flex items-center justify-center text-muted-foreground transition-all duration-300 sm:group-hover:scale-110 relative z-10"
           style={{ color: styleProps.iconColor }}
         >
@@ -38,16 +38,16 @@ const SkillCard = memo<{
       </div>
 
       <div className="text-center">
-        <h4 
+        <h4
           className="text-xs sm:text-sm font-dev font-medium text-foreground sm:group-hover:text-foreground transition-colors duration-300 mb-1 sm:mb-2 flex items-center justify-center min-h-[1.5rem] z-10 relative"
-          style={skill.name === 'Heroku' ? { color: styleProps.skillColor } : {}}
+          style={{}}
         >
           {skill.name}
         </h4>
         <div className="opacity-0 transform translate-y-2 sm:group-hover:opacity-100 sm:group-hover:translate-y-0 transition-all duration-300 ease-out">
-          <span 
+          <span
             className={`inline-flex items-center justify-center min-w-[70px] sm:min-w-[88px] px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium border backdrop-blur-sm ${skill.name === 'Vercel' ? 'vercel-level-pill' : ''}`}
-            style={{ 
+            style={{
               color: styleProps.skillColor,
               borderColor: `${styleProps.skillColor}50`,
               backgroundColor: `${styleProps.skillColor}15`,
@@ -98,10 +98,10 @@ const SkillsSection = () => {
   }, [isIntersecting, allSkills, handleCategoryVisible]);
 
   return (
-    <section 
+    <section
       ref={ref}
-      id="skills" 
-      className="py-12 sm:py-16 lg:py-20 px-3 sm:px-6 relative overflow-hidden z-10" 
+      id="skills"
+      className="py-12 sm:py-16 lg:py-20 px-3 sm:px-6 relative overflow-hidden z-10"
       style={{ scrollMarginTop: '5rem' }}
     >
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
@@ -109,7 +109,7 @@ const SkillsSection = () => {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -119,7 +119,7 @@ const SkillsSection = () => {
           Skills
         </motion.h2>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
