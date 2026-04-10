@@ -49,8 +49,8 @@ const SkillCard = memo<{
             className={`inline-flex items-center justify-center min-w-[70px] sm:min-w-[88px] px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium border backdrop-blur-sm ${skill.name === 'Vercel' ? 'vercel-level-pill' : ''}`}
             style={{
               color: styleProps.skillColor,
-              borderColor: `${styleProps.skillColor}50`,
-              backgroundColor: `${styleProps.skillColor}15`,
+              borderColor: `color-mix(in srgb, ${styleProps.skillColor}, transparent 70%)`,
+              backgroundColor: `color-mix(in srgb, ${styleProps.skillColor}, transparent 95%)`,
             }}
           >
             {skill.level}
