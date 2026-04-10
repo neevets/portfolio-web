@@ -11,7 +11,7 @@ export const projectsData: Project[] = [
   },
   {
     title: "Drew Bot",
-    description: "An open-source, high-performance multipurpose/opsec bot. Go provides memory safety and high concurrency, Fiber ensures low-latency execution, while PostgreSQL and Redis enable scalable state management and ACID-compliant logging",
+    description: "An open-source, high-performance multipurpose bot. Go provides memory safety and high concurrency, Fiber ensures low-latency execution, while PostgreSQL and Redis enable scalable state management and ACID-compliant logging",
     repo: "https://github.com/neevets/drew-bot",
     productionUrl: "https://drewbot.site",
     tech: ["Go", "Fiber", "Redis", "PostgreSQL"],
@@ -20,9 +20,9 @@ export const projectsData: Project[] = [
   },
   {
     title: "Guroi Bot",
-    description: "A high-performance Discord bot written in Rust, designed for scalability, multilingual support, and robust command handling. Twilight powers the gateway layer, Moka provides in-memory caching, and Fluent Templates enable internationalization across 31 languages",
+    description: "An opsec bot written in Rust, designed for scalability, multilingual support, and robust command handling. Twilight powers the gateway layer, Moka provides in-memory caching, and Fluent enable internationalization",
     repo: "https://github.com/neevets/guroi-bot",
-    tech: ["Rust", "Tokio", "Serenity"],
+    tech: ["Rust", "Twilight", "Moka", "Fluent"],
     category: "Security",
     status: "In Development"
   }
