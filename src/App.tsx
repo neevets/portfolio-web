@@ -37,7 +37,7 @@ const App = () => {
 
   return (
     <HelmetProvider>
-      <ThemeProvider defaultTheme="system">
+      <ThemeProvider defaultTheme="dark">
         <div
           className={`transition-opacity duration-500 ${isLoaderVisible ? "opacity-0" : "opacity-100"}`}
           aria-hidden={isLoaderVisible}
