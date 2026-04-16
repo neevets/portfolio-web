@@ -7,6 +7,7 @@ export const skillsData: Record<string, Skill[]> = {
     { name: 'TypeScript', icon: 'TypeScript', color: 'hsl(211, 60%, 45%)', level: 'Junior' },
   ],
   'Frameworks & Libraries': [
+    { name: 'Fiber', icon: 'Fiber', color: 'hsl(193, 100%, 42%)', level: 'Mid level' },
     { name: 'FastAPI', icon: 'FastAPI', color: 'hsl(173, 80%, 40%)', level: 'Mid level' },
     { name: 'React', icon: 'React', color: 'hsl(193, 95%, 68%)', level: 'Junior' },
     { name: 'Tailwind', icon: 'Tailwind', color: 'hsl(198, 93%, 60%)', level: 'Trainee' },
