@@ -68,7 +68,7 @@ const AboutSection = memo(() => {
                 <div className="relative border border-border/80 bg-card/85 backdrop-blur-sm p-10 lg:p-12 rounded-md">
                   <div className="relative z-10 space-y-6 text-center">
                     <h3 className="text-3xl md:text-4xl font-dev font-light text-foreground/90">Who am I?</h3>
-                    <p className="text-lg md:text-xl leading-relaxed text-muted-foreground max-w-3xl mx-auto font-dev">
+                    <p className="text-lg md:text-xl leading-relaxed text-muted-foreground max-w-4xl mx-auto font-dev">
                       I am a backend developer with a focus on systems programming. I pick up new things fast and tend to go further than what&apos;s strictly required, mostly out of curiosity. Comfortable working across the stack but most at home in Golang and Python.
                     </p>
                   </div>
