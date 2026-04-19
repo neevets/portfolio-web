@@ -41,7 +41,7 @@ const ContactSection = memo(() => {
       {
         label: 'LinkedIn',
         value: '/in/neevets',
-        href: 'https://www.linkedin.com/in/steeven-r-68921833a',
+        href: 'https://www.linkedin.com/in/neevets',
         icon: ContactIcons.LinkedIn,
       },
       {
