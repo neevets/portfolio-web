@@ -42,6 +42,9 @@ const AboutSection = memo(() => {
       style={{ scrollMarginTop: '5rem' }}
       className="py-20 sm:py-32 px-4 sm:px-6 relative overflow-hidden"
     >
+      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10">
+        <div className="dot-pattern absolute inset-0" />
+      </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.h2

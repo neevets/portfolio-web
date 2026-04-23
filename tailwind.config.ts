@@ -355,24 +355,6 @@ export default {
 						transform: 'scale(1.02)'
 					}
 				},
-				'skill-gas-pulse': {
-					'0%, 80%, 100%': {
-						opacity: '0',
-						transform: 'scale(1) rotate(0deg)'
-					},
-					'20%': {
-						opacity: '0.4',
-						transform: 'scale(1.2) rotate(90deg)'
-					},
-					'50%': {
-						opacity: '0.7',
-						transform: 'scale(1.4) rotate(180deg)'
-					},
-					'70%': {
-						opacity: '0.3',
-						transform: 'scale(1.6) rotate(270deg)'
-					}
-				},
 				'skill-smooth-fade-in': {
 					'0%': {
 						opacity: '0',
@@ -440,7 +422,6 @@ export default {
 				'animate-magical-float': 'magical-float 8s ease-in-out infinite',
 				'animate-gentle-skill-float': 'gentle-skill-float 7s ease-in-out infinite',
 				'animate-glow-pulse': 'glow-pulse 4s ease-in-out infinite',
-				'skill-gas-pulse': 'skill-gas-pulse 12s ease-in-out infinite',
 				'skill-smooth-fade-in': 'skill-smooth-fade-in 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards',
 				'fast-pulse': 'fast-pulse 0.8s ease-in-out infinite'
 			}
