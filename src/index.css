@@ -4,16 +4,16 @@
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 222 25% 10%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
     --card: 0 0% 100%;
-    --card-foreground: 222 25% 10%;
-    --primary: 222 28% 16%;
+    --card-foreground: 0 0% 0%;
+    --primary: 0 0% 0%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 84%;
-    --secondary-foreground: 222 25% 10%;
-    --muted: 0 0% 92%;
-    --muted-foreground: 222 10% 35%;
+    --secondary: 0 0% 90%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
     --accent: 0 0% 88%;
     --accent-foreground: 222 25% 10%;
     --border: 0 0% 82%;
@@ -22,43 +22,43 @@
     --fiverr-green: 146 80% 43%;
     --fiverr-green-foreground: 0 0% 0%;
     --radius: 0.75rem;
-    
+
     --gradient-bg: linear-gradient(135deg, hsl(0 0% 98%) 0%, hsl(0 0% 95%) 50%, hsl(0 0% 100%) 100%);
     --gradient-hero: radial-gradient(ellipse 80% 60% at 50% -10%, hsl(0 0% 20% / 0.08) 0%, transparent 70%);
     --gradient-mesh: conic-gradient(from 90deg at 50% 50%, hsl(222 25% 10% / 0.05) 0deg, transparent 60deg, hsl(0 0% 70% / 0.07) 120deg, transparent 180deg);
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(0 0% 96%) 100%);
     --gradient-glow: radial-gradient(circle at 50% 50%, hsl(222 25% 10% / 0.12) 0%, transparent 70%);
-    
+
     --dot-pattern: radial-gradient(circle at 50% 50%, hsl(222 25% 10% / 0.12) 1px, transparent 1px);
     --dot-size: 48px 48px;
-    
+
     --shadow-sm: 0 1px 3px hsl(222 25% 10% / 0.12);
     --shadow: 0 2px 8px hsl(222 25% 10% / 0.14);
     --shadow-md: 0 4px 12px hsl(222 25% 10% / 0.18);
     --shadow-lg: 0 8px 24px hsl(222 25% 10% / 0.22);
     --shadow-xl: 0 16px 48px hsl(222 25% 10% / 0.28);
     --shadow-glow: 0 0 40px hsl(222 25% 10% / 0.18);
-    
+
     --glass-bg: hsl(0 0% 100% / 0.92);
     --glass-border: hsl(0 0% 65% / 0.35);
   }
 
   .dark {
     --background: 0 0% 0%;
-    --foreground: 0 0% 96%;
-    --card: 0 0% 4%;
-    --card-foreground: 0 0% 96%;
-    --primary: 0 0% 96%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 2%;
+    --card-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
     --primary-foreground: 0 0% 0%;
-    --secondary: 0 0% 8%;
-    --secondary-foreground: 0 0% 96%;
-    --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 72%;
-    --accent: 0 0% 12%;
-    --accent-foreground: 0 0% 96%;
-    --border: 0 0% 18%;
-    --input: 0 0% 10%;
-    --ring: 0 0% 96%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 100%;
+    --border: 0 0% 20%;
+    --input: 0 0% 12%;
+    --ring: 0 0% 100%;
 
     --gradient-bg: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(0 0% 0%) 50%, hsl(0 0% 3%) 100%);
     --gradient-hero: radial-gradient(ellipse 80% 60% at 50% -10%, hsl(0 0% 100% / 0.08) 0%, transparent 70%);
@@ -82,7 +82,7 @@
 
 @layer base {
   * { @apply border-border; }
-  
+
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
@@ -92,9 +92,9 @@
     scrollbar-width: none;
     overflow-y: scroll;
   }
-  
+
   html::-webkit-scrollbar { width: 0; background: transparent; display: none; }
-  
+
   body {
     @apply bg-background text-foreground;
     font-family: 'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -136,11 +136,11 @@
   .fade-in {
     animation: fadeIn 0.6s ease-out forwards;
   }
-  
+
   .fade-in-up {
     animation: fadeInUp 0.8s ease-out forwards;
   }
-  
+
   .elevated-card {
     @apply backdrop-blur-sm rounded-lg border transition-all duration-500 ease-out;
     background: var(--glass-bg);
@@ -193,16 +193,16 @@
 
   .elegant-neon {
     @apply transition-all duration-1000 ease-out;
-    text-shadow: 
+    text-shadow:
       0 0 8px hsl(var(--foreground) / 0.4),
       0 0 16px hsl(var(--foreground) / 0.3),
       0 0 24px hsl(var(--foreground) / 0.2);
     filter: brightness(1.05) contrast(1.02);
     animation: professional-neon-glow 4s ease-in-out infinite, elegant-float 8s ease-in-out infinite;
   }
-  
+
   .elegant-neon:hover {
-    text-shadow: 
+    text-shadow:
       0 0 12px hsl(var(--foreground) / 0.6),
       0 0 24px hsl(var(--foreground) / 0.4),
       0 0 36px hsl(var(--foreground) / 0.3),
@@ -238,12 +238,6 @@
     transform: translateY(-2px);
   }
 
-
-
-
-
-
-
   .gentle-float {
     animation: gentleFloat 6s ease-in-out infinite;
   }
@@ -255,13 +249,13 @@
   }
 
   .shine-effect {
-    background: linear-gradient(90deg, 
-      transparent 0%, 
-      transparent 40%, 
-      hsl(var(--foreground) / 0.1) 45%, 
-      hsl(var(--foreground) / 0.2) 50%, 
-      hsl(var(--foreground) / 0.1) 55%, 
-      transparent 60%, 
+    background: linear-gradient(90deg,
+      transparent 0%,
+      transparent 40%,
+      hsl(var(--foreground) / 0.1) 45%,
+      hsl(var(--foreground) / 0.2) 50%,
+      hsl(var(--foreground) / 0.1) 55%,
+      transparent 60%,
       transparent 100%
     );
     background-size: 200% 100%;
@@ -269,10 +263,6 @@
     height: 100%;
     width: 100%;
   }
-
-
-
-
 
   .nav-dot-hover {
     @apply relative transition-all duration-500 ease-out;
@@ -294,8 +284,6 @@
   .nav-dot-hover:hover::after {
     transform: translateX(-50%) scale(1);
   }
-
-
 
   .skills-category-advanced {
     @apply relative;
@@ -487,12 +475,12 @@
     transform: none !important;
     filter: none !important;
   }
-  
+
   .skill-card-optimized {
     background: hsl(var(--card));
     border: 1px solid hsl(var(--border));
   }
-  
+
   .skill-card-optimized:hover {
     border-color: hsl(var(--border)) !important;
     transform: none !important;
@@ -503,16 +491,16 @@
     transform: scale(0.98);
     background: hsl(var(--muted));
   }
-  
+
   .hover-scale:active {
     transform: scale(0.98);
   }
-  
+
   html {
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
   }
-  
+
   body {
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
@@ -524,22 +512,15 @@
     min-height: 92px;
     padding: 0.625rem;
   }
-  
+
   .category-header h3 {
     font-size: 1rem;
   }
-
-
-
 
   .skill-card-placeholder {
     min-height: 92px;
   }
 }
-
-
-
-
 
 @media (min-width: 641px) and (max-width: 1024px) {
   .skill-card-optimized {

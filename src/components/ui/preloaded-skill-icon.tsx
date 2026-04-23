@@ -9,13 +9,13 @@ interface PreloadedSkillIconProps {
   style?: React.CSSProperties;
 }
 
-export const PreloadedSkillIcon = memo<PreloadedSkillIconProps>(({ 
-  name, 
+export const PreloadedSkillIcon = memo<PreloadedSkillIconProps>(({
+  name,
   className = "w-full h-full",
   style
 }) => {
   return (
-    <Icon 
+    <Icon
       name={name as IconName}
       className={cn(className)}
       style={style}

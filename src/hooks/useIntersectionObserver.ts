@@ -23,7 +23,7 @@ export const useIntersectionObserver = ({
       ([entry]) => {
         const intersecting = entry.isIntersecting;
         setIsIntersecting(intersecting);
-        
+
         if (intersecting && triggerOnce) {
           setHasIntersected(true);
           observer.disconnect();

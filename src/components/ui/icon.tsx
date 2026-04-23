@@ -11,7 +11,7 @@ interface IconProps {
 }
 
 const IconSkeleton = ({ className }: { className?: string }) => (
-  <div 
+  <div
     className={cn(
       "animate-pulse bg-muted-foreground/20 rounded-sm",
       className
@@ -21,15 +21,15 @@ const IconSkeleton = ({ className }: { className?: string }) => (
   />
 );
 
-export const Icon = memo<IconProps>(({ 
-  name, 
-  className = "w-full h-full", 
+export const Icon = memo<IconProps>(({
+  name,
+  className = "w-full h-full",
   size,
   style,
   fallback
 }) => {
   const IconComponent = iconMap[name];
-  
+
   if (!IconComponent) {
     return fallback || <IconSkeleton className={className} />;
   }
@@ -38,7 +38,7 @@ export const Icon = memo<IconProps>(({
   const combinedStyle = { ...sizeStyle, ...style };
 
   return (
-    <div 
+    <div
       className={cn("flex items-center justify-center", className)}
       style={combinedStyle}
     >

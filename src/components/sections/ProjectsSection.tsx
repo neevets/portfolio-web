@@ -16,7 +16,7 @@ const ProjectCard = memo(({ project, index, isVisible }: ProjectCardProps) => {
     }
 
     return (
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
@@ -45,7 +45,7 @@ const ProjectCard = memo(({ project, index, isVisible }: ProjectCardProps) => {
 
         <div className="flex flex-wrap gap-2 mb-8 justify-center">
           {project.tech.map((tech) => (
-            <span 
+            <span
               key={tech}
               className="px-4 py-2 bg-muted/50 rounded-lg text-sm font-dev font-medium text-foreground border border-border/50 hover:border-foreground/30 transition-colors"
             >
@@ -95,9 +95,9 @@ const ProjectsSection = memo(() => {
   });
 
   return (
-    <section 
+    <section
       ref={ref}
-      id="projects" 
+      id="projects"
       className="py-20 md:py-32 px-4 sm:px-6 relative overflow-hidden z-10"
       style={{ scrollMarginTop: '5rem' }}
     >
@@ -107,7 +107,7 @@ const ProjectsSection = memo(() => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16 md:mb-20">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
@@ -117,7 +117,7 @@ const ProjectsSection = memo(() => {
             Projects
           </motion.h2>
 
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
@@ -126,8 +126,8 @@ const ProjectsSection = memo(() => {
           >
             Production-ready solutions built with modern technologies
           </motion.p>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}

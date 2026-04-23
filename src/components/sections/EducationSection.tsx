@@ -4,7 +4,7 @@ import { Course } from '@/types/portfolio';
 import { motion } from 'framer-motion';
 
 const CourseCard = memo<{ course: Course; index: number }>(({ course, index }) => (
-  <motion.div 
+  <motion.div
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-50px" }}
@@ -42,7 +42,7 @@ CourseCard.displayName = 'CourseCard';
 const EducationSection = memo(() => (
   <section id="courses" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 relative overflow-hidden" style={{ scrollMarginTop: '5rem' }}>
     <div className="max-w-7xl mx-auto relative">
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
