@@ -1,6 +1,7 @@
 import { memo, useMemo } from 'react';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 import { motion } from 'framer-motion';
+import { MapPin } from 'lucide-react';
 
 const HeroSection = memo(() => {
   const { ref, isIntersecting } = useIntersectionObserver({
@@ -69,9 +70,12 @@ const HeroSection = memo(() => {
               <div className="absolute inset-0 w-3 h-3 bg-green-400 rounded-full animate-ping" />
               <div className="absolute -inset-1 w-5 h-5 bg-green-500/30 rounded-full animate-pulse" />
             </div>
-            <p className="text-base sm:text-lg font-dev text-muted-foreground font-medium animate-fade-in-up transition-all duration-700 ease-out" style={{ animationDelay: '1s' }}>
-              Based in Spain
-            </p>
+            <div className="relative flex items-center">
+              <MapPin className="w-4 h-4 text-muted-foreground/60 mr-2" />
+              <p className="text-base sm:text-lg font-dev text-muted-foreground font-medium animate-fade-in-up transition-all duration-700 ease-out" style={{ animationDelay: '1s' }}>
+                Based in Spain
+              </p>
+            </div>
           </div>
         </motion.div>
       </motion.div>
