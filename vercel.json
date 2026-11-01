@@ -3,6 +3,12 @@
   "redirects": [
     {
       "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.neevets.com" }],
+      "destination": "https://neevets.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
       "has": [{ "type": "host", "value": "neevets.website" }],
       "destination": "https://neevets.com/:path*",
       "permanent": true
