@@ -9,12 +9,6 @@
     },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "neevets.website" }],
-      "destination": "https://neevets.com/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/:path*",
       "has": [{ "type": "host", "value": "neevets.is-a.dev" }],
       "destination": "https://neevets.com/:path*",
       "permanent": true

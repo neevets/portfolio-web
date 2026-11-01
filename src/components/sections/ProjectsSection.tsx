@@ -3,7 +3,6 @@ import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { projectsData } from "@/data/projects";
 import { Project } from "@/types/portfolio";
 import { motion } from "framer-motion";
-import { Activity } from "lucide-react";
 
 interface ProjectCardProps {
   project: Project;
@@ -134,16 +133,6 @@ const ProjectsSection = memo(() => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
           >
-            <a
-              href="https://status.neevets.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border border-border bg-background text-foreground rounded-xl font-dev font-medium hover:scale-105 hover:bg-muted/50 transition-all duration-300 group shadow-md"
-            >
-              <Activity className="w-4 h-4 mr-2 text-green-500" />
-              Status
-            </a>
-
             <a
               href="https://github.com/neevets"
               target="_blank"
