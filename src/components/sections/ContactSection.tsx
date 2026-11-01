@@ -52,8 +52,8 @@ const ContactSection = memo(() => {
       },
       {
         label: "Discord",
-        value: "@goroutines",
-        href: "https://discord.com/users/goroutines",
+        value: "@neevtsio",
+        href: "https://discord.com/users/neevtsio",
         icon: ContactIcons.Discord,
       },
     ],
