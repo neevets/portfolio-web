@@ -3,19 +3,34 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.neevets.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "www.neevets.com"
+        }
+      ],
       "destination": "https://neevets.com/:path*",
       "permanent": true
     },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "neevets.is-a.dev" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "neevets.is-a.dev"
+        }
+      ],
       "destination": "https://neevets.com/:path*",
       "permanent": true
     },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "neeevets.is-a.dev" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "neeevets.is-a.dev"
+        }
+      ],
       "destination": "https://neevets.com/:path*",
       "permanent": true
     }
@@ -28,12 +43,33 @@
   ],
   "headers": [
     {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
       ]
     }
   ]
