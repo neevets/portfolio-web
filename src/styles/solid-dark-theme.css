@@ -1,4 +1,4 @@
-/* Keep the dark portfolio visually consistent with the Get in Touch section. */
+/* Match the solid black background used by Get in Touch. */
 .dark,
 .dark body,
 .dark #root,
@@ -16,16 +16,10 @@
   --gradient-mesh: none;
   --gradient-card: #000;
   --gradient-glow: none;
-  --dot-pattern: none;
   --glass-bg: #000;
 }
 
-/* Remove glass effects and translucent surfaces from embedded UI and cards. */
-.dark [class*="backdrop-blur"] {
-  -webkit-backdrop-filter: none !important;
-  backdrop-filter: none !important;
-}
-
+/* Make translucent card and embed surfaces opaque without disabling motion. */
 .dark .elevated-card,
 .dark .glass-card,
 .dark .skill-card-optimized,
@@ -33,14 +27,16 @@
 .dark [class*="bg-background/"] {
   background-color: #000 !important;
   background-image: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
 }
 
-/* Remove decorative grid, glow and dot overlays so sections stay flat black. */
+/* Keep decorative patterns and all animation effects intact. */
 .dark .dot-pattern {
-  background-image: none !important;
-  animation: none !important;
+  background-color: transparent;
 }
 
-.dark #hero > .absolute {
+/* Remove only the static hero gradient overlay, not the animated grid. */
+.dark #hero > .absolute[style*="gradient-hero"] {
   display: none !important;
 }
