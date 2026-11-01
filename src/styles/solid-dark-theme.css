@@ -1,0 +1,46 @@
+/* Keep the dark portfolio visually consistent with the Get in Touch section. */
+.dark,
+.dark body,
+.dark #root,
+.dark main,
+.dark main > section,
+.dark footer {
+  background-color: #000 !important;
+  background-image: none !important;
+}
+
+.dark {
+  --card: 0 0% 0%;
+  --gradient-bg: #000;
+  --gradient-hero: none;
+  --gradient-mesh: none;
+  --gradient-card: #000;
+  --gradient-glow: none;
+  --dot-pattern: none;
+  --glass-bg: #000;
+}
+
+/* Remove glass effects and translucent surfaces from embedded UI and cards. */
+.dark [class*="backdrop-blur"] {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.dark .elevated-card,
+.dark .glass-card,
+.dark .skill-card-optimized,
+.dark [class*="bg-card/"],
+.dark [class*="bg-background/"] {
+  background-color: #000 !important;
+  background-image: none !important;
+}
+
+/* Remove decorative grid, glow and dot overlays so sections stay flat black. */
+.dark .dot-pattern {
+  background-image: none !important;
+  animation: none !important;
+}
+
+.dark #hero > .absolute {
+  display: none !important;
+}
