@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import { HelmetProvider } from "react-helmet-async";
 import Portfolio from "./pages/portfolio";
 import NotFound from "./pages/NotFound";
+import "./styles/solid-dark-theme.css";
 
 const router = createBrowserRouter([
   { path: "/", element: <Portfolio /> },
