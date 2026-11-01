@@ -2,6 +2,39 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "neeevets.is-a.dev"
+        }
+      ],
+      "destination": "https://neevets.com/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "neevets.is-a.dev"
+        }
+      ],
+      "destination": "https://neevets.com/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.neevets.com"
+        }
+      ],
+      "destination": "https://neevets.com/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
