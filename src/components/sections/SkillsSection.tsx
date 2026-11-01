@@ -23,7 +23,9 @@ const SkillCard = memo<{
 
   return (
     <div
-      className={`skill-card-optimized group opacity-0 animate-skill-fade-in ${skill.name === 'Vercel' ? 'vercel-skill-card' : ''}`}
+      className={`skill-card-optimized group opacity-0 animate-skill-fade-in ${
+        skill.name === 'Vercel' ? 'vercel-skill-card' : ''
+      }`}
       style={{
         '--skill-color': styleProps.skillColor,
       } as React.CSSProperties & { '--skill-color': string }}
@@ -43,9 +45,11 @@ const SkillCard = memo<{
         >
           {skill.name}
         </h4>
-        <div className="opacity-0 transform translate-y-2 sm:group-hover:opacity-100 sm:group-hover:translate-y-0 transition-all duration-300 ease-out">
+        <div className="opacity-100 translate-y-0 sm:opacity-0 sm:translate-y-2 sm:group-hover:opacity-100 sm:group-hover:translate-y-0 transition-all duration-300 ease-out">
           <span
-            className={`inline-flex items-center justify-center min-w-[70px] sm:min-w-[88px] px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium border backdrop-blur-sm ${skill.name === 'Vercel' ? 'vercel-level-pill' : ''}`}
+            className={`inline-flex items-center justify-center min-w-[70px] sm:min-w-[88px] px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium border backdrop-blur-sm ${
+              skill.name === 'Vercel' ? 'vercel-level-pill' : ''
+            }`}
             style={{
               color: styleProps.skillColor,
               borderColor: `${styleProps.skillColor}50`,
@@ -103,7 +107,7 @@ const SkillsSection = () => {
       className="py-12 sm:py-16 lg:py-20 px-3 sm:px-6 relative overflow-hidden z-10"
       style={{ scrollMarginTop: '5rem' }}
     >
-      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20" aria-hidden="true">
         <div className="dot-pattern absolute inset-0" />
       </div>
 
