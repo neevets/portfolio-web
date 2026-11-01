@@ -123,7 +123,7 @@ const ProjectsSection = memo(() => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-muted-foreground font-dev text-base sm:text-lg max-w-2xl mx-auto mb-8"
           >
-            Selected work across backend systems, security, and software tooling.
+            Production-ready solutions built with modern technologies
           </motion.p>
 
           <motion.div
