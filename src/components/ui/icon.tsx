@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { iconMap, IconName } from '@/components/icons';
+import { iconMap, type IconName } from '@/components/icons/icon-map';
 import { cn } from '@/lib/utils';
 
 interface IconProps {
