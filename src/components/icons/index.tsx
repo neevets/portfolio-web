@@ -1,5 +1,6 @@
 
 import { memo } from 'react';
+export { iconMap } from './icon-map';
 
 export const JavaScriptIcon = memo(() => (
   <svg className="w-full h-full scale-[1.3]" viewBox="0 0 48 48">
@@ -223,41 +224,3 @@ export const GitHubIcon = memo(() => (
   </svg>
 ));
 
-export const iconMap = {
-  JavaScript: JavaScriptIcon,
-  TypeScript: TypeScriptIcon,
-  React: ReactIcon,
-  Tailwind: TailwindIcon,
-  Git: GitIcon,
-  VSCode: VSCodeIcon,
-  Go: GoIcon,
-  Fiber: FiberIcon,
-  Python: PythonIcon,
-  Node: NodeIcon,
-  Django: DjangoIcon,
-  FastAPI: FastAPIIcon,
-  NestJS: NestJSIcon,
-  SQLite: SQLiteIcon,
-  MySQL: MySQLIcon,
-  PostgreSQL: PostgreSQLIcon,
-  MongoDB: MongoDBIcon,
-  Redis: RedisIcon,
-  Docker: DockerIcon,
-  Heroku: HerokuIcon,
-  Vercel: VercelIcon,
-  Netlify: NetlifyIcon,
-  Cloudflare: CloudflareIcon,
-  Kubernetes: KubernetesIcon,
-  Postman: PostmanIcon,
-  Sentry: SentryIcon,
-  Rust: RustIcon,
-  GitHub: GitHubIcon,
-
-  Email: EmailIcon,
-  LinkedIn: LinkedInIcon,
-  Discord: DiscordIcon,
-  VSCodium: VSCodiumIcon,
-  VisualStudio: VisualStudioIcon,
-} as const;
-
-export type IconName = keyof typeof iconMap;
