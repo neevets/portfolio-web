@@ -1,6 +1,5 @@
 
 import { memo } from 'react';
-export { iconMap } from './icon-map';
 
 export const JavaScriptIcon = memo(() => (
   <svg className="w-full h-full scale-[1.3]" viewBox="0 0 48 48">
