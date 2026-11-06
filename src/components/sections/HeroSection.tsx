@@ -72,9 +72,6 @@ const HeroSection = memo(() => {
             <p className="text-base sm:text-lg font-dev text-muted-foreground font-medium animate-fade-in-up transition-all duration-700 ease-out" style={{ animationDelay: '1s' }}>
               Based in Spain
             </p>
-          <p className="mt-6 max-w-2xl mx-auto text-sm sm:text-base text-muted-foreground font-dev leading-relaxed">
-            Backend development and systems programming with Go, Python, APIs, and modern infrastructure.
-          </p>
           </div>
         </motion.div>
       </motion.div>
