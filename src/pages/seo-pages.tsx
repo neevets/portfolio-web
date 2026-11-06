@@ -1,3 +1,4 @@
+import { useLayoutEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { SEOHead } from "@/components/ui/seo-head";
@@ -55,6 +56,11 @@ const services = {
 
 const ServicePage = () => {
   const { serviceSlug } = useParams<{ serviceSlug: keyof typeof services }>();
+
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, left: 0 });
+  }, [serviceSlug]);
+
   const service = serviceSlug ? services[serviceSlug] : undefined;
 
   if (!service) {
@@ -85,7 +91,7 @@ const ServicePage = () => {
           <section className="border-t border-border py-10">
             <h2 className="text-2xl font-dev mb-4">Discuss a project</h2>
             <p className="text-muted-foreground mb-6">Share the problem you are trying to solve and the requirements you already know.</p>
-            <a href="mailto:contact@neevets.com" className="inline-flex items-center gap-2 rounded-xl bg-foreground text-background px-6 py-3 font-medium">Get in touch <ArrowUpRight size={16} /></a>
+            <a href="mailto:contact@neevets.com" className="group inline-flex items-center gap-2 rounded-xl bg-foreground text-background px-6 py-3 font-medium transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.03] hover:shadow-lg active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Get in touch <ArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" size={16} /></a>
           </section>
           <nav aria-label="Other services" className="border-t border-border pt-8">
             <h2 className="text-lg font-dev mb-4">Explore other services</h2>

@@ -44,14 +44,15 @@ const HeroSection = memo(() => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-center max-w-7xl mx-auto relative z-10 px-4 sm:px-6 py-16 sm:py-20"
+        className="text-center max-w-7xl mx-auto relative z-10 px-0 sm:px-6 py-16 sm:py-20"
       >
         <div className="mb-6 sm:mb-8 md:mb-12">
           <motion.h1
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-            className="section-title font-dev font-light mb-12 sm:mb-16 md:mb-20 tracking-tight relative animated-underline leading-none cursor-pointer text-[clamp(3.25rem,16.5vw,9rem)] md:text-[clamp(6rem,16vw,14rem)] xl:text-[clamp(6rem,14vw,14rem)]"
+            style={{ fontSize: "clamp(4rem, 18vw, 14rem)", width: "100vw", marginLeft: "calc(50% - 50vw)" }}
+            className="section-title font-dev font-light mb-12 sm:mb-16 md:mb-20 tracking-tight relative animated-underline leading-none cursor-pointer whitespace-nowrap"
           >
             <span className="text-foreground">Neevets</span>
           </motion.h1>
