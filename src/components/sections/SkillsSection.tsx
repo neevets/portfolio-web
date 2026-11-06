@@ -51,9 +51,9 @@ const SkillCard = memo<{
               skill.name === 'Vercel' ? 'vercel-level-pill' : ''
             }`}
             style={{
-              color: styleProps.skillColor,
-              borderColor: `${styleProps.skillColor}50`,
-              backgroundColor: `${styleProps.skillColor}15`,
+              color: 'hsl(var(--foreground))',
+              borderColor: styleProps.skillColor,
+              backgroundColor: styleProps.skillColor,
             }}
           >
             {skill.level}
