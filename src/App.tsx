@@ -46,7 +46,7 @@ const App = () => {
       window.removeEventListener("load", finishLoading);
 
       const elapsed = Date.now() - startedAt;
-      const remaining = Math.max(0, MIN_LOADING_TIME_MS - elapsed);
+      const remaining = Math.max(0, MIN_LOADING_TIME_MS - elapsed - FADE_OUT_DURATION_MS);
 
       fadeTimer = window.setTimeout(startFadeOut, remaining);
     };
@@ -59,7 +59,7 @@ const App = () => {
       }
 
       startFadeOut();
-    }, MAX_LOADING_TIME_MS);
+    }, MAX_LOADING_TIME_MS - FADE_OUT_DURATION_MS);
 
     if (document.readyState === "complete") {
       finishLoading();
