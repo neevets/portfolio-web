@@ -1,0 +1,35 @@
+import { memo } from "react";
+import { Link } from "react-router-dom";
+import { ArrowUpRight } from "lucide-react";
+
+const services = [
+  { title: "Backend Development", description: "Backend application logic, REST APIs, database integration, and maintainable services.", path: "/services/backend-development" },
+  { title: "Go Development", description: "Go services and APIs with clear structure, practical testing, and reliable data access.", path: "/services/go-development" },
+  { title: "Python APIs", description: "Python API development with FastAPI, validation, documentation, and integrations.", path: "/services/python-apis" },
+  { title: "DevOps & Deployment", description: "Containerisation, CI workflows, deployment configuration, and operational basics.", path: "/services/devops" },
+];
+
+const ServicesSection = memo(() => (
+  <section id="services" className="py-20 sm:py-28 px-4 sm:px-6 relative z-10" style={{ scrollMarginTop: "5rem" }}>
+    <div className="max-w-7xl mx-auto">
+      <div className="max-w-3xl mb-12">
+        <h2 className="section-title text-4xl sm:text-5xl md:text-6xl font-dev font-light mb-5">Services</h2>
+        <p className="text-muted-foreground font-dev text-base sm:text-lg leading-relaxed">Explore the areas I work with, from backend application development to APIs and deployment workflows.</p>
+      </div>
+      <div className="grid sm:grid-cols-2 gap-4">
+        {services.map((service) => (
+          <Link key={service.path} to={service.path} className="group border border-border/70 bg-card/60 rounded-xl p-6 sm:p-8 hover:border-foreground/40 transition-colors">
+            <div className="flex items-start justify-between gap-4 mb-4">
+              <h3 className="text-xl sm:text-2xl font-dev font-medium">{service.title}</h3>
+              <ArrowUpRight className="shrink-0 text-muted-foreground group-hover:text-foreground transition-colors" size={20} />
+            </div>
+            <p className="text-sm sm:text-base leading-relaxed text-muted-foreground">{service.description}</p>
+          </Link>
+        ))}
+      </div>
+    </div>
+  </section>
+));
+
+ServicesSection.displayName = "ServicesSection";
+export { ServicesSection };

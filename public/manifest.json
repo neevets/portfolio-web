@@ -1,7 +1,7 @@
 {
-  "name": "Neevets Portfolio",
+  "name": "Neevets | Backend Development",
   "short_name": "Neevets",
-  "description": "Hi, I'm Neevets, a fullstack developer from Honduras. Explore my projects and work.",
+  "description": "Backend development, Go, Python APIs, and software infrastructure projects.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

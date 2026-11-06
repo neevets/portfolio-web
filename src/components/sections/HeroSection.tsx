@@ -51,8 +51,7 @@ const HeroSection = memo(() => {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-            className="section-title font-dev font-light mb-12 sm:mb-16 md:mb-20 tracking-tight relative animated-underline leading-none cursor-pointer"
-            style={{ fontSize: 'clamp(3rem, 14vw, 14rem)' }}
+            className="section-title font-dev font-light mb-12 sm:mb-16 md:mb-20 tracking-tight relative animated-underline leading-none cursor-pointer text-[clamp(3.25rem,16.5vw,9rem)] md:text-[clamp(6rem,16vw,14rem)] xl:text-[clamp(6rem,14vw,14rem)]"
           >
             <span className="text-foreground">Neevets</span>
           </motion.h1>

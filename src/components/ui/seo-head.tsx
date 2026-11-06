@@ -3,13 +3,23 @@ import { Helmet } from "react-helmet-async";
 interface SEOHeadProps {
   title?: string;
   description?: string;
+  path?: string;
+  type?: "website" | "article";
+  robots?: string;
+  canonical?: boolean;
 }
 
-const SITE_URL = "https://neevets.com/";
+const SITE_URL = "https://neevets.com";
+
 export const SEOHead = ({
-  title = "Neevets",
-  description = "Neevets is a backend developer focused on systems programming and building reliable software with Go, Python, and modern infrastructure.",
+  title = "Neevets | Backend Developer, Go & Python",
+  description = "Neevets is a backend developer focused on Go, Python APIs, systems programming, and reliable software infrastructure.",
+  path = "/",
+  type = "website",
+  robots = "index, follow, max-image-preview:large",
+  canonical = true,
 }: SEOHeadProps) => {
+  const canonicalUrl = new URL(path, SITE_URL).toString();
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -39,18 +49,20 @@ export const SEOHead = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="author" content="Neevets" />
-      <meta name="robots" content="index, follow, max-image-preview:large" />
+      <meta name="robots" content={robots} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={type} />
       <meta property="og:site_name" content="Neevets" />
       <meta property="og:locale" content="en_US" />
-      <meta property="og:url" content={SITE_URL} />
+      {canonical && <meta property="og:url" content={canonicalUrl} />}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <link rel="canonical" href={SITE_URL} />
-      <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+      {canonical && <link rel="canonical" href={canonicalUrl} />}
+      {robots.includes("noindex") ? null : (
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+      )}
     </Helmet>
   );
 };
