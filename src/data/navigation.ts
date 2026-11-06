@@ -5,7 +5,7 @@ export const navItems: NavItem[] = [
   { label: 'Home', id: 'hero', icon: Home },
   { label: 'About Me', id: 'about', icon: User },
   { label: 'Skills', id: 'skills', icon: Code },
-  { label: 'Services', id: 'services', icon: BriefcaseBusiness },
+  { label: 'Services', id: 'services', icon: Briefcase },
   { label: 'Projects', id: 'projects', icon: FolderOpen },
   { label: 'Certificates', id: 'courses', icon: GraduationCap },
   { label: 'Get in Touch', id: 'getintouch', icon: Mail }
