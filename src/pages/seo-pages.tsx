@@ -70,7 +70,6 @@ const ServicePage = () => {
       <main className="min-h-screen bg-background text-foreground px-6 py-20 sm:py-28">
         <article className="max-w-4xl mx-auto">
           <Link to="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-16"><ArrowLeft size={16} /> Back to portfolio</Link>
-          <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-5">Neevets / Services</p>
           <h1 className="text-4xl sm:text-6xl font-dev font-light leading-tight mb-8">{service.heading}</h1>
           <p className="text-lg sm:text-xl leading-relaxed text-muted-foreground max-w-3xl mb-14">{service.description}</p>
           <section className="border-t border-border py-10">
@@ -118,8 +117,11 @@ const DrewProjectPage = () => (
           <p className="text-muted-foreground leading-relaxed">Go, Fiber, PostgreSQL, and Redis.</p>
         </section>
         <section className="border-t border-border py-10">
-          <h2 className="text-2xl font-dev mb-5">Source code</h2>
-          <a href="https://github.com/neevets/drew" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 underline underline-offset-4">Explore Drew on GitHub <ArrowUpRight size={16} /></a>
+          <h2 className="text-2xl font-dev mb-5">Project links</h2>
+          <div className="flex flex-wrap gap-x-6 gap-y-4 text-muted-foreground">
+            <a href="https://drewbot.xyz" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 underline underline-offset-4 hover:text-foreground">Visit Drew website <ArrowUpRight size={16} /></a>
+            <a href="https://github.com/neevets/drew" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 underline underline-offset-4 hover:text-foreground">Explore source code on GitHub <ArrowUpRight size={16} /></a>
+          </div>
         </section>
       </article>
     </main>
