@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
@@ -10,9 +10,9 @@ import NotFound from "./pages/NotFound";
 import { DrewProjectPage, ServicePage } from "./pages/seo-pages";
 import "./styles/solid-dark-theme.css";
 
-const MIN_LOADING_TIME_MS = 4500;
+const MIN_LOADING_CYCLES = 3;
 const FADE_OUT_DURATION_MS = 450;
-const MAX_LOADING_TIME_MS = 8000;
+const LOAD_EVENT_FALLBACK_MS = 8000;
 
 const router = createBrowserRouter([
   { path: "/", element: <Portfolio /> },
@@ -24,42 +24,48 @@ const router = createBrowserRouter([
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isFadingOut, setIsFadingOut] = useState(false);
+  const completedCyclesRef = useRef(0);
+  const pageReadyRef = useRef(false);
+  const exitStartedRef = useRef(false);
+  const hideTimerRef = useRef<number | undefined>(undefined);
+
+  const tryStartFadeOut = useCallback(() => {
+    if (
+      !pageReadyRef.current ||
+      completedCyclesRef.current < MIN_LOADING_CYCLES ||
+      exitStartedRef.current
+    ) {
+      return;
+    }
+
+    exitStartedRef.current = true;
+    setIsFadingOut(true);
+    hideTimerRef.current = window.setTimeout(() => {
+      setIsLoading(false);
+    }, FADE_OUT_DURATION_MS);
+  }, []);
+
+  const handleAnimationCycleComplete = useCallback(() => {
+    completedCyclesRef.current += 1;
+    tryStartFadeOut();
+  }, [tryStartFadeOut]);
 
   useEffect(() => {
-    const startedAt = Date.now();
-    let fadeTimer: number | undefined;
-    let hideTimer: number | undefined;
-    let hasStartedExit = false;
-
-    const startFadeOut = () => {
-      if (hasStartedExit) return;
-      hasStartedExit = true;
-
-      setIsFadingOut(true);
-      hideTimer = window.setTimeout(() => {
-        setIsLoading(false);
-      }, FADE_OUT_DURATION_MS);
-    };
+    let fallbackTimer: number | undefined;
 
     const finishLoading = () => {
-      window.clearTimeout(fallbackTimer);
-      window.removeEventListener("load", finishLoading);
-
-      const elapsed = Date.now() - startedAt;
-      const remaining = Math.max(0, MIN_LOADING_TIME_MS - elapsed - FADE_OUT_DURATION_MS);
-
-      fadeTimer = window.setTimeout(startFadeOut, remaining);
-    };
-
-    const fallbackTimer = window.setTimeout(() => {
-      window.removeEventListener("load", finishLoading);
-
-      if (fadeTimer !== undefined) {
-        window.clearTimeout(fadeTimer);
+      if (fallbackTimer !== undefined) {
+        window.clearTimeout(fallbackTimer);
       }
 
-      startFadeOut();
-    }, MAX_LOADING_TIME_MS - FADE_OUT_DURATION_MS);
+      window.removeEventListener("load", finishLoading);
+      pageReadyRef.current = true;
+    };
+
+    fallbackTimer = window.setTimeout(() => {
+      window.removeEventListener("load", finishLoading);
+      pageReadyRef.current = true;
+    }, LOAD_EVENT_FALLBACK_MS);
 
     if (document.readyState === "complete") {
       finishLoading();
@@ -69,14 +75,13 @@ const App = () => {
 
     return () => {
       window.removeEventListener("load", finishLoading);
-      window.clearTimeout(fallbackTimer);
 
-      if (fadeTimer !== undefined) {
-        window.clearTimeout(fadeTimer);
+      if (fallbackTimer !== undefined) {
+        window.clearTimeout(fallbackTimer);
       }
 
-      if (hideTimer !== undefined) {
-        window.clearTimeout(hideTimer);
+      if (hideTimerRef.current !== undefined) {
+        window.clearTimeout(hideTimerRef.current);
       }
     };
   }, []);
@@ -87,7 +92,12 @@ const App = () => {
         <RouterProvider router={router} />
         <Analytics />
         <SpeedInsights />
-        {isLoading && <InitialLoader isExiting={isFadingOut} />}
+        {isLoading && (
+          <InitialLoader
+            isExiting={isFadingOut}
+            onCycleComplete={handleAnimationCycleComplete}
+          />
+        )}
       </ThemeProvider>
     </HelmetProvider>
   );
