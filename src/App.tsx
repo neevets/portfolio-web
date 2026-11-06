@@ -51,18 +51,14 @@ const App = () => {
   }, [tryStartFadeOut]);
 
   useEffect(() => {
-    let fallbackTimer: number | undefined;
-
     const finishLoading = () => {
-      if (fallbackTimer !== undefined) {
-        window.clearTimeout(fallbackTimer);
-      }
+      window.clearTimeout(fallbackTimer);
 
       window.removeEventListener("load", finishLoading);
       pageReadyRef.current = true;
     };
 
-    fallbackTimer = window.setTimeout(() => {
+    const fallbackTimer = window.setTimeout(() => {
       window.removeEventListener("load", finishLoading);
       pageReadyRef.current = true;
     }, LOAD_EVENT_FALLBACK_MS);
