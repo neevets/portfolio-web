@@ -10,7 +10,8 @@ import NotFound from "./pages/NotFound";
 import { DrewProjectPage, ServicePage } from "./pages/seo-pages";
 import "./styles/solid-dark-theme.css";
 
-const MIN_LOADING_TIME_MS = 1500;
+const MIN_LOADING_TIME_MS = 4500;
+const FADE_OUT_DURATION_MS = 450;
 const MAX_LOADING_TIME_MS = 8000;
 
 const router = createBrowserRouter([
@@ -22,10 +23,23 @@ const router = createBrowserRouter([
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [isFadingOut, setIsFadingOut] = useState(false);
 
   useEffect(() => {
     const startedAt = Date.now();
+    let fadeTimer: number | undefined;
     let hideTimer: number | undefined;
+    let hasStartedExit = false;
+
+    const startFadeOut = () => {
+      if (hasStartedExit) return;
+      hasStartedExit = true;
+
+      setIsFadingOut(true);
+      hideTimer = window.setTimeout(() => {
+        setIsLoading(false);
+      }, FADE_OUT_DURATION_MS);
+    };
 
     const finishLoading = () => {
       window.clearTimeout(fallbackTimer);
@@ -34,19 +48,17 @@ const App = () => {
       const elapsed = Date.now() - startedAt;
       const remaining = Math.max(0, MIN_LOADING_TIME_MS - elapsed);
 
-      hideTimer = window.setTimeout(() => {
-        setIsLoading(false);
-      }, remaining);
+      fadeTimer = window.setTimeout(startFadeOut, remaining);
     };
 
     const fallbackTimer = window.setTimeout(() => {
       window.removeEventListener("load", finishLoading);
 
-      if (hideTimer !== undefined) {
-        window.clearTimeout(hideTimer);
+      if (fadeTimer !== undefined) {
+        window.clearTimeout(fadeTimer);
       }
 
-      setIsLoading(false);
+      startFadeOut();
     }, MAX_LOADING_TIME_MS);
 
     if (document.readyState === "complete") {
@@ -58,6 +70,10 @@ const App = () => {
     return () => {
       window.removeEventListener("load", finishLoading);
       window.clearTimeout(fallbackTimer);
+
+      if (fadeTimer !== undefined) {
+        window.clearTimeout(fadeTimer);
+      }
 
       if (hideTimer !== undefined) {
         window.clearTimeout(hideTimer);
@@ -71,7 +87,7 @@ const App = () => {
         <RouterProvider router={router} />
         <Analytics />
         <SpeedInsights />
-        {isLoading && <InitialLoader />}
+        {isLoading && <InitialLoader isExiting={isFadingOut} />}
       </ThemeProvider>
     </HelmetProvider>
   );
