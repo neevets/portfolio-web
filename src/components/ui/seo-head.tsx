@@ -3,13 +3,19 @@ import { Helmet } from "react-helmet-async";
 interface SEOHeadProps {
   title?: string;
   description?: string;
+  path?: string;
+  type?: "website" | "article";
 }
 
-const SITE_URL = "https://neevets.com/";
+const SITE_URL = "https://neevets.com";
+
 export const SEOHead = ({
-  title = "Neevets",
-  description = "Neevets is a backend developer focused on systems programming and building reliable software with Go, Python, and modern infrastructure.",
+  title = "Neevets | Backend Developer, Go & Python",
+  description = "Neevets is a backend developer focused on Go, Python APIs, systems programming, and reliable software infrastructure.",
+  path = "/",
+  type = "website",
 }: SEOHeadProps) => {
+  const canonicalUrl = new URL(path, SITE_URL).toString();
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -42,14 +48,14 @@ export const SEOHead = ({
       <meta name="robots" content="index, follow, max-image-preview:large" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={type} />
       <meta property="og:site_name" content="Neevets" />
       <meta property="og:locale" content="en_US" />
-      <meta property="og:url" content={SITE_URL} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <link rel="canonical" href={SITE_URL} />
+      <link rel="canonical" href={canonicalUrl} />
       <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
     </Helmet>
   );
