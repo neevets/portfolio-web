@@ -1,4 +1,4 @@
-import { Home, User, Code, FolderOpen, GraduationCap, Mail, BriefcaseBusiness } from 'lucide-react';
+import { Home, User, Code, FolderOpen, GraduationCap, Mail, Briefcase } from 'lucide-react';
 import { NavItem } from '@/types/portfolio';
 
 export const navItems: NavItem[] = [
