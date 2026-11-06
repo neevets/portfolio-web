@@ -10,6 +10,9 @@ import NotFound from "./pages/NotFound";
 import { DrewProjectPage, ServicePage } from "./pages/seo-pages";
 import "./styles/solid-dark-theme.css";
 
+const MIN_LOADING_TIME_MS = 1500;
+const MAX_LOADING_TIME_MS = 8000;
+
 const router = createBrowserRouter([
   { path: "/", element: <Portfolio /> },
   { path: "/services/:serviceSlug", element: <ServicePage /> },
@@ -21,18 +24,30 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    const startedAt = Date.now();
     let hideTimer: number | undefined;
 
     const finishLoading = () => {
       window.clearTimeout(fallbackTimer);
+      window.removeEventListener("load", finishLoading);
+
+      const elapsed = Date.now() - startedAt;
+      const remaining = Math.max(0, MIN_LOADING_TIME_MS - elapsed);
+
       hideTimer = window.setTimeout(() => {
         setIsLoading(false);
-      }, 450);
+      }, remaining);
     };
 
     const fallbackTimer = window.setTimeout(() => {
+      window.removeEventListener("load", finishLoading);
+
+      if (hideTimer !== undefined) {
+        window.clearTimeout(hideTimer);
+      }
+
       setIsLoading(false);
-    }, 8000);
+    }, MAX_LOADING_TIME_MS);
 
     if (document.readyState === "complete") {
       finishLoading();
