@@ -22,17 +22,17 @@ const App = () => {
 
   useEffect(() => {
     let hideTimer: number | undefined;
-    let fallbackTimer: number | undefined;
 
     const finishLoading = () => {
-      if (fallbackTimer !== undefined) {
-        window.clearTimeout(fallbackTimer);
-      }
-
+      window.clearTimeout(fallbackTimer);
       hideTimer = window.setTimeout(() => {
         setIsLoading(false);
       }, 450);
     };
+
+    const fallbackTimer = window.setTimeout(() => {
+      setIsLoading(false);
+    }, 8000);
 
     if (document.readyState === "complete") {
       finishLoading();
@@ -40,19 +40,12 @@ const App = () => {
       window.addEventListener("load", finishLoading, { once: true });
     }
 
-    fallbackTimer = window.setTimeout(() => {
-      setIsLoading(false);
-    }, 8000);
-
     return () => {
       window.removeEventListener("load", finishLoading);
+      window.clearTimeout(fallbackTimer);
 
       if (hideTimer !== undefined) {
         window.clearTimeout(hideTimer);
-      }
-
-      if (fallbackTimer !== undefined) {
-        window.clearTimeout(fallbackTimer);
       }
     };
   }, []);
