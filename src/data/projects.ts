@@ -13,7 +13,7 @@ export const projectsData: Project[] = [
     title: "Drew Bot",
     description: "Open-source multipurpose Discord bot written in Go. Its stack includes Fiber for HTTP services, PostgreSQL for persistent data, and Redis for caching and fast access to frequently used state.",
     repo: "https://github.com/neevets/drew",
-    productionUrl: "https://drewbot.site",
+    productionUrl: "https://drewbot.xyz",
     tech: ["Go", "Fiber", "Redis", "PostgreSQL"],
     category: "Backend",
     status: "Production"
