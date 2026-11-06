@@ -17,7 +17,14 @@ export const InitialLoader = ({
         className="initial-loader-shape"
         aria-label="Cargando sitio"
         role="status"
-        onAnimationIteration={onCycleComplete}
+        onAnimationIteration={(event) => {
+          if (
+            event.animationName === "initial-loader-rotate" &&
+            event.pseudoElement === ""
+          ) {
+            onCycleComplete?.();
+          }
+        }}
       />
     </div>
   );
