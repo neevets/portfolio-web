@@ -3,27 +3,27 @@ import { Project } from '@/types/portfolio';
 export const projectsData: Project[] = [
   {
     title: "Portfolio Web",
-    description: "Personal site built with React and TypeScript, deployed on Vercel with Cloudflare handling edge caching and DDoS protection",
+    description: "Personal developer portfolio built with React and TypeScript. The project uses Vite for its build tooling and is deployed on Vercel, with Cloudflare providing edge and DNS services.",
     repo: "https://github.com/neevets/portfolio-web",
-    tech: ["React", "TypeScript", "Tailwind", "Vercel", "Cloudflare"],
+    tech: ["React", "TypeScript", "Vite", "Tailwind", "Vercel", "Cloudflare"],
     category: "Frontend",
     status: "Production"
   },
   {
     title: "Drew Bot",
-    description: "An open-source, high-performance multipurpose bot. Go provides memory safety and high concurrency, Fiber ensures low-latency execution, while PostgreSQL and Redis enable scalable state management and ACID-compliant logging",
-    repo: "https://github.com/neevets/drew-bot",
+    description: "Open-source multipurpose Discord bot written in Go. Its stack includes Fiber for HTTP services, PostgreSQL for persistent data, and Redis for caching and fast access to frequently used state.",
+    repo: "https://github.com/neevets/drew",
     productionUrl: "https://drewbot.site",
     tech: ["Go", "Fiber", "Redis", "PostgreSQL"],
-    category: "Security",
+    category: "Backend",
     status: "Production"
   },
   {
     title: "Guroi Bot",
-    description: "An opsec bot written in Rust, designed for scalability, multilingual support, and robust command handling. Twilight powers the gateway layer, Moka provides in-memory caching, and Fluent enable internationalization",
+    description: "Discord bot project written in Rust, using Twilight for Discord connectivity, Moka for in-memory caching, and Fluent for localization. The project focuses on modular command handling and multilingual support.",
     repo: "https://github.com/neevets/guroi-bot",
     tech: ["Rust", "Twilight", "Moka", "Fluent"],
-    category: "Security",
+    category: "Backend",
     status: "In Development"
   }
 ];
