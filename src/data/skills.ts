@@ -43,8 +43,7 @@ export const skillsData: Record<string, Skill[]> = {
     { name: "Sentry", icon: "Sentry", color: "hsl(257, 31%, 43%)", level: "Mid level" },
   ],
   "APIs, Security & Tooling": [
-    { name: "Swagger / OpenAPI", icon: "Swagger", color: "#85EA2D", level: "Junior" },
-    { name: "OAuth 2.0", icon: "OAuth2", color: "#4F46E5", level: "Junior" },
+    { name: "Swagger", icon: "Swagger", color: "#85EA2D", level: "Junior" },
     { name: "Auth0", icon: "Auth0", color: "#EB5424", level: "Junior" },
     { name: "JWT", icon: "JWT", color: "#D63AFF", level: "Junior" },
     { name: "MCP", icon: "MCP", color: "#4B91F1", level: "Junior" },

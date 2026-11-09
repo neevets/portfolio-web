@@ -1,5 +1,4 @@
 import { memo } from "react";
-import { KeyRound } from "lucide-react";
 
 import BunLogo from "@/assets/skills/bun.svg";
 import NginxLogo from "@/assets/skills/nginx.svg";
@@ -82,6 +81,3 @@ export const JWTIcon = memo(() => (
   </>
 ));
 export const MCPIcon = memo(() => <BrandAssetIcon src={MCPLogo} invertOnDark />);
-export const OAuth2Icon = memo(() => (
-  <KeyRound className="h-full w-full" strokeWidth={1.8} aria-hidden="true" />
-));

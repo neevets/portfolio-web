@@ -56,7 +56,6 @@ import {
   JSONIcon,
   JWTIcon,
   MCPIcon,
-  OAuth2Icon,
 } from "./skill-brand-icons";
 
 export const iconMap = {
@@ -104,7 +103,6 @@ export const iconMap = {
   JSON: JSONIcon,
   Swagger: SwaggerIcon,
   Apache: ApacheIcon,
-  OAuth2: OAuth2Icon,
   Auth0: Auth0Icon,
   JWT: JWTIcon,
   MCP: MCPIcon,
