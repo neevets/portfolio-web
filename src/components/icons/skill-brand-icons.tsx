@@ -11,6 +11,8 @@ import SwaggerLogo from "@/assets/skills/swagger.svg";
 import ApacheLogo from "@/assets/skills/apache.svg";
 import OpenTelemetryLogo from "@/assets/skills/opentelemetry.svg";
 import JestLogo from "@/assets/skills/jest.svg";
+import JestDarkLogo from "@/assets/skills/jest-dark.svg";
+import JenkinsLogo from "@/assets/skills/jenkins.svg";
 import PostmanLogo from "@/assets/skills/postman.svg";
 import JSONLogo from "@/assets/skills/json.svg";
 import JSONDarkLogo from "@/assets/skills/json-dark.svg";
@@ -50,7 +52,13 @@ export const ViteIcon = memo(() => <BrandAssetIcon src={ViteLogo} />);
 export const SwaggerIcon = memo(() => <BrandAssetIcon src={SwaggerLogo} />);
 export const ApacheIcon = memo(() => <BrandAssetIcon src={ApacheLogo} />);
 export const OpenTelemetryIcon = memo(() => <BrandAssetIcon src={OpenTelemetryLogo} />);
-export const JestIcon = memo(() => <BrandAssetIcon src={JestLogo} />);
+export const JestIcon = memo(() => (
+  <>
+    <img src={JestLogo} alt="" aria-hidden="true" draggable={false} className="h-full w-full object-contain dark:hidden" />
+    <img src={JestDarkLogo} alt="" aria-hidden="true" draggable={false} className="hidden h-full w-full object-contain dark:block" />
+  </>
+));
+export const JenkinsIcon = memo(() => <BrandAssetIcon src={JenkinsLogo} />);
 export const PostmanBrandIcon = memo(() => <BrandAssetIcon src={PostmanLogo} />);
 export const JSONIcon = memo(() => (
   <>
