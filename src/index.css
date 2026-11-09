@@ -4,11 +4,14 @@
 
 @layer components {
   .contact-email-button {
+    display: inline-flex;
+    box-sizing: border-box;
+    min-height: 4.5rem;
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
-    transition:
-      transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
-      box-shadow 220ms ease;
+    transform: none !important;
+    scale: 1 !important;
+    transition: box-shadow 220ms ease, background-color 220ms ease;
   }
 
   .contact-email-button__content {
@@ -20,7 +23,17 @@
 
   .contact-email-button__icon {
     flex: 0 0 auto;
-    transition: transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1);
+    transform: translate3d(0, 0, 0);
+    transform-origin: 50% 50%;
+    transition: transform 280ms cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: transform;
+  }
+
+  .contact-email-button:hover,
+  .contact-email-button:active,
+  .contact-email-button:focus-visible {
+    transform: none !important;
+    scale: 1 !important;
   }
 
   .contact-email-button:focus-visible {
@@ -30,37 +43,43 @@
 
   @media (hover: hover) and (pointer: fine) {
     .contact-email-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 24px hsl(var(--foreground) / 0.14);
+      box-shadow: 0 8px 20px hsl(var(--foreground) / 0.16);
     }
 
     .contact-email-button:hover .contact-email-button__icon {
-      transform: translate(3px, -2px) rotate(-8deg);
+      animation: email-send-hover 420ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+
+    .contact-email-button:focus-visible .contact-email-button__icon {
+      animation: email-send-hover 420ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
     }
   }
 
-  .contact-email-button:active {
-    transform: scale(0.975);
+  .contact-email-button:active .contact-email-button__icon {
+    transform: translate3d(4px, -3px, 0) rotate(-9deg);
   }
 
-  .contact-email-button:active .contact-email-button__icon {
-    transform: translate(2px, -1px) rotate(-5deg);
+  @keyframes email-send-hover {
+    0% {
+      transform: translate3d(0, 0, 0) rotate(0);
+    }
+    55% {
+      transform: translate3d(6px, -5px, 0) rotate(-12deg);
+    }
+    100% {
+      transform: translate3d(4px, -3px, 0) rotate(-8deg);
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
     .contact-email-button,
     .contact-email-button__icon {
       transition: none;
+      animation: none !important;
     }
 
-    .contact-email-button:hover,
-    .contact-email-button:active {
-      transform: none;
-    }
-
-    .contact-email-button:hover .contact-email-button__icon,
-    .contact-email-button:active .contact-email-button__icon {
-      transform: none;
+    .contact-email-button__icon {
+      transform: none !important;
     }
   }
 }
