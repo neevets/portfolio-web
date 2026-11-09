@@ -30,7 +30,7 @@ export const skillsData: Record<string, Skill[]> = {
     { name: "Oracle Cloud", icon: "OracleCloud", color: "#C74634", level: "Familiar" },
     { name: "Azure", icon: "Azure", color: "#0078D4", level: "Familiar" },
   ],
-  "DevOps & Observability": [
+  "DevOps, Testing & Observability": [
     { name: "Git", icon: "Git", color: "hsl(14, 100%, 53%)", level: "Mid level" },
     { name: "GitHub", icon: "GitHub", color: "#181717", level: "Mid level" },
     { name: "Jest", icon: "Jest", color: "#99425B", level: "Familiar" },
