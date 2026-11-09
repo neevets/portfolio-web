@@ -153,7 +153,7 @@ export const Navigation = () => {
                 <span className="text-3xl font-display font-medium text-foreground group-hover:translate-x-2 transition-transform duration-300">
                   {item.label}
                 </span>
-                <span className="ml-auto text-muted-foreground/40 text-sm font-display group-hover:text-muted-foreground transition-colors duration-300">
+                <span className="ml-auto text-muted-foreground text-sm font-display group-hover:text-muted-foreground transition-colors duration-300">
                   0{index + 1}
                 </span>
               </button>

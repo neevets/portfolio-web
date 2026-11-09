@@ -21,8 +21,8 @@ const featureCards: FeatureCardData[] = [
 
 const FeatureCard = memo<{ card: FeatureCardData }>(({ card }) => (
   <div className="border border-border/80 bg-card/85 backdrop-blur-sm p-5 sm:p-8 text-left h-full flex flex-col rounded-md shadow-sm">
-    <h4 className="text-xl font-dev font-light mb-3 text-foreground/90">{card.title}</h4>
-    <p className="text-muted-foreground/90 font-dev leading-relaxed text-sm flex-grow">{card.description}</p>
+    <h4 className="text-xl font-dev font-light mb-3 text-foreground">{card.title}</h4>
+    <p className="text-muted-foreground font-dev leading-relaxed text-sm flex-grow">{card.description}</p>
   </div>
 ));
 
@@ -60,7 +60,7 @@ const AboutSection = memo(() => {
               <div className="space-y-8">
                 <div className="relative border border-border/80 bg-card/85 backdrop-blur-sm p-5 sm:p-8 lg:p-12 rounded-md">
                   <div className="relative z-10 space-y-6 text-center">
-                    <h3 className="text-3xl md:text-4xl font-dev font-light text-foreground/90">Who am I?</h3>
+                    <h3 className="text-3xl md:text-4xl font-dev font-light text-foreground">Who am I?</h3>
                     <p className="text-lg md:text-xl leading-relaxed text-muted-foreground max-w-4xl mx-auto font-dev">
                       I focus on backend development and systems programming, with most of my work centred on Go and Python. I enjoy understanding how systems fit together, building practical APIs, and keeping software readable and maintainable. My projects also involve databases, containerisation, and the tools used to build and operate applications.
                     </p>
