@@ -16,11 +16,13 @@ import PostmanLogo from "@/assets/skills/postman.svg";
 import OpenAPILogo from "@/assets/skills/openapi.svg";
 import Auth0Logo from "@/assets/skills/auth0.svg";
 import AWSLogo from "@/assets/skills/aws.svg";
+import AWSDarkLogo from "@/assets/skills/aws-dark.svg";
 import AzureLogo from "@/assets/skills/azure.svg";
 import OracleLogo from "@/assets/skills/oracle.svg";
 import ESLintLogo from "@/assets/skills/eslint.svg";
 import PrettierLogo from "@/assets/skills/prettier.svg";
 import JWTLogo from "@/assets/skills/jwt.svg";
+import JWTLightLogo from "@/assets/skills/jwt-light.svg";
 import MCPLogo from "@/assets/skills/mcp.svg";
 
 interface BrandAssetIconProps {
@@ -52,15 +54,25 @@ export const JestIcon = memo(() => <BrandAssetIcon src={JestLogo} />);
 export const PostmanBrandIcon = memo(() => <BrandAssetIcon src={PostmanLogo} />);
 export const OpenAPIIcon = memo(() => <BrandAssetIcon src={OpenAPILogo} />);
 export const Auth0Icon = memo(() => <BrandAssetIcon src={Auth0Logo} />);
-export const AWSIcon = memo(() => <BrandAssetIcon src={AWSLogo} invertOnDark />);
+export const AWSIcon = memo(() => (
+  <>
+    <img src={AWSLogo} alt="" aria-hidden="true" draggable={false} className="h-full w-full object-contain dark:hidden" />
+    <img src={AWSDarkLogo} alt="" aria-hidden="true" draggable={false} className="hidden h-full w-full object-contain dark:block" />
+  </>
+));
 export const AzureIcon = memo(() => <BrandAssetIcon src={AzureLogo} />);
 export const OracleIcon = memo(() => (
-  <img src={OracleLogo} alt="" aria-hidden="true" draggable={false} className="h-auto w-[84px] max-w-none object-contain" />
+  <img src={OracleLogo} alt="" aria-hidden="true" draggable={false} className="h-auto w-[120px] max-w-none object-contain" />
 ));
 export const ESLintIcon = memo(() => <BrandAssetIcon src={ESLintLogo} />);
 export const PrettierIcon = memo(() => <BrandAssetIcon src={PrettierLogo} />);
 export const JSONIcon = memo(() => <Braces className="h-full w-full" strokeWidth={1.8} aria-hidden="true" />);
-export const JWTIcon = memo(() => <BrandAssetIcon src={JWTLogo} />);
+export const JWTIcon = memo(() => (
+  <>
+    <img src={JWTLightLogo} alt="" aria-hidden="true" draggable={false} className="h-full w-full object-contain dark:hidden" />
+    <img src={JWTLogo} alt="" aria-hidden="true" draggable={false} className="hidden h-full w-full object-contain dark:block" />
+  </>
+));
 export const MCPIcon = memo(() => <BrandAssetIcon src={MCPLogo} invertOnDark />);
 export const OAuth2Icon = memo(() => (
   <KeyRound className="h-full w-full" strokeWidth={1.8} aria-hidden="true" />

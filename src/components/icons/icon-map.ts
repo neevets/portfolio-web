@@ -35,8 +35,6 @@ import {
 
 import {
   BunIcon,
-  JestIcon,
-  PostmanBrandIcon,
   NginxIcon,
   GrafanaIcon,
   PrometheusIcon,
