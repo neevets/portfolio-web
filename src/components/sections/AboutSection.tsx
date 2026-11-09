@@ -21,7 +21,7 @@ const featureCards: FeatureCardData[] = [
 ];
 
 const FeatureCard = memo<{ card: FeatureCardData }>(({ card }) => (
-  <div className="border border-border/80 bg-card/85 backdrop-blur-sm p-8 text-left h-full flex flex-col rounded-md shadow-sm">
+  <div className="border border-border/80 bg-card/85 backdrop-blur-sm p-5 sm:p-8 text-left h-full flex flex-col rounded-md shadow-sm">
     <h4 className="text-xl font-dev font-light mb-3 text-foreground/90">{card.title}</h4>
     <p className="text-muted-foreground/90 font-dev leading-relaxed text-sm flex-grow">{card.description}</p>
   </div>
@@ -52,7 +52,7 @@ const AboutSection = memo(() => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="section-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-dev font-light mb-20 sm:mb-24 text-center"
+          className="section-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-dev font-light mb-12 sm:mb-16 lg:mb-20 text-center"
         >
           About Me
         </motion.h2>
@@ -65,7 +65,7 @@ const AboutSection = memo(() => {
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             >
               <div className="space-y-8">
-                <div className="relative border border-border/80 bg-card/85 backdrop-blur-sm p-10 lg:p-12 rounded-md">
+                <div className="relative border border-border/80 bg-card/85 backdrop-blur-sm p-5 sm:p-8 lg:p-12 rounded-md">
                   <div className="relative z-10 space-y-6 text-center">
                     <h3 className="text-3xl md:text-4xl font-dev font-light text-foreground/90">Who am I?</h3>
                     <p className="text-lg md:text-xl leading-relaxed text-muted-foreground max-w-4xl mx-auto font-dev">
