@@ -644,9 +644,13 @@
 
 #skills .section-title,
 #skills .category-header h3,
-#skills .skill-card-optimized h4,
-#skills .skill-card-optimized .skill-level-pill {
+#skills .skill-card-optimized h4 {
   color: var(--skills-text-color) !important;
+}
+
+/* Level labels stay white over each technology's original brand-color pill. */
+#skills .skill-card-optimized .skill-level-pill {
+  color: #ffffff !important;
 }
 
 #skills .skill-icon-theme {
