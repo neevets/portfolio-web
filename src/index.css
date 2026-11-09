@@ -97,10 +97,10 @@
       transform: translate3d(0, 0, 0) rotate(0);
     }
     38% {
-      transform: translate3d(5px, -6px, 0) rotate(-10deg);
+      transform: translate3d(0, -6px, 0) rotate(-5deg);
     }
     72% {
-      transform: translate3d(12px, -13px, 0) rotate(-18deg);
+      transform: translate3d(0, -14px, 0) rotate(-9deg);
     }
     100% {
       transform: translate3d(0, 0, 0) rotate(0);
