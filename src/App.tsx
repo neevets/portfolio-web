@@ -53,14 +53,15 @@ const App = () => {
   useEffect(() => {
     const finishLoading = () => {
       window.clearTimeout(fallbackTimer);
-
       window.removeEventListener("load", finishLoading);
       pageReadyRef.current = true;
+      tryStartFadeOut();
     };
 
     const fallbackTimer = window.setTimeout(() => {
       window.removeEventListener("load", finishLoading);
       pageReadyRef.current = true;
+      tryStartFadeOut();
     }, LOAD_EVENT_FALLBACK_MS);
 
     if (document.readyState === "complete") {
@@ -80,7 +81,7 @@ const App = () => {
         window.clearTimeout(hideTimerRef.current);
       }
     };
-  }, []);
+  }, [tryStartFadeOut]);
 
   return (
     <HelmetProvider>
