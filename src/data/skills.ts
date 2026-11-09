@@ -3,7 +3,7 @@ import { Skill } from '@/types/portfolio';
 export const skillsData: Record<string, Skill[]> = {
   'Languages': [
     { name: 'Golang', icon: 'Go', color: 'hsl(199, 89%, 48%)', level: 'Mid level' },
-    { name: 'Python', icon: 'Python', color: '#3776AB', level: 'Mid level' },
+    { name: 'Python', icon: 'Python', color: '#FFD43B', level: 'Mid level' },
     { name: 'TypeScript', icon: 'TypeScript', color: 'hsl(211, 60%, 45%)', level: 'Junior' },
   ],
   'Frameworks & Libraries': [
@@ -14,7 +14,7 @@ export const skillsData: Record<string, Skill[]> = {
   ],
   'Databases': [
     { name: 'PostgreSQL', icon: 'PostgreSQL', color: 'hsl(205, 81%, 33%)', level: 'Mid level' },
-    { name: 'Redis', icon: 'Redis', color: '#DC382D', level: 'Junior' },
+    { name: 'Redis', icon: 'Redis', color: '#D82C20', level: 'Junior' },
   ],
   'DevOps': [
     { name: 'Git', icon: 'Git', color: 'hsl(14, 100%, 53%)', level: 'Mid level' },
