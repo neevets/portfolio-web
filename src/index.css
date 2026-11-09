@@ -290,6 +290,31 @@
     @apply relative;
   }
 
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .skills-grid > * {
+    box-sizing: border-box;
+    flex: 1 1 calc(50% - 0.375rem);
+    min-width: 0;
+    max-width: 18rem;
+  }
+
+  @media (min-width: 640px) {
+    .skills-grid {
+      gap: 1rem;
+    }
+
+    .skills-grid > * {
+      flex-basis: 14rem;
+    }
+  }
+
   .category-header {
     @apply flex items-center mb-6 sm:mb-8;
   }
