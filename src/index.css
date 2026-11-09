@@ -406,8 +406,6 @@
     box-shadow: 0 10px 24px hsl(0 0% 0% / 0.35);
   }
 
-
-
 }
 
 @keyframes fadeInUp {
@@ -511,8 +509,6 @@
     box-shadow: 0 0 55px rgb(234,179,8,1.2);
   }
 }
-
-
 
 @keyframes vite-lightning {
   0%, 100% { filter: brightness(1); }
@@ -632,8 +628,6 @@
   }
 }
 
-
-/* Keep every Skills label on one theme color and tint level pills for readable contrast. */
 #skills {
   --skills-text-color: #000000;
 }
@@ -648,7 +642,6 @@
   color: var(--skills-text-color) !important;
 }
 
-/* Level labels stay white over each technology's original brand-color pill. */
 #skills .skill-card-optimized .skill-level-pill {
   color: #ffffff !important;
 }
@@ -656,7 +649,6 @@
 #skills .skill-icon-theme {
   color: var(--skills-text-color) !important;
 }
-
 
 .dark #skills .skill-card-optimized[data-skill="Fastify"] img {
   filter: brightness(0) invert(1) !important;

@@ -2,7 +2,7 @@ import { memo } from 'react';
 import { skillsData } from '@/data/skills';
 import { motion } from 'framer-motion';
 import { PreloadedSkillIcon } from '@/components/ui/preloaded-skill-icon';
-import { Skill } from '@/types/portfolio';
+import type { Skill } from '@/types/portfolio';
 
 const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
   return (
@@ -51,7 +51,6 @@ SkillCard.displayName = 'SkillCard';
 
 const SkillsSection = () => {
   const allSkills = Object.entries(skillsData);
-
 
   return (
     <section
