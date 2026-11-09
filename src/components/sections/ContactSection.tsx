@@ -81,10 +81,9 @@ const ContactSection = memo(() => {
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
           <a
             href="mailto:contact@neevets.com"
-            className="contact-email-button w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-foreground text-background rounded-xl font-dev font-medium overflow-hidden"
+            className="contact-email-button w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-foreground text-background rounded-xl font-dev font-medium"
             aria-label="Send an email to contact@neevets.com"
           >
-            <span className="contact-email-button__shine" aria-hidden="true" />
             <span className="contact-email-button__content">
               <Send
                 className="contact-email-button__icon"
