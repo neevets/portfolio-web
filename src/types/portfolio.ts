@@ -1,5 +1,5 @@
 import { LucideIcon } from 'lucide-react';
-import { IconName } from '@/components/icons';
+import type { IconName } from '@/components/icons/icon-map';
 
 export interface Project {
   title: string;
