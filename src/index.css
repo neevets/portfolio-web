@@ -84,9 +84,9 @@
     --secondary: 0 0% 90%;
     --secondary-foreground: 0 0% 0%;
     --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 0%;
+    --muted-foreground: 0 0% 40%;
     --accent: 0 0% 88%;
-    --accent-foreground: 0 0% 0%;
+    --accent-foreground: 222 25% 10%;
     --border: 0 0% 82%;
     --input: 0 0% 94%;
     --ring: 222 28% 16%;
@@ -124,7 +124,7 @@
     --secondary: 0 0% 10%;
     --secondary-foreground: 0 0% 100%;
     --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 100%;
+    --muted-foreground: 0 0% 70%;
     --accent: 0 0% 15%;
     --accent-foreground: 0 0% 100%;
     --border: 0 0% 20%;
@@ -423,13 +423,13 @@
   }
 
   .vercel-level-pill {
-    color: hsl(0 0% 0%) !important;
+    color: hsl(0 0% 8%) !important;
     border-color: hsl(0 0% 0% / 0.3) !important;
     background-color: transparent !important;
   }
 
   .dark .vercel-level-pill {
-    color: hsl(0 0% 100%) !important;
+    color: hsl(0 0% 88%) !important;
     border-color: hsl(0 0% 88% / 0.35) !important;
     background-color: transparent !important;
   }
@@ -657,4 +657,21 @@
   100% {
     transform: rotate(calc(var(--s, 1) * 120deg)) translate(0);
   }
+}
+
+
+/* Skills text follows one shared monochrome theme without changing any surfaces or brand icons. */
+#skills {
+  --skills-text-color: #000000;
+}
+
+.dark #skills {
+  --skills-text-color: #ffffff;
+}
+
+#skills .section-title,
+#skills .category-header h3,
+#skills .skill-card-optimized h4,
+#skills .skill-card-optimized .skill-level-pill {
+  color: var(--skills-text-color) !important;
 }

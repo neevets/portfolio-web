@@ -4,52 +4,6 @@ import { motion } from 'framer-motion';
 import { PreloadedSkillIcon } from '@/components/ui/preloaded-skill-icon';
 import { Skill } from '@/types/portfolio';
 
-const getReadableTextColor = (color: string): string => {
-  let rgb: [number, number, number] | null = null;
-  const hex = color.match(/^#([\da-f]{6})$/i);
-
-  if (hex) {
-    rgb = [
-      parseInt(hex[1].slice(0, 2), 16) / 255,
-      parseInt(hex[1].slice(2, 4), 16) / 255,
-      parseInt(hex[1].slice(4, 6), 16) / 255,
-    ];
-  } else {
-    const hsl = color.match(/^hsl\(\s*([\d.]+)\s*,\s*([\d.]+)%\s*,\s*([\d.]+)%\s*\)$/i);
-    if (hsl) {
-      const hue = ((Number(hsl[1]) % 360) + 360) % 360;
-      const saturation = Number(hsl[2]) / 100;
-      const lightness = Number(hsl[3]) / 100;
-      const chroma = (1 - Math.abs(2 * lightness - 1)) * saturation;
-      const x = chroma * (1 - Math.abs(((hue / 60) % 2) - 1));
-      const offset = lightness - chroma / 2;
-      let channels: [number, number, number];
-
-      if (hue < 60) channels = [chroma, x, 0];
-      else if (hue < 120) channels = [x, chroma, 0];
-      else if (hue < 180) channels = [0, chroma, x];
-      else if (hue < 240) channels = [0, x, chroma];
-      else if (hue < 300) channels = [x, 0, chroma];
-      else channels = [chroma, 0, x];
-
-      rgb = channels.map((channel) => channel + offset) as [number, number, number];
-    }
-  }
-
-  if (!rgb) return 'hsl(var(--foreground))';
-
-  const linearize = (channel: number) =>
-    channel <= 0.04045 ? channel / 12.92 : ((channel + 0.055) / 1.055) ** 2.4;
-  const luminance =
-    0.2126 * linearize(rgb[0]) +
-    0.7152 * linearize(rgb[1]) +
-    0.0722 * linearize(rgb[2]);
-  const whiteContrast = 1.05 / (luminance + 0.05);
-  const blackContrast = (luminance + 0.05) / 0.05;
-
-  return whiteContrast >= blackContrast ? '#FFFFFF' : '#111111';
-};
-
 const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
   const styleProps = useMemo(() => {
     const skillColor = skill.color;
@@ -87,11 +41,10 @@ const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
         </h4>
         <div className="opacity-100 translate-y-0 sm:opacity-0 sm:translate-y-2 sm:group-hover:opacity-100 sm:group-hover:translate-y-0 transition-all duration-300 ease-out">
           <span
-            className={`inline-flex items-center justify-center min-w-[70px] sm:min-w-[88px] px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium border backdrop-blur-sm ${
+            className={`skill-level-pill inline-flex items-center justify-center min-w-[70px] sm:min-w-[88px] px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium border backdrop-blur-sm ${
               skill.name === 'Vercel' ? 'vercel-level-pill' : ''
             }`}
             style={{
-              color: getReadableTextColor(styleProps.skillColor),
               borderColor: styleProps.skillColor,
               backgroundColor: styleProps.skillColor,
             }}
@@ -113,7 +66,7 @@ const SkillsSection = () => {
   return (
     <section
       id="skills"
-      className="py-12 sm:py-16 lg:py-20 px-3 sm:px-6 relative overflow-hidden z-10"
+      className="skills-section py-12 sm:py-16 lg:py-20 px-3 sm:px-6 relative overflow-hidden z-10"
       style={{ scrollMarginTop: '5rem' }}
     >
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20" aria-hidden="true">
