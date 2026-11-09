@@ -134,7 +134,7 @@ const ProjectsSection = memo(() => {
               href="https://fiverr.com/neevetsio"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-green-600 dark:bg-green-800 text-white rounded-xl font-dev font-medium hover:bg-green-700 dark:hover:bg-green-700 hover:scale-105 transition-all duration-300 group shadow-xl shadow-green-500/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-green-600 text-white rounded-xl font-dev font-medium hover:scale-105 hover:shadow-2xl hover:shadow-green-500/30 transition-all duration-300 group shadow-xl shadow-green-500/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
               Hire me on Fiverr
             </a>
