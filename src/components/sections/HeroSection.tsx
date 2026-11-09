@@ -51,7 +51,7 @@ const HeroSection = memo(() => {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-            style={{ fontSize: "clamp(4rem, 18vw, 14rem)", width: "100vw", marginLeft: "calc(50% - 50vw)" }}
+            style={{ fontSize: "clamp(3rem, 17vw, 14rem)", width: "100%", marginLeft: 0 }}
             className="section-title font-dev font-light mb-12 sm:mb-16 md:mb-20 tracking-tight relative animated-underline leading-none cursor-pointer whitespace-nowrap"
           >
             <span className="text-foreground">Neevets</span>
