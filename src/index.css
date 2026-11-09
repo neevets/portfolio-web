@@ -21,19 +21,17 @@
   }
 
   .contact-email-button__icon {
+    display: block;
     flex: 0 0 auto;
-    transform-origin: 50% 50%;
+    overflow: visible;
+    transform-box: fill-box;
+    transform-origin: center;
   }
 
-  @media (hover: hover) and (pointer: fine) {
-    .contact-email-button:hover .contact-email-button__icon,
-    .contact-email-button:focus-visible .contact-email-button__icon {
-      animation: email-plane-flight 560ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
-    }
-  }
-
+  .contact-email-button:hover .contact-email-button__icon,
+  .contact-email-button:focus-visible .contact-email-button__icon,
   .contact-email-button:active .contact-email-button__icon {
-    animation: email-plane-flight 560ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    animation: email-plane-lift 620ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
   }
 
   .service-card {
@@ -92,15 +90,18 @@
     transform: translate3d(2px, -2px, 0);
   }
 
-  @keyframes email-plane-flight {
+  @keyframes email-plane-lift {
     0% {
       transform: translate3d(0, 0, 0) rotate(0);
     }
-    38% {
-      transform: translate3d(5px, -6px, 0) rotate(-10deg);
+    34% {
+      transform: translate3d(0, -7px, 0) rotate(-6deg);
     }
-    72% {
-      transform: translate3d(12px, -13px, 0) rotate(-18deg);
+    68% {
+      transform: translate3d(0, -18px, 0) rotate(-12deg);
+    }
+    84% {
+      transform: translate3d(0, -11px, 0) rotate(-7deg);
     }
     100% {
       transform: translate3d(0, 0, 0) rotate(0);
