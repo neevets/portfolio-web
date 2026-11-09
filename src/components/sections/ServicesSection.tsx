@@ -26,11 +26,11 @@ const ServicesSection = memo(() => (
             onClick={() => {
               sessionStorage.setItem(PORTFOLIO_SCROLL_KEY, String(window.scrollY));
             }}
-            className="group border border-border/70 bg-card/60 rounded-xl p-6 sm:p-8 hover:border-foreground/40 transition-colors"
+            className="service-card group border border-border/70 bg-card/60 rounded-xl p-6 sm:p-8"
           >
             <div className="flex items-start justify-between gap-4 mb-4">
-              <h3 className="text-xl sm:text-2xl font-dev font-medium">{service.title}</h3>
-              <ArrowUpRight className="shrink-0 text-muted-foreground group-hover:text-foreground transition-colors" size={20} />
+              <h3 className="service-card__title text-xl sm:text-2xl font-dev font-medium">{service.title}</h3>
+              <ArrowUpRight className="service-card__arrow shrink-0 text-muted-foreground" size={20} />
             </div>
             <p className="text-sm sm:text-base leading-relaxed text-muted-foreground">{service.description}</p>
           </Link>
