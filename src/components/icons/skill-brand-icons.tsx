@@ -1,6 +1,5 @@
 import { memo } from "react";
 
-import BunLogo from "@/assets/skills/bun.svg";
 import NginxLogo from "@/assets/skills/nginx.svg";
 import GrafanaLogo from "@/assets/skills/grafana.svg";
 import PrometheusLogo from "@/assets/skills/prometheus.svg";
@@ -41,7 +40,6 @@ const BrandAssetIcon = ({ src, invertOnDark = false }: BrandAssetIconProps) => (
   />
 );
 
-export const BunIcon = memo(() => <BrandAssetIcon src={BunLogo} />);
 export const NginxIcon = memo(() => <BrandAssetIcon src={NginxLogo} />);
 export const GrafanaIcon = memo(() => <BrandAssetIcon src={GrafanaLogo} />);
 export const PrometheusIcon = memo(() => <BrandAssetIcon src={PrometheusLogo} />);

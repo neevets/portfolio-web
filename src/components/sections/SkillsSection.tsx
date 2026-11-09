@@ -1,36 +1,24 @@
-import { memo, useMemo } from 'react';
+import { memo } from 'react';
 import { skillsData } from '@/data/skills';
 import { motion } from 'framer-motion';
 import { PreloadedSkillIcon } from '@/components/ui/preloaded-skill-icon';
 import { Skill } from '@/types/portfolio';
 
 const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
-  const styleProps = useMemo(() => {
-    const skillColor = skill.color;
-    return {
-      skillColor,
-      iconColor: skillColor,
-    };
-  }, [skill.color]);
-
   return (
     <div
       className="skill-card-optimized group"
-      data-skill={skill.name}
       style={{
-        '--skill-color': styleProps.skillColor,
+        '--skill-color': skill.color,
       } as React.CSSProperties & { '--skill-color': string }}
     >
       <div className="relative">
         <div
           className={`w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto mb-2 sm:mb-3 flex items-center justify-center text-muted-foreground transition-all duration-300 sm:group-hover:scale-110 relative z-10 ${
-            skill.name === "GitHub" ? "skill-icon-theme" : skill.name === "Rust" ? "skill-icon-theme rust-icon-theme" : ""
+            skill.name === "GitHub" ? "skill-icon-theme" : ""
           }`}
           style={{
-            color:
-              skill.name === "GitHub" || skill.name === "Rust"
-                ? "var(--skills-text-color)"
-                : styleProps.iconColor,
+            color: skill.name === "GitHub" ? "var(--skills-text-color)" : skill.color,
           }}
         >
           <PreloadedSkillIcon name={skill.icon} />
@@ -47,8 +35,8 @@ const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
           <span
             className="skill-level-pill inline-flex items-center justify-center min-w-[70px] sm:min-w-[88px] px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium border backdrop-blur-sm transition-colors duration-200"
             style={{
-              borderColor: styleProps.skillColor,
-              backgroundColor: styleProps.skillColor,
+              borderColor: skill.color,
+              backgroundColor: skill.color,
             }}
           >
             {skill.level}
@@ -62,7 +50,7 @@ const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
 SkillCard.displayName = 'SkillCard';
 
 const SkillsSection = () => {
-  const allSkills = useMemo(() => Object.entries(skillsData), []);
+  const allSkills = Object.entries(skillsData);
 
 
   return (

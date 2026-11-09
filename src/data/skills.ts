@@ -9,7 +9,6 @@ export const skillsData: Record<string, Skill[]> = {
   ],
   "Runtimes & Frameworks": [
     { name: "Node.js", icon: "Node", color: "#5FA04E", level: "Junior" },
-    { name: "Bun", icon: "Bun", color: "#F9F1E1", level: "Junior" },
     { name: "Fiber", icon: "Fiber", color: "hsl(193, 100%, 42%)", level: "Mid level" },
     { name: "FastAPI", icon: "FastAPI", color: "hsl(173, 80%, 40%)", level: "Mid level" },
     { name: "NestJS", icon: "NestJS", color: "#E0234E", level: "Junior" },
@@ -40,7 +39,7 @@ export const skillsData: Record<string, Skill[]> = {
     { name: "Grafana", icon: "Grafana", color: "#F46800", level: "Junior" },
     { name: "Prometheus", icon: "Prometheus", color: "#E6522C", level: "Junior" },
     { name: "OpenTelemetry", icon: "OpenTelemetry", color: "#F5A800", level: "Junior" },
-    { name: "Sentry", icon: "Sentry", color: "hsl(257, 31%, 43%)", level: "Mid level" },
+    { name: "Sentry", icon: "Sentry", color: "#6A5FC1", level: "Mid level" },
   ],
   "APIs, Security & Tooling": [
     { name: "Swagger", icon: "Swagger", color: "#85EA2D", level: "Junior" },

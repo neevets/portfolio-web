@@ -34,7 +34,6 @@ import {
 } from "./index";
 
 import {
-  BunIcon,
   NginxIcon,
   GrafanaIcon,
   PrometheusIcon,
@@ -69,7 +68,6 @@ export const iconMap = {
   Fiber: FiberIcon,
   Python: PythonIcon,
   Node: NodeIcon,
-  Bun: BunIcon,
   Django: DjangoIcon,
   FastAPI: FastAPIIcon,
   NestJS: NestJSIcon,
