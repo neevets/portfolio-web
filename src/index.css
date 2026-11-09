@@ -649,16 +649,6 @@
   color: var(--skills-text-color) !important;
 }
 
-#skills .skill-card-optimized .skill-level-pill {
-  background-color: color-mix(in srgb, var(--skill-color) 12%, #ffffff) !important;
-  border-color: color-mix(in srgb, var(--skill-color) 68%, #000000) !important;
-}
-
-.dark #skills .skill-card-optimized .skill-level-pill {
-  background-color: color-mix(in srgb, var(--skill-color) 25%, #000000) !important;
-  border-color: color-mix(in srgb, var(--skill-color) 65%, #ffffff) !important;
-}
-
 #skills .skill-icon-theme {
   color: var(--skills-text-color) !important;
 }
