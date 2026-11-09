@@ -138,7 +138,7 @@ const SkillsSection = () => {
                 <div className="flex-1 h-px bg-gradient-to-r from-foreground/50 to-transparent" />
               </div>
 
-              <div className="grid grid-cols-2 min-[520px]:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-5 gap-2 min-[390px]:gap-2.5 sm:gap-3 md:gap-4">
+              <div className="skills-grid">
                 {skills.map((skill) => (
                   <SkillCard
                     key={skill.name}
