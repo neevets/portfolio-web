@@ -86,7 +86,7 @@ const SkillsSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: true, margin: "250px 0px" }}
           transition={{ duration: 0.7, delay: 0.1 }}
           className="space-y-10 lg:space-y-14"
         >
