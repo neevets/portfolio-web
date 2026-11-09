@@ -15,9 +15,7 @@ const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
 
   return (
     <div
-      className={`skill-card-optimized group ${
-        skill.name === 'Vercel' ? 'vercel-skill-card' : ''
-      }`}
+      className="skill-card-optimized group"
       style={{
         '--skill-color': styleProps.skillColor,
       } as React.CSSProperties & { '--skill-color': string }}
@@ -25,9 +23,14 @@ const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
       <div className="relative">
         <div
           className={`w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto mb-2 sm:mb-3 flex items-center justify-center text-muted-foreground transition-all duration-300 sm:group-hover:scale-110 relative z-10 ${
-            skill.name === "GitHub" || skill.name === "Rust" ? "text-black dark:text-white" : ""
+            skill.name === "GitHub" || skill.name === "Rust" ? "skill-icon-theme" : ""
           }`}
-          style={{ color: skill.name === "GitHub" || skill.name === "Rust" ? undefined : styleProps.iconColor }}
+          style={{
+            color:
+              skill.name === "GitHub" || skill.name === "Rust"
+                ? "var(--skills-text-color)"
+                : styleProps.iconColor,
+          }}
         >
           <PreloadedSkillIcon name={skill.icon} />
         </div>
@@ -41,13 +44,7 @@ const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
         </h4>
         <div className="opacity-100 translate-y-0 sm:opacity-0 sm:translate-y-2 sm:group-hover:opacity-100 sm:group-hover:translate-y-0 transition-all duration-300 ease-out">
           <span
-            className={`skill-level-pill inline-flex items-center justify-center min-w-[70px] sm:min-w-[88px] px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium border backdrop-blur-sm ${
-              skill.name === 'Vercel' ? 'vercel-level-pill' : ''
-            }`}
-            style={{
-              borderColor: styleProps.skillColor,
-              backgroundColor: styleProps.skillColor,
-            }}
+            className="skill-level-pill inline-flex items-center justify-center min-w-[70px] sm:min-w-[88px] px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium border backdrop-blur-sm transition-colors duration-200"
           >
             {skill.level}
           </span>

@@ -406,33 +406,6 @@
     box-shadow: 0 10px 24px hsl(0 0% 0% / 0.35);
   }
 
-  .vercel-skill-card {
-    --skill-color: hsl(0 0% 0%) !important;
-  }
-
-  .vercel-skill-card .flex.items-center.justify-center {
-    color: black !important;
-  }
-
-  .dark .vercel-skill-card {
-    --skill-color: hsl(0 0% 88%) !important;
-  }
-
-  .dark .vercel-skill-card .flex.items-center.justify-center {
-    color: white !important;
-  }
-
-  .vercel-level-pill {
-    color: hsl(0 0% 8%) !important;
-    border-color: hsl(0 0% 0% / 0.3) !important;
-    background-color: transparent !important;
-  }
-
-  .dark .vercel-level-pill {
-    color: hsl(0 0% 88%) !important;
-    border-color: hsl(0 0% 88% / 0.35) !important;
-    background-color: transparent !important;
-  }
 
 
 }
@@ -660,7 +633,7 @@
 }
 
 
-/* Skills text follows one shared monochrome theme without changing any surfaces or brand icons. */
+/* Keep every Skills label on one theme color and tint level pills for readable contrast. */
 #skills {
   --skills-text-color: #000000;
 }
@@ -673,5 +646,19 @@
 #skills .category-header h3,
 #skills .skill-card-optimized h4,
 #skills .skill-card-optimized .skill-level-pill {
+  color: var(--skills-text-color) !important;
+}
+
+#skills .skill-card-optimized .skill-level-pill {
+  background-color: color-mix(in srgb, var(--skill-color) 12%, #ffffff) !important;
+  border-color: color-mix(in srgb, var(--skill-color) 68%, #000000) !important;
+}
+
+.dark #skills .skill-card-optimized .skill-level-pill {
+  background-color: color-mix(in srgb, var(--skill-color) 25%, #000000) !important;
+  border-color: color-mix(in srgb, var(--skill-color) 65%, #ffffff) !important;
+}
+
+#skills .skill-icon-theme {
   color: var(--skills-text-color) !important;
 }
