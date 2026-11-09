@@ -49,8 +49,66 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Unbounded:wght@300;400;500;600;700;800&display=swap" as="style" />
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Unbounded:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      html { min-height: 100%; background: #000; }
+      html.light { background: #fff; }
+      body { min-height: 100vh; margin: 0; background: transparent; }
+      #root { min-height: 100vh; background: transparent; }
+      #initial-preloader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: grid;
+        place-items: center;
+        background: #000;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 350ms ease, visibility 350ms ease;
+      }
+      html.light #initial-preloader { background: #fff; }
+      #initial-preloader.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+      #initial-preloader .initial-loader-shape {
+        --initial-loader-color: #fff;
+        width: 50px;
+        aspect-ratio: 1.154;
+        position: relative;
+        background: conic-gradient(from 120deg at 50% 64%, transparent, var(--initial-loader-color) 1deg 120deg, transparent 121deg);
+        animation: initial-loader-rotate 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+      }
+      html.light #initial-preloader .initial-loader-shape { --initial-loader-color: #000; }
+      #initial-preloader .initial-loader-shape::before,
+      #initial-preloader .initial-loader-shape::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: inherit;
+        transform-origin: 50% 66%;
+        animation: initial-loader-orbit 1.5s infinite;
+      }
+      #initial-preloader .initial-loader-shape::after { --s: -1; }
+      @keyframes initial-loader-rotate {
+        0%, 30% { transform: rotate(0); }
+        70% { transform: rotate(120deg); }
+        70.01%, 100% { transform: rotate(360deg); }
+      }
+      @keyframes initial-loader-orbit {
+        0% { transform: rotate(calc(var(--s, 1) * 120deg)) translate(0); }
+        30%, 70% { transform: rotate(calc(var(--s, 1) * 120deg)) translate(calc(var(--s, 1) * -5px), 10px); }
+        100% { transform: rotate(calc(var(--s, 1) * 120deg)) translate(0); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #initial-preloader .initial-loader-shape,
+        #initial-preloader .initial-loader-shape::before,
+        #initial-preloader .initial-loader-shape::after { animation: none; }
+      }
+    </style>
   </head>
   <body>
+    <div id="initial-preloader" role="status" aria-label="Loading site"><div class="initial-loader-shape" aria-hidden="true"></div></div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
