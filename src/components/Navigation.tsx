@@ -64,8 +64,8 @@ export const Navigation = () => {
       >
         <div className="w-full px-4 sm:px-6">
           <div className="flex items-center justify-between">
-            <div className="hidden md:flex items-center justify-center flex-1">
-              <div className="flex items-center space-x-6 lg:space-x-8">
+            <div className="hidden lg:flex items-center justify-center flex-1">
+              <div className="flex items-center space-x-5 xl:space-x-8">
                 {navItems.map((item, index) => (
                   <button
                     key={item.id}
@@ -83,7 +83,7 @@ export const Navigation = () => {
             <button
               type="button"
               onClick={toggleTheme}
-              className="hidden md:inline-flex items-center justify-center p-2 rounded-xl mr-2 transition-all duration-300 ease-out hover:bg-muted/50 active:scale-95"
+              className="hidden lg:inline-flex items-center justify-center p-2 rounded-xl mr-2 transition-all duration-300 ease-out hover:bg-muted/50 active:scale-95"
               aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
               aria-pressed={!isDarkMode}
             >
@@ -93,7 +93,7 @@ export const Navigation = () => {
             <button
               type="button"
               onClick={() => setIsOpen((open) => !open)}
-              className="md:hidden ml-auto p-3 z-50 relative touch-manipulation rounded-xl hover:bg-muted/50 active:scale-95 transition-all duration-300"
+              className="lg:hidden ml-auto p-3 z-50 relative touch-manipulation rounded-xl hover:bg-muted/50 active:scale-95 transition-all duration-300"
               aria-label={isOpen ? "Close navigation" : "Open navigation"}
               aria-expanded={isOpen}
               aria-controls="mobile-navigation"
@@ -124,7 +124,7 @@ export const Navigation = () => {
         aria-label="Mobile navigation"
         aria-hidden={!isOpen}
         className={cn(
-          "fixed inset-0 z-40 md:hidden flex flex-col transition-opacity duration-300 ease-out h-[100dvh] overscroll-none touch-none",
+          "fixed inset-0 z-40 lg:hidden flex flex-col transition-opacity duration-300 ease-out h-[100dvh] overscroll-none touch-none",
           isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         )}
       >
