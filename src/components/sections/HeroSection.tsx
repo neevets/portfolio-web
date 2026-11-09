@@ -1,13 +1,7 @@
 import { memo, useMemo } from 'react';
-import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 import { motion } from 'framer-motion';
 
 const HeroSection = memo(() => {
-  const { ref, isIntersecting } = useIntersectionObserver({
-    threshold: 0.1,
-    rootMargin: '50px 0px',
-  });
-
   const GridBackground = useMemo(
     () => (
       <div className="absolute inset-0 opacity-40 overflow-hidden">
@@ -37,8 +31,8 @@ const HeroSection = memo(() => {
   );
 
   return (
-    <section ref={ref} id="hero" className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-6 relative overflow-hidden z-10">
-      {isIntersecting && GridBackground}
+    <section id="hero" className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-6 relative overflow-hidden z-10">
+      {GridBackground}
       <div className="absolute top-0 left-0 w-full h-96 opacity-60" style={{ background: 'var(--gradient-hero)' }} />
       <motion.div 
         initial={{ opacity: 0, y: 50 }}

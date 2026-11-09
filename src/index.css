@@ -434,15 +434,7 @@
     background-color: transparent !important;
   }
 
-  .skill-card-placeholder {
-    @apply relative p-3 sm:p-4 rounded-xl border border-transparent;
-    background: transparent;
-    opacity: 0;
-  }
 
-  .animate-skill-fade-in {
-    animation: skill-fade-in 0.5s ease-out forwards;
-  }
 }
 
 @keyframes fadeInUp {
@@ -547,16 +539,7 @@
   }
 }
 
-@keyframes skill-fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
 
 @keyframes vite-lightning {
   0%, 100% { filter: brightness(1); }
@@ -614,9 +597,6 @@
     font-size: 1rem;
   }
 
-  .skill-card-placeholder {
-    min-height: 92px;
-  }
 }
 
 @media (min-width: 641px) and (max-width: 1024px) {

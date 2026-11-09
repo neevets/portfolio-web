@@ -1,5 +1,4 @@
 import { memo } from 'react';
-import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 import { motion } from 'framer-motion';
 
 interface FeatureCardData {
@@ -30,14 +29,8 @@ const FeatureCard = memo<{ card: FeatureCardData }>(({ card }) => (
 FeatureCard.displayName = 'FeatureCard';
 
 const AboutSection = memo(() => {
-  const { ref, isIntersecting } = useIntersectionObserver({
-    threshold: 0.1,
-    rootMargin: '50px 0px',
-  });
-
   return (
     <section
-      ref={ref}
       id="about"
       style={{ scrollMarginTop: '5rem' }}
       className="py-20 sm:py-32 px-4 sm:px-6 relative overflow-hidden"
@@ -50,18 +43,18 @@ const AboutSection = memo(() => {
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "250px 0px" }}
           transition={{ duration: 0.8 }}
           className="section-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-dev font-light mb-12 sm:mb-16 lg:mb-20 text-center"
         >
           About Me
         </motion.h2>
 
-        {isIntersecting && (
           <div className="max-w-5xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "250px 0px" }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             >
               <div className="space-y-8">
@@ -82,7 +75,6 @@ const AboutSection = memo(() => {
               </div>
             </motion.div>
           </div>
-        )}
       </div>
     </section>
   );

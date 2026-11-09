@@ -1,14 +1,10 @@
-import { memo, useMemo, useState, useCallback, useEffect } from 'react';
+import { memo, useMemo } from 'react';
 import { skillsData } from '@/data/skills';
 import { motion } from 'framer-motion';
 import { PreloadedSkillIcon } from '@/components/ui/preloaded-skill-icon';
-import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 import { Skill } from '@/types/portfolio';
 
-const SkillCard = memo<{
-  skill: Skill;
-  isVisible: boolean;
-}>(({ skill, isVisible }) => {
+const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
   const styleProps = useMemo(() => {
     const skillColor = skill.color;
     return {
@@ -17,13 +13,9 @@ const SkillCard = memo<{
     };
   }, [skill.color]);
 
-  if (!isVisible) {
-    return <div className="skill-card-placeholder" style={{ minHeight: '90px' }} />;
-  }
-
   return (
     <div
-      className={`skill-card-optimized group opacity-0 animate-skill-fade-in ${
+      className={`skill-card-optimized group ${
         skill.name === 'Vercel' ? 'vercel-skill-card' : ''
       }`}
       style={{
@@ -67,42 +59,11 @@ const SkillCard = memo<{
 SkillCard.displayName = 'SkillCard';
 
 const SkillsSection = () => {
-  const { ref, isIntersecting } = useIntersectionObserver({
-    threshold: 0.1,
-    rootMargin: '100px 0px'
-  });
-
-  const [visibleCategories, setVisibleCategories] = useState<Set<number>>(new Set());
-
   const allSkills = useMemo(() => Object.entries(skillsData), []);
 
-  const handleCategoryVisible = useCallback((categoryIndex: number) => {
-    setVisibleCategories(prev => {
-      if (prev.has(categoryIndex)) return prev;
-      return new Set([...prev, categoryIndex]);
-    });
-  }, []);
-
-  useEffect(() => {
-    if (!isIntersecting) return;
-
-    const timeouts: ReturnType<typeof setTimeout>[] = [];
-
-    allSkills.forEach((_, index) => {
-      const timeout = setTimeout(() => {
-        handleCategoryVisible(index);
-      }, index * 300);
-      timeouts.push(timeout);
-    });
-
-    return () => {
-      timeouts.forEach(timeout => clearTimeout(timeout));
-    };
-  }, [isIntersecting, allSkills, handleCategoryVisible]);
 
   return (
     <section
-      ref={ref}
       id="skills"
       className="py-12 sm:py-16 lg:py-20 px-3 sm:px-6 relative overflow-hidden z-10"
       style={{ scrollMarginTop: '5rem' }}
@@ -115,7 +76,7 @@ const SkillsSection = () => {
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: true, margin: "250px 0px" }}
           transition={{ duration: 0.6 }}
           className="section-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-dev font-light mb-8 sm:mb-12 lg:mb-16 text-center"
         >
@@ -129,7 +90,7 @@ const SkillsSection = () => {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="space-y-10 lg:space-y-14"
         >
-          {allSkills.map(([category, skills], categoryIndex) => (
+          {allSkills.map(([category, skills]) => (
             <div key={category} className="skills-category-advanced">
               <div className="category-header">
                 <h3 className="text-[0.95rem] min-[390px]:text-base sm:text-xl md:text-2xl lg:text-3xl font-dev font-light text-foreground mr-2 min-[390px]:mr-3 sm:mr-6 leading-tight break-words">
@@ -143,7 +104,6 @@ const SkillsSection = () => {
                   <SkillCard
                     key={skill.name}
                     skill={skill as Skill}
-                    isVisible={visibleCategories.has(categoryIndex)}
                   />
                 ))}
               </div>

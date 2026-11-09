@@ -1,5 +1,4 @@
 import { memo } from "react";
-import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { projectsData } from "@/data/projects";
 import { Project } from "@/types/portfolio";
 import { motion } from "framer-motion";
@@ -7,19 +6,13 @@ import { motion } from "framer-motion";
 interface ProjectCardProps {
   project: Project;
   index: number;
-  isVisible: boolean;
 }
 
-const ProjectCard = memo(({ project, index, isVisible }: ProjectCardProps) => {
-  if (!isVisible) {
-    return <div className="h-64 bg-muted-foreground/5 rounded-lg animate-pulse" aria-hidden="true" />;
-  }
-
-  return (
+const ProjectCard = memo(({ project, index }: ProjectCardProps) => {  return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={{ once: true, margin: "250px 0px" }}
       transition={{ duration: 0.6, delay: index * 0.15 }}
       className="text-center"
     >
@@ -88,14 +81,8 @@ const ProjectCard = memo(({ project, index, isVisible }: ProjectCardProps) => {
 ProjectCard.displayName = "ProjectCard";
 
 const ProjectsSection = memo(() => {
-  const { ref, isIntersecting } = useIntersectionObserver({
-    threshold: 0.1,
-    rootMargin: "50px 0px",
-  });
-
   return (
     <section
-      ref={ref}
       id="projects"
       className="py-20 md:py-32 px-4 sm:px-6 relative overflow-hidden z-10"
       style={{ scrollMarginTop: "5rem" }}
@@ -159,7 +146,6 @@ const ProjectsSection = memo(() => {
               key={project.title}
               project={project}
               index={index}
-              isVisible={isIntersecting}
             />
           ))}
         </div>
