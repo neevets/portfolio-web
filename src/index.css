@@ -656,3 +656,23 @@
 #skills .skill-icon-theme {
   color: var(--skills-text-color) !important;
 }
+
+
+/* Individual brand contrast fixes for the Skills cards. */
+#skills .skill-card-optimized[data-skill="Rust"]:hover .rust-icon-theme,
+#skills .skill-card-optimized[data-skill="Rust"]:focus-visible .rust-icon-theme,
+#skills .skill-card-optimized[data-skill="Rust"]:active .rust-icon-theme {
+  color: #D34516 !important;
+}
+
+#skills .skill-card-optimized[data-skill="Bun"] .skill-level-pill {
+  color: #111111 !important;
+}
+
+.dark #skills .skill-card-optimized[data-skill="Bun"] .skill-level-pill {
+  color: #FFFFFF !important;
+}
+
+.dark #skills .skill-card-optimized[data-skill="Fastify"] img {
+  filter: brightness(0) invert(1) !important;
+}
