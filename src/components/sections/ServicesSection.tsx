@@ -2,6 +2,8 @@ import { memo } from "react";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 
+const PORTFOLIO_SCROLL_KEY = "portfolio:scrollY";
+
 const services = [
   { title: "Backend Development", description: "Backend application logic, REST APIs, database integration, and maintainable services.", path: "/services/backend-development" },
   { title: "Go Development", description: "Go services and APIs with clear structure, practical testing, and reliable data access.", path: "/services/go-development" },
@@ -18,7 +20,14 @@ const ServicesSection = memo(() => (
       </div>
       <div className="grid sm:grid-cols-2 gap-4">
         {services.map((service) => (
-          <Link key={service.path} to={service.path} className="group border border-border/70 bg-card/60 rounded-xl p-6 sm:p-8 hover:border-foreground/40 transition-colors">
+          <Link
+            key={service.path}
+            to={service.path}
+            onClick={() => {
+              sessionStorage.setItem(PORTFOLIO_SCROLL_KEY, String(window.scrollY));
+            }}
+            className="group border border-border/70 bg-card/60 rounded-xl p-6 sm:p-8 hover:border-foreground/40 transition-colors"
+          >
             <div className="flex items-start justify-between gap-4 mb-4">
               <h3 className="text-xl sm:text-2xl font-dev font-medium">{service.title}</h3>
               <ArrowUpRight className="shrink-0 text-muted-foreground group-hover:text-foreground transition-colors" size={20} />
