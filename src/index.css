@@ -3,37 +3,6 @@
 @tailwind utilities;
 
 @layer components {
-  .contact-email-button {
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-  }
-
-  .contact-email-button:focus-visible {
-    outline: 2px solid hsl(var(--ring));
-    outline-offset: 4px;
-  }
-
-  .contact-email-button__content {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-  }
-
-  .contact-email-button__icon {
-    display: block;
-    flex: 0 0 auto;
-    overflow: visible;
-    transform-box: fill-box;
-    transform-origin: center;
-  }
-
-  .contact-email-button:hover .contact-email-button__icon,
-  .contact-email-button:focus-visible .contact-email-button__icon,
-  .contact-email-button:active .contact-email-button__icon {
-    animation: email-plane-lift 620ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
-  }
-
   .service-card {
     display: block;
     transform: translate3d(0, 0, 0);
@@ -90,26 +59,7 @@
     transform: translate3d(2px, -2px, 0);
   }
 
-  @keyframes email-plane-lift {
-    0% {
-      transform: translate3d(0, 0, 0) rotate(0);
-    }
-    34% {
-      transform: translate3d(0, -7px, 0) rotate(-6deg);
-    }
-    68% {
-      transform: translate3d(0, -18px, 0) rotate(-12deg);
-    }
-    84% {
-      transform: translate3d(0, -11px, 0) rotate(-7deg);
-    }
-    100% {
-      transform: translate3d(0, 0, 0) rotate(0);
-    }
-  }
-
   @media (prefers-reduced-motion: reduce) {
-    .contact-email-button__icon,
     .service-card,
     .service-card__title,
     .service-card__arrow {
@@ -117,7 +67,6 @@
       animation: none !important;
     }
 
-    .contact-email-button__icon,
     .service-card,
     .service-card__arrow {
       transform: none !important;
