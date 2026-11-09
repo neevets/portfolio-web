@@ -14,9 +14,9 @@ const services = [
 const ServicesSection = memo(() => (
   <section id="services" className="py-20 sm:py-28 px-4 sm:px-6 relative z-10" style={{ scrollMarginTop: "5rem" }}>
     <div className="max-w-7xl mx-auto">
-      <div className="max-w-3xl mb-12">
-        <h2 className="section-title text-4xl sm:text-5xl md:text-6xl font-dev font-light mb-5">Services</h2>
-        <p className="text-muted-foreground font-dev text-base sm:text-lg leading-relaxed">Explore the areas I work with, from backend application development to APIs and deployment workflows.</p>
+      <div className="max-w-3xl mx-auto mb-12 text-center">
+        <h2 className="section-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-dev font-light mb-6 text-center">Services</h2>
+        <p className="text-muted-foreground font-dev text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">Explore the areas I work with, from backend application development to APIs and deployment workflows.</p>
       </div>
       <div className="grid sm:grid-cols-2 gap-4">
         {services.map((service) => (
