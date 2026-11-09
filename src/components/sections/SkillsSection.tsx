@@ -45,7 +45,12 @@ const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
               skill.name === 'Vercel' ? 'vercel-level-pill' : ''
             }`}
             style={{
-              color: 'hsl(var(--foreground))',
+              color:
+                skill.name === "GitHub" || skill.name === "JSON"
+                  ? "#FFFFFF"
+                  : skill.name === "Rust"
+                    ? "#111111"
+                    : "hsl(var(--foreground))",
               borderColor: styleProps.skillColor,
               backgroundColor: styleProps.skillColor,
             }}

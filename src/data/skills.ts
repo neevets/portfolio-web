@@ -5,7 +5,7 @@ export const skillsData: Record<string, Skill[]> = {
     { name: "Golang", icon: "Go", color: "hsl(199, 89%, 48%)", level: "Mid level" },
     { name: "Python", icon: "Python", color: "#FFD43B", level: "Mid level" },
     { name: "TypeScript", icon: "TypeScript", color: "hsl(211, 60%, 45%)", level: "Junior" },
-    { name: "Rust", icon: "Rust", color: "#DEA584", level: "Junior" },
+    { name: "Rust", icon: "Rust", color: "#D34516", level: "Junior" },
   ],
   "Runtimes & Frameworks": [
     { name: "Node.js", icon: "Node", color: "#5FA04E", level: "Junior" },
