@@ -34,9 +34,9 @@ const NotFound = () => {
           </div>
         </div>
 
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-black/30 rounded-full animate-gentle-float pointer-events-none"></div>
-        <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-black/30 rounded-full animate-deep-float pointer-events-none" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-black/30 rounded-full animate-enhanced-float pointer-events-none" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-foreground/30 rounded-full animate-gentle-float pointer-events-none"></div>
+        <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-foreground/30 rounded-full animate-deep-float pointer-events-none" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-foreground/30 rounded-full animate-enhanced-float pointer-events-none" style={{ animationDelay: '2s' }}></div>
       </div>
     </>
   );
