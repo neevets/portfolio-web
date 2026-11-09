@@ -17,7 +17,7 @@ export const TypeScriptIcon = memo(() => (
     <text
       x="2.4"
       y="18.5"
-      fill="#FFFFFF"
+      className="fill-black dark:fill-white"
       fontFamily="Arial, Helvetica, sans-serif"
       fontSize="15.5"
       fontWeight="700"
