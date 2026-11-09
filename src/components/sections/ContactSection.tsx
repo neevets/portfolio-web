@@ -1,6 +1,7 @@
 import { memo, useMemo } from "react";
 import type { ComponentType } from "react";
 import { ContactIcons } from "@/components/ContactIcons";
+import { Send } from "lucide-react";
 
 interface ContactLink {
   label: string;
@@ -80,13 +81,16 @@ const ContactSection = memo(() => {
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
           <a
             href="mailto:contact@neevets.com"
-            className="w-full sm:w-auto group relative inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-foreground text-background rounded-xl font-dev font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg overflow-hidden"
+            className="contact-email-button w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-foreground text-background rounded-xl font-dev font-medium overflow-hidden"
             aria-label="Send an email to contact@neevets.com"
           >
-            <span className="relative z-10 flex items-center">
-              <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 transition-all duration-500 group-hover:-translate-y-2 group-hover:translate-x-2 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-              </svg>
+            <span className="contact-email-button__content">
+              <Send
+                className="contact-email-button__icon"
+                size={18}
+                strokeWidth={1.8}
+                aria-hidden="true"
+              />
               <span className="text-sm sm:text-base">Send me an email</span>
             </span>
           </a>
