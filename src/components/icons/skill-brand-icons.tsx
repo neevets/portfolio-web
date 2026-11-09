@@ -11,11 +11,11 @@ import FastifyLogo from "@/assets/skills/fastify.svg";
 import ViteLogo from "@/assets/skills/vite.svg";
 import SwaggerLogo from "@/assets/skills/swagger.svg";
 import ApacheLogo from "@/assets/skills/apache.svg";
-import PostCSSLogo from "@/assets/skills/postcss.svg";
 import OpenTelemetryLogo from "@/assets/skills/opentelemetry.svg";
 import JestLogo from "@/assets/skills/jest.svg";
 import PostmanLogo from "@/assets/skills/postman.svg";
 import JSONLogo from "@/assets/skills/json.svg";
+import JSONDarkLogo from "@/assets/skills/json-dark.svg";
 import Auth0Logo from "@/assets/skills/auth0.svg";
 import AWSLogo from "@/assets/skills/aws.svg";
 import AWSDarkLogo from "@/assets/skills/aws-dark.svg";
@@ -52,11 +52,15 @@ export const FastifyIcon = memo(() => <BrandAssetIcon src={FastifyLogo} invertOn
 export const ViteIcon = memo(() => <BrandAssetIcon src={ViteLogo} />);
 export const SwaggerIcon = memo(() => <BrandAssetIcon src={SwaggerLogo} />);
 export const ApacheIcon = memo(() => <BrandAssetIcon src={ApacheLogo} />);
-export const PostCSSIcon = memo(() => <img src={PostCSSLogo} alt="" aria-hidden="true" draggable={false} className="h-full w-full scale-[1.08] object-contain" />);
 export const OpenTelemetryIcon = memo(() => <BrandAssetIcon src={OpenTelemetryLogo} />);
 export const JestIcon = memo(() => <BrandAssetIcon src={JestLogo} />);
 export const PostmanBrandIcon = memo(() => <BrandAssetIcon src={PostmanLogo} />);
-export const JSONIcon = memo(() => <BrandAssetIcon src={JSONLogo} />);
+export const JSONIcon = memo(() => (
+  <>
+    <img src={JSONLogo} alt="" aria-hidden="true" draggable={false} className="h-full w-full object-contain dark:hidden" />
+    <img src={JSONDarkLogo} alt="" aria-hidden="true" draggable={false} className="hidden h-full w-full object-contain dark:block" />
+  </>
+));
 export const Auth0Icon = memo(() => <BrandAssetIcon src={Auth0Logo} />);
 export const AWSIcon = memo(() => (
   <>

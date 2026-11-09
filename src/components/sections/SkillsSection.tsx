@@ -24,8 +24,10 @@ const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
     >
       <div className="relative">
         <div
-          className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto mb-2 sm:mb-3 flex items-center justify-center text-muted-foreground transition-all duration-300 sm:group-hover:scale-110 relative z-10"
-          style={{ color: skill.name === "GitHub" ? "hsl(var(--foreground))" : styleProps.iconColor }}
+          className={`w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto mb-2 sm:mb-3 flex items-center justify-center text-muted-foreground transition-all duration-300 sm:group-hover:scale-110 relative z-10 ${
+            skill.name === "GitHub" || skill.name === "Rust" ? "text-black dark:text-white" : ""
+          }`}
+          style={{ color: skill.name === "GitHub" || skill.name === "Rust" ? undefined : styleProps.iconColor }}
         >
           <PreloadedSkillIcon name={skill.icon} />
         </div>
