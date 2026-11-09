@@ -3,7 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#05070d" />
+    <script>
+      (() => {
+        let theme = "dark";
+
+        try {
+          const storedTheme = window.localStorage.getItem("portfolio-theme");
+          if (storedTheme === "light" || storedTheme === "dark" || storedTheme === "system") {
+            theme = storedTheme;
+          }
+        } catch {
+          // Keep the dark default when browser storage is unavailable.
+        }
+
+        const prefersDark = window.matchMedia?.("(prefers-color-scheme: dark)").matches ?? true;
+        const resolvedTheme = theme === "system" ? (prefersDark ? "dark" : "light") : theme;
+        const root = document.documentElement;
+
+        root.classList.remove("light", "dark");
+        root.classList.add(resolvedTheme);
+        root.style.colorScheme = resolvedTheme;
+        root.style.backgroundColor = resolvedTheme === "dark" ? "#000000" : "#ffffff";
+        document.querySelector('meta[name="theme-color"]')?.setAttribute(
+          "content",
+          resolvedTheme === "dark" ? "#05070d" : "#ffffff"
+        );
+      })();
+    </script>
     <meta name="description" content="Neevets is a backend developer focused on Go, Python APIs, systems programming, and reliable software infrastructure. Explore projects and development services." />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <title>Neevets | Backend Developer, Go & Python</title>
