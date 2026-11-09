@@ -11,11 +11,11 @@ const CourseCard = memo<{ course: Course; index: number }>(({ course, index }) =
     transition={{ duration: 0.5, delay: index * 0.1 }}
     className="group"
   >
-    <div className="relative bg-card/80 backdrop-blur-sm border border-border/60 rounded-xl p-6 hover:shadow-lg hover:border-border transition-all duration-300">
+    <div className="relative bg-card/80 backdrop-blur-sm border border-border/60 rounded-xl p-4 sm:p-6 hover:shadow-lg hover:border-border transition-all duration-300">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div className="flex-1">
-          <h3 className="text-xl font-semibold text-foreground mb-2">{course.title}</h3>
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+          <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2 break-words">{course.title}</h3>
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted-foreground">
             <span className="font-medium">{course.institution}</span>
             <span>•</span>
             <span>{course.date}</span>
