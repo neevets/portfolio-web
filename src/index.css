@@ -406,3 +406,32 @@
 .dark #skills img[data-invert-on-dark="true"] {
   filter: brightness(0) invert(1);
 }
+
+.palette-digit {
+  color: hsl(199, 89%, 48%);
+  animation: palette-steps 7.2s linear infinite;
+}
+
+.palette-digit:nth-child(2) {
+  animation-delay: -2.4s;
+}
+
+.palette-digit:nth-child(3) {
+  animation-delay: -4.8s;
+}
+
+@keyframes palette-steps {
+  0.00%, 13.47% { color: hsl(199, 89%, 48%); }
+  16.67%, 30.13% { color: #FFD43B; }
+  33.33%, 46.80% { color: #E0234E; }
+  50.00%, 63.47% { color: #42B883; }
+  66.67%, 80.13% { color: #FF3E00; }
+  83.33%, 96.80% { color: #D63AFF; }
+  100% { color: hsl(199, 89%, 48%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .palette-digit {
+    animation: none;
+  }
+}
