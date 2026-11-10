@@ -14,7 +14,6 @@
   --gradient-card: #000;
 }
 
-.elevated-card,
 .skill-card-optimized,
 iframe,
 [class*="bg-card/"],
@@ -26,8 +25,7 @@ iframe,
   backdrop-filter: none !important;
 }
 
-.dark .elevated-card,
-.dark .skill-card-optimized,
+.dark .dark .skill-card-optimized,
 .dark iframe,
 .dark [class*="bg-card/"],
 .dark [class*="bg-background/"] {
