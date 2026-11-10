@@ -31,7 +31,6 @@ import FlaskLogo from "@/assets/skills/flask.svg";
 import SocketIOLogo from "@/assets/skills/socketio.svg";
 import LinuxLogo from "@/assets/skills/linux.svg";
 import VMwareLogo from "@/assets/skills/vmware.svg";
-import VMwareDarkLogo from "@/assets/skills/vmware-dark.svg";
 import WindowsLogo from "@/assets/skills/windows.svg";
 import WebSocketLogo from "@/assets/skills/websocket.svg";
 import PuTTYLogo from "@/assets/skills/putty.svg";
@@ -54,13 +53,6 @@ const BrandAssetIcon = ({ src, invertOnDark = false }: BrandAssetIconProps) => (
   />
 );
 
-
-const ThemeAwareBrandAssetIcon = ({ lightSrc, darkSrc }: { lightSrc: string; darkSrc: string }) => (
-  <>
-    <img src={lightSrc} alt="" aria-hidden="true" draggable={false} className="h-full w-full object-contain dark:hidden" />
-    <img src={darkSrc} alt="" aria-hidden="true" draggable={false} className="hidden h-full w-full object-contain dark:block" />
-  </>
-);
 
 export const NginxIcon = memo(() => <BrandAssetIcon src={NginxLogo} />);
 export const GrafanaIcon = memo(() => <BrandAssetIcon src={GrafanaLogo} />);
@@ -113,7 +105,7 @@ export const SocketIOIcon = memo(() => <BrandAssetIcon src={SocketIOLogo} invert
 export const WebSocketsIcon = memo(() => <BrandAssetIcon src={WebSocketLogo} />);
 export const LinuxIcon = memo(() => <BrandAssetIcon src={LinuxLogo} />);
 export const WindowsIcon = memo(() => <BrandAssetIcon src={WindowsLogo} />);
-export const VMwareIcon = memo(() => <ThemeAwareBrandAssetIcon lightSrc={VMwareLogo} darkSrc={VMwareDarkLogo} />);
+export const VMwareIcon = memo(() => <BrandAssetIcon src={VMwareLogo} />);
 export const PuTTYIcon = memo(() => <BrandAssetIcon src={PuTTYLogo} />);
 export const GCCIcon = memo(() => <BrandAssetIcon src={GCCLogo} />);
 export const LLVMIcon = memo(() => <BrandAssetIcon src={LLVMLogo} />);

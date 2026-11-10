@@ -6,17 +6,12 @@ import type { Skill } from '@/types/portfolio';
 import { getReadableTextColor, getRelativeLuminance } from '@/lib/utils';
 
 const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
-  const isWordmarkSkill = skill.name === "VMware";
-  const iconContainerSize = isWordmarkSkill
-    ? "w-24 h-16 mb-1 sm:w-28 sm:h-[4.75rem] sm:mb-2 lg:w-32 lg:h-[5.25rem]"
-    : "w-8 h-8 mb-2 sm:w-10 sm:h-10 sm:mb-3 lg:w-12 lg:h-12";
   const luminance = getRelativeLuminance(skill.color);
-  const invertPillOnDark = isWordmarkSkill || (luminance !== null && luminance < 0.03);
+  const invertPillOnDark = luminance !== null && luminance < 0.03;
 
   return (
     <div
       className="skill-card-optimized group"
-      data-wordmark={isWordmarkSkill ? "true" : undefined}
       data-invert-pill-on-dark={invertPillOnDark ? "true" : undefined}
       style={{
         '--skill-color': skill.color,
@@ -24,7 +19,7 @@ const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
     >
       <div className="relative">
         <div
-          className={`${iconContainerSize} mx-auto flex items-center justify-center text-muted-foreground transition-all duration-300 sm:group-hover:scale-110 relative z-10 ${
+          className={`w-8 h-8 mb-2 sm:w-10 sm:h-10 sm:mb-3 lg:w-12 lg:h-12 mx-auto flex items-center justify-center text-muted-foreground transition-all duration-300 sm:group-hover:scale-110 relative z-10 ${
             skill.name === "GitHub" ? "skill-icon-theme" : ""
           }`}
           style={{
@@ -50,11 +45,7 @@ const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
 
       <div className="text-center">
         <h4
-          className={
-            isWordmarkSkill
-              ? "sr-only"
-              : "text-xs sm:text-sm font-dev font-medium text-foreground sm:group-hover:text-foreground transition-colors duration-300 mb-1 sm:mb-2 flex items-center justify-center min-h-[1.5rem] z-10 relative"
-          }
+          className="text-xs sm:text-sm font-dev font-medium text-foreground sm:group-hover:text-foreground transition-colors duration-300 mb-1 sm:mb-2 flex items-center justify-center min-h-[1.5rem] z-10 relative"
         >
           {skill.name}
         </h4>
