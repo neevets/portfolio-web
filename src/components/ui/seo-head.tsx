@@ -12,7 +12,7 @@ interface SEOHeadProps {
 const SITE_URL = "https://neevets.com";
 
 export const SEOHead = ({
-  title = "Neevets | Backend Developer, Go & Python",
+  title = "Neevets: Backend Developer, Go & Python",
   description = "Neevets is a backend developer focused on Go, Python APIs, systems programming, and reliable software infrastructure.",
   path = "/",
   type = "website",
