@@ -14,7 +14,7 @@ const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
     >
       <div className="relative">
         <div
-          className={`${skill.name === "OpenSSL" ? "w-24 h-8 sm:w-28 sm:h-10 lg:w-32 lg:h-12" : "w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12"} mx-auto mb-2 sm:mb-3 flex items-center justify-center text-muted-foreground transition-all duration-300 sm:group-hover:scale-110 relative z-10 ${
+          className={`${(skill.name === "OpenSSL" || skill.name === "VMware") ? "w-24 h-8 sm:w-28 sm:h-10 lg:w-32 lg:h-12" : "w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12"} mx-auto mb-2 sm:mb-3 flex items-center justify-center text-muted-foreground transition-all duration-300 sm:group-hover:scale-110 relative z-10 ${
             skill.name === "GitHub" ? "skill-icon-theme" : ""
           }`}
           style={{
@@ -28,7 +28,7 @@ const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
               rel="noopener noreferrer"
               aria-label={`Open ${skill.name} project website`}
               title={`${skill.name} project website`}
-              className={skill.name === "OpenSSL" ? "inline-flex h-full w-full items-center justify-center rounded-md bg-white p-1" : "inline-flex h-full w-full items-center justify-center"}
+              className="inline-flex h-full w-full items-center justify-center"
             >
               <PreloadedSkillIcon name={skill.icon} />
             </a>
@@ -39,7 +39,7 @@ const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
       </div>
 
       <div className="text-center">
-        {skill.name !== "OpenSSL" && (
+        {skill.name !== "OpenSSL" && skill.name !== "VMware" && (
           <h4
             className="text-xs sm:text-sm font-dev font-medium text-foreground sm:group-hover:text-foreground transition-colors duration-300 mb-1 sm:mb-2 flex items-center justify-center min-h-[1.5rem] z-10 relative"
           >
@@ -48,7 +48,7 @@ const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
         )}
         <div className="opacity-100 translate-y-0 sm:opacity-0 sm:translate-y-2 sm:group-hover:opacity-100 sm:group-hover:translate-y-0 transition-all duration-300 ease-out">
           <span
-            className="skill-level-pill inline-flex items-center justify-center min-w-[70px] sm:min-w-[88px] px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium border transition-colors duration-200"
+            className={`skill-level-pill inline-flex items-center justify-center min-w-[70px] sm:min-w-[88px] px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium border transition-colors duration-200 ${skill.name === "VMware" ? "dark:!bg-white dark:!border-white dark:!text-black" : ""}`}
             style={{
               borderColor: skill.color,
               backgroundColor: skill.color,

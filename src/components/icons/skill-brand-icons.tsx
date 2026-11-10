@@ -31,12 +31,14 @@ import FlaskLogo from "@/assets/skills/flask.svg";
 import SocketIOLogo from "@/assets/skills/socketio.svg";
 import LinuxLogo from "@/assets/skills/linux.svg";
 import VMwareLogo from "@/assets/skills/vmware.svg";
+import VMwareDarkLogo from "@/assets/skills/vmware-dark.svg";
 import WindowsLogo from "@/assets/skills/windows.svg";
 import WebSocketLogo from "@/assets/skills/websocket.svg";
 import PuTTYLogo from "@/assets/skills/putty.svg";
 import GCCLogo from "@/assets/skills/gcc.svg";
 import LLVMLogo from "@/assets/skills/llvm.svg";
 import OpenSSLLogo from "@/assets/skills/openssl.svg";
+import OpenSSLDarkLogo from "@/assets/skills/openssl-dark.svg";
 
 interface BrandAssetIconProps {
   src: string;
@@ -52,6 +54,14 @@ const BrandAssetIcon = ({ src, invertOnDark = false }: BrandAssetIconProps) => (
     className="h-full w-full object-contain"
     data-invert-on-dark={invertOnDark ? "true" : undefined}
   />
+);
+
+
+const ThemeAwareBrandAssetIcon = ({ lightSrc, darkSrc }: { lightSrc: string; darkSrc: string }) => (
+  <>
+    <img src={lightSrc} alt="" aria-hidden="true" draggable={false} className="h-full w-full object-contain dark:hidden" />
+    <img src={darkSrc} alt="" aria-hidden="true" draggable={false} className="hidden h-full w-full object-contain dark:block" />
+  </>
 );
 
 export const NginxIcon = memo(() => <BrandAssetIcon src={NginxLogo} />);
@@ -105,9 +115,9 @@ export const SocketIOIcon = memo(() => <BrandAssetIcon src={SocketIOLogo} invert
 export const WebSocketsIcon = memo(() => <BrandAssetIcon src={WebSocketLogo} />);
 export const LinuxIcon = memo(() => <BrandAssetIcon src={LinuxLogo} />);
 export const WindowsIcon = memo(() => <BrandAssetIcon src={WindowsLogo} />);
-export const VMwareIcon = memo(() => <BrandAssetIcon src={VMwareLogo} />);
+export const VMwareIcon = memo(() => <ThemeAwareBrandAssetIcon lightSrc={VMwareLogo} darkSrc={VMwareDarkLogo} />);
 export const PuTTYIcon = memo(() => <BrandAssetIcon src={PuTTYLogo} />);
 export const GCCIcon = memo(() => <BrandAssetIcon src={GCCLogo} />);
 export const LLVMIcon = memo(() => <BrandAssetIcon src={LLVMLogo} />);
 
-export const OpenSSLIcon = memo(() => <BrandAssetIcon src={OpenSSLLogo} />);
+export const OpenSSLIcon = memo(() => <ThemeAwareBrandAssetIcon lightSrc={OpenSSLLogo} darkSrc={OpenSSLDarkLogo} />);

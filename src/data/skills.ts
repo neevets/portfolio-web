@@ -45,7 +45,7 @@ export const skillsData: Record<string, Skill[]> = {
   "Systems & Virtualization": [
     { name: "Linux", icon: "Linux", color: "#FCC624", level: "Exploring" },
     { name: "Windows", icon: "Windows", color: "#0078D4", level: "Exploring" },
-    { name: "VMware", icon: "VMware", color: "#0091DA", level: "Exploring" },
+    { name: "VMware", icon: "VMware", color: "#717074", level: "Exploring" },
     { name: "PuTTY", icon: "PuTTY", color: "#005A9C", level: "Exploring" },
   ],
   "DevOps, Testing & Observability": [
@@ -65,7 +65,7 @@ export const skillsData: Record<string, Skill[]> = {
     { name: "Swagger", icon: "Swagger", color: "#85EA2D", level: "Junior" },
     { name: "Auth0", icon: "Auth0", color: "#EB5424", level: "Junior" },
     { name: "JWT", icon: "JWT", color: "#D63AFF", level: "Junior" },
-    { name: "OpenSSL", icon: "OpenSSL", color: "#721412", level: "Exploring", url: "https://www.openssl.org/" },
+    { name: "OpenSSL", icon: "OpenSSL", color: "#6D2520", level: "Exploring", url: "https://www.openssl.org/" },
     { name: "MCP", icon: "MCP", color: "#4B91F1", level: "Junior" },
     { name: "Postman", icon: "Postman", color: "#FF6C37", level: "Junior" },
     { name: "Vite", icon: "Vite", color: "#646CFF", level: "Junior" },
