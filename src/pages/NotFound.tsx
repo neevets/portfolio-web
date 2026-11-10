@@ -7,7 +7,7 @@ const NotFound = () => {
   return (
     <>
       <SEOHead
-        title="Page Not Found | Neevets"
+        title="Neevets: Page Not Found"
         description="The requested page could not be found on Neevets."
         path={location.pathname}
         robots="noindex, follow"
