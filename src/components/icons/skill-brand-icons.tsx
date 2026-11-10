@@ -25,7 +25,21 @@ import ESLintLogo from "@/assets/skills/eslint.svg";
 import PrettierLogo from "@/assets/skills/prettier.svg";
 import JWTLogo from "@/assets/skills/jwt.svg";
 import MCPLogo from "@/assets/skills/mcp.svg";
-import TechnologySprite from "@/assets/skills/technology-icons.svg";
+import { ListOrdered, Monitor, Network } from "lucide-react";
+import VueLogo from "@/assets/skills/vuejs.svg";
+import SvelteLogo from "@/assets/skills/svelte.svg";
+import NextLogo from "@/assets/skills/nextjs.svg";
+import FlaskLogo from "@/assets/skills/flask.svg";
+import SocketIOLogo from "@/assets/skills/socketio.svg";
+import RabbitMQLogo from "@/assets/skills/rabbitmq.svg";
+import KafkaLogo from "@/assets/skills/apachekafka.svg";
+import LinuxLogo from "@/assets/skills/linux.svg";
+import WindowsLogo from "@/assets/skills/windows.svg";
+import GitHubActionsLogo from "@/assets/skills/github-actions.svg";
+import PuTTYLogo from "@/assets/skills/putty.svg";
+import GCCLogo from "@/assets/skills/gcc.svg";
+import LLVMLogo from "@/assets/skills/llvm.svg";
+import WebAssemblyLogo from "@/assets/skills/webassembly.svg";
 
 interface BrandAssetIconProps {
   src: string;
@@ -82,25 +96,21 @@ export const PrettierIcon = memo(() => <BrandAssetIcon src={PrettierLogo} />);
 export const JWTIcon = memo(() => <BrandAssetIcon src={JWTLogo} />);
 export const MCPIcon = memo(() => <BrandAssetIcon src={MCPLogo} invertOnDark />);
 
-const TechnologySpriteIcon = ({ id, invertOnDark = false }: { id: string; invertOnDark?: boolean }) => (
-  <svg className="h-full w-full" viewBox="0 0 24 24" aria-hidden="true" focusable="false" data-invert-on-dark={invertOnDark ? "true" : undefined}>
-    <use href={`${TechnologySprite}#${id}`} />
-  </svg>
-);
-export const VueIcon = memo(() => <TechnologySpriteIcon id="vue" />);
-export const SvelteIcon = memo(() => <TechnologySpriteIcon id="svelte" />);
-export const NextIcon = memo(() => <TechnologySpriteIcon id="next" invertOnDark />);
-export const FlaskIcon = memo(() => <TechnologySpriteIcon id="flask" invertOnDark />);
-export const SocketIOIcon = memo(() => <TechnologySpriteIcon id="socketio" invertOnDark />);
-export const WebSocketsIcon = memo(() => <TechnologySpriteIcon id="websockets" />);
-export const BullMQIcon = memo(() => <TechnologySpriteIcon id="bullmq" />);
-export const RabbitMQIcon = memo(() => <TechnologySpriteIcon id="rabbitmq" />);
-export const KafkaIcon = memo(() => <TechnologySpriteIcon id="kafka" invertOnDark />);
-export const LinuxIcon = memo(() => <TechnologySpriteIcon id="linux" />);
-export const WindowsIcon = memo(() => <TechnologySpriteIcon id="windows" />);
-export const VirtualMachinesIcon = memo(() => <TechnologySpriteIcon id="virtual-machines" />);
-export const PuTTYIcon = memo(() => <TechnologySpriteIcon id="putty" />);
-export const GitHubActionsIcon = memo(() => <TechnologySpriteIcon id="github-actions" />);
-export const GCCIcon = memo(() => <TechnologySpriteIcon id="gcc" />);
-export const LLVMIcon = memo(() => <TechnologySpriteIcon id="llvm" invertOnDark />);
-export const WebAssemblyIcon = memo(() => <TechnologySpriteIcon id="webassembly" />);
+
+export const VueIcon = memo(() => <BrandAssetIcon src={VueLogo} />);
+export const SvelteIcon = memo(() => <BrandAssetIcon src={SvelteLogo} />);
+export const NextIcon = memo(() => <BrandAssetIcon src={NextLogo} />);
+export const FlaskIcon = memo(() => <BrandAssetIcon src={FlaskLogo} invertOnDark />);
+export const SocketIOIcon = memo(() => <BrandAssetIcon src={SocketIOLogo} invertOnDark />);
+export const WebSocketsIcon = memo(() => <Network className="h-full w-full" strokeWidth={1.8} />);
+export const BullMQIcon = memo(() => <ListOrdered className="h-full w-full" strokeWidth={1.8} />);
+export const RabbitMQIcon = memo(() => <BrandAssetIcon src={RabbitMQLogo} />);
+export const KafkaIcon = memo(() => <BrandAssetIcon src={KafkaLogo} />);
+export const LinuxIcon = memo(() => <BrandAssetIcon src={LinuxLogo} />);
+export const WindowsIcon = memo(() => <BrandAssetIcon src={WindowsLogo} />);
+export const VirtualMachinesIcon = memo(() => <Monitor className="h-full w-full" strokeWidth={1.8} />);
+export const PuTTYIcon = memo(() => <BrandAssetIcon src={PuTTYLogo} />);
+export const GitHubActionsIcon = memo(() => <BrandAssetIcon src={GitHubActionsLogo} />);
+export const GCCIcon = memo(() => <BrandAssetIcon src={GCCLogo} />);
+export const LLVMIcon = memo(() => <BrandAssetIcon src={LLVMLogo} />);
+export const WebAssemblyIcon = memo(() => <BrandAssetIcon src={WebAssemblyLogo} />);
