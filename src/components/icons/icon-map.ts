@@ -57,8 +57,8 @@ import {
   MCPIcon,
   VueIcon, SvelteIcon, NextIcon, FlaskIcon, SocketIOIcon, WebSocketsIcon,
   LinuxIcon, WindowsIcon, VMwareIcon,
-  PuTTYIcon, GitHubActionsIcon, GCCIcon, LLVMIcon, CassandraIcon,
-  OpenSSLIcon, ElectronIcon,
+  PuTTYIcon, GCCIcon, LLVMIcon, CassandraIcon,
+  OpenSSLIcon,
 } from "./skill-brand-icons";
 
 export const iconMap = {
@@ -83,7 +83,6 @@ export const iconMap = {
   Redis: RedisIcon,
   Cassandra: CassandraIcon,
   OpenSSL: OpenSSLIcon,
-  Electron: ElectronIcon,
   Docker: DockerIcon,
   Heroku: HerokuIcon,
   Vercel: VercelIcon,
@@ -121,7 +120,6 @@ export const iconMap = {
   Windows: WindowsIcon,
   VMware: VMwareIcon,
   PuTTY: PuTTYIcon,
-  GitHubActions: GitHubActionsIcon,
   GCC: GCCIcon,
   LLVM: LLVMIcon,
   ESLint: ESLintIcon,

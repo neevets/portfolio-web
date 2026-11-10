@@ -14,7 +14,7 @@ const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
     >
       <div className="relative">
         <div
-          className={`w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto mb-2 sm:mb-3 flex items-center justify-center text-muted-foreground transition-all duration-300 sm:group-hover:scale-110 relative z-10 ${
+          className={`${skill.name === "OpenSSL" ? "w-24 h-8 sm:w-28 sm:h-10 lg:w-32 lg:h-12" : "w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12"} mx-auto mb-2 sm:mb-3 flex items-center justify-center text-muted-foreground transition-all duration-300 sm:group-hover:scale-110 relative z-10 ${
             skill.name === "GitHub" ? "skill-icon-theme" : ""
           }`}
           style={{
