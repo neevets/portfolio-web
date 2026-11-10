@@ -56,7 +56,7 @@ import {
   JWTIcon,
   MCPIcon,
   VueIcon, SvelteIcon, NextIcon, FlaskIcon, SocketIOIcon, WebSocketsIcon,
-  RabbitMQIcon, LinuxIcon, WindowsIcon, VMwareIcon,
+  LinuxIcon, WindowsIcon, VMwareIcon,
   PuTTYIcon, GitHubActionsIcon, GCCIcon, LLVMIcon, CassandraIcon,
   OpenSSLIcon, ElectronIcon,
 } from "./skill-brand-icons";
@@ -117,7 +117,6 @@ export const iconMap = {
   Flask: FlaskIcon,
   SocketIO: SocketIOIcon,
   WebSockets: WebSocketsIcon,
-  RabbitMQ: RabbitMQIcon,
   Linux: LinuxIcon,
   Windows: WindowsIcon,
   VMware: VMwareIcon,

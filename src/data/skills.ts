@@ -32,7 +32,6 @@ export const skillsData: Record<string, Skill[]> = {
   "Messaging & Real-Time": [
     { name: "Socket.IO", icon: "SocketIO", color: "#111111", level: "Exploring" },
     { name: "WebSockets", icon: "WebSockets", color: "#2F81F7", level: "Exploring" },
-    { name: "RabbitMQ", icon: "RabbitMQ", color: "#FF6600", level: "Exploring" },
   ],
   "Cloud & Infrastructure": [
     { name: "Docker", icon: "Docker", color: "#2496ED", level: "Mid level" },
