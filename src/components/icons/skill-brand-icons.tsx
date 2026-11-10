@@ -32,7 +32,6 @@ import SocketIOLogo from "@/assets/skills/socketio.svg";
 import LinuxLogo from "@/assets/skills/linux.svg";
 import VMwareLogo from "@/assets/skills/vmware.svg";
 import WindowsLogo from "@/assets/skills/windows.svg";
-import CassandraLogo from "@/assets/skills/cassandra.svg";
 import WebSocketLogo from "@/assets/skills/websocket.svg";
 import PuTTYLogo from "@/assets/skills/putty.svg";
 import GCCLogo from "@/assets/skills/gcc.svg";
@@ -103,13 +102,12 @@ export const NextIcon = memo(() => (
 ));
 export const FlaskIcon = memo(() => <BrandAssetIcon src={FlaskLogo} invertOnDark />);
 export const SocketIOIcon = memo(() => <BrandAssetIcon src={SocketIOLogo} invertOnDark />);
-export const WebSocketsIcon = memo(() => <BrandAssetIcon src={WebSocketLogo} invertOnDark />);
-export const LinuxIcon = memo(() => <BrandAssetIcon src={LinuxLogo} invertOnDark />);
+export const WebSocketsIcon = memo(() => <BrandAssetIcon src={WebSocketLogo} />);
+export const LinuxIcon = memo(() => <BrandAssetIcon src={LinuxLogo} />);
 export const WindowsIcon = memo(() => <BrandAssetIcon src={WindowsLogo} />);
 export const VMwareIcon = memo(() => <BrandAssetIcon src={VMwareLogo} />);
 export const PuTTYIcon = memo(() => <BrandAssetIcon src={PuTTYLogo} />);
-export const GCCIcon = memo(() => <BrandAssetIcon src={GCCLogo} invertOnDark />);
+export const GCCIcon = memo(() => <BrandAssetIcon src={GCCLogo} />);
 export const LLVMIcon = memo(() => <BrandAssetIcon src={LLVMLogo} />);
-export const CassandraIcon = memo(() => <BrandAssetIcon src={CassandraLogo} />);
 
 export const OpenSSLIcon = memo(() => <BrandAssetIcon src={OpenSSLLogo} />);

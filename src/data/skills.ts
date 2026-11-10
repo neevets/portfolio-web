@@ -26,7 +26,7 @@ export const skillsData: Record<string, Skill[]> = {
   Databases: [
     { name: "PostgreSQL", icon: "PostgreSQL", color: "hsl(205, 81%, 33%)", level: "Mid level" },
     { name: "Redis", icon: "Redis", color: "#D82C20", level: "Junior" },
-    { name: "Cassandra", icon: "Cassandra", color: "#7566B8", level: "Exploring" },
+    { name: "MongoDB", icon: "MongoDB", color: "#47A248", level: "Exploring" },
   ],
   "Messaging & Real-Time": [
     { name: "Socket.IO", icon: "SocketIO", color: "#111111", level: "Exploring" },
