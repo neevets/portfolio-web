@@ -41,6 +41,7 @@ import GCCLogo from "@/assets/skills/gcc.svg";
 import LLVMLogo from "@/assets/skills/llvm.svg";
 import OpenSSLLogo from "@/assets/skills/openssl.svg";
 import CiscoPacketTracerLogo from "@/assets/skills/cisco-packet-tracer.svg";
+import ElectronLogo from "@/assets/skills/electron.svg";
 
 interface BrandAssetIconProps {
   src: string;
@@ -115,3 +116,4 @@ export const CassandraIcon = memo(() => <BrandAssetIcon src={CassandraLogo} />);
 
 export const OpenSSLIcon = memo(() => <BrandAssetIcon src={OpenSSLLogo} />);
 export const CiscoPacketTracerIcon = memo(() => <BrandAssetIcon src={CiscoPacketTracerLogo} />);
+export const ElectronIcon = memo(() => <BrandAssetIcon src={ElectronLogo} />);

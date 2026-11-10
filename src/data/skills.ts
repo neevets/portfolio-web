@@ -8,6 +8,8 @@ export const skillsData: Record<string, Skill[]> = {
     { name: "Rust", icon: "Rust", color: "#D34516", level: "Junior" },
   ],
   "Compilers & Runtime": [
+    { name: "Go Compiler", icon: "Go", color: "hsl(199, 89%, 48%)", level: "Exploring" },
+    { name: "Rust Compiler", icon: "Rust", color: "#D34516", level: "Exploring" },
     { name: "GCC", icon: "GCC", color: "#A42E2B", level: "Exploring" },
     { name: "LLVM", icon: "LLVM", color: "#596579", level: "Exploring" },
   ],
@@ -15,6 +17,7 @@ export const skillsData: Record<string, Skill[]> = {
     { name: "Fiber", icon: "Fiber", color: "hsl(193, 100%, 42%)", level: "Mid level" },
     { name: "FastAPI", icon: "FastAPI", color: "hsl(173, 80%, 40%)", level: "Mid level" },
     { name: "Node.js", icon: "Node", color: "#5FA04E", level: "Junior" },
+    { name: "Electron", icon: "Electron", color: "#47848F", level: "Exploring" },
     { name: "NestJS", icon: "NestJS", color: "#E0234E", level: "Junior" },
     { name: "React", icon: "React", color: "hsl(193, 95%, 68%)", level: "Junior" },
     { name: "Tailwind CSS", icon: "Tailwind", color: "hsl(198, 93%, 60%)", level: "Trainee" },

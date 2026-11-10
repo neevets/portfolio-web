@@ -58,7 +58,7 @@ import {
   VueIcon, SvelteIcon, NextIcon, FlaskIcon, SocketIOIcon, WebSocketsIcon,
   RabbitMQIcon, LinuxIcon, WindowsIcon, VMwareIcon,
   PuTTYIcon, GitHubActionsIcon, GCCIcon, LLVMIcon, CassandraIcon,
-  OpenSSLIcon, CiscoPacketTracerIcon,
+  OpenSSLIcon, CiscoPacketTracerIcon, ElectronIcon,
 } from "./skill-brand-icons";
 
 export const iconMap = {
@@ -84,6 +84,7 @@ export const iconMap = {
   Cassandra: CassandraIcon,
   OpenSSL: OpenSSLIcon,
   CiscoPacketTracer: CiscoPacketTracerIcon,
+  Electron: ElectronIcon,
   Docker: DockerIcon,
   Heroku: HerokuIcon,
   Vercel: VercelIcon,
