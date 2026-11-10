@@ -1,4 +1,5 @@
 import { memo } from "react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { projectsData } from "@/data/projects";
 import type { Project } from "@/types/portfolio";
 import { motion } from "framer-motion";
@@ -57,9 +58,7 @@ const ProjectCard = memo(({ project, index }: ProjectCardProps) => {
             className="inline-flex items-center px-6 py-3 border border-border bg-background text-foreground rounded-lg font-dev font-medium hover:scale-105 hover:bg-muted/50 transition-all duration-300 group"
           >
             View source
-            <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
+            <ExternalLink className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" aria-hidden="true" />
           </a>
         )}
 
@@ -71,9 +70,7 @@ const ProjectCard = memo(({ project, index }: ProjectCardProps) => {
             className="inline-flex items-center px-6 py-3 bg-foreground text-background rounded-lg font-dev font-medium hover:scale-105 transition-all duration-300 group"
           >
             Explore Project
-            <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
+            <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" aria-hidden="true" />
           </a>
         )}
       </div>
