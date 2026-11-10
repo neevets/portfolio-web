@@ -3,7 +3,7 @@ import { skillsData } from '@/data/skills';
 import { motion } from 'framer-motion';
 import { Icon } from '@/components/ui/icon';
 import type { Skill } from '@/types/portfolio';
-import { getReadableTextColor, getRelativeLuminance } from '@/lib/utils';
+import { getRelativeLuminance } from '@/lib/utils';
 
 const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
   const luminance = getRelativeLuminance(skill.color);
@@ -42,7 +42,7 @@ const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
             style={{
               borderColor: skill.color,
               backgroundColor: skill.color,
-              color: getReadableTextColor(skill.color),
+              color: "#FFFFFF",
             }}
           >
             {skill.level}

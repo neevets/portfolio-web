@@ -40,14 +40,3 @@ export function getRelativeLuminance(color: string): number | null {
   });
   return 0.2126 * r + 0.7152 * g + 0.0722 * b;
 }
-
-export function getReadableTextColor(background: string): "#000000" | "#FFFFFF" {
-  const luminance = getRelativeLuminance(background);
-  if (luminance === null) {
-    return "#FFFFFF";
-  }
-
-  const contrastWithWhite = 1.05 / (luminance + 0.05);
-  const contrastWithBlack = (luminance + 0.05) / 0.05;
-  return contrastWithBlack > contrastWithWhite ? "#000000" : "#FFFFFF";
-}
