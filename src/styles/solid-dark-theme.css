@@ -1,4 +1,3 @@
-/* Keep component surfaces monochrome in both themes. */
 :root {
   --card: 0 0% 100%;
   --border: 0 0% 0%;
@@ -18,7 +17,6 @@
   --gradient-glow: none;
 }
 
-/* Solid surfaces and contrasting borders for cards, embeds and panels. */
 .elevated-card,
 .glass-card,
 .skill-card-optimized,
@@ -45,7 +43,6 @@ iframe,
   border-color: #fff !important;
 }
 
-/* Remove accent-colored borders from common component variants. */
 [class*="border-primary"],
 [class*="border-amber"],
 [class*="border-yellow"],
@@ -64,12 +61,10 @@ iframe,
   border-color: #fff !important;
 }
 
-/* Keep decorative patterns and all animation effects intact. */
 .dark .dot-pattern {
   background-color: transparent;
 }
 
-/* Remove only the static hero gradient overlay, not the animated grid. */
 .dark #hero > .absolute[style*="gradient-hero"] {
   display: none !important;
 }

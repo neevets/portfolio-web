@@ -646,7 +646,6 @@
   color: #ffffff !important;
 }
 
-/* VMware's gray brand color is too dark on the black theme: use a white pill with black text. */
 .dark #skills .skill-card-optimized[data-wordmark="true"] .skill-level-pill {
   background-color: #ffffff !important;
   border-color: #ffffff !important;

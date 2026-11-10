@@ -5,7 +5,6 @@ import { PreloadedSkillIcon } from '@/components/ui/preloaded-skill-icon';
 import type { Skill } from '@/types/portfolio';
 
 const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
-  // Wordmark logos already contain the skill name, so they take the space of icon + title.
   const isWordmarkSkill = skill.name === "VMware";
   const iconContainerSize = isWordmarkSkill
     ? "w-24 h-16 mb-1 sm:w-28 sm:h-[4.75rem] sm:mb-2 lg:w-32 lg:h-[5.25rem]"

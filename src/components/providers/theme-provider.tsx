@@ -1,29 +1,18 @@
 import {
-  createContext,
   useCallback,
-  useContext,
   useEffect,
   useMemo,
   useState,
 } from "react";
 import type { ReactNode } from "react";
-
-type Theme = "light" | "dark" | "system";
-type ResolvedTheme = "light" | "dark";
+import { ThemeProviderContext } from "./theme-context";
+import type { ResolvedTheme, Theme } from "./theme-context";
 
 type ThemeProviderProps = {
   children: ReactNode;
   defaultTheme?: Theme;
   storageKey?: string;
 };
-
-type ThemeProviderState = {
-  theme: Theme;
-  resolvedTheme: ResolvedTheme;
-  setTheme: (theme: Theme) => void;
-};
-
-const ThemeProviderContext = createContext<ThemeProviderState | undefined>(undefined);
 
 const isTheme = (value: string | null): value is Theme =>
   value === "light" || value === "dark" || value === "system";
@@ -59,7 +48,7 @@ export function ThemeProvider({
     try {
       window.localStorage.setItem(storageKey, nextTheme);
     } catch {
-      // The selected theme still applies when browser storage is unavailable.
+      return;
     }
   }, [storageKey]);
 
@@ -99,14 +88,4 @@ export function ThemeProvider({
       {children}
     </ThemeProviderContext.Provider>
   );
-}
-
-export function useTheme() {
-  const context = useContext(ThemeProviderContext);
-
-  if (!context) {
-    throw new Error("useTheme must be used within a ThemeProvider");
-  }
-
-  return context;
 }

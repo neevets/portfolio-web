@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Moon, Sun } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useTheme } from "@/components/providers/theme-provider";
+import { useTheme } from "@/components/providers/theme-context";
 import { navItems } from "@/data/navigation";
 
 export const Navigation = () => {
