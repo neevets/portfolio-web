@@ -8,8 +8,6 @@ export const skillsData: Record<string, Skill[]> = {
     { name: "Rust", icon: "Rust", color: "#D34516", level: "Junior" },
   ],
   "Compilers & Runtime": [
-    { name: "Go Compiler", icon: "Go", color: "hsl(199, 89%, 48%)", level: "Exploring" },
-    { name: "Rust Compiler", icon: "Rust", color: "#D34516", level: "Exploring" },
     { name: "GCC", icon: "GCC", color: "#A42E2B", level: "Exploring" },
     { name: "LLVM", icon: "LLVM", color: "#596579", level: "Exploring" },
   ],
@@ -29,7 +27,7 @@ export const skillsData: Record<string, Skill[]> = {
   Databases: [
     { name: "PostgreSQL", icon: "PostgreSQL", color: "hsl(205, 81%, 33%)", level: "Mid level" },
     { name: "Redis", icon: "Redis", color: "#D82C20", level: "Junior" },
-    { name: "Cassandra", icon: "Cassandra", color: "#1287B1", level: "Exploring" },
+    { name: "Cassandra", icon: "Cassandra", color: "#7566B8", level: "Exploring" },
   ],
   "Messaging & Real-Time": [
     { name: "Socket.IO", icon: "SocketIO", color: "#111111", level: "Exploring" },
@@ -47,15 +45,15 @@ export const skillsData: Record<string, Skill[]> = {
     { name: "Apache", icon: "Apache", color: "#D22128", level: "Junior" },
   ],
   "Systems & Virtualization": [
-    { name: "Linux", icon: "Linux", color: "#D6A500", level: "Exploring" },
+    { name: "Linux", icon: "Linux", color: "#FCC624", level: "Exploring" },
     { name: "Windows", icon: "Windows", color: "#0078D4", level: "Exploring" },
-    { name: "VMware", icon: "VMware", color: "#607078", level: "Exploring" },
+    { name: "VMware", icon: "VMware", color: "#0091DA", level: "Exploring" },
     { name: "PuTTY", icon: "PuTTY", color: "#005A9C", level: "Exploring" },
   ],
   "DevOps, Testing & Observability": [
     { name: "Git", icon: "Git", color: "hsl(14, 100%, 53%)", level: "Mid level" },
     { name: "GitHub", icon: "GitHub", color: "#181616", level: "Mid level" },
-    { name: "GitHub Actions", icon: "GitHubActions", color: "#2088FF", level: "Exploring" },
+    { name: "GitHub Actions", icon: "GitHubActions", color: "#8957E5", level: "Exploring" },
     { name: "Sentry", icon: "Sentry", color: "#6A5FC1", level: "Mid level" },
     { name: "Jest", icon: "Jest", color: "#99425B", level: "Junior" },
     { name: "Jenkins", icon: "Jenkins", color: "#d23a33", level: "Mid level" },
@@ -64,9 +62,6 @@ export const skillsData: Record<string, Skill[]> = {
     { name: "Grafana", icon: "Grafana", color: "#F46800", level: "Junior" },
     { name: "Prometheus", icon: "Prometheus", color: "#E6522C", level: "Junior" },
     { name: "OpenTelemetry", icon: "OpenTelemetry", color: "#F5A800", level: "Junior" },
-  ],
-  "Networking & Simulation": [
-    { name: "Cisco Packet Tracer", icon: "CiscoPacketTracer", color: "#159BD7", level: "Exploring" },
   ],
   "APIs, Security & Tooling": [
     { name: "JSON", icon: "JSON", color: "#505050", level: "Mid level" },
