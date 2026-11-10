@@ -1,4 +1,5 @@
 import { memo } from "react";
+import { Layers3, ShieldCheck } from "lucide-react";
 
 import NginxLogo from "@/assets/skills/nginx.svg";
 import GrafanaLogo from "@/assets/skills/grafana.svg";
@@ -99,19 +100,23 @@ export const MCPIcon = memo(() => <BrandAssetIcon src={MCPLogo} invertOnDark />)
 
 export const VueIcon = memo(() => <BrandAssetIcon src={VueLogo} />);
 export const SvelteIcon = memo(() => <BrandAssetIcon src={SvelteLogo} />);
-export const NextIcon = memo(() => <BrandAssetIcon src={NextLogo} />);
+export const NextIcon = memo(() => (
+  <span className="inline-flex h-full w-full items-center justify-center rounded-full bg-white p-[2px]">
+    <BrandAssetIcon src={NextLogo} />
+  </span>
+));
 export const FlaskIcon = memo(() => <BrandAssetIcon src={FlaskLogo} invertOnDark />);
 export const SocketIOIcon = memo(() => <BrandAssetIcon src={SocketIOLogo} invertOnDark />);
 export const WebSocketsIcon = memo(() => <BrandAssetIcon src={WebSocketLogo} invertOnDark />);
 export const RabbitMQIcon = memo(() => <BrandAssetIcon src={RabbitMQLogo} />);
 export const LinuxIcon = memo(() => <BrandAssetIcon src={LinuxLogo} invertOnDark />);
 export const WindowsIcon = memo(() => <BrandAssetIcon src={WindowsLogo} />);
-export const VMwareIcon = memo(() => <BrandAssetIcon src={VMwareLogo} invertOnDark />);
+export const VMwareIcon = memo(() => <Layers3 className="h-full w-full" strokeWidth={1.8} aria-hidden="true" />);
 export const PuTTYIcon = memo(() => <BrandAssetIcon src={PuTTYLogo} />);
 export const GitHubActionsIcon = memo(() => <BrandAssetIcon src={GitHubActionsLogo} invertOnDark />);
-export const GCCIcon = memo(() => <BrandAssetIcon src={GCCLogo} />);
+export const GCCIcon = memo(() => <BrandAssetIcon src={GCCLogo} invertOnDark />);
 export const LLVMIcon = memo(() => <BrandAssetIcon src={LLVMLogo} />);
 export const CassandraIcon = memo(() => <BrandAssetIcon src={CassandraLogo} />);
 
-export const OpenSSLIcon = memo(() => <BrandAssetIcon src={OpenSSLLogo} />);
-export const ElectronIcon = memo(() => <BrandAssetIcon src={ElectronLogo} />);
+export const OpenSSLIcon = memo(() => <ShieldCheck className="h-full w-full" strokeWidth={1.8} aria-hidden="true" />);
+export const ElectronIcon = memo(() => <BrandAssetIcon src={ElectronLogo} invertOnDark />);
