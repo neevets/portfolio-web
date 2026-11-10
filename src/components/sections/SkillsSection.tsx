@@ -3,17 +3,21 @@ import { skillsData } from '@/data/skills';
 import { motion } from 'framer-motion';
 import { PreloadedSkillIcon } from '@/components/ui/preloaded-skill-icon';
 import type { Skill } from '@/types/portfolio';
+import { getReadableTextColor, getRelativeLuminance } from '@/lib/utils';
 
 const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
   const isWordmarkSkill = skill.name === "VMware";
   const iconContainerSize = isWordmarkSkill
     ? "w-24 h-16 mb-1 sm:w-28 sm:h-[4.75rem] sm:mb-2 lg:w-32 lg:h-[5.25rem]"
     : "w-8 h-8 mb-2 sm:w-10 sm:h-10 sm:mb-3 lg:w-12 lg:h-12";
+  const luminance = getRelativeLuminance(skill.color);
+  const invertPillOnDark = isWordmarkSkill || (luminance !== null && luminance < 0.03);
 
   return (
     <div
       className="skill-card-optimized group"
       data-wordmark={isWordmarkSkill ? "true" : undefined}
+      data-invert-pill-on-dark={invertPillOnDark ? "true" : undefined}
       style={{
         '--skill-color': skill.color,
       } as React.CSSProperties & { '--skill-color': string }}
@@ -60,7 +64,7 @@ const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
             style={{
               borderColor: skill.color,
               backgroundColor: skill.color,
-              color: "#FFFFFF",
+              color: getReadableTextColor(skill.color),
             }}
           >
             {skill.level}

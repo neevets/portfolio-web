@@ -642,11 +642,7 @@
   color: var(--skills-text-color) !important;
 }
 
-#skills .skill-card-optimized .skill-level-pill {
-  color: #ffffff !important;
-}
-
-.dark #skills .skill-card-optimized[data-wordmark="true"] .skill-level-pill {
+.dark #skills .skill-card-optimized[data-invert-pill-on-dark="true"] .skill-level-pill {
   background-color: #ffffff !important;
   border-color: #ffffff !important;
   color: #000000 !important;
