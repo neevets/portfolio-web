@@ -56,6 +56,9 @@ import {
   JSONIcon,
   JWTIcon,
   MCPIcon,
+  VueIcon, SvelteIcon, NextIcon, FlaskIcon, SocketIOIcon, WebSocketsIcon,
+  BullMQIcon, RabbitMQIcon, KafkaIcon, LinuxIcon, WindowsIcon, VirtualMachinesIcon,
+  PuTTYIcon, GitHubActionsIcon, GCCIcon, LLVMIcon, WebAssemblyIcon,
 } from "./skill-brand-icons";
 
 export const iconMap = {
@@ -106,6 +109,23 @@ export const iconMap = {
   Auth0: Auth0Icon,
   JWT: JWTIcon,
   MCP: MCPIcon,
+  Vue: VueIcon,
+  Svelte: SvelteIcon,
+  Next: NextIcon,
+  Flask: FlaskIcon,
+  SocketIO: SocketIOIcon,
+  WebSockets: WebSocketsIcon,
+  BullMQ: BullMQIcon,
+  RabbitMQ: RabbitMQIcon,
+  Kafka: KafkaIcon,
+  Linux: LinuxIcon,
+  Windows: WindowsIcon,
+  VirtualMachines: VirtualMachinesIcon,
+  PuTTY: PuTTYIcon,
+  GitHubActions: GitHubActionsIcon,
+  GCC: GCCIcon,
+  LLVM: LLVMIcon,
+  WebAssembly: WebAssemblyIcon,
   ESLint: ESLintIcon,
   Prettier: PrettierIcon,
 

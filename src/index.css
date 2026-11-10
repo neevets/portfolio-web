@@ -651,6 +651,10 @@
 }
 
 
+.dark #skills svg[data-invert-on-dark="true"] {
+  filter: brightness(0) invert(1);
+}
+
 .dark #skills img[data-invert-on-dark="true"] {
   filter: brightness(0) invert(1);
 }

@@ -7,6 +7,11 @@ export const skillsData: Record<string, Skill[]> = {
     { name: "TypeScript", icon: "TypeScript", color: "hsl(211, 60%, 45%)", level: "Junior" },
     { name: "Rust", icon: "Rust", color: "#D34516", level: "Junior" },
   ],
+  "Compilers & Runtime": [
+    { name: "GCC", icon: "GCC", color: "#A42E2B", level: "Exploring" },
+    { name: "LLVM", icon: "LLVM", color: "#596579", level: "Exploring" },
+    { name: "WebAssembly", icon: "WebAssembly", color: "#654FF0", level: "Exploring" },
+  ],
   "Runtimes & Frameworks": [
     { name: "Fiber", icon: "Fiber", color: "hsl(193, 100%, 42%)", level: "Mid level" },
     { name: "FastAPI", icon: "FastAPI", color: "hsl(173, 80%, 40%)", level: "Mid level" },
@@ -15,10 +20,21 @@ export const skillsData: Record<string, Skill[]> = {
     { name: "Fastify", icon: "Fastify", color: "#202020", level: "Junior" },
     { name: "React", icon: "React", color: "hsl(193, 95%, 68%)", level: "Junior" },
     { name: "Tailwind CSS", icon: "Tailwind", color: "hsl(198, 93%, 60%)", level: "Trainee" },
+    { name: "Vue.js", icon: "Vue", color: "#42B883", level: "Exploring" },
+    { name: "Svelte", icon: "Svelte", color: "#FF3E00", level: "Exploring" },
+    { name: "Next.js", icon: "Next", color: "#111111", level: "Exploring" },
+    { name: "Flask", icon: "Flask", color: "#111111", level: "Exploring" },
   ],
   Databases: [
     { name: "PostgreSQL", icon: "PostgreSQL", color: "hsl(205, 81%, 33%)", level: "Mid level" },
     { name: "Redis", icon: "Redis", color: "#D82C20", level: "Junior" },
+  ],
+  "Messaging & Real-Time": [
+    { name: "Socket.IO", icon: "SocketIO", color: "#111111", level: "Exploring" },
+    { name: "WebSockets", icon: "WebSockets", color: "#2F81F7", level: "Exploring" },
+    { name: "BullMQ", icon: "BullMQ", color: "#D9432F", level: "Exploring" },
+    { name: "RabbitMQ", icon: "RabbitMQ", color: "#FF6600", level: "Exploring" },
+    { name: "Apache Kafka", icon: "Kafka", color: "#111111", level: "Exploring" },
   ],
   "Cloud & Infrastructure": [
     { name: "Docker", icon: "Docker", color: "#2496ED", level: "Mid level" },
@@ -30,9 +46,16 @@ export const skillsData: Record<string, Skill[]> = {
     { name: "Nginx", icon: "Nginx", color: "#009639", level: "Junior" },
     { name: "Apache", icon: "Apache", color: "#D22128", level: "Junior" },
   ],
+  "Systems & Virtualization": [
+    { name: "Linux", icon: "Linux", color: "#D6A500", level: "Exploring" },
+    { name: "Windows", icon: "Windows", color: "#0078D4", level: "Exploring" },
+    { name: "Virtual Machines", icon: "VirtualMachines", color: "#3976A8", level: "Exploring" },
+    { name: "PuTTY", icon: "PuTTY", color: "#005A9C", level: "Exploring" },
+  ],
   "DevOps, Testing & Observability": [
     { name: "Git", icon: "Git", color: "hsl(14, 100%, 53%)", level: "Mid level" },
     { name: "GitHub", icon: "GitHub", color: "#181616", level: "Mid level" },
+    { name: "GitHub Actions", icon: "GitHubActions", color: "#2088FF", level: "Exploring" },
     { name: "Sentry", icon: "Sentry", color: "#6A5FC1", level: "Mid level" },
     { name: "Jest", icon: "Jest", color: "#99425B", level: "Junior" },
     { name: "Jenkins", icon: "Jenkins", color: "#d23a33", level: "Mid level" },

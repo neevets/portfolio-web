@@ -25,6 +25,7 @@ import ESLintLogo from "@/assets/skills/eslint.svg";
 import PrettierLogo from "@/assets/skills/prettier.svg";
 import JWTLogo from "@/assets/skills/jwt.svg";
 import MCPLogo from "@/assets/skills/mcp.svg";
+import TechnologySprite from "@/assets/skills/technology-icons.svg";
 
 interface BrandAssetIconProps {
   src: string;
@@ -80,3 +81,26 @@ export const PrettierIcon = memo(() => <BrandAssetIcon src={PrettierLogo} />);
 
 export const JWTIcon = memo(() => <BrandAssetIcon src={JWTLogo} />);
 export const MCPIcon = memo(() => <BrandAssetIcon src={MCPLogo} invertOnDark />);
+
+const TechnologySpriteIcon = ({ id, invertOnDark = false }: { id: string; invertOnDark?: boolean }) => (
+  <svg className="h-full w-full" viewBox="0 0 24 24" aria-hidden="true" focusable="false" data-invert-on-dark={invertOnDark ? "true" : undefined}>
+    <use href={`${TechnologySprite}#${id}`} />
+  </svg>
+);
+export const VueIcon = memo(() => <TechnologySpriteIcon id="vue" />);
+export const SvelteIcon = memo(() => <TechnologySpriteIcon id="svelte" />);
+export const NextIcon = memo(() => <TechnologySpriteIcon id="next" invertOnDark />);
+export const FlaskIcon = memo(() => <TechnologySpriteIcon id="flask" invertOnDark />);
+export const SocketIOIcon = memo(() => <TechnologySpriteIcon id="socketio" invertOnDark />);
+export const WebSocketsIcon = memo(() => <TechnologySpriteIcon id="websockets" />);
+export const BullMQIcon = memo(() => <TechnologySpriteIcon id="bullmq" />);
+export const RabbitMQIcon = memo(() => <TechnologySpriteIcon id="rabbitmq" />);
+export const KafkaIcon = memo(() => <TechnologySpriteIcon id="kafka" invertOnDark />);
+export const LinuxIcon = memo(() => <TechnologySpriteIcon id="linux" />);
+export const WindowsIcon = memo(() => <TechnologySpriteIcon id="windows" />);
+export const VirtualMachinesIcon = memo(() => <TechnologySpriteIcon id="virtual-machines" />);
+export const PuTTYIcon = memo(() => <TechnologySpriteIcon id="putty" />);
+export const GitHubActionsIcon = memo(() => <TechnologySpriteIcon id="github-actions" />);
+export const GCCIcon = memo(() => <TechnologySpriteIcon id="gcc" />);
+export const LLVMIcon = memo(() => <TechnologySpriteIcon id="llvm" invertOnDark />);
+export const WebAssemblyIcon = memo(() => <TechnologySpriteIcon id="webassembly" />);
