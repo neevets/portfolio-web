@@ -72,7 +72,7 @@ const ServicePage = () => {
 
   return (
     <>
-      <SEOHead title={`${service.title} | Neevets`} description={description} path={path} />
+      <SEOHead title={`Neevets: ${service.title}`} description={description} path={path} />
       <main className="min-h-screen bg-background text-foreground px-6 py-20 sm:py-28">
         <article className="max-w-4xl mx-auto">
           <Link to="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-16"><ArrowLeft size={16} /> Back to portfolio</Link>
@@ -108,7 +108,7 @@ const ServicePage = () => {
 const DrewProjectPage = () => (
   <>
     <SEOHead
-      title="Drew Bot | Go Discord Bot Project | Neevets"
+      title="Neevets: Drew Bot | Go Discord Bot Project"
       description="Explore Drew, an open-source multipurpose Discord bot built with Go, Fiber, PostgreSQL, and Redis."
       path="/projects/drew"
     />
