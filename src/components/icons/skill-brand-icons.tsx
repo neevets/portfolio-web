@@ -46,7 +46,7 @@ const BrandAssetIcon = ({ src, invertOnDark = false }: BrandAssetIconProps) => (
 export const NginxIcon = memo(() => <BrandAssetIcon src={NginxLogo} />);
 export const GrafanaIcon = memo(() => <BrandAssetIcon src={GrafanaLogo} />);
 export const PrometheusIcon = memo(() => <BrandAssetIcon src={PrometheusLogo} />);
-export const BashIcon = memo(() => <BrandAssetIcon src={BashLogo} invertOnDark />);
+export const BashIcon = memo(() => <BrandAssetIcon src={BashLogo} />);
 export const PowerShellIcon = memo(() => <BrandAssetIcon src={PowerShellLogo} />);
 export const FastifyIcon = memo(() => <BrandAssetIcon src={FastifyLogo} invertOnDark />);
 export const ViteIcon = memo(() => <BrandAssetIcon src={ViteLogo} />);
