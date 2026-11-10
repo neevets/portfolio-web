@@ -434,10 +434,10 @@
 .palette-gradient {
   background-image: linear-gradient(90deg, var(--stop-1), var(--stop-2), var(--stop-3), var(--stop-4));
   animation:
-    palette-stop-1 24s linear infinite,
-    palette-stop-2 24s linear -4s infinite,
-    palette-stop-3 24s linear -8s infinite,
-    palette-stop-4 24s linear -12s infinite;
+    palette-stop-1 15s linear infinite,
+    palette-stop-2 15s linear -2.5s infinite,
+    palette-stop-3 15s linear -5s infinite,
+    palette-stop-4 15s linear -7.5s infinite;
 }
 
 @keyframes palette-stop-1 {
