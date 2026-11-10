@@ -38,7 +38,8 @@ const BrandAssetIcon = ({ src, invertOnDark = false }: BrandAssetIconProps) => (
     alt=""
     aria-hidden="true"
     draggable={false}
-    className={`h-full w-full object-contain ${invertOnDark ? "dark:invert" : ""}`}
+    className="h-full w-full object-contain"
+    data-invert-on-dark={invertOnDark ? "true" : undefined}
   />
 );
 
