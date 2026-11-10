@@ -93,7 +93,7 @@ export const Navigation = () => {
             <button
               type="button"
               onClick={() => setIsOpen((open) => !open)}
-              className="lg:hidden ml-auto p-3 z-50 relative touch-manipulation rounded-xl hover:bg-muted/50 active:scale-95 transition-all duration-300"
+              className="lg:hidden ml-auto p-3 z-50 relative touch-manipulation rounded-xl hover:bg-muted active:bg-muted focus-visible:bg-muted focus-visible:outline-none active:scale-95 transition-all duration-200 [-webkit-tap-highlight-color:transparent]"
               aria-label={isOpen ? "Close navigation" : "Open navigation"}
               aria-expanded={isOpen}
               aria-controls="mobile-navigation"
