@@ -21,7 +21,20 @@ const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
             color: skill.name === "GitHub" ? "var(--skills-text-color)" : skill.color,
           }}
         >
-          <PreloadedSkillIcon name={skill.icon} />
+          {skill.url ? (
+            <a
+              href={skill.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Open ${skill.name} project website`}
+              title={`${skill.name} project website`}
+              className={skill.name === "OpenSSL" ? "inline-flex h-full w-full items-center justify-center rounded-md bg-white p-1" : "inline-flex h-full w-full items-center justify-center"}
+            >
+              <PreloadedSkillIcon name={skill.icon} />
+            </a>
+          ) : (
+            <PreloadedSkillIcon name={skill.icon} />
+          )}
         </div>
       </div>
 

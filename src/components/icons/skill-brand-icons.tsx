@@ -39,6 +39,8 @@ import WebSocketLogo from "@/assets/skills/websocket.svg";
 import PuTTYLogo from "@/assets/skills/putty.svg";
 import GCCLogo from "@/assets/skills/gcc.svg";
 import LLVMLogo from "@/assets/skills/llvm.svg";
+import OpenSSLLogo from "@/assets/skills/openssl.svg";
+import CiscoPacketTracerLogo from "@/assets/skills/cisco-packet-tracer.svg";
 
 interface BrandAssetIconProps {
   src: string;
@@ -110,3 +112,6 @@ export const GitHubActionsIcon = memo(() => <BrandAssetIcon src={GitHubActionsLo
 export const GCCIcon = memo(() => <BrandAssetIcon src={GCCLogo} />);
 export const LLVMIcon = memo(() => <BrandAssetIcon src={LLVMLogo} />);
 export const CassandraIcon = memo(() => <BrandAssetIcon src={CassandraLogo} />);
+
+export const OpenSSLIcon = memo(() => <BrandAssetIcon src={OpenSSLLogo} />);
+export const CiscoPacketTracerIcon = memo(() => <BrandAssetIcon src={CiscoPacketTracerLogo} />);

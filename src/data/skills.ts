@@ -62,11 +62,15 @@ export const skillsData: Record<string, Skill[]> = {
     { name: "Prometheus", icon: "Prometheus", color: "#E6522C", level: "Junior" },
     { name: "OpenTelemetry", icon: "OpenTelemetry", color: "#F5A800", level: "Junior" },
   ],
+  "Networking & Simulation": [
+    { name: "Cisco Packet Tracer", icon: "CiscoPacketTracer", color: "#159BD7", level: "Exploring" },
+  ],
   "APIs, Security & Tooling": [
     { name: "JSON", icon: "JSON", color: "#505050", level: "Mid level" },
     { name: "Swagger", icon: "Swagger", color: "#85EA2D", level: "Junior" },
     { name: "Auth0", icon: "Auth0", color: "#EB5424", level: "Junior" },
     { name: "JWT", icon: "JWT", color: "#D63AFF", level: "Junior" },
+    { name: "OpenSSL", icon: "OpenSSL", color: "#721412", level: "Exploring", url: "https://www.openssl.org/" },
     { name: "MCP", icon: "MCP", color: "#4B91F1", level: "Junior" },
     { name: "Postman", icon: "Postman", color: "#FF6C37", level: "Junior" },
     { name: "Vite", icon: "Vite", color: "#646CFF", level: "Junior" },
