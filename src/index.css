@@ -650,6 +650,7 @@
   color: var(--skills-text-color) !important;
 }
 
-.dark #skills .skill-card-optimized[data-skill="Fastify"] img {
-  filter: brightness(0) invert(1) !important;
+
+.dark #skills img[data-invert-on-dark="true"] {
+  filter: brightness(0) invert(1);
 }
