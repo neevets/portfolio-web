@@ -46,7 +46,7 @@ import {
   MCPIcon,
   VueIcon, SvelteIcon, NextIcon, FlaskIcon, SocketIOIcon, WebSocketsIcon,
   LinuxIcon, WindowsIcon, VMwareIcon,
-  PuTTYIcon, GCCIcon, LLVMIcon, VSCodiumIcon, JetBrainsIcon,
+  PuTTYIcon, GCCIcon, LLVMIcon, VSCodiumIcon, JetBrainsIcon, VisualStudioIcon,
 } from "./skill-brand-icons";
 
 export const iconMap = {
@@ -104,6 +104,7 @@ export const iconMap = {
   Prettier: PrettierIcon,
   VSCodium: VSCodiumIcon,
   JetBrains: JetBrainsIcon,
+  VisualStudio: VisualStudioIcon,
   LinkedIn: LinkedInIcon,
   Discord: DiscordIcon,
 } as const;

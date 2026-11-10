@@ -38,6 +38,7 @@ import GCCLogo from "@/assets/skills/gcc.svg";
 import LLVMLogo from "@/assets/skills/llvm.svg";
 import VSCodiumLogo from "@/assets/skills/vscodium.svg";
 import JetBrainsLogo from "@/assets/skills/jetbrains.svg";
+import VisualStudioLogo from "@/assets/skills/visualstudio.svg";
 
 interface BrandAssetIconProps {
   src: string;
@@ -113,3 +114,4 @@ export const GCCIcon = memo(() => <BrandAssetIcon src={GCCLogo} />);
 export const LLVMIcon = memo(() => <BrandAssetIcon src={LLVMLogo} />);
 export const VSCodiumIcon = memo(() => <BrandAssetIcon src={VSCodiumLogo} />);
 export const JetBrainsIcon = memo(() => <BrandAssetIcon src={JetBrainsLogo} invertOnDark />);
+export const VisualStudioIcon = memo(() => <BrandAssetIcon src={VisualStudioLogo} />);

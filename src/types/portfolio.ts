@@ -1,4 +1,3 @@
-import { LucideIcon } from 'lucide-react';
 import type { IconName } from '@/components/icons/icon-map';
 
 export interface Project {
@@ -7,7 +6,6 @@ export interface Project {
   repo: string;
   productionUrl?: string;
   tech: string[];
-  category: string;
   status: string;
 }
 
@@ -29,5 +27,4 @@ export interface Course {
 export interface NavItem {
   label: string;
   id: string;
-  icon: LucideIcon;
 }

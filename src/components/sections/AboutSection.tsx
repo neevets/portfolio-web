@@ -90,4 +90,3 @@ const AboutSection = memo(() => (
 AboutSection.displayName = "AboutSection";
 
 export { AboutSection };
-export default AboutSection;

@@ -61,7 +61,7 @@ const SkillsSection = () => {
   return (
     <section
       id="skills"
-      className="skills-section py-12 sm:py-16 lg:py-20 px-3 sm:px-6 relative overflow-hidden z-10"
+      className="py-12 sm:py-16 lg:py-20 px-3 sm:px-6 relative overflow-hidden z-10"
       style={{ scrollMarginTop: '5rem' }}
     >
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20" aria-hidden="true">
@@ -112,4 +112,3 @@ const SkillsSection = () => {
 };
 
 export { SkillsSection };
-export default SkillsSection;

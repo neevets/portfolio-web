@@ -1,40 +1,37 @@
-import { memo, useMemo } from 'react';
+import { memo } from 'react';
 import { motion } from 'framer-motion';
 
-const HeroSection = memo(() => {
-  const GridBackground = useMemo(
-    () => (
-      <div className="absolute inset-0 opacity-40 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background/80 pointer-events-none z-10" />
-        <div className="absolute inset-0 w-[300%] h-[300%] -left-[100%] -top-[100%]">
-          <svg className="absolute inset-0 w-full h-full animate-grid-seamless-1" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="grid-main" width="80" height="80" patternUnits="userSpaceOnUse">
-                <path d="M 80 0 L 0 0 0 80" fill="none" stroke="hsl(var(--foreground))" strokeWidth="1" strokeOpacity="0.4" />
-                <circle cx="40" cy="40" r="1" fill="hsl(var(--foreground))" fillOpacity="0.6" className="animate-subtle-glow" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#grid-main)" />
-          </svg>
-          <svg className="absolute inset-0 w-full h-full animate-grid-seamless-2" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="grid-secondary" width="120" height="120" patternUnits="userSpaceOnUse">
-                <path d="M 120 0 L 0 0 0 120" fill="none" stroke="hsl(var(--foreground))" strokeWidth="0.5" strokeOpacity="0.2" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#grid-secondary)" />
-          </svg>
-        </div>
-      </div>
-    ),
-    []
-  );
+const gridBackground = (
+  <div className="absolute inset-0 opacity-40 overflow-hidden">
+    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background/80 pointer-events-none z-10" />
+    <div className="absolute inset-0 w-[300%] h-[300%] -left-[100%] -top-[100%]">
+      <svg className="absolute inset-0 w-full h-full animate-grid-seamless-1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="grid-main" width="80" height="80" patternUnits="userSpaceOnUse">
+            <path d="M 80 0 L 0 0 0 80" fill="none" stroke="hsl(var(--foreground))" strokeWidth="1" strokeOpacity="0.4" />
+            <circle cx="40" cy="40" r="1" fill="hsl(var(--foreground))" fillOpacity="0.6" className="animate-subtle-glow" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid-main)" />
+      </svg>
+      <svg className="absolute inset-0 w-full h-full animate-grid-seamless-2" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="grid-secondary" width="120" height="120" patternUnits="userSpaceOnUse">
+            <path d="M 120 0 L 0 0 0 120" fill="none" stroke="hsl(var(--foreground))" strokeWidth="0.5" strokeOpacity="0.2" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid-secondary)" />
+      </svg>
+    </div>
+  </div>
+);
 
+const HeroSection = memo(() => {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-6 relative overflow-hidden z-10">
-      {GridBackground}
+      {gridBackground}
       <div className="absolute top-0 left-0 w-full h-96 opacity-60" style={{ background: 'var(--gradient-hero)' }} />
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -76,4 +73,3 @@ const HeroSection = memo(() => {
 HeroSection.displayName = 'HeroSection';
 
 export { HeroSection };
-export default HeroSection;

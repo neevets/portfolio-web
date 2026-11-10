@@ -1,8 +1,7 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
-
-const PORTFOLIO_SCROLL_KEY = "portfolio:scrollY";
+import { PORTFOLIO_SCROLL_KEY } from "@/lib/utils";
 
 const services = [
   { title: "Backend Development", description: "Backend application logic, REST APIs, database integration, and maintainable services.", path: "/services/backend-development" },

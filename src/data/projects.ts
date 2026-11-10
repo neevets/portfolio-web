@@ -6,7 +6,6 @@ export const projectsData: Project[] = [
     description: "Personal developer portfolio built with React and TypeScript. The project uses Vite for its build tooling and is deployed on Vercel, with Cloudflare providing edge and DNS services.",
     repo: "https://github.com/neevets/portfolio-web",
     tech: ["React", "TypeScript", "Vite", "Tailwind", "Vercel", "Cloudflare"],
-    category: "Frontend",
     status: "Production"
   },
   {
@@ -15,7 +14,6 @@ export const projectsData: Project[] = [
     repo: "https://github.com/neevets/drew",
     productionUrl: "https://drewbot.xyz",
     tech: ["Go", "Fiber", "Redis", "PostgreSQL"],
-    category: "Backend",
     status: "Production"
   },
   {
@@ -23,7 +21,6 @@ export const projectsData: Project[] = [
     description: "Discord bot project written in Rust, using Twilight for Discord connectivity, Moka for in-memory caching, and Fluent for localization. The project focuses on modular command handling and multilingual support.",
     repo: "https://github.com/neevets/guroi-bot",
     tech: ["Rust", "Twilight", "Moka", "Fluent"],
-    category: "Backend",
     status: "In Development"
   }
 ];

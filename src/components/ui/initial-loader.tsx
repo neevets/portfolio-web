@@ -16,7 +16,7 @@ export const InitialLoader = ({
     >
       <div
         className="initial-loader-shape"
-        aria-label="Cargando sitio"
+        aria-label="Loading site"
         role="status"
         onAnimationIteration={(event) => {
           if (

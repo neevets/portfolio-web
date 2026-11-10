@@ -9,7 +9,6 @@ const CourseCard = memo<{ course: Course; index: number }>(({ course, index }) =
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "250px 0px" }}
     transition={{ duration: 0.5, delay: index * 0.1 }}
-    className="course-card"
   >
     <div className="relative bg-card/80 backdrop-blur-sm border border-border/60 rounded-xl p-4 sm:p-6 hover:shadow-lg hover:border-border transition-all duration-300">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
@@ -74,4 +73,4 @@ const EducationSection = memo(() => (
 
 EducationSection.displayName = 'EducationSection';
 
-export default EducationSection;
+export { EducationSection };

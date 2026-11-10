@@ -7,10 +7,9 @@ import { AboutSection } from '@/components/sections/AboutSection';
 import { SkillsSection } from '@/components/sections/SkillsSection';
 import { ServicesSection } from '@/components/sections/ServicesSection';
 import { ProjectsSection } from '@/components/sections/ProjectsSection';
-import EducationSection from '@/components/sections/EducationSection';
+import { EducationSection } from '@/components/sections/EducationSection';
 import { ContactSection } from '@/components/sections/ContactSection';
-
-const PORTFOLIO_SCROLL_KEY = 'portfolio:scrollY';
+import { PORTFOLIO_SCROLL_KEY } from '@/lib/utils';
 
 const PortfolioPage = memo(() => {
   useLayoutEffect(() => {

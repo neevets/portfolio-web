@@ -58,7 +58,7 @@ export const Navigation = () => {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out",
           isScrolled
-            ? "bg-background/95 backdrop-blur-md py-3 sm:py-4 shadow-subtle border-b border-border/30"
+            ? "bg-background/95 backdrop-blur-md py-3 sm:py-4 border-b border-border/30"
             : "bg-transparent py-4 sm:py-6"
         )}
       >
@@ -66,13 +66,12 @@ export const Navigation = () => {
           <div className="flex items-center justify-between">
             <div className="hidden lg:flex items-center justify-center flex-1">
               <div className="flex items-center space-x-5 xl:space-x-8">
-                {navItems.map((item, index) => (
+                {navItems.map((item) => (
                   <button
                     key={item.id}
                     type="button"
                     onClick={() => scrollToSection(item.id)}
                     className="text-sm font-dev hover:text-foreground text-muted-foreground transition-all duration-300 relative nav-dot-hover px-2 py-1 touch-manipulation"
-                    style={{ animationDelay: `${index * 100}ms` }}
                   >
                     {item.label}
                   </button>
@@ -129,7 +128,7 @@ export const Navigation = () => {
         )}
       >
         <div
-          className="absolute inset-0 bg-background/100 backdrop-blur-xl"
+          className="absolute inset-0 bg-background backdrop-blur-xl"
           aria-hidden="true"
           onClick={() => setIsOpen(false)}
         />

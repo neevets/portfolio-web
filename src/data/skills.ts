@@ -74,5 +74,6 @@ export const skillsData: Record<string, Skill[]> = {
   "Editors & IDEs": [
     { name: "VSCodium", icon: "VSCodium", color: "#2F80ED", level: "Mid level" },
     { name: "JetBrains", icon: "JetBrains", color: "#000000", level: "Mid level" },
+    { name: "Visual Studio", icon: "VisualStudio", color: "#865FC5", level: "Mid level" },
   ],
 };
