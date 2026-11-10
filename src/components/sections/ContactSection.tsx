@@ -1,43 +1,39 @@
 import { memo } from "react";
-import type { ComponentType } from "react";
-import { ContactIcons } from "@/components/ContactIcons";
+import { Icon } from "@/components/ui/icon";
+import type { IconName } from "@/components/icons/icon-map";
 
 interface ContactLink {
   label: string;
   value: string;
   href: string;
-  icon: ComponentType;
+  icon: IconName;
 }
 
-const ContactCard = memo<{ link: ContactLink }>(({ link }) => {
-  const IconComponent = link.icon;
-
-  return (
-    <a
-      href={link.href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group relative overflow-hidden bg-background/80 border border-border/50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-    >
-      <div className="p-4 sm:p-6 relative z-10">
-        <div className="flex items-center justify-between gap-3 min-w-0">
-          <div className="flex items-center space-x-3 sm:space-x-4 min-w-0">
-            <div className="w-12 h-12 bg-foreground rounded-2xl flex items-center justify-center text-background group-hover:bg-foreground/90 transition-colors duration-300">
-              <IconComponent />
-            </div>
-            <div className="text-left">
-              <div className="font-dev text-sm text-muted-foreground">{link.label}</div>
-              <div className="font-dev font-medium text-sm sm:text-base text-foreground break-all">{link.value}</div>
-            </div>
+const ContactCard = memo<{ link: ContactLink }>(({ link }) => (
+  <a
+    href={link.href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group relative overflow-hidden bg-background/80 border border-border/50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+  >
+    <div className="p-4 sm:p-6 relative z-10">
+      <div className="flex items-center justify-between gap-3 min-w-0">
+        <div className="flex items-center space-x-3 sm:space-x-4 min-w-0">
+          <div className="w-12 h-12 bg-foreground rounded-2xl flex items-center justify-center text-background group-hover:bg-foreground/90 transition-colors duration-300">
+            <Icon name={link.icon} className="h-6 w-6" />
           </div>
-          <svg className="w-5 h-5 text-muted-foreground group-hover:text-foreground transition-all duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
+          <div className="text-left">
+            <div className="font-dev text-sm text-muted-foreground">{link.label}</div>
+            <div className="font-dev font-medium text-sm sm:text-base text-foreground break-all">{link.value}</div>
+          </div>
         </div>
+        <svg className="w-5 h-5 text-muted-foreground group-hover:text-foreground transition-all duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
       </div>
-    </a>
-  );
-});
+    </div>
+  </a>
+));
 
 ContactCard.displayName = "ContactCard";
 
@@ -46,13 +42,13 @@ const contactLinks: ContactLink[] = [
     label: "LinkedIn",
     value: "/in/neevets",
     href: "https://www.linkedin.com/in/neevets",
-    icon: ContactIcons.LinkedIn,
+    icon: "LinkedIn",
   },
   {
     label: "Discord",
     value: "@neevetsio",
     href: "https://discord.com/users/neevetsio",
-    icon: ContactIcons.Discord,
+    icon: "Discord",
   },
 ];
 

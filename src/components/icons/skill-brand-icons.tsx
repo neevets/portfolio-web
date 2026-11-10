@@ -57,6 +57,12 @@ const BrandAssetIcon = ({ src, invertOnDark = false }: BrandAssetIconProps) => (
   />
 );
 
+const ThemedBrandAssetIcon = ({ lightSrc, darkSrc }: { lightSrc: string; darkSrc: string }) => (
+  <>
+    <img src={lightSrc} alt="" aria-hidden="true" draggable={false} className="h-full w-full object-contain dark:hidden" />
+    <img src={darkSrc} alt="" aria-hidden="true" draggable={false} className="hidden h-full w-full object-contain dark:block" />
+  </>
+);
 
 export const NginxIcon = memo(() => <BrandAssetIcon src={NginxLogo} />);
 export const GrafanaIcon = memo(() => <BrandAssetIcon src={GrafanaLogo} />);
@@ -67,37 +73,19 @@ export const ViteIcon = memo(() => <BrandAssetIcon src={ViteLogo} />);
 export const SwaggerIcon = memo(() => <BrandAssetIcon src={SwaggerLogo} />);
 export const ApacheIcon = memo(() => <BrandAssetIcon src={ApacheLogo} />);
 export const OpenTelemetryIcon = memo(() => <BrandAssetIcon src={OpenTelemetryLogo} />);
-export const JestIcon = memo(() => (
-  <>
-    <img src={JestLogo} alt="" aria-hidden="true" draggable={false} className="h-full w-full object-contain dark:hidden" />
-    <img src={JestDarkLogo} alt="" aria-hidden="true" draggable={false} className="hidden h-full w-full object-contain dark:block" />
-  </>
-));
+export const JestIcon = memo(() => <ThemedBrandAssetIcon lightSrc={JestLogo} darkSrc={JestDarkLogo} />);
 export const JenkinsIcon = memo(() => <BrandAssetIcon src={JenkinsLogo} />);
-export const PostmanBrandIcon = memo(() => <BrandAssetIcon src={PostmanLogo} />);
-export const JSONIcon = memo(() => (
-  <>
-    <img src={JSONLogo} alt="" aria-hidden="true" draggable={false} className="h-full w-full object-contain dark:hidden" />
-    <img src={JSONDarkLogo} alt="" aria-hidden="true" draggable={false} className="hidden h-full w-full object-contain dark:block" />
-  </>
-));
+export const PostmanIcon = memo(() => <BrandAssetIcon src={PostmanLogo} />);
+export const JSONIcon = memo(() => <ThemedBrandAssetIcon lightSrc={JSONLogo} darkSrc={JSONDarkLogo} />);
 export const Auth0Icon = memo(() => <BrandAssetIcon src={Auth0Logo} invertOnDark />);
-export const AWSIcon = memo(() => (
-  <>
-    <img src={AWSLogo} alt="" aria-hidden="true" draggable={false} className="h-full w-full object-contain dark:hidden" />
-    <img src={AWSDarkLogo} alt="" aria-hidden="true" draggable={false} className="hidden h-full w-full object-contain dark:block" />
-  </>
-));
+export const AWSIcon = memo(() => <ThemedBrandAssetIcon lightSrc={AWSLogo} darkSrc={AWSDarkLogo} />);
 export const DockerIcon = memo(() => <BrandAssetIcon src={DockerLogo} />);
 export const AzureIcon = memo(() => <BrandAssetIcon src={AzureLogo} />);
 export const OracleIcon = memo(() => <BrandAssetIcon src={OracleLogo} />);
 export const ESLintIcon = memo(() => <BrandAssetIcon src={ESLintLogo} />);
 export const PrettierIcon = memo(() => <BrandAssetIcon src={PrettierLogo} />);
-
 export const JWTIcon = memo(() => <BrandAssetIcon src={JWTLogo} />);
 export const MCPIcon = memo(() => <BrandAssetIcon src={MCPLogo} invertOnDark />);
-
-
 export const VueIcon = memo(() => <BrandAssetIcon src={VueLogo} />);
 export const SvelteIcon = memo(() => <BrandAssetIcon src={SvelteLogo} />);
 export const NextIcon = memo(() => (
