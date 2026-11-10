@@ -434,49 +434,49 @@
 .palette-gradient {
   background-image: linear-gradient(90deg, var(--stop-1), var(--stop-2), var(--stop-3), var(--stop-4));
   animation:
-    palette-stop-1 7.2s linear infinite,
-    palette-stop-2 7.2s linear -1.2s infinite,
-    palette-stop-3 7.2s linear -2.4s infinite,
-    palette-stop-4 7.2s linear -3.6s infinite;
+    palette-stop-1 24s linear infinite,
+    palette-stop-2 24s linear -4s infinite,
+    palette-stop-3 24s linear -8s infinite,
+    palette-stop-4 24s linear -12s infinite;
 }
 
 @keyframes palette-stop-1 {
-  0.00%, 13.47% { --stop-1: hsl(199, 89%, 48%); }
-  16.67%, 30.13% { --stop-1: #D63AFF; }
-  33.33%, 46.80% { --stop-1: #E0234E; }
-  50.00%, 63.47% { --stop-1: #FF3E00; }
-  66.67%, 80.13% { --stop-1: #FFD43B; }
-  83.33%, 96.80% { --stop-1: #42B883; }
+  0.00% { --stop-1: hsl(199, 89%, 48%); }
+  16.67% { --stop-1: #D63AFF; }
+  33.33% { --stop-1: #E0234E; }
+  50.00% { --stop-1: #FF3E00; }
+  66.67% { --stop-1: #FFD43B; }
+  83.33% { --stop-1: #42B883; }
   100% { --stop-1: hsl(199, 89%, 48%); }
 }
 
 @keyframes palette-stop-2 {
-  0.00%, 13.47% { --stop-2: hsl(199, 89%, 48%); }
-  16.67%, 30.13% { --stop-2: #D63AFF; }
-  33.33%, 46.80% { --stop-2: #E0234E; }
-  50.00%, 63.47% { --stop-2: #FF3E00; }
-  66.67%, 80.13% { --stop-2: #FFD43B; }
-  83.33%, 96.80% { --stop-2: #42B883; }
+  0.00% { --stop-2: hsl(199, 89%, 48%); }
+  16.67% { --stop-2: #D63AFF; }
+  33.33% { --stop-2: #E0234E; }
+  50.00% { --stop-2: #FF3E00; }
+  66.67% { --stop-2: #FFD43B; }
+  83.33% { --stop-2: #42B883; }
   100% { --stop-2: hsl(199, 89%, 48%); }
 }
 
 @keyframes palette-stop-3 {
-  0.00%, 13.47% { --stop-3: hsl(199, 89%, 48%); }
-  16.67%, 30.13% { --stop-3: #D63AFF; }
-  33.33%, 46.80% { --stop-3: #E0234E; }
-  50.00%, 63.47% { --stop-3: #FF3E00; }
-  66.67%, 80.13% { --stop-3: #FFD43B; }
-  83.33%, 96.80% { --stop-3: #42B883; }
+  0.00% { --stop-3: hsl(199, 89%, 48%); }
+  16.67% { --stop-3: #D63AFF; }
+  33.33% { --stop-3: #E0234E; }
+  50.00% { --stop-3: #FF3E00; }
+  66.67% { --stop-3: #FFD43B; }
+  83.33% { --stop-3: #42B883; }
   100% { --stop-3: hsl(199, 89%, 48%); }
 }
 
 @keyframes palette-stop-4 {
-  0.00%, 13.47% { --stop-4: hsl(199, 89%, 48%); }
-  16.67%, 30.13% { --stop-4: #D63AFF; }
-  33.33%, 46.80% { --stop-4: #E0234E; }
-  50.00%, 63.47% { --stop-4: #FF3E00; }
-  66.67%, 80.13% { --stop-4: #FFD43B; }
-  83.33%, 96.80% { --stop-4: #42B883; }
+  0.00% { --stop-4: hsl(199, 89%, 48%); }
+  16.67% { --stop-4: #D63AFF; }
+  33.33% { --stop-4: #E0234E; }
+  50.00% { --stop-4: #FF3E00; }
+  66.67% { --stop-4: #FFD43B; }
+  83.33% { --stop-4: #42B883; }
   100% { --stop-4: hsl(199, 89%, 48%); }
 }
 
