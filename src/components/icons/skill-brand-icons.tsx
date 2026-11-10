@@ -47,7 +47,7 @@ export const GrafanaIcon = memo(() => <BrandAssetIcon src={GrafanaLogo} />);
 export const PrometheusIcon = memo(() => <BrandAssetIcon src={PrometheusLogo} />);
 export const BashIcon = memo(() => <BrandAssetIcon src={BashLogo} invertOnDark />);
 export const PowerShellIcon = memo(() => <BrandAssetIcon src={PowerShellLogo} />);
-export const FastifyIcon = memo(() => <BrandAssetIcon src={FastifyLogo} />);
+export const FastifyIcon = memo(() => <BrandAssetIcon src={FastifyLogo} invertOnDark />);
 export const ViteIcon = memo(() => <BrandAssetIcon src={ViteLogo} />);
 export const SwaggerIcon = memo(() => <BrandAssetIcon src={SwaggerLogo} />);
 export const ApacheIcon = memo(() => <BrandAssetIcon src={ApacheLogo} />);
