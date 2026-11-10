@@ -46,7 +46,7 @@ export const skillsData: Record<string, Skill[]> = {
     { name: "Linux", icon: "Linux", color: "#FCC624", level: "Mid level" },
     { name: "Windows", icon: "Windows", color: "#0078D4", level: "Senior" },
     { name: "VMware", icon: "VMware", color: "#0E95F1", level: "Mid level" },
-    { name: "VirtualBox", icon: "VirtualBox", color: "#2F61B4", level: "Mid level" },
+    { name: "VirtualBox", icon: "VirtualBox", color: "#000000", level: "Mid level" },
     { name: "PuTTY", icon: "PuTTY", color: "#005A9C", level: "Junior" },
   ],
   "DevOps, Testing & Observability": [
