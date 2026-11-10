@@ -25,7 +25,7 @@ const NotFound = () => {
         <div className="flex w-full max-w-3xl flex-col items-center text-center">
           <motion.h1
             {...fadeUp(0)}
-            className="select-none bg-gradient-to-b from-foreground via-foreground/80 to-foreground/5 bg-clip-text font-display text-transparent"
+            className="select-none font-display text-foreground"
             style={{ fontSize: "clamp(6.5rem, 30vw, 17rem)", lineHeight: 0.95, letterSpacing: "-0.04em" }}
           >
             404
@@ -35,7 +35,7 @@ const NotFound = () => {
             {...fadeUp(0.15)}
             className="mt-4 max-w-md text-base leading-relaxed text-muted-foreground sm:text-lg"
           >
-            The page you are looking for does not exist dummy.
+            The page you are looking for does not exist dummy
           </motion.p>
 
           <motion.div {...fadeUp(0.3)} className="mt-8">
