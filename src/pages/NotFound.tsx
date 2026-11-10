@@ -35,7 +35,7 @@ const NotFound = () => {
             {...fadeUp(0.15)}
             className="mt-4 max-w-md text-base leading-relaxed text-muted-foreground sm:text-lg"
           >
-            The page you are looking for does not exist dummy
+            The page you are looking for does not exist
           </motion.p>
 
           <motion.div {...fadeUp(0.3)} className="mt-8">

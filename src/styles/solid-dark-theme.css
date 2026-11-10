@@ -25,7 +25,7 @@ iframe,
   backdrop-filter: none !important;
 }
 
-.dark .dark .skill-card-optimized,
+.dark .skill-card-optimized,
 .dark iframe,
 .dark [class*="bg-card/"],
 .dark [class*="bg-background/"] {
