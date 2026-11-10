@@ -407,31 +407,81 @@
   filter: brightness(0) invert(1);
 }
 
-.palette-digit {
-  color: hsl(199, 89%, 48%);
-  animation: palette-steps 7.2s linear infinite;
+@property --stop-1 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: hsl(199, 89%, 48%);
 }
 
-.palette-digit:nth-child(2) {
-  animation-delay: -2.4s;
+@property --stop-2 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #D63AFF;
 }
 
-.palette-digit:nth-child(3) {
-  animation-delay: -4.8s;
+@property --stop-3 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #E0234E;
 }
 
-@keyframes palette-steps {
-  0.00%, 13.47% { color: hsl(199, 89%, 48%); }
-  16.67%, 30.13% { color: #FFD43B; }
-  33.33%, 46.80% { color: #E0234E; }
-  50.00%, 63.47% { color: #42B883; }
-  66.67%, 80.13% { color: #FF3E00; }
-  83.33%, 96.80% { color: #D63AFF; }
-  100% { color: hsl(199, 89%, 48%); }
+@property --stop-4 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #FF3E00;
+}
+
+.palette-gradient {
+  background-image: linear-gradient(90deg, var(--stop-1), var(--stop-2), var(--stop-3), var(--stop-4));
+  animation:
+    palette-stop-1 7.2s linear infinite,
+    palette-stop-2 7.2s linear -1.2s infinite,
+    palette-stop-3 7.2s linear -2.4s infinite,
+    palette-stop-4 7.2s linear -3.6s infinite;
+}
+
+@keyframes palette-stop-1 {
+  0.00%, 13.47% { --stop-1: hsl(199, 89%, 48%); }
+  16.67%, 30.13% { --stop-1: #D63AFF; }
+  33.33%, 46.80% { --stop-1: #E0234E; }
+  50.00%, 63.47% { --stop-1: #FF3E00; }
+  66.67%, 80.13% { --stop-1: #FFD43B; }
+  83.33%, 96.80% { --stop-1: #42B883; }
+  100% { --stop-1: hsl(199, 89%, 48%); }
+}
+
+@keyframes palette-stop-2 {
+  0.00%, 13.47% { --stop-2: hsl(199, 89%, 48%); }
+  16.67%, 30.13% { --stop-2: #D63AFF; }
+  33.33%, 46.80% { --stop-2: #E0234E; }
+  50.00%, 63.47% { --stop-2: #FF3E00; }
+  66.67%, 80.13% { --stop-2: #FFD43B; }
+  83.33%, 96.80% { --stop-2: #42B883; }
+  100% { --stop-2: hsl(199, 89%, 48%); }
+}
+
+@keyframes palette-stop-3 {
+  0.00%, 13.47% { --stop-3: hsl(199, 89%, 48%); }
+  16.67%, 30.13% { --stop-3: #D63AFF; }
+  33.33%, 46.80% { --stop-3: #E0234E; }
+  50.00%, 63.47% { --stop-3: #FF3E00; }
+  66.67%, 80.13% { --stop-3: #FFD43B; }
+  83.33%, 96.80% { --stop-3: #42B883; }
+  100% { --stop-3: hsl(199, 89%, 48%); }
+}
+
+@keyframes palette-stop-4 {
+  0.00%, 13.47% { --stop-4: hsl(199, 89%, 48%); }
+  16.67%, 30.13% { --stop-4: #D63AFF; }
+  33.33%, 46.80% { --stop-4: #E0234E; }
+  50.00%, 63.47% { --stop-4: #FF3E00; }
+  66.67%, 80.13% { --stop-4: #FFD43B; }
+  83.33%, 96.80% { --stop-4: #42B883; }
+  100% { --stop-4: hsl(199, 89%, 48%); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .palette-digit {
+  .palette-gradient {
     animation: none;
   }
 }

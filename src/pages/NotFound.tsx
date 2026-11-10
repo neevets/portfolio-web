@@ -25,12 +25,10 @@ const NotFound = () => {
         <div className="flex w-full max-w-3xl flex-col items-center text-center">
           <motion.h1
             {...fadeUp(0)}
-            className="select-none font-display"
+            className="palette-gradient select-none bg-clip-text font-display text-transparent"
             style={{ fontSize: "clamp(6.5rem, 30vw, 17rem)", lineHeight: 0.95, letterSpacing: "-0.04em" }}
           >
-            <span className="palette-digit">4</span>
-            <span className="palette-digit">0</span>
-            <span className="palette-digit">4</span>
+            404
           </motion.h1>
 
           <motion.p
