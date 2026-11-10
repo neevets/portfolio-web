@@ -24,7 +24,6 @@ import OracleLogo from "@/assets/skills/oracle.svg";
 import ESLintLogo from "@/assets/skills/eslint.svg";
 import PrettierLogo from "@/assets/skills/prettier.svg";
 import JWTLogo from "@/assets/skills/jwt.svg";
-import JWTLightLogo from "@/assets/skills/jwt-light.svg";
 import MCPLogo from "@/assets/skills/mcp.svg";
 
 interface BrandAssetIconProps {
@@ -79,10 +78,5 @@ export const OracleIcon = memo(() => <BrandAssetIcon src={OracleLogo} />);
 export const ESLintIcon = memo(() => <BrandAssetIcon src={ESLintLogo} />);
 export const PrettierIcon = memo(() => <BrandAssetIcon src={PrettierLogo} />);
 
-export const JWTIcon = memo(() => (
-  <>
-    <img src={JWTLightLogo} alt="" aria-hidden="true" draggable={false} className="h-full w-full object-contain dark:hidden" />
-    <img src={JWTLogo} alt="" aria-hidden="true" draggable={false} className="hidden h-full w-full object-contain dark:block" />
-  </>
-));
+export const JWTIcon = memo(() => <BrandAssetIcon src={JWTLogo} />);
 export const MCPIcon = memo(() => <BrandAssetIcon src={MCPLogo} invertOnDark />);

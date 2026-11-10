@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { Icon } from '@/components/ui/icon';
-import { IconName } from '@/components/icons';
+import type { IconName } from '@/components/icons';
 import { cn } from '@/lib/utils';
 
 interface PreloadedSkillIconProps {

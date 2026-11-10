@@ -94,7 +94,7 @@ const SkillsSection = () => {
                 {skills.map((skill) => (
                   <SkillCard
                     key={skill.name}
-                    skill={skill as Skill}
+                    skill={skill}
                   />
                 ))}
               </div>
