@@ -134,8 +134,8 @@ export const Navigation = () => {
           onClick={() => setIsOpen(false)}
         />
 
-        <div className="relative flex flex-col h-[100dvh] px-8 pt-28 pb-12 overflow-hidden">
-          <nav aria-label="Mobile navigation links" className="flex-1 flex flex-col justify-center gap-2">
+        <div className="relative flex flex-col h-[100dvh] px-6 pt-20 pb-8 overflow-hidden">
+          <nav aria-label="Mobile navigation links" className="flex-1 flex flex-col justify-center gap-0">
             {navItems.map((item, index) => (
               <button
                 key={item.id}
@@ -143,14 +143,14 @@ export const Navigation = () => {
                 tabIndex={isOpen ? 0 : -1}
                 onClick={() => scrollToSection(item.id)}
                 className={cn(
-                  "group flex items-center gap-4 py-4 text-left w-full",
+                  "group flex items-center gap-4 py-3 text-left w-full",
                   "border-b border-border/20 last:border-none",
                   "transition-all duration-300 ease-out",
                   isOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
                 )}
                 style={{ transitionDelay: isOpen ? `${index * 60 + 80}ms` : "0ms" }}
               >
-                <span className="text-3xl font-display font-medium text-foreground group-hover:translate-x-2 transition-transform duration-300">
+                <span className="text-2xl sm:text-3xl font-display font-medium text-foreground group-hover:translate-x-1 transition-transform duration-300">
                   {item.label}
                 </span>
                 <span className="ml-auto text-muted-foreground/40 text-sm font-display group-hover:text-muted-foreground transition-colors duration-300">
@@ -162,7 +162,7 @@ export const Navigation = () => {
 
           <div
             className={cn(
-              "flex items-center justify-between pt-6 border-t border-border/20",
+              "flex items-center justify-between pt-4 border-t border-border/20",
               "transition-all duration-300 ease-out",
               isOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
