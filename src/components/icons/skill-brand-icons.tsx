@@ -74,9 +74,7 @@ export const AWSIcon = memo(() => (
   </>
 ));
 export const AzureIcon = memo(() => <BrandAssetIcon src={AzureLogo} />);
-export const OracleIcon = memo(() => (
-  <img src={OracleLogo} alt="" aria-hidden="true" draggable={false} className="block h-auto w-[112px] max-w-full object-contain sm:w-[128px] lg:w-[144px]" />
-));
+export const OracleIcon = memo(() => <BrandAssetIcon src={OracleLogo} />);
 export const ESLintIcon = memo(() => <BrandAssetIcon src={ESLintLogo} />);
 export const PrettierIcon = memo(() => <BrandAssetIcon src={PrettierLogo} />);
 
