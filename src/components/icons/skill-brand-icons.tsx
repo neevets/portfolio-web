@@ -37,8 +37,6 @@ import WebSocketLogo from "@/assets/skills/websocket.svg";
 import PuTTYLogo from "@/assets/skills/putty.svg";
 import GCCLogo from "@/assets/skills/gcc.svg";
 import LLVMLogo from "@/assets/skills/llvm.svg";
-import OpenSSLLogo from "@/assets/skills/openssl.svg";
-import OpenSSLDarkLogo from "@/assets/skills/openssl-dark.svg";
 
 interface BrandAssetIconProps {
   src: string;
@@ -119,5 +117,3 @@ export const VMwareIcon = memo(() => <ThemeAwareBrandAssetIcon lightSrc={VMwareL
 export const PuTTYIcon = memo(() => <BrandAssetIcon src={PuTTYLogo} />);
 export const GCCIcon = memo(() => <BrandAssetIcon src={GCCLogo} />);
 export const LLVMIcon = memo(() => <BrandAssetIcon src={LLVMLogo} />);
-
-export const OpenSSLIcon = memo(() => <ThemeAwareBrandAssetIcon lightSrc={OpenSSLLogo} darkSrc={OpenSSLDarkLogo} />);
