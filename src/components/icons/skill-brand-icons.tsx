@@ -113,5 +113,5 @@ export const PuTTYIcon = memo(() => <BrandAssetIcon src={PuTTYLogo} />);
 export const GCCIcon = memo(() => <BrandAssetIcon src={GCCLogo} />);
 export const LLVMIcon = memo(() => <BrandAssetIcon src={LLVMLogo} />);
 export const VSCodiumIcon = memo(() => <BrandAssetIcon src={VSCodiumLogo} />);
-export const JetBrainsIcon = memo(() => <BrandAssetIcon src={JetBrainsLogo} invertOnDark />);
+export const JetBrainsIcon = memo(() => <BrandAssetIcon src={JetBrainsLogo} />);
 export const VisualStudioIcon = memo(() => <BrandAssetIcon src={VisualStudioLogo} />);
