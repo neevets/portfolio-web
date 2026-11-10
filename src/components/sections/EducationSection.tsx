@@ -16,7 +16,7 @@ const CourseCard = memo<{ course: Course; index: number }>(({ course, index }) =
           <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2 break-words">{course.title}</h3>
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted-foreground">
             <span className="font-medium">{course.institution}</span>
-            <span>•</span>
+            <span className="h-1 w-1 rounded-full bg-current" aria-hidden="true" />
             <span>{course.date}</span>
           </div>
         </div>
