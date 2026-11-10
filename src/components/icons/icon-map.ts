@@ -57,7 +57,6 @@ import {
   VueIcon, SvelteIcon, NextIcon, FlaskIcon, SocketIOIcon, WebSocketsIcon,
   LinuxIcon, WindowsIcon, VMwareIcon,
   PuTTYIcon, GCCIcon, LLVMIcon,
-  OpenSSLIcon,
 } from "./skill-brand-icons";
 
 export const iconMap = {
@@ -80,7 +79,6 @@ export const iconMap = {
   PostgreSQL: PostgreSQLIcon,
   MongoDB: MongoDBIcon,
   Redis: RedisIcon,
-  OpenSSL: OpenSSLIcon,
   Docker: DockerIcon,
   Heroku: HerokuIcon,
   Vercel: VercelIcon,
