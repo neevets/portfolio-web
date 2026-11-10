@@ -5,7 +5,7 @@ import { PreloadedSkillIcon } from '@/components/ui/preloaded-skill-icon';
 import type { Skill } from '@/types/portfolio';
 
 const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
-  const isWordmarkSkill = skill.name === "OpenSSL" || skill.name === "VMware";
+  const isWordmarkSkill = skill.name === "VMware";
   const iconContainerSize = isWordmarkSkill
     ? "w-24 h-8 sm:w-28 sm:h-10 lg:w-32 lg:h-12"
     : "w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12";
