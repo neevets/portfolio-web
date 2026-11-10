@@ -35,12 +35,10 @@ import LinuxLogo from "@/assets/skills/linux.svg";
 import WindowsLogo from "@/assets/skills/windows.svg";
 import GitHubActionsLogo from "@/assets/skills/github-actions.svg";
 import CassandraLogo from "@/assets/skills/cassandra.svg";
-import VMwareLogo from "@/assets/skills/vmware.svg";
 import WebSocketLogo from "@/assets/skills/websocket.svg";
 import PuTTYLogo from "@/assets/skills/putty.svg";
 import GCCLogo from "@/assets/skills/gcc.svg";
 import LLVMLogo from "@/assets/skills/llvm.svg";
-import OpenSSLLogo from "@/assets/skills/openssl.svg";
 import ElectronLogo from "@/assets/skills/electron.svg";
 
 interface BrandAssetIconProps {
