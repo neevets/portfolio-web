@@ -36,6 +36,8 @@ import WebSocketLogo from "@/assets/skills/websocket.svg";
 import PuTTYLogo from "@/assets/skills/putty.svg";
 import GCCLogo from "@/assets/skills/gcc.svg";
 import LLVMLogo from "@/assets/skills/llvm.svg";
+import VSCodiumLogo from "@/assets/skills/vscodium.svg";
+import JetBrainsLogo from "@/assets/skills/jetbrains.svg";
 
 interface BrandAssetIconProps {
   src: string;
@@ -109,3 +111,5 @@ export const VMwareIcon = memo(() => <BrandAssetIcon src={VMwareLogo} />);
 export const PuTTYIcon = memo(() => <BrandAssetIcon src={PuTTYLogo} />);
 export const GCCIcon = memo(() => <BrandAssetIcon src={GCCLogo} />);
 export const LLVMIcon = memo(() => <BrandAssetIcon src={LLVMLogo} />);
+export const VSCodiumIcon = memo(() => <BrandAssetIcon src={VSCodiumLogo} />);
+export const JetBrainsIcon = memo(() => <BrandAssetIcon src={JetBrainsLogo} invertOnDark />);

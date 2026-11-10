@@ -10,17 +10,12 @@
   --border: 0 0% 100%;
   --glass-bg: #000;
   --glass-border: #fff;
-  --gradient-bg: #000;
   --gradient-hero: none;
-  --gradient-mesh: none;
   --gradient-card: #000;
-  --gradient-glow: none;
 }
 
 .elevated-card,
-.glass-card,
 .skill-card-optimized,
-.animated-button,
 iframe,
 [class*="bg-card/"],
 [class*="bg-background/"] {
@@ -32,9 +27,7 @@ iframe,
 }
 
 .dark .elevated-card,
-.dark .glass-card,
 .dark .skill-card-optimized,
-.dark .animated-button,
 .dark iframe,
 .dark [class*="bg-card/"],
 .dark [class*="bg-background/"] {

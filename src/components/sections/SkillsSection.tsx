@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { skillsData } from '@/data/skills';
 import { motion } from 'framer-motion';
-import { PreloadedSkillIcon } from '@/components/ui/preloaded-skill-icon';
+import { Icon } from '@/components/ui/icon';
 import type { Skill } from '@/types/portfolio';
 import { getReadableTextColor, getRelativeLuminance } from '@/lib/utils';
 
@@ -26,20 +26,7 @@ const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
             color: skill.name === "GitHub" ? "var(--skills-text-color)" : skill.color,
           }}
         >
-          {skill.url ? (
-            <a
-              href={skill.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`Open ${skill.name} project website`}
-              title={`${skill.name} project website`}
-              className="inline-flex h-full w-full items-center justify-center"
-            >
-              <PreloadedSkillIcon name={skill.icon} />
-            </a>
-          ) : (
-            <PreloadedSkillIcon name={skill.icon} />
-          )}
+          <Icon name={skill.icon} />
         </div>
       </div>
 

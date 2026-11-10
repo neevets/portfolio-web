@@ -16,7 +16,6 @@ export interface Skill {
   icon: IconName;
   color: string;
   level: string;
-  url?: string;
 }
 
 export interface Course {

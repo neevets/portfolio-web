@@ -45,8 +45,8 @@ export const skillsData: Record<string, Skill[]> = {
   "Systems & Virtualization": [
     { name: "Linux", icon: "Linux", color: "#FCC624", level: "Mid level" },
     { name: "Windows", icon: "Windows", color: "#0078D4", level: "Senior" },
-    { name: "VMware", icon: "VMware", color: "#0E95F1", level: "Exploring" },
-    { name: "PuTTY", icon: "PuTTY", color: "#005A9C", level: "Exploring" },
+    { name: "VMware", icon: "VMware", color: "#0E95F1", level: "Mid level" },
+    { name: "PuTTY", icon: "PuTTY", color: "#005A9C", level: "Junior" },
   ],
   "DevOps, Testing & Observability": [
     { name: "Git", icon: "Git", color: "hsl(14, 100%, 53%)", level: "Mid level" },
@@ -70,5 +70,9 @@ export const skillsData: Record<string, Skill[]> = {
     { name: "Vite", icon: "Vite", color: "#646CFF", level: "Junior" },
     { name: "ESLint", icon: "ESLint", color: "#4B32C3", level: "Junior" },
     { name: "Prettier", icon: "Prettier", color: "#F7B93E", level: "Junior" },
+  ],
+  "Editors & IDEs": [
+    { name: "VSCodium", icon: "VSCodium", color: "#2F80ED", level: "Mid level" },
+    { name: "JetBrains", icon: "JetBrains", color: "#000000", level: "Mid level" },
   ],
 };
