@@ -1,4 +1,4 @@
-import { memo, useMemo } from "react";
+import { memo } from "react";
 import type { ComponentType } from "react";
 import { ContactIcons } from "@/components/ContactIcons";
 
@@ -41,25 +41,22 @@ const ContactCard = memo<{ link: ContactLink }>(({ link }) => {
 
 ContactCard.displayName = "ContactCard";
 
-const ContactSection = memo(() => {
-  const contactLinks = useMemo<ContactLink[]>(
-    () => [
-      {
-        label: "LinkedIn",
-        value: "/in/neevets",
-        href: "https://www.linkedin.com/in/neevets",
-        icon: ContactIcons.LinkedIn,
-      },
-      {
-        label: "Discord",
-        value: "@neevetsio",
-        href: "https://discord.com/users/neevetsio",
-        icon: ContactIcons.Discord,
-      },
-    ],
-    []
-  );
+const contactLinks: ContactLink[] = [
+  {
+    label: "LinkedIn",
+    value: "/in/neevets",
+    href: "https://www.linkedin.com/in/neevets",
+    icon: ContactIcons.LinkedIn,
+  },
+  {
+    label: "Discord",
+    value: "@neevetsio",
+    href: "https://discord.com/users/neevetsio",
+    icon: ContactIcons.Discord,
+  },
+];
 
+const ContactSection = memo(() => {
   return (
     <section id="getintouch" className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 relative overflow-hidden z-10" style={{ scrollMarginTop: "5rem" }}>
       <div className="absolute inset-0 dot-pattern opacity-20" aria-hidden="true" />

@@ -11,8 +11,9 @@
     "preview": "vite preview",
     "audit": "npm audit --audit-level=moderate",
     "audit:fix": "npm audit fix",
-    "release:check": "npm run lint && npm run build",
-    "release": "npm run release:check"
+    "release:check": "npm run lint && npm run typecheck && npm run build",
+    "release": "npm run release:check",
+    "typecheck": "tsc --noEmit -p tsconfig.app.json && tsc --noEmit -p tsconfig.node.json"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
@@ -25,8 +26,7 @@
     "react-helmet-async": "^2.0.5",
     "react-router-dom": "^7.18.5",
     "tailwind-merge": "^3.7.0",
-    "tailwindcss-animate": "^1.0.7",
-    "web-vitals": "^5.1.0"
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",

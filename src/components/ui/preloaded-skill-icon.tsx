@@ -4,7 +4,7 @@ import type { IconName } from '@/components/icons';
 import { cn } from '@/lib/utils';
 
 interface PreloadedSkillIconProps {
-  name: string;
+  name: IconName;
   className?: string;
   style?: React.CSSProperties;
 }
@@ -16,7 +16,7 @@ export const PreloadedSkillIcon = memo<PreloadedSkillIconProps>(({
 }) => {
   return (
     <Icon
-      name={name as IconName}
+      name={name}
       className={cn(className)}
       style={style}
       fallback={<div className={cn(className, "bg-muted-foreground/20 rounded animate-pulse")} style={style} />}

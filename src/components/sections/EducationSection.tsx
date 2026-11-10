@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { coursesData } from '@/data/education';
-import { Course } from '@/types/portfolio';
+import type { Course } from '@/types/portfolio';
 import { motion } from 'framer-motion';
 
 const CourseCard = memo<{ course: Course; index: number }>(({ course, index }) => (

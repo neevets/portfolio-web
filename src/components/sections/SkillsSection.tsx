@@ -5,6 +5,11 @@ import { PreloadedSkillIcon } from '@/components/ui/preloaded-skill-icon';
 import type { Skill } from '@/types/portfolio';
 
 const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
+  const isWordmarkSkill = skill.name === "OpenSSL" || skill.name === "VMware";
+  const iconContainerSize = isWordmarkSkill
+    ? "w-24 h-8 sm:w-28 sm:h-10 lg:w-32 lg:h-12"
+    : "w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12";
+
   return (
     <div
       className="skill-card-optimized group"
@@ -14,7 +19,7 @@ const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
     >
       <div className="relative">
         <div
-          className={`${(skill.name === "OpenSSL" || skill.name === "VMware") ? "w-24 h-8 sm:w-28 sm:h-10 lg:w-32 lg:h-12" : "w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12"} mx-auto mb-2 sm:mb-3 flex items-center justify-center text-muted-foreground transition-all duration-300 sm:group-hover:scale-110 relative z-10 ${
+          className={`${iconContainerSize} mx-auto mb-2 sm:mb-3 flex items-center justify-center text-muted-foreground transition-all duration-300 sm:group-hover:scale-110 relative z-10 ${
             skill.name === "GitHub" ? "skill-icon-theme" : ""
           }`}
           style={{
@@ -39,9 +44,9 @@ const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
       </div>
 
       <div className="text-center">
-        {skill.name !== "OpenSSL" && skill.name !== "VMware" && (
+        {(
           <h4
-            className="text-xs sm:text-sm font-dev font-medium text-foreground sm:group-hover:text-foreground transition-colors duration-300 mb-1 sm:mb-2 flex items-center justify-center min-h-[1.5rem] z-10 relative"
+            className={`text-xs sm:text-sm font-dev font-medium text-foreground sm:group-hover:text-foreground transition-colors duration-300 mb-1 sm:mb-2 flex items-center justify-center min-h-[1.5rem] z-10 relative ${isWordmarkSkill ? "sr-only" : ""}`}
           >
             {skill.name}
           </h4>

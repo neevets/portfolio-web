@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { projectsData } from "@/data/projects";
-import { Project } from "@/types/portfolio";
+import type { Project } from "@/types/portfolio";
 import { motion } from "framer-motion";
 
 interface ProjectCardProps {

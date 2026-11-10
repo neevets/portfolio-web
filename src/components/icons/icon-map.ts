@@ -13,7 +13,6 @@ import {
   SQLiteIcon,
   MongoDBIcon,
   RedisIcon,
-  EmailIcon,
   LinkedInIcon,
   DiscordIcon,
   PythonIcon,
@@ -124,7 +123,6 @@ export const iconMap = {
   ESLint: ESLintIcon,
   Prettier: PrettierIcon,
 
-  Email: EmailIcon,
   LinkedIn: LinkedInIcon,
   Discord: DiscordIcon,
   VSCodium: VSCodiumIcon,
