@@ -394,9 +394,9 @@
 }
 
 .dark #skills .skill-card-optimized[data-invert-pill-on-dark="true"] .skill-level-pill {
-  background-color: #ffffff !important;
-  border-color: #ffffff !important;
-  color: #000000 !important;
+  background-color: #6b7280 !important;
+  border-color: #6b7280 !important;
+  color: #ffffff !important;
 }
 
 #skills .skill-icon-theme {
