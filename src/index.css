@@ -312,6 +312,11 @@
     background: hsl(var(--muted));
   }
 
+  .skill-card-optimized .skill-level-reveal {
+    opacity: 1;
+    transform: none;
+  }
+
   html {
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;

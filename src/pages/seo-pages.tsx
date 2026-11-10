@@ -62,7 +62,7 @@ const services = {
 const PageBackLink = () => (
   <Link
     to="/"
-    className="mb-16 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
+    className="-mt-2 mb-14 inline-flex items-center gap-2 py-2 text-sm text-muted-foreground hover:text-foreground"
   >
     <ArrowLeft size={16} />
     Back to portfolio
@@ -148,13 +148,13 @@ const ServicePage = () => {
             className="border-t border-border pt-8"
           >
             <h2 className="mb-4 text-lg font-dev">Explore other services</h2>
-            <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted-foreground">
+            <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm text-muted-foreground">
               {Object.entries(services)
                 .filter(([slug]) => slug !== serviceSlug)
                 .map(([slug, item]) => (
                   <Link
                     key={slug}
-                    className="underline underline-offset-4 hover:text-foreground"
+                    className="py-2 underline underline-offset-4 hover:text-foreground"
                     to={`/services/${slug}`}
                   >
                     {item.title}
@@ -202,18 +202,9 @@ const DrewProjectPage = () => (
               href="https://drewbot.xyz"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 underline underline-offset-4 hover:text-foreground"
+              className="inline-flex items-center gap-2 py-2 underline underline-offset-4 hover:text-foreground"
             >
               Visit Drew website
-              <ArrowUpRight size={16} />
-            </a>
-            <a
-              href="https://github.com/neevets/drew"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 underline underline-offset-4 hover:text-foreground"
-            >
-              Explore source code on GitHub
               <ArrowUpRight size={16} />
             </a>
           </div>

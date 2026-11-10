@@ -3,7 +3,7 @@ import type { IconName } from '@/components/icons/icon-map';
 export interface Project {
   title: string;
   description: string;
-  repo: string;
+  repo?: string;
   productionUrl?: string;
   tech: string[];
   status: string;

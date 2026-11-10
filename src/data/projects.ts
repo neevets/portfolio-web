@@ -11,7 +11,6 @@ export const projectsData: Project[] = [
   {
     title: "Drew Bot",
     description: "Open-source multipurpose Discord bot written in Go. Its stack includes Fiber for HTTP services, PostgreSQL for persistent data, and Redis for caching and fast access to frequently used state.",
-    repo: "https://github.com/neevets/drew",
     productionUrl: "https://drewbot.xyz",
     tech: ["Go", "Fiber", "Redis", "PostgreSQL"],
     status: "Production"
@@ -19,7 +18,6 @@ export const projectsData: Project[] = [
   {
     title: "Guroi Bot",
     description: "Discord bot project written in Rust, using Twilight for Discord connectivity, Moka for in-memory caching, and Fluent for localization. The project focuses on modular command handling and multilingual support.",
-    repo: "https://github.com/neevets/guroi-bot",
     tech: ["Rust", "Twilight", "Moka", "Fluent"],
     status: "In Development"
   }
