@@ -9,7 +9,7 @@ export const skillsData: Record<string, Skill[]> = {
   ],
   "Compilers & Runtime": [
     { name: "GCC", icon: "GCC", color: "#A42E2B", level: "Exploring" },
-    { name: "LLVM", icon: "LLVM", color: "#596579", level: "Exploring" },
+    { name: "LLVM", icon: "LLVM", color: "#6B9CCB", level: "Exploring" },
   ],
   "Runtimes & Frameworks": [
     { name: "Fiber", icon: "Fiber", color: "hsl(193, 100%, 42%)", level: "Mid level" },
@@ -26,11 +26,11 @@ export const skillsData: Record<string, Skill[]> = {
   Databases: [
     { name: "PostgreSQL", icon: "PostgreSQL", color: "hsl(205, 81%, 33%)", level: "Mid level" },
     { name: "Redis", icon: "Redis", color: "#D82C20", level: "Junior" },
-    { name: "MongoDB", icon: "MongoDB", color: "#47A248", level: "Exploring" },
+    { name: "MongoDB", icon: "MongoDB", color: "#47A248", level: "Mid level" },
   ],
   "Messaging & Real-Time": [
-    { name: "Socket.IO", icon: "SocketIO", color: "#111111", level: "Exploring" },
-    { name: "WebSockets", icon: "WebSockets", color: "#2F81F7", level: "Exploring" },
+    { name: "Socket.IO", icon: "SocketIO", color: "#010101", level: "Mid level" },
+    { name: "WebSockets", icon: "WebSockets", color: "#2F81F7", level: "Mid level" },
   ],
   "Cloud & Infrastructure": [
     { name: "Docker", icon: "Docker", color: "#2496ED", level: "Mid level" },
@@ -43,8 +43,8 @@ export const skillsData: Record<string, Skill[]> = {
     { name: "Apache", icon: "Apache", color: "#D22128", level: "Junior" },
   ],
   "Systems & Virtualization": [
-    { name: "Linux", icon: "Linux", color: "#FCC624", level: "Exploring" },
-    { name: "Windows", icon: "Windows", color: "#0078D4", level: "Exploring" },
+    { name: "Linux", icon: "Linux", color: "#FCC624", level: "Mid level" },
+    { name: "Windows", icon: "Windows", color: "#0078D4", level: "Senior" },
     { name: "VMware", icon: "VMware", color: "#717074", level: "Exploring" },
     { name: "PuTTY", icon: "PuTTY", color: "#005A9C", level: "Exploring" },
   ],
@@ -65,7 +65,7 @@ export const skillsData: Record<string, Skill[]> = {
     { name: "Swagger", icon: "Swagger", color: "#85EA2D", level: "Junior" },
     { name: "Auth0", icon: "Auth0", color: "#EB5424", level: "Junior" },
     { name: "JWT", icon: "JWT", color: "#D63AFF", level: "Junior" },
-    { name: "OpenSSL", icon: "OpenSSL", color: "#6D2520", level: "Exploring", url: "https://www.openssl.org/" },
+    { name: "OpenSSL", icon: "OpenSSL", color: "#C62828", level: "Mid level", url: "https://www.openssl.org/" },
     { name: "MCP", icon: "MCP", color: "#4B91F1", level: "Junior" },
     { name: "Postman", icon: "Postman", color: "#FF6C37", level: "Junior" },
     { name: "Vite", icon: "Vite", color: "#646CFF", level: "Junior" },
