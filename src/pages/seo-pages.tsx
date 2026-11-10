@@ -172,7 +172,7 @@ const DrewProjectPage = () => (
   <>
     <SEOHead
       title="Neevets: Drew Bot | Go Discord Bot Project"
-      description="Explore Drew, an open-source multipurpose Discord bot built with Go, Fiber, PostgreSQL, and Redis."
+      description="Explore Drew, a multipurpose Discord bot product built with Go, Fiber, PostgreSQL, and Redis."
       path="/projects/drew"
     />
     <main className="min-h-screen bg-background px-6 py-20 text-foreground sm:py-28">
@@ -185,7 +185,7 @@ const DrewProjectPage = () => (
           Drew Bot
         </h1>
         <p className="mb-12 text-lg leading-relaxed text-muted-foreground sm:text-xl">
-          Drew is an open-source multipurpose Discord bot written in Go. The project combines a Go backend with Fiber, PostgreSQL, and Redis to support bot features and persistent application data.
+          Drew is a multipurpose Discord bot written in Go and offered as a product. It combines a Go backend with Fiber, PostgreSQL, and Redis to support bot features and persistent application data.
         </p>
 
         <section className="border-t border-border py-10">

@@ -32,6 +32,7 @@ import FlaskLogo from "@/assets/skills/flask.svg";
 import SocketIOLogo from "@/assets/skills/socketio.svg";
 import LinuxLogo from "@/assets/skills/linux.svg";
 import VMwareLogo from "@/assets/skills/vmware.svg";
+import VirtualBoxLogo from "@/assets/skills/virtualbox.svg";
 import WindowsLogo from "@/assets/skills/windows.svg";
 import WebSocketLogo from "@/assets/skills/websocket.svg";
 import PuTTYLogo from "@/assets/skills/putty.svg";
@@ -99,6 +100,7 @@ export const WebSocketsIcon = memo(() => <BrandAssetIcon src={WebSocketLogo} />)
 export const LinuxIcon = memo(() => <BrandAssetIcon src={LinuxLogo} />);
 export const WindowsIcon = memo(() => <BrandAssetIcon src={WindowsLogo} />);
 export const VMwareIcon = memo(() => <BrandAssetIcon src={VMwareLogo} />);
+export const VirtualBoxIcon = memo(() => <BrandAssetIcon src={VirtualBoxLogo} />);
 export const PuTTYIcon = memo(() => <BrandAssetIcon src={PuTTYLogo} />);
 export const GCCIcon = memo(() => <BrandAssetIcon src={GCCLogo} />);
 export const LLVMIcon = memo(() => <BrandAssetIcon src={LLVMLogo} />);
