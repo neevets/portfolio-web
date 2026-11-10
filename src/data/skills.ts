@@ -33,7 +33,7 @@ export const skillsData: Record<string, Skill[]> = {
     { name: "WebSockets", icon: "WebSockets", color: "#2F81F7", level: "Mid level" },
   ],
   "Cloud & Infrastructure": [
-    { name: "Docker", icon: "Docker", color: "#2496ED", level: "Mid level" },
+    { name: "Docker", icon: "Docker", color: "#1D63ED", level: "Mid level" },
     { name: "Cloudflare", icon: "Cloudflare", color: "hsl(31, 100%, 55%)", level: "Mid level" },
     { name: "Oracle", icon: "Oracle", color: "#C74634", level: "Mid level" },
     { name: "Kubernetes", icon: "Kubernetes", color: "hsl(212, 100%, 50%)", level: "Junior" },
@@ -58,12 +58,12 @@ export const skillsData: Record<string, Skill[]> = {
     { name: "PowerShell", icon: "PowerShell", color: "#5391FE", level: "Junior" },
     { name: "Grafana", icon: "Grafana", color: "#F46800", level: "Junior" },
     { name: "Prometheus", icon: "Prometheus", color: "#E6522C", level: "Junior" },
-    { name: "OpenTelemetry", icon: "OpenTelemetry", color: "#F5A800", level: "Junior" },
+    { name: "OpenTelemetry", icon: "OpenTelemetry", color: "#425CC7", level: "Junior" },
   ],
   "APIs, Security & Tooling": [
     { name: "JSON", icon: "JSON", color: "#505050", level: "Mid level" },
     { name: "Swagger", icon: "Swagger", color: "#85EA2D", level: "Junior" },
-    { name: "Auth0", icon: "Auth0", color: "#EB5424", level: "Junior" },
+    { name: "Auth0", icon: "Auth0", color: "#000000", level: "Junior" },
     { name: "JWT", icon: "JWT", color: "#D63AFF", level: "Junior" },
     { name: "MCP", icon: "MCP", color: "#4B91F1", level: "Junior" },
     { name: "Postman", icon: "Postman", color: "#FF6C37", level: "Junior" },

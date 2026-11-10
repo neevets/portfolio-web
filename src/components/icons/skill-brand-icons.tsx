@@ -18,6 +18,7 @@ import JSONDarkLogo from "@/assets/skills/json-dark.svg";
 import Auth0Logo from "@/assets/skills/auth0.svg";
 import AWSLogo from "@/assets/skills/aws.svg";
 import AWSDarkLogo from "@/assets/skills/aws-dark.svg";
+import DockerLogo from "@/assets/skills/docker.svg";
 import AzureLogo from "@/assets/skills/azure.svg";
 import OracleLogo from "@/assets/skills/oracle.svg";
 import ESLintLogo from "@/assets/skills/eslint.svg";
@@ -80,13 +81,14 @@ export const JSONIcon = memo(() => (
     <img src={JSONDarkLogo} alt="" aria-hidden="true" draggable={false} className="hidden h-full w-full object-contain dark:block" />
   </>
 ));
-export const Auth0Icon = memo(() => <BrandAssetIcon src={Auth0Logo} />);
+export const Auth0Icon = memo(() => <BrandAssetIcon src={Auth0Logo} invertOnDark />);
 export const AWSIcon = memo(() => (
   <>
     <img src={AWSLogo} alt="" aria-hidden="true" draggable={false} className="h-full w-full object-contain dark:hidden" />
     <img src={AWSDarkLogo} alt="" aria-hidden="true" draggable={false} className="hidden h-full w-full object-contain dark:block" />
   </>
 ));
+export const DockerIcon = memo(() => <BrandAssetIcon src={DockerLogo} />);
 export const AzureIcon = memo(() => <BrandAssetIcon src={AzureLogo} />);
 export const OracleIcon = memo(() => <BrandAssetIcon src={OracleLogo} />);
 export const ESLintIcon = memo(() => <BrandAssetIcon src={ESLintLogo} />);

@@ -15,7 +15,6 @@ import {
   PythonIcon,
   NodeIcon,
   PostgreSQLIcon,
-  DockerIcon,
   CloudflareIcon,
   KubernetesIcon,
   SentryIcon,
@@ -45,7 +44,7 @@ import {
   JWTIcon,
   MCPIcon,
   VueIcon, SvelteIcon, NextIcon, FlaskIcon, SocketIOIcon, WebSocketsIcon,
-  LinuxIcon, WindowsIcon, VMwareIcon,
+  LinuxIcon, WindowsIcon, VMwareIcon, DockerIcon,
   PuTTYIcon, GCCIcon, LLVMIcon, VSCodiumIcon, JetBrainsIcon, VisualStudioIcon,
 } from "./skill-brand-icons";
 
