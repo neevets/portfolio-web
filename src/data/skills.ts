@@ -66,7 +66,7 @@ export const skillsData: Record<string, Skill[]> = {
     { name: "Swagger", icon: "Swagger", color: "#85EA2D", level: "Junior" },
     { name: "Auth0", icon: "Auth0", color: "#000000", level: "Junior" },
     { name: "JWT", icon: "JWT", color: "#D63AFF", level: "Junior" },
-    { name: "MCP", icon: "MCP", color: "#4B91F1", level: "Junior" },
+    { name: "MCP", icon: "MCP", color: "#111111", level: "Junior" },
     { name: "Postman", icon: "Postman", color: "#FF6C37", level: "Junior" },
     { name: "Vite", icon: "Vite", color: "#646CFF", level: "Junior" },
     { name: "ESLint", icon: "ESLint", color: "#4B32C3", level: "Junior" },
