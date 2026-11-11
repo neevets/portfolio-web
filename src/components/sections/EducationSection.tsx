@@ -10,10 +10,10 @@ const CourseCard = memo<{ course: Course; index: number }>(({ course, index }) =
     viewport={{ once: true, margin: "250px 0px" }}
     transition={{ duration: 0.5, delay: index * 0.1 }}
   >
-    <div className="relative bg-card/80 backdrop-blur-sm border border-border/60 rounded-xl p-4 sm:p-6 hover:shadow-lg hover:border-border transition-all duration-300">
+    <div className="relative bg-card/80 backdrop-blur-xs border border-border/60 rounded-xl p-4 sm:p-6 hover:shadow-lg hover:border-border transition-all duration-300">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div className="flex-1">
-          <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2 break-words">{course.title}</h3>
+          <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2 wrap-break-word">{course.title}</h3>
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted-foreground">
             <span className="font-medium">{course.institution}</span>
             <span className="h-1 w-1 rounded-full bg-current" aria-hidden="true" />
@@ -25,7 +25,7 @@ const CourseCard = memo<{ course: Course; index: number }>(({ course, index }) =
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`View certificate for ${course.title}`}
-          className="group inline-flex items-center gap-2.5 px-4 py-2 rounded-full text-xs font-semibold bg-foreground/5 text-foreground border border-border/70 shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-[1.03] hover:bg-foreground hover:text-background hover:border-foreground hover:shadow-md active:translate-y-0 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          className="group inline-flex items-center gap-2.5 px-4 py-2 rounded-full text-xs font-semibold bg-foreground/5 text-foreground border border-border/70 shadow-xs transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-[1.03] hover:bg-foreground hover:text-background hover:border-foreground hover:shadow-md active:translate-y-0 active:scale-[0.98] focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
         >
           <svg className="w-4 h-4 text-green-500 transition-colors duration-200 group-hover:text-background" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
             <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -57,7 +57,7 @@ const EducationSection = memo(() => (
         transition={{ duration: 0.6 }}
         className="text-center mb-16 md:mb-20"
       >
-        <h2 className="section-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-dev font-light mb-6 text-foreground leading-tight">Certificates</h2>
+        <h2 className="section-title text-4xl sm:text-5xl sm:leading-none md:text-6xl md:leading-none lg:text-7xl lg:leading-none xl:text-8xl xl:leading-none font-dev font-light mb-6 text-foreground leading-tight">Certificates</h2>
         <p className="text-muted-foreground font-dev text-base sm:text-lg max-w-2xl mx-auto">Continuous evolution through structured learning and hands-on experience</p>
       </motion.div>
       <div className="max-w-4xl mx-auto">

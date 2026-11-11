@@ -1,61 +1,71 @@
-:root {
-  --card: 0 0% 100%;
-  --border: 0 0% 0%;
-  --glass-bg: #fff;
-  --glass-border: #000;
-}
+/*
+  Tailwind v4 emits its styles in native cascade layers, and unlayered CSS
+  always beats layered CSS. Keep these overrides in the base layer (declared
+  in Tailwind's order first) so index.css theme variables and utilities still
+  take precedence, as they did with Tailwind v3.
+*/
+@layer theme, base, components, utilities;
 
-.dark {
-  --card: 0 0% 0%;
-  --border: 0 0% 100%;
-  --glass-bg: #000;
-  --glass-border: #fff;
-  --gradient-hero: none;
-  --gradient-card: #000;
-}
+@layer base {
+  :root {
+    --card: 0 0% 100%;
+    --border: 0 0% 0%;
+    --glass-bg: #fff;
+    --glass-border: #000;
+  }
 
-.skill-card-optimized,
-iframe,
-[class*="bg-card/"],
-[class*="bg-background/"] {
-  background-color: #fff !important;
-  background-image: none !important;
-  border-color: #000 !important;
-  -webkit-backdrop-filter: none !important;
-  backdrop-filter: none !important;
-}
+  .dark {
+    --card: 0 0% 0%;
+    --border: 0 0% 100%;
+    --glass-bg: #000;
+    --glass-border: #fff;
+    --gradient-hero: none;
+    --gradient-card: #000;
+  }
 
-.dark .skill-card-optimized,
-.dark iframe,
-.dark [class*="bg-card/"],
-.dark [class*="bg-background/"] {
-  background-color: #000 !important;
-  background-image: none !important;
-  border-color: #fff !important;
-}
+  .skill-card-optimized,
+  iframe,
+  [class*="bg-card/"],
+  [class*="bg-background/"] {
+    background-color: #fff !important;
+    background-image: none !important;
+    border-color: #000 !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
 
-[class*="border-primary"],
-[class*="border-amber"],
-[class*="border-yellow"],
-[class*="border-orange"],
-.dark [class*="border-primary"],
-.dark [class*="border-amber"],
-.dark [class*="border-yellow"],
-.dark [class*="border-orange"] {
-  border-color: #000 !important;
-}
+  .dark .skill-card-optimized,
+  .dark iframe,
+  .dark [class*="bg-card/"],
+  .dark [class*="bg-background/"] {
+    background-color: #000 !important;
+    background-image: none !important;
+    border-color: #fff !important;
+  }
 
-.dark [class*="border-primary"],
-.dark [class*="border-amber"],
-.dark [class*="border-yellow"],
-.dark [class*="border-orange"] {
-  border-color: #fff !important;
-}
+  [class*="border-primary"],
+  [class*="border-amber"],
+  [class*="border-yellow"],
+  [class*="border-orange"],
+  .dark [class*="border-primary"],
+  .dark [class*="border-amber"],
+  .dark [class*="border-yellow"],
+  .dark [class*="border-orange"] {
+    border-color: #000 !important;
+  }
 
-.dark .dot-pattern {
-  background-color: transparent;
-}
+  .dark [class*="border-primary"],
+  .dark [class*="border-amber"],
+  .dark [class*="border-yellow"],
+  .dark [class*="border-orange"] {
+    border-color: #fff !important;
+  }
 
-.dark #hero > .absolute[style*="gradient-hero"] {
-  display: none !important;
+  .dark .dot-pattern {
+    background-color: transparent;
+  }
+
+  .dark #hero > .absolute[style*="gradient-hero"] {
+    display: none !important;
+  }
 }

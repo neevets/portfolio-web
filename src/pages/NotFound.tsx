@@ -33,7 +33,7 @@ const NotFound = () => {
 
           <motion.p
             {...fadeUp(0.15)}
-            className="mt-4 max-w-md text-base leading-relaxed text-muted-foreground sm:text-lg"
+            className="mt-4 max-w-md text-base leading-relaxed text-muted-foreground sm:text-lg sm:leading-7"
           >
             The page you are looking for does not exist
           </motion.p>
@@ -41,7 +41,7 @@ const NotFound = () => {
           <motion.div {...fadeUp(0.3)} className="mt-8">
             <Link
               to="/"
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-foreground px-6 py-3 font-dev text-sm font-medium text-background transition-all duration-300 hover:scale-105 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-foreground px-6 py-3 font-dev text-sm font-medium text-background transition-all duration-300 hover:scale-105 hover:shadow-lg focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               <Home className="h-4 w-4" aria-hidden="true" />
               Back to Home

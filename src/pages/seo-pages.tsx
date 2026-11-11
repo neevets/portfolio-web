@@ -103,10 +103,10 @@ const ServicePage = () => {
       <main className="min-h-screen bg-background px-6 py-20 text-foreground sm:py-28">
         <article className="mx-auto max-w-4xl">
           <PageBackLink />
-          <h1 className="mb-8 text-4xl font-dev font-light leading-tight sm:text-6xl">
+          <h1 className="mb-8 text-4xl font-dev font-light leading-tight sm:text-6xl sm:leading-none">
             {service.heading}
           </h1>
-          <p className="mb-14 max-w-3xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
+          <p className="mb-14 max-w-3xl text-lg leading-relaxed text-muted-foreground sm:text-xl sm:leading-7">
             {service.description}
           </p>
 
@@ -133,7 +133,7 @@ const ServicePage = () => {
             </p>
             <a
               href="mailto:contact@neevets.com"
-              className="group inline-flex items-center gap-2 rounded-xl bg-foreground px-6 py-3 font-medium text-background transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.03] hover:shadow-lg active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              className="group inline-flex items-center gap-2 rounded-xl bg-foreground px-6 py-3 font-medium text-background transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.03] hover:shadow-lg active:scale-[0.98] focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
               Get in touch
               <ArrowUpRight
@@ -181,10 +181,10 @@ const DrewProjectPage = () => (
         <p className="mb-5 text-sm uppercase tracking-[0.2em] text-muted-foreground">
           Neevets / Projects
         </p>
-        <h1 className="mb-8 text-4xl font-dev font-light leading-tight sm:text-6xl">
+        <h1 className="mb-8 text-4xl font-dev font-light leading-tight sm:text-6xl sm:leading-none">
           Drew Bot
         </h1>
-        <p className="mb-12 text-lg leading-relaxed text-muted-foreground sm:text-xl">
+        <p className="mb-12 text-lg leading-relaxed text-muted-foreground sm:text-xl sm:leading-7">
           Drew is a multipurpose Discord bot written in Go. It combines a Go backend with Fiber, PostgreSQL, and Redis to support bot features and persistent application data.
         </p>
 

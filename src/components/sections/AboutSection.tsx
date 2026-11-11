@@ -20,11 +20,11 @@ const featureCards: FeatureCardData[] = [
 ];
 
 const FeatureCard = memo<{ card: FeatureCardData }>(({ card }) => (
-  <div className="flex h-full flex-col rounded-md border border-border/80 bg-card/85 p-5 text-left shadow-sm backdrop-blur-sm sm:p-8">
+  <div className="flex h-full flex-col rounded-md border border-border/80 bg-card/85 p-5 text-left shadow-xs backdrop-blur-xs sm:p-8">
     <h4 className="mb-3 text-xl font-dev font-light text-foreground/90">
       {card.title}
     </h4>
-    <p className="flex-grow font-dev text-sm leading-relaxed text-muted-foreground/90">
+    <p className="grow font-dev text-sm leading-relaxed text-muted-foreground/90">
       {card.description}
     </p>
   </div>
@@ -64,12 +64,12 @@ const AboutSection = memo(() => (
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
           <div className="space-y-8">
-            <div className="relative rounded-md border border-border/80 bg-card/85 p-5 backdrop-blur-sm sm:p-8 lg:p-12">
+            <div className="relative rounded-md border border-border/80 bg-card/85 p-5 backdrop-blur-xs sm:p-8 lg:p-12">
               <div className="relative z-10 space-y-6 text-center">
                 <h3 className="text-3xl font-dev font-light text-foreground/90 md:text-4xl">
                   Who am I?
                 </h3>
-                <p className="mx-auto max-w-4xl font-dev text-lg leading-relaxed text-muted-foreground md:text-xl">
+                <p className="mx-auto max-w-4xl font-dev text-lg leading-relaxed text-muted-foreground md:text-xl md:leading-7">
                   I focus on backend development and systems programming, with most of my work centred on Go and Python. I enjoy understanding how systems fit together, building practical APIs, and keeping software readable and maintainable. My projects also involve databases, containerisation, and the tools used to build and operate applications.
                 </p>
               </div>

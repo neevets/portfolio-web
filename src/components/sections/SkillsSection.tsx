@@ -32,7 +32,7 @@ const SkillCard = memo<{ skill: Skill }>(({ skill }) => {
 
       <div className="text-center">
         <h4
-          className="text-xs sm:text-sm font-dev font-medium text-foreground sm:group-hover:text-foreground transition-colors duration-300 mb-1 sm:mb-2 flex items-center justify-center min-h-[1.5rem] z-10 relative"
+          className="text-xs sm:text-sm font-dev font-medium text-foreground sm:group-hover:text-foreground transition-colors duration-300 mb-1 sm:mb-2 flex items-center justify-center min-h-6 z-10 relative"
         >
           {skill.name}
         </h4>
@@ -89,10 +89,10 @@ const SkillsSection = () => {
           {allSkills.map(([category, skills]) => (
             <div key={category} className="skills-category-advanced">
               <div className="category-header">
-                <h3 className="text-[0.95rem] min-[390px]:text-base sm:text-xl md:text-2xl lg:text-3xl font-dev font-light text-foreground mr-2 min-[390px]:mr-3 sm:mr-6 leading-tight break-words">
+                <h3 className="text-[0.95rem] min-[390px]:text-base min-[390px]:leading-6 sm:text-xl sm:leading-7 md:text-2xl md:leading-8 lg:text-3xl lg:leading-9 font-dev font-light text-foreground mr-2 min-[390px]:mr-3 sm:mr-6 leading-tight wrap-break-word">
                   {category}
                 </h3>
-                <div className="flex-1 h-px bg-gradient-to-r from-foreground/50 to-transparent" />
+                <div className="flex-1 h-px bg-linear-to-r from-foreground/50 to-transparent" />
               </div>
 
               <div className="skills-grid">
