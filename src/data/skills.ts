@@ -64,7 +64,7 @@ export const skillsData: Record<string, Skill[]> = {
   "APIs, Security & Tooling": [
     { name: "JSON", icon: "JSON", color: "#505050", level: "Mid level" },
     { name: "Swagger", icon: "Swagger", color: "#85EA2D", level: "Junior" },
-    { name: "Auth0", icon: "Auth0", color: "#52525B", level: "Junior" },
+    { name: "Auth0", icon: "Auth0", color: "#000000", level: "Junior" },
     { name: "JWT", icon: "JWT", color: "#D63AFF", level: "Junior" },
     { name: "MCP", icon: "MCP", color: "#4B91F1", level: "Junior" },
     { name: "Postman", icon: "Postman", color: "#FF6C37", level: "Junior" },
