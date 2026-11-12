@@ -255,13 +255,14 @@
 
   .skill-card-optimized {
     @apply relative p-3 sm:p-4 rounded-xl border border-border/50 backdrop-blur-sm transition-all duration-300 ease-out cursor-pointer;
-    background: var(--glass-bg);
+    background: color-mix(in srgb, var(--skill-color) 9%, var(--glass-bg));
     min-height: 88px;
   }
 
   .skill-card-optimized:hover {
     @apply -translate-y-1;
     border-color: var(--skill-color);
+    background: color-mix(in srgb, var(--skill-color) 16%, var(--glass-bg));
     box-shadow: 0 8px 20px hsl(0 0% 0% / 0.1);
   }
 
@@ -276,9 +277,9 @@
 }
 
 @media (hover: none) and (pointer: coarse) {
-  .skill-card-optimized {
-    background: hsl(var(--card));
-    border: 1px solid hsl(var(--border));
+   .skill-card-optimized {
+    background: color-mix(in srgb, var(--skill-color) 9%, hsl(var(--card)));
+    border: 1px solid color-mix(in srgb, var(--skill-color) 30%, hsl(var(--border)));
   }
 
   .skill-card-optimized:hover {
