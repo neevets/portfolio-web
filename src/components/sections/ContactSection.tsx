@@ -14,7 +14,7 @@ const ContactCard = memo<{ link: ContactLink }>(({ link }) => (
     href={link.href}
     target="_blank"
     rel="noopener noreferrer"
-    className="group relative w-full overflow-hidden sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] bg-background/80 border border-border/50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+    className="group relative w-full overflow-hidden sm:w-[calc(50%-0.75rem)] bg-background/80 border border-border/50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
   >
     <div className="p-4 sm:p-6 relative z-10">
       <div className="flex items-center justify-between gap-3 min-w-0">
