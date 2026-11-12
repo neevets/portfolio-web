@@ -2,16 +2,13 @@
   --card: 0 0% 100%;
   --border: 0 0% 0%;
   --glass-bg: #fff;
-  --glass-border: #000;
 }
 
 .dark {
   --card: 0 0% 0%;
   --border: 0 0% 100%;
   --glass-bg: #000;
-  --glass-border: #fff;
   --gradient-hero: none;
-  --gradient-card: #000;
 }
 
 .skill-card-optimized,
