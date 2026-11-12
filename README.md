@@ -50,3 +50,26 @@ npm run preview
 ## Deployment
 
 The project is configured for Vercel. The Vercel configuration includes an SPA fallback so client-side routes resolve through `index.html`.
+
+
+## Browser testing
+
+The repository includes end-to-end smoke tests with Playwright and Selenium.
+
+### Install test tools
+
+```bash
+npm ci
+npm install --no-save --package-lock=false @playwright/test@1.56.1
+npx playwright install chromium
+python -m pip install -r requirements-test.txt
+```
+
+### Run tests
+
+```bash
+npm run test:e2e:playwright
+npm run test:e2e:selenium
+```
+
+Playwright starts the Vite preview server automatically. Selenium starts its own preview server and uses Selenium Manager to obtain the matching Chrome driver.
