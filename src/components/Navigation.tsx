@@ -42,9 +42,11 @@ export const Navigation = () => {
       const headerHeight = window.innerWidth < 768 ? 60 : 80;
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
 
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
       window.scrollTo({
         top: Math.max(0, elementPosition - headerHeight - 20),
-        behavior: "smooth",
+        behavior: prefersReducedMotion ? "auto" : "smooth",
       });
     }
 

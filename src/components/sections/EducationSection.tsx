@@ -3,12 +3,12 @@ import { coursesData } from '@/data/education';
 import type { Course } from '@/types/portfolio';
 import { motion } from 'framer-motion';
 
-const CourseCard = memo<{ course: Course; index: number }>(({ course, index }) => (
+const CourseCard = memo<{ course: Course }>(({ course }) => (
   <motion.div
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "250px 0px" }}
-    transition={{ duration: 0.5, delay: index * 0.1 }}
+    transition={{ duration: 0.5 }}
   >
     <div className="relative bg-card/80 backdrop-blur-sm border border-border/60 rounded-xl p-4 sm:p-6 hover:shadow-lg hover:border-border transition-all duration-300">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
@@ -62,8 +62,8 @@ const EducationSection = memo(() => (
       </motion.div>
       <div className="max-w-4xl mx-auto">
         <div className="space-y-6 sm:space-y-8">
-          {coursesData.map((course, index) => (
-            <CourseCard key={course.title} course={course} index={index} />
+          {coursesData.map((course) => (
+            <CourseCard key={course.title} course={course} />
           ))}
         </div>
       </div>
