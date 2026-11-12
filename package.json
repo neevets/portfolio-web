@@ -13,7 +13,10 @@
     "audit:fix": "npm audit fix",
     "release:check": "npm run lint && npm run typecheck && npm run build",
     "release": "npm run release:check",
-    "typecheck": "tsc --noEmit -p tsconfig.app.json && tsc --noEmit -p tsconfig.node.json"
+    "typecheck": "tsc --noEmit -p tsconfig.app.json && tsc --noEmit -p tsconfig.node.json",
+    "test:e2e": "playwright test",
+    "test:e2e:playwright": "playwright test",
+    "test:e2e:selenium": "python -m pytest tests/selenium"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
