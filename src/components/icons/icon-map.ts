@@ -19,6 +19,7 @@ import {
   SentryIcon,
   TailwindIcon,
   TypeScriptIcon,
+  XIcon,
 } from "./index";
 import {
   ApacheIcon,
@@ -124,6 +125,7 @@ export const iconMap = {
   VisualStudio: VisualStudioIcon,
   LinkedIn: LinkedInIcon,
   Discord: DiscordIcon,
+  X: XIcon,
 } as const;
 
 export type IconName = keyof typeof iconMap;

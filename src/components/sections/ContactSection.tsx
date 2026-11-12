@@ -14,7 +14,7 @@ const ContactCard = memo<{ link: ContactLink }>(({ link }) => (
     href={link.href}
     target="_blank"
     rel="noopener noreferrer"
-    className="group relative overflow-hidden bg-background/80 border border-border/50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+    className="group relative w-full overflow-hidden sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] bg-background/80 border border-border/50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
   >
     <div className="p-4 sm:p-6 relative z-10">
       <div className="flex items-center justify-between gap-3 min-w-0">
@@ -45,6 +45,12 @@ const contactLinks: ContactLink[] = [
     icon: "LinkedIn",
   },
   {
+    label: "X",
+    value: "@neevetsio",
+    href: "https://x.com/neevetsio",
+    icon: "X",
+  },
+  {
     label: "Discord",
     value: "@neevetsio",
     href: "https://discord.com/users/neevetsio",
@@ -64,7 +70,7 @@ const ContactSection = memo(() => {
           Have a project in mind? Get in touch and let's discuss how to build it.
         </p>
 
-        <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mb-12 sm:mb-14 md:mb-16">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-12 sm:mb-14 md:mb-16">
           {contactLinks.map((link) => (
             <ContactCard key={link.label} link={link} />
           ))}
