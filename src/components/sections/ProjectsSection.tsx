@@ -6,16 +6,15 @@ import { motion } from "framer-motion";
 
 interface ProjectCardProps {
   project: Project;
-  index: number;
 }
 
-const ProjectCard = memo(({ project, index }: ProjectCardProps) => {
+const ProjectCard = memo(({ project }: ProjectCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "250px 0px" }}
-      transition={{ duration: 0.6, delay: index * 0.15 }}
+      transition={{ duration: 0.6 }}
       className="text-center"
     >
       <div className="flex items-center justify-center gap-4 mb-6">
@@ -42,7 +41,7 @@ const ProjectCard = memo(({ project, index }: ProjectCardProps) => {
         {project.tech.map((tech) => (
           <span
             key={tech}
-            className="px-4 py-2 bg-muted/50 rounded-lg text-sm font-dev font-medium text-foreground border border-border/50 hover:border-foreground/30 transition-colors"
+            className="px-4 py-2 bg-muted/50 rounded-lg text-sm font-dev font-medium text-foreground border border-border/50"
           >
             {tech}
           </span>
@@ -141,11 +140,10 @@ const ProjectsSection = memo(() => {
         </div>
 
         <div className="space-y-12 md:space-y-16 mb-20">
-          {projectsData.map((project, index) => (
+          {projectsData.map((project) => (
             <ProjectCard
               key={project.title}
               project={project}
-              index={index}
             />
           ))}
         </div>

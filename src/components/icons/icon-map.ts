@@ -19,6 +19,7 @@ import {
   SentryIcon,
   TailwindIcon,
   TypeScriptIcon,
+  XIcon,
 } from "./index";
 import {
   ApacheIcon,
@@ -42,6 +43,8 @@ import {
   NextIcon,
   NginxIcon,
   OpenTelemetryIcon,
+  PlaywrightIcon,
+  SeleniumIcon,
   OracleIcon,
   PostmanIcon,
   PowerShellIcon,
@@ -85,6 +88,8 @@ export const iconMap = {
   Oracle: OracleIcon,
   GitHub: GitHubIcon,
   Jest: JestIcon,
+  Playwright: PlaywrightIcon,
+  Selenium: SeleniumIcon,
   Jenkins: JenkinsIcon,
   Bash: BashIcon,
   PowerShell: PowerShellIcon,
@@ -120,6 +125,7 @@ export const iconMap = {
   VisualStudio: VisualStudioIcon,
   LinkedIn: LinkedInIcon,
   Discord: DiscordIcon,
+  X: XIcon,
 } as const;
 
 export type IconName = keyof typeof iconMap;

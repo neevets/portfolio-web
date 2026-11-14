@@ -41,6 +41,8 @@ import LLVMLogo from "@/assets/skills/llvm.svg";
 import VSCodiumLogo from "@/assets/skills/vscodium.svg";
 import JetBrainsLogo from "@/assets/skills/jetbrains.svg";
 import VisualStudioLogo from "@/assets/skills/visualstudio.svg";
+import PlaywrightLogo from "@/assets/skills/playwright.svg";
+import SeleniumLogo from "@/assets/skills/selenium.svg";
 
 interface BrandAssetIconProps {
   src: string;
@@ -107,3 +109,5 @@ export const LLVMIcon = memo(() => <BrandAssetIcon src={LLVMLogo} />);
 export const VSCodiumIcon = memo(() => <BrandAssetIcon src={VSCodiumLogo} />);
 export const JetBrainsIcon = memo(() => <BrandAssetIcon src={JetBrainsLogo} />);
 export const VisualStudioIcon = memo(() => <BrandAssetIcon src={VisualStudioLogo} />);
+export const PlaywrightIcon = memo(() => <BrandAssetIcon src={PlaywrightLogo} />);
+export const SeleniumIcon = memo(() => <BrandAssetIcon src={SeleniumLogo} />);

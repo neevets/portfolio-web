@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { MotionConfig } from "framer-motion";
 import { HelmetProvider } from "react-helmet-async";
 import { InitialLoader } from "@/components/ui/initial-loader";
 import Portfolio from "./pages/portfolio";
@@ -86,7 +87,9 @@ const App = () => {
   return (
     <HelmetProvider>
       <ThemeProvider defaultTheme="dark">
-        <RouterProvider router={router} />
+        <MotionConfig reducedMotion="user">
+          <RouterProvider router={router} />
+        </MotionConfig>
         <Analytics />
         <SpeedInsights />
         {isLoading && (

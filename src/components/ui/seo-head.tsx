@@ -30,6 +30,7 @@ export const SEOHead = ({
     sameAs: [
       "https://github.com/neevets",
       "https://www.linkedin.com/in/neevets",
+      "https://x.com/neevetsio",
     ],
     knowsAbout: [
       "Backend development",

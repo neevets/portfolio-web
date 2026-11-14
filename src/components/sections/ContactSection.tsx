@@ -14,7 +14,7 @@ const ContactCard = memo<{ link: ContactLink }>(({ link }) => (
     href={link.href}
     target="_blank"
     rel="noopener noreferrer"
-    className="group relative overflow-hidden bg-background/80 border border-border/50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+    className="group relative w-full overflow-hidden sm:w-[calc(50%-0.75rem)] bg-background/80 border border-border/50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
   >
     <div className="p-4 sm:p-6 relative z-10">
       <div className="flex items-center justify-between gap-3 min-w-0">
@@ -39,16 +39,22 @@ ContactCard.displayName = "ContactCard";
 
 const contactLinks: ContactLink[] = [
   {
-    label: "LinkedIn",
-    value: "/in/neevets",
-    href: "https://www.linkedin.com/in/neevets",
-    icon: "LinkedIn",
-  },
-  {
     label: "Discord",
     value: "@neevetsio",
     href: "https://discord.com/users/neevetsio",
     icon: "Discord",
+  },
+  {
+    label: "X",
+    value: "@neevetsio",
+    href: "https://x.com/neevetsio",
+    icon: "X",
+  },
+  {
+    label: "LinkedIn",
+    value: "/in/neevets",
+    href: "https://www.linkedin.com/in/neevets",
+    icon: "LinkedIn",
   },
 ];
 
@@ -64,7 +70,7 @@ const ContactSection = memo(() => {
           Have a project in mind? Get in touch and let's discuss how to build it.
         </p>
 
-        <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mb-12 sm:mb-14 md:mb-16">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-12 sm:mb-14 md:mb-16">
           {contactLinks.map((link) => (
             <ContactCard key={link.label} link={link} />
           ))}
@@ -77,7 +83,7 @@ const ContactSection = memo(() => {
             aria-label="Send an email to contact@neevets.com"
           >
             <span className="relative z-10 flex items-center">
-              <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-110 motion-reduce:transition-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
               </svg>
               <span className="text-sm sm:text-base">Send me an email</span>
