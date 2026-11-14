@@ -15,7 +15,7 @@ const ServicesSection = memo(() => (
     <div className="max-w-7xl mx-auto">
       <div className="max-w-3xl mx-auto mb-12 text-center">
         <h2 className="section-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-dev font-light mb-6 text-center">Services</h2>
-        <p className="text-muted-foreground font-dev text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">Explore the areas I work with, from backend application development to APIs and deployment workflows.</p>
+        <p className="text-muted-foreground font-dev text-base sm:text-lg sm:leading-7 leading-relaxed max-w-2xl mx-auto">Explore the areas I work with, from backend application development to APIs and deployment workflows.</p>
       </div>
       <div className="grid sm:grid-cols-2 gap-4">
         {services.map((service) => (
@@ -31,7 +31,7 @@ const ServicesSection = memo(() => (
               <h3 className="service-card__title text-xl sm:text-2xl font-dev font-medium">{service.title}</h3>
               <ArrowUpRight className="service-card__arrow shrink-0 text-muted-foreground" size={20} />
             </div>
-            <p className="text-sm sm:text-base leading-relaxed text-muted-foreground">{service.description}</p>
+            <p className="text-sm sm:text-base sm:leading-6 leading-relaxed text-muted-foreground">{service.description}</p>
           </Link>
         ))}
       </div>

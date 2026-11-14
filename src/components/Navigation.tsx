@@ -94,7 +94,7 @@ export const Navigation = () => {
             <button
               type="button"
               onClick={() => setIsOpen((open) => !open)}
-              className="lg:hidden ml-auto p-3 z-50 relative touch-manipulation rounded-xl active:scale-95 transition-transform duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background [-webkit-tap-highlight-color:transparent]"
+              className="lg:hidden ml-auto p-3 z-50 relative touch-manipulation rounded-xl active:scale-95 transition-transform duration-200 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background [-webkit-tap-highlight-color:transparent]"
               aria-label={isOpen ? "Close navigation" : "Open navigation"}
               aria-expanded={isOpen}
               aria-controls="mobile-navigation"
@@ -110,7 +110,7 @@ export const Navigation = () => {
                 )} />
                 <span className={cn(
                   "block h-0.5 bg-foreground rounded-full transition-all duration-300 origin-center",
-                  isOpen ? "-rotate-45 -translate-y-[9px]" : ""
+                  isOpen ? "-rotate-45 translate-y-[-9px]" : ""
                 )} />
               </div>
             </button>
@@ -125,7 +125,7 @@ export const Navigation = () => {
         aria-label="Mobile navigation"
         aria-hidden={!isOpen}
         className={cn(
-          "fixed inset-0 z-40 lg:hidden flex flex-col transition-opacity duration-300 ease-out h-[100dvh] overscroll-none touch-none",
+          "fixed inset-0 z-40 lg:hidden flex flex-col transition-opacity duration-300 ease-out h-dvh overscroll-none touch-none",
           isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         )}
       >
@@ -135,7 +135,7 @@ export const Navigation = () => {
           onClick={() => setIsOpen(false)}
         />
 
-        <div className="relative flex flex-col h-[100dvh] px-6 pt-20 pb-8 overflow-hidden">
+        <div className="relative flex flex-col h-dvh px-6 pt-20 pb-8 overflow-hidden">
           <nav aria-label="Mobile navigation links" className="flex-1 flex flex-col justify-center gap-0">
             {navItems.map((item, index) => (
               <button

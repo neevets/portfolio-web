@@ -38,7 +38,7 @@ export const InitialLoader = ({
 
   return (
     <div
-      className={`fixed inset-0 z-[100] flex items-center justify-center bg-background transition-opacity ease-out ${
+      className={`fixed inset-0 z-100 flex items-center justify-center bg-background transition-opacity ease-out ${
         isExiting ? "pointer-events-none opacity-0" : "opacity-100"
       }`}
       style={{ transitionDuration: "450ms", height: "100vh", minHeight: "100dvh", touchAction: "none" }}

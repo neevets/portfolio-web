@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 
 const gridBackground = (
   <div className="absolute inset-0 opacity-40 overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background/80 pointer-events-none z-10" />
-    <div className="absolute inset-0 w-[300%] h-[300%] -left-[100%] -top-[100%]">
+    <div className="absolute inset-0 bg-linear-to-b from-transparent via-background/20 to-background/80 pointer-events-none z-10" />
+    <div className="absolute inset-0 w-[300%] h-[300%] -left-full -top-full">
       <svg className="absolute inset-0 w-full h-full animate-grid-seamless-1 motion-reduce:animate-none" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <pattern id="grid-main" width="80" height="80" patternUnits="userSpaceOnUse">
@@ -54,7 +54,7 @@ const HeroSection = memo(() => {
           transition={{ duration: 1, delay: 0.8 }}
           className="relative"
         >
-          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full border border-border/30 bg-background/30 backdrop-blur-sm shadow-lg">
+          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full border border-border/30 bg-background/30 backdrop-blur-xs shadow-lg">
             <div className="relative">
               <div className="w-3 h-3 bg-green-500 rounded-full shadow-[0_0_20px_rgba(34,197,94,0.8)]" />
               <div className="absolute inset-0 w-3 h-3 bg-green-400 rounded-full animate-ping motion-reduce:animate-none" />
