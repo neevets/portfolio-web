@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { siteMeta } from "@/data/profiles";
 
 interface SEOHeadProps {
   title?: string;
@@ -12,8 +13,8 @@ interface SEOHeadProps {
 const SITE_URL = "https://neevets.com";
 
 export const SEOHead = ({
-  title = "Neevets: Backend Developer, Go & Python",
-  description = "Neevets is a backend developer focused on Go, Python APIs, systems programming, and reliable software infrastructure.",
+  title = siteMeta.title,
+  description = siteMeta.description,
   path = "/",
   type = "website",
   robots = "index, follow, max-image-preview:large",
@@ -25,7 +26,7 @@ export const SEOHead = ({
     "@type": "Person",
     name: "Neevets",
     url: SITE_URL,
-    jobTitle: "Backend Developer",
+    jobTitle: ["SMC Trader", "Barber", "Nutritionist", "Music Producer", "Backend Developer"],
     description,
     sameAs: [
       "https://github.com/neevets",
@@ -33,6 +34,10 @@ export const SEOHead = ({
       "https://x.com/neevetsio",
     ],
     knowsAbout: [
+      "Smart Money Concepts trading",
+      "Barbering",
+      "Nutrition",
+      "Music production",
       "Backend development",
       "Systems programming",
       "Go",

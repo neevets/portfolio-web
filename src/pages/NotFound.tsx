@@ -2,12 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Home } from "lucide-react";
 import { SEOHead } from "@/components/ui/seo-head";
-
-const fadeUp = (delay: number) => ({
-  initial: { opacity: 0, y: 24 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6, delay, ease: "easeOut" as const },
-});
+import { fadeUp } from "@/lib/motion";
 
 const NotFound = () => {
   const location = useLocation();

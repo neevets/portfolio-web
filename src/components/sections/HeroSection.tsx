@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
 const gridBackground = (
@@ -26,7 +27,7 @@ const gridBackground = (
   </div>
 );
 
-const HeroSection = memo(() => {
+const HeroSection = memo(({ children }: { children?: ReactNode }) => {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-6 relative overflow-hidden z-10">
       {gridBackground}
@@ -64,6 +65,7 @@ const HeroSection = memo(() => {
             </p>
           </div>
         </motion.div>
+        {children}
       </motion.div>
     </section>
   );

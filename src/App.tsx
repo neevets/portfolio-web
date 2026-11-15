@@ -6,9 +6,12 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import { MotionConfig } from "framer-motion";
 import { HelmetProvider } from "react-helmet-async";
 import { InitialLoader } from "@/components/ui/initial-loader";
+import Home from "./pages/home";
 import Portfolio from "./pages/portfolio";
+import ProfilePage from "./pages/profile";
 import NotFound from "./pages/NotFound";
 import { DrewProjectPage, ServicePage } from "./pages/seo-pages";
+import { profiles } from "./data/profiles";
 import "./styles/solid-dark-theme.css";
 
 const MIN_LOADING_CYCLES = 3;
@@ -16,7 +19,12 @@ const FADE_OUT_DURATION_MS = 450;
 const LOAD_EVENT_FALLBACK_MS = 8000;
 
 const router = createBrowserRouter([
-  { path: "/", element: <Portfolio /> },
+  { path: "/", element: <Home /> },
+  { path: "/portfolio", element: <Portfolio /> },
+  ...profiles.map((profile) => ({
+    path: `/${profile.slug}`,
+    element: <ProfilePage profile={profile} />,
+  })),
   { path: "/services/:serviceSlug", element: <ServicePage /> },
   { path: "/projects/drew", element: <DrewProjectPage /> },
   { path: "*", element: <NotFound /> },

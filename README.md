@@ -41,10 +41,12 @@ npm run preview
 ## Project structure
 
 - `src/components/sections`: portfolio page sections
+- `src/components/home`: sections of the root page
+- `src/components/layout`: site navigation, footer and the come back button
 - `src/components/ui`: reusable UI primitives
 - `src/components/icons`: icon components and icon registry
-- `src/data`: portfolio content
-- `src/pages`: route-level pages
+- `src/data`: content (`profiles.ts` holds the root page story and the trading, barber, nutrition and music pages)
+- `src/pages`: route-level pages (`/` about, `/portfolio`, `/trading`, `/barber`, `/nutrition`, `/music`)
 - `src/styles`: theme-specific overrides
 
 ## Deployment

@@ -1,7 +1,7 @@
 {
-  "name": "Neevets: Backend Development",
+  "name": "Neevets",
   "short_name": "Neevets",
-  "description": "Backend development, Go, Python APIs, and software infrastructure projects.",
+  "description": "SMC trader, barber, nutritionist, music producer and backend developer.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

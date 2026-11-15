@@ -61,7 +61,7 @@ const services = {
 
 const PageBackLink = () => (
   <Link
-    to="/"
+    to="/portfolio"
     className="-mt-2 mb-14 inline-flex items-center gap-2 py-2 text-sm text-muted-foreground hover:text-foreground"
   >
     <ArrowLeft size={16} />
